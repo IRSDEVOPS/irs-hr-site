@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+
+# Allow everything else
+Allow: /
+
+# Sitemap location
+Sitemap: https://irshr.co.uk/sitemap.xml

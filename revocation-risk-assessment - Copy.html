@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revocation Risk Assessment  | IRS HR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/images/favicon.webp">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .bg-gold {
+            background-color: #bdad81;
+        }
+
+        .text-white {
+            --tw-text-opacity: 1;
+            color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+        }
+
+        .font-bold {
+            font-weight: 700;
+        }
+
+        .text-lg {
+            font-size: 1.125rem;
+            line-height: 1.75rem;
+        }
+
+        .py-3 {
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+        }
+
+        .px-6 {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        .rounded-lg {
+            border-radius: 0.5rem;
+        }
+
+        .w-full {
+            width: 100%;
+        }
+
+        .bg-gold:hover {
+            background-color: #a5915b;
+        }
+
+        .bg-quiz {
+            background-image: url(./assets/images/bg.png);
+            height: 100%;
+            background-size: cover;
+        }
+
+        .bg-gold-900 {
+            background-color: #a5915b;
+        }
+
+        .text-gold-900 {
+            color: #a5915b;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 min-h-screen flex items-center justify-center p-4 bg-quiz">
+
+
+    <!-- Quiz Container -->
+    <div class="max-w-2xl w-full bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-200"
+        id="quizContainer">
+
+        <!-- Header -->
+        <div class="bg-gold-900 p-6 text-white flex justify-between items-center" id="headerContainer">
+            <div>
+                <h1 class="text-xl font-bold">Revocation Risk Assessment</h1>
+                <p class="text-sm text-white">Can you survive a Home Office salary audit?</p>
+            </div>
+            <div class="text-right">
+                <span id="questionCounter" class="text-2xl font-bold text-white">1</span><span
+                    class="text-slate-800">/10</span>
+            </div>
+        </div>
+
+
+        <!-- Start Screen -->
+        <div id="startScreen" class="p-8 text-center">
+            <div
+                class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6 text-red-600 text-3xl animate-pulse">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">Is your sponsor licence at the risk of revocation?</h2>
+            <p class="text-slate-600 mb-8">
+                The Home Office is actively revoking Sponsor licences for salary discrepancies. Take this 2-minute diagnotsic quiz to assess your sponsor revocation risk.
+            </p>
+            <button onclick="startQuiz()"
+                class="bg-gold text-white font-bold py-3 px-8 rounded-lg transition-colors shadow-lg shadow-blue-500/30">
+                Start Assessment
+            </button>
+        </div>
+
+
+        <!-- Question View -->
+        <div id="questionView" class="hidden p-8">
+            <div id="questionText" class="text-xl font-bold text-slate-900 mb-6 leading-relaxed"></div>
+
+            <div class="space-y-3" id="optionsContainer">
+                <!-- Options injected here -->
+            </div>
+
+
+            <div id="feedback" class="hidden mt-6 p-4 rounded-lg bg-slate-50 border border-slate-200">
+                <p id="feedbackText" class="text-sm"></p>
+                <button onclick="nextQuestion()" class="mt-3 text-sm font-bold text-gold-900 hover:underline">Next
+                    Question <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+
+        <!-- Lead Capture Screen (New Step) -->
+        <div id="leadCaptureScreen" class="hidden fixed inset-0  flex items-center justify-center p-4 z-50">
+            <div class="bg-white p-8 md:p-12 rounded-xl shadow-2xl max-w-lg w-full text-center fade-in">
+                <div class="mb-4">
+                    <svg class="w-16 h-16 mx-auto text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01">
+                        </path>
+                    </svg>
+                </div>
+                <h2 class="text-3xl font-bold text-gray-800 mb-3">You've Completed the Quiz!</h2>
+                <p class="text-gray-600 mb-6">Enter your details below to get your personalised compliance score and
+                    free
+                    recommendations to protect your sponsor licence and safeguard your sponsored employees with IRS HR
+                </p>
+                <form id="leadForm" class="space-y-4 pure-form pure-form-stacked" method="POST"
+                    data-email="pc@irslimited.co.uk"
+                    action="https://script.google.com/macros/s/AKfycbx54ddpa4hm6m7YRa4hQY8V192_3nTe4p4Fv0rC_Al3Jmyf15Vwn4PjV0XzJ4_AXD-yiQ/exec">
+                    <div class="form-elements">
+                        <fieldset class="pure-group">
+                            <input type="text" id="name" placeholder="Your Name" name="name"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 mb-4 focus:ring-gold focus:border-gold outline-none"
+                                required>
+                        </fieldset>
+                        <fieldset class="pure-group">
+                            <input type="email" id="email" placeholder="Work Email" name="email"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 mb-4 focus:ring-gold focus:border-gold outline-none"
+                                required>
+                        </fieldset>
+                        <fieldset class="pure-group">
+                            <input type="text" id="phone" placeholder="Phone Number" name="phone"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 mb-4 focus:ring-gold focus:border-gold outline-none"
+                                required>
+                        </fieldset>
+                        <fieldset class="pure-group">
+                            <input type="text" id="company" placeholder="Company Name" name="company"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 mb-4 focus:ring-gold focus:border-gold outline-none"
+                                required>
+                        </fieldset>
+                        <fieldset class="pure-group">
+                            <input type="text" id="employees" placeholder="Number of Employees" name="employees"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 mb-4 focus:ring-gold focus:border-gold outline-none"
+                                required>
+                        </fieldset>
+
+
+
+                        <!-- Hidden inputs for quiz answers -->
+                        <fieldset class="pure-group">
+                            <input type="hidden" name="question_1" id="answer_1" value="">
+                        </fieldset>
+                        <fieldset class="pure-group">
+                            <input type="hidden" name="question_2" id="answer_2" value="">
+                        </fieldset>
+                        <fieldset class="pure-group">
+                            <input type="hidden" name="question_3" id="answer_3" value="">
+                        </fieldset>
+                        <fieldset class="pure-group">
+                            <input type="hidden" name="question_4" id="answer_4" value="">
+                        </fieldset>
+                        <fieldset class="pure-group">
+                            <input type="hidden" name="question_5" id="answer_5" value="">
+                        </fieldset>
+                        <fieldset class="pure-group">
+                            <input type="hidden" name="question_6" id="answer_6" value="">
+                        </fieldset>
+                        <fieldset class="pure-group">
+                            <input type="hidden" name="question_7" id="answer_7" value="">
+                        </fieldset>
+                        <fieldset class="pure-group">
+                            <input type="hidden" name="question_8" id="answer_8" value="">
+                        </fieldset>
+                        <fieldset class="pure-group">
+                            <input type="hidden" name="question_9" id="answer_9" value="">
+                        </fieldset>
+                        <fieldset class="pure-group">
+                            <input type="hidden" name="question_10" id="answer_10" value="">
+                        </fieldset>
+                        <fieldset class="pure-group">
+                            <input type="hidden" name="final_score" id="final_score" value="">
+                        </fieldset>
+
+
+                        <button type="submit" id="submitLeadBtn"
+                            class="w-full bg-gold text-white font-bold py-3 px-6 rounded-lg  transition-all duration-300 text-lg shadow-md mt-4">
+                            Get My Results
+                        </button>
+                    </div>
+
+                    <p id="leadFormThankYou" class="text-green-600 font-semibold mt-4 hidden">Thank you for your
+                        submission. Showing results...</p>
+
+                </form>
+
+                <!-- <button id="skipLeadBtn" class="mt-4 text-sm text-gray-500 hover:text-indigo-600 transition duration-200">
+                    No thanks, skip and see my score
+                </button> -->
+            </div>
+        </div>
+
+
+        <!-- Result View -->
+        <div id="resultView" class="hidden p-8 text-center">
+            <div id="scoreIcon" class="text-6xl mb-4"></div>
+            <h2 id="scoreTitle" class="text-3xl font-bold mb-2"></h2>
+            <p id="scoreMessage" class="text-slate-600 mb-8"></p>
+
+
+            <div class="bg-slate-100 p-6 rounded-xl mb-8 text-left">
+                <h3 class="font-bold text-slate-900 mb-2 uppercase text-xs tracking-wider">Your Action Plan:</h3>
+                <ul id="actionPlan" class="space-y-2 text-sm text-slate-700"></ul>
+            </div>
+
+
+            <a href="https://meet.brevo.com/irsdemo/intro"
+                class="block w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-lg transition-colors shadow-lg shadow-red-500/30 mb-3">
+                Book Emergency Compliance Review
+            </a>
+            <button onclick="location.reload()" class="text-slate-400 text-sm hover:text-slate-600">Restart
+                Quiz</button>
+        </div>
+
+
+    </div>
+
+
+    <script>
+        const questions = [
+            {
+                text: "Have you paid any sponsored worker LESS than the amount stated on their CoS in the last 6 months?",
+                options: [
+                    { text: "No, never.", score: 10, feedback: "Excellent. Consistency is key." },
+                    { text: "Yes, but only for Statutory Sick Pay or authorized unpaid leave.", score: 8, feedback: "Good, but ensure you reported this via SMS within 10 days." },
+                    { text: "Yes, due to lack of client work or admin error.", score: 0, feedback: "CRITICAL RISK: 'Lack of work' is illegal. This is grounds for immediate revocation." }
+                ]
+            },
+            {
+                text: "If you reduced a worker's salary (for any reason), did you report it via the Sponsorship Management System (SMS)?",
+                options: [
+                    { text: "Yes, within 10 working days.", score: 10, feedback: "Correct. Timely reporting is mandatory." },
+                    { text: "Yes, but it took longer than 10 days.", score: 5, feedback: "Late reporting is a breach. The Home Office may overlook one instance, but a pattern is dangerous." },
+                    { text: "No, I didn't think I needed to.", score: 0, feedback: "HIGH RISK: Failure to report a significant change is a Tier 4 breach." }
+                ]
+            },
+            {
+                text: "Do you have signed employment contracts on file for every single sponsored worker?",
+                options: [
+                    { text: "Yes, all signed and dated.", score: 10, feedback: "Perfect. This is the first document requested during an audit." },
+                    { text: "Mostly, might be missing one or two signatures.", score: 2, feedback: "Fix this today. An unsigned contract is invalid evidence." },
+                    { text: "No, we use verbal agreements or offer letters only.", score: 0, feedback: "CRITICAL: You must have written contracts compliant with UK law." }
+                ]
+            },
+            {
+                text: "Can you instantly produce 6 months of business bank statements showing salary transfers?",
+                options: [
+                    { text: "Yes, easily.", score: 10, feedback: "Great. Ensure the transfers clearly show the worker's name." },
+                    { text: "I can, but I pay some staff in cash.", score: 0, feedback: "CRITICAL: Cash payments to sponsored workers are strictly forbidden. You must have a digital audit trail." },
+                    { text: "It would take me a while to find them.", score: 5, feedback: "Speed matters. You only get 10 days to respond to an audit letter." }
+                ]
+            },
+            {
+                text: "Does your payroll report (RTI) match your CoS data exactly?",
+                options: [
+                    { text: "Yes, to the penny.", score: 10, feedback: "Excellent." },
+                    { text: "Roughly, there might be small fluctuations.", score: 5, feedback: "Be careful. Even small unexplained variances can trigger an investigation." },
+                    { text: "No, we pay a different rate now.", score: 0, feedback: "HIGH RISK: If pay changed, the CoS or SMS should have been updated immediately." }
+                ]
+            },
+            {
+                text: "Are your workers paying for their own uniforms or DBS checks via salary deduction?",
+                options: [
+                    { text: "No, or we pay for it.", score: 10, feedback: "Correct practice." },
+                    { text: "Yes, we deduct it from their gross pay.", score: 0, feedback: "DANGER: You cannot deduct costs if it drops their pay below the National Minimum Wage. This is 'illegal clawback'." }
+                ]
+            },
+            {
+                text: "Have any of your workers been absent without pay for more than 4 weeks in a calendar year?",
+                options: [
+                    { text: "No.", score: 10, feedback: "Good." },
+                    { text: "Yes, and we stopped sponsorship.", score: 10, feedback: "Correct action." },
+                    { text: "Yes, but we kept sponsoring them.", score: 0, feedback: "HIGH RISK: Unless there is a valid reason (sick, maternity, strike), sponsorship must cease after 4 weeks unpaid." }
+                ]
+            },
+            {
+                text: "Do your payslips clearly show the hourly rate and hours worked?",
+                options: [
+                    { text: "Yes, detailed breakdown.", score: 10, feedback: "Perfect for proving NMW compliance." },
+                    { text: "No, just a total monthly figure.", score: 5, feedback: "Improve this. The Home Office needs to see hours to calculate the hourly rate compliance." }
+                ]
+            },
+            {
+                text: "If a worker's start date was delayed, did you report it within 30 days?",
+                options: [
+                    { text: "Yes, always.", score: 10, feedback: "Correct." },
+                    { text: "No, I just let them start late.", score: 0, feedback: "HIGH RISK: A worker cannot start later than 28 days after the CoS start date (or visa grant date) without a valid report." }
+                ]
+            },
+            {
+                text: "Do you have a dedicated Authorising Officer who checks the SMS weekly?",
+                options: [
+                    { text: "Yes.", score: 10, feedback: "Best practice." },
+                    { text: "No, we check it once a year or when we need a CoS.", score: 2, feedback: "Dangerous. You might miss critical notifications or deadlines." }
+                ]
+            }
+        ];
+
+
+        let currentQuestion = 0;
+        let totalScore = 0;
+        const maxScore = 100; // Adjusted based on question weights
+
+
+        function startQuiz() {
+            document.getElementById('startScreen').classList.add('hidden');
+            document.getElementById('questionView').classList.remove('hidden');
+            showQuestion();
+        }
+
+
+        function showQuestion() {
+            const q = questions[currentQuestion];
+            document.getElementById('questionText').innerText = q.text;
+            document.getElementById('questionCounter').innerText = currentQuestion + 1;
+            document.getElementById('feedback').classList.add('hidden');
+
+            const container = document.getElementById('optionsContainer');
+            container.innerHTML = '';
+
+
+            q.options.forEach(opt => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-left p-4 rounded-lg border border-slate-300 hover:border-blue-500 hover:bg-blue-50 transition-all font-medium text-slate-700";
+                btn.innerText = opt.text;
+                btn.onclick = () => selectOption(btn, opt);
+                container.appendChild(btn);
+            });
+        }
+
+
+        function selectOption(btn, option) {
+            // Disable all buttons
+            const buttons = document.getElementById('optionsContainer').children;
+            for (let b of buttons) b.disabled = true;
+
+
+            // Highlight selected
+            btn.classList.remove('border-slate-300', 'hover:border-blue-500', 'hover:bg-blue-50');
+            if (option.score > 0) {
+                btn.classList.add('bg-green-100', 'border-green-500', 'text-green-800');
+                totalScore += option.score;
+            } else {
+                btn.classList.add('bg-red-100', 'border-red-500', 'text-red-800');
+            }
+
+            // Save answer to hidden input
+            const answerInput = document.getElementById(`answer_${currentQuestion + 1}`);
+            if (answerInput) {
+                answerInput.value = option.text;
+            }
+
+
+            // Show feedback
+            const fb = document.getElementById('feedback');
+            const fbText = document.getElementById('feedbackText');
+            fb.classList.remove('hidden');
+
+            fbText.innerHTML = (option.score > 0 ? '<i class="fa-solid fa-check-circle text-green-600 mr-2"></i>' : '<i class="fa-solid fa-triangle-exclamation text-red-600 mr-2"></i>') +
+                `<span class="${option.score > 0 ? 'text-green-800' : 'text-red-800'} font-bold">${option.feedback}</span>`;
+
+            fb.className = `mt-6 p-4 rounded-lg border ${option.score > 0 ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'}`;
+        }
+
+
+        function nextQuestion() {
+            currentQuestion++;
+            if (currentQuestion < questions.length) {
+                showQuestion();
+            } else {
+                //showResults();
+                showLeadCapture();
+            }
+        }
+
+        function showLeadCapture() {
+            document.getElementById('questionView').classList.add('hidden');
+            document.getElementById('headerContainer').classList.add('hidden');
+            document.getElementById('quizContainer').classList.remove('border');
+            document.getElementById('leadCaptureScreen').classList.remove('hidden');
+
+            // Store final score for form submission
+            document.getElementById('final_score').value = totalScore;
+        }
+
+
+
+        function showResults() {
+            document.getElementById('leadCaptureScreen').classList.add('hidden');
+            document.getElementById('questionView').classList.add('hidden');
+            document.getElementById('resultView').classList.remove('hidden');
+            document.querySelector('.bg-gold-900').classList.add('hidden'); // Hide header
+
+            
+
+
+
+            const title = document.getElementById('scoreTitle');
+            const icon = document.getElementById('scoreIcon');
+            const msg = document.getElementById('scoreMessage');
+            const plan = document.getElementById('actionPlan');
+
+
+            // Normalized percentage roughly
+            const percentage = (totalScore / 98) * 100; // approximate max score sum
+
+
+            if (percentage >= 90) {
+                title.innerText = "Low Risk (Audit Ready)";
+                title.className = "text-3xl font-bold mb-2 text-green-600";
+                icon.innerHTML = '<i class="fa-solid fa-shield-heart text-green-500"></i>';
+                msg.innerText = "You have excellent compliance habits. Keep maintaining your records.";
+                plan.innerHTML = `
+                   <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> Maintain monthly SMS checks.</li>
+                   <li class="flex items-start"><i class="fa-solid fa-check text-green-500 mt-1 mr-2"></i> Prepare a mock audit folder just in case.</li>
+               `;
+            } else if (percentage >= 60) {
+                title.innerText = "Medium Risk (Vulnerable)";
+                title.className = "text-3xl font-bold mb-2 text-yellow-600";
+                icon.innerHTML = '<i class="fa-solid fa-triangle-exclamation text-yellow-500"></i>';
+                msg.innerText = "You have some good processes, but critical gaps exist that could lead to suspension.";
+                plan.innerHTML = `
+                   <li class="flex items-start"><i class="fa-solid fa-triangle-exclamation text-yellow-500 mt-1 mr-2"></i> Audit all employee contracts immediately.</li>
+                   <li class="flex items-start"><i class="fa-solid fa-triangle-exclamation text-yellow-500 mt-1 mr-2"></i> Review last 6 months of SMS reporting.</li>
+               `;
+            } else {
+                title.innerText = "CRITICAL RISK (Revocation Likely)";
+                title.className = "text-3xl font-bold mb-2 text-red-600";
+                icon.innerHTML = '<i class="fa-solid fa-circle-xmark text-red-500 animate-pulse"></i>';
+                msg.innerText = "Your current practices are flagging major breaches. If the Home Office audits you today, you will likely lose your licence.";
+                plan.innerHTML = `
+                   <li class="flex items-start"><i class="fa-solid fa-xmark text-red-500 mt-1 mr-2"></i> STOP any illegal deductions immediately.</li>
+                   <li class="flex items-start"><i class="fa-solid fa-xmark text-red-500 mt-1 mr-2"></i> Report all salary changes retrospectively.</li>
+                   <li class="flex items-start"><i class="fa-solid fa-xmark text-red-500 mt-1 mr-2"></i> Book an emergency review call.</li>
+               `;
+            }
+
+             // 🚀 Auto-redirect after 5 seconds
+            setTimeout(() => {
+                window.location.href = "https://irshr.co.uk/sponsor-licence-revocation-risk.html?#contact";
+            }, 4000);
+        }
+
+        //        document.getElementById('leadForm').addEventListener('submit', function () {
+        //     document.getElementById('submitLeadBtn').disabled = true;
+        //     document.getElementById('leadFormThankYou').classList.remove('hidden');
+
+        //     // Delay to allow form POST
+        //     setTimeout(() => {
+        //         document.getElementById('leadCaptureScreen').classList.add('hidden');
+        //         showResults();
+        //     }, 1200);
+        // });
+
+        // Handle Lead Form Submission (AJAX)
+        leadForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            submitLeadBtn.disabled = true;
+            submitLeadBtn.textContent = 'Submitting...';
+            leadFormThankYou.classList.add('hidden');
+
+            const form = e.target;
+            const formData = new FormData(form);
+            const url = form.action;
+
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    body: formData,
+                    mode: 'no-cors' // Required for Google Apps Script endpoints
+                });
+
+                // Since it's no-cors, we can't check response status, 
+                // so we assume success for the UI update.
+
+                submitLeadBtn.textContent = 'Submitted!';
+                leadFormThankYou.classList.remove('hidden');
+
+                // Wait a moment before showing results to acknowledge submission
+                setTimeout(() => {
+                    showResults();
+                }, 1000);
+
+            } catch (error) {
+                // For a real app, you'd handle the error here.
+                console.error('Lead submission failed:', error);
+                // Still show results so the user isn't stuck
+                showResults();
+            } finally {
+                submitLeadBtn.disabled = false;
+                submitLeadBtn.textContent = 'Get My Results';
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

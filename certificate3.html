@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Certificate</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+<style>
+
+body{
+    margin:0;
+    background:#e8dfd2;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Inter',sans-serif;
+}
+#cert-logo{
+    position:absolute;
+    top:40px;
+    left:50%;
+    transform:translateX(-50%);
+    width:140px;
+    height:auto;
+    z-index:10;
+}
+.wrapper{
+    text-align:center;
+}
+
+#certificate{
+    width:1200px;
+    height:850px;
+    background:white;
+    border:15px solid #d8cab7;
+    box-sizing:border-box;
+    padding:35px;
+    position:relative;
+}
+
+.inner{
+    width:100%;
+    height:100%;
+    border:3px solid #d8cab7;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding-top:20px;
+    box-sizing:border-box;
+}
+
+.title{
+    font-size:60px;
+    font-weight:700;
+    letter-spacing:4px;
+}
+
+.subtitle{
+    font-size:24px;
+    letter-spacing:3px;
+    margin-top:10px;
+    color:#444;
+}
+
+.name{
+    font-family:'Great Vibes',cursive;
+    font-size:110px;
+    color:#5b4127;
+    margin:50px 0;
+}
+
+.text{
+    font-size:28px;
+    color:#555;
+}
+
+.course{
+    font-size:42px;
+    font-weight:700;
+    margin-top:15px;
+}
+
+.footer{
+    position:absolute;
+    bottom:70px;
+    left:0;
+    width:100%;
+    text-align:center;
+}
+
+.cert-id{
+    font-size:16px;
+    font-weight:700;
+}
+
+.cert-label{
+    color:#888;
+    margin-top:8px;
+}
+
+.date{
+    margin-top:15px;
+    color:#666;
+}
+
+.download-btn{
+    margin-top:30px;
+    background:#9c8850;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:10px;
+    font-weight:700;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<div id="certificate">
+<img
+    src="assets/images/logo.webp"
+    id="cert-logo"
+    alt="Logo">
+    <div class="inner">
+
+        <div class="title">
+            CERTIFICATE
+        </div>
+
+        <div class="subtitle">
+            OF COMPLETION
+        </div>
+
+        <div id="name" class="name">
+            Student Name
+        </div>
+
+        <div class="text">
+            Successfully completed the
+        </div>
+
+        <div class="course">
+            Mastering the Certificate of Sponsorship Course
+        </div>
+
+        <div class="footer">
+
+            <div id="cert-id" class="cert-id"></div>
+
+            <div class="cert-label">
+                Certificate ID
+            </div>
+
+            <div class="date">
+                Date:
+                <span id="date"></span>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<button class="download-btn" onclick="downloadCertificate()">
+    Download Certificate
+</button>
+
+</div>
+
+<script>
+
+const cert = JSON.parse(localStorage.getItem('certificateData'));
+
+if(cert){
+
+    document.getElementById('name').textContent =
+        cert.name;
+
+    document.getElementById('cert-id').textContent =
+        cert.certificateId;
+
+    document.getElementById('date').textContent =
+        cert.date;
+}
+
+async function downloadCertificate(){
+
+    const canvas = await html2canvas(
+        document.getElementById('certificate'),
+        {
+            scale:3,
+            useCORS:true
+        }
+    );
+
+    const link = document.createElement('a');
+
+    link.download =
+        'CoS-Certificate.png';
+
+    link.href =
+        canvas.toDataURL('image/png');
+
+    link.click();
+}
+
+window.onload = () => {
+
+    setTimeout(() => {
+        downloadCertificate();
+    }, 1000);
+
+};
+
+</script>
+
+</body>
+</html>
+

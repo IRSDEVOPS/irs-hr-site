@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Sponsor Licence Risk Assessment</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+
+
+   <!-- Chosen Palette: Slate (Professional), Blue (Action), Red (Risk/Alert) -->
+   <!-- Application Structure Plan: This SPA is now a dedicated, single-purpose assessment tool. By removing all educational content and focus-shifting entirely to the Quiz, we create a "sink or swim" environment for the user. The user is immediately presented with the assessment, followed by a high-stakes "Revocation Chance" score. The lead-generation gate at the end is the only way for them to receive the full risk mitigation report. -->
+   <!-- Visualization & Content Choices: 1. Risk Percentage -> Goal: Impact -> High-contrast typography -> Emphasizes the danger of non-compliance. 2. Assessment Quiz -> Goal: Engagement -> 10 specific questions based on Appendix D v03/26. 3. Lead Gate -> Goal: Conversion -> Form at point of maximum psychological impact. -->
+   <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+
+   <style>
+       ::-webkit-scrollbar { width: 8px; }
+       ::-webkit-scrollbar-track { background: #f8fafc; }
+       ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+       ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+
+       .quiz-option {
+           transition: all 0.2s ease-in-out;
+       }
+       .quiz-option:hover {
+           transform: translateX(4px);
+       }
+       .risk-high { color: #ef4444; }
+       .risk-med { color: #f59e0b; }
+       .risk-low { color: #10b981; }
+   </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex items-center justify-center p-4">
+
+
+   <div class="max-w-3xl w-full">
+       <!-- HEADER -->
+       <div class="text-center mb-8">
+           <h1 class="text-3xl font-black text-slate-900 tracking-tight uppercase italic">IRS HR Solutions</h1>
+           <p class="text-slate-500 font-bold text-sm tracking-widest mt-1">Sponsor Licence Risk Assessment • Appendix D v03/26</p>
+       </div>
+
+
+       <!-- MAIN QUIZ CARD -->
+       <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
+           <div class="bg-slate-900 p-8 text-white relative">
+               <div class="relative z-10">
+                   <h2 class="text-2xl font-bold">Audit Readiness Assessment</h2>
+                   <p class="text-slate-400 text-sm mt-1">Determine the statistical likelihood of your licence being revoked in a Home Office visit.</p>
+               </div>
+               <!-- Progress Bar -->
+               <div id="quiz-progress-bar" class="absolute bottom-0 left-0 h-1.5 bg-blue-500 transition-all duration-500" style="width: 0%"></div>
+           </div>
+          
+           <div class="p-8 md:p-12" id="quiz-container">
+               <!-- INTRO STATE -->
+               <div id="quiz-intro" class="text-center py-6">
+                   <div class="text-6xl mb-6">🕵️‍♂️</div>
+                   <h3 class="text-2xl font-bold text-slate-800 mb-4">How secure is your Sponsor Licence?</h3>
+                   <p class="text-slate-600 mb-8 max-w-md mx-auto">This 10-question assessment evaluates your current knowledge of the mandatory record-keeping duties effective from <strong>6 March 2026</strong>.</p>
+                   <button onclick="startQuiz()" class="w-full md:w-auto bg-slate-900 text-white px-10 py-4 rounded-2xl font-black hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                       Begin Assessment
+                   </button>
+                   <p class="text-[10px] text-slate-400 uppercase tracking-widest mt-6 font-bold">Takes approx. 2 minutes</p>
+               </div>
+              
+               <!-- ACTIVE QUIZ STATE -->
+               <div id="quiz-content" class="hidden">
+                   <div class="mb-10">
+                       <div class="flex justify-between items-center mb-2">
+                           <span class="text-xs font-black text-blue-600 uppercase tracking-widest" id="quiz-q-number">Question 1 of 10</span>
+                           <span class="text-xs font-bold text-slate-400" id="quiz-timer">March 2026 Ruleset</span>
+                       </div>
+                       <h3 class="text-2xl font-extrabold text-slate-900 leading-tight" id="quiz-q-text">Loading...</h3>
+                   </div>
+                   <div class="space-y-3" id="quiz-options">
+                       <!-- Options injected by JS -->
+                   </div>
+               </div>
+
+
+               <!-- RESULTS STATE -->
+               <div id="quiz-results" class="hidden text-center">
+                   <div class="mb-8">
+                       <div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-red-100 text-red-600 text-4xl mb-4" id="risk-icon">🚫</div>
+                       <h3 class="text-6xl font-black mb-1" id="revocation-chance">--%</h3>
+                       <p class="text-slate-400 font-black uppercase tracking-widest text-xs">Statistical Chance of Revocation</p>
+                   </div>
+                  
+                   <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 mb-8">
+                       <div class="flex items-center justify-center gap-4 mb-2">
+                           <span class="text-sm font-bold text-slate-500 uppercase tracking-widest">Assessment Score:</span>
+                           <span class="text-xl font-black text-slate-900" id="quiz-score-text">0/10</span>
+                       </div>
+                       <p class="text-sm text-slate-600 leading-relaxed" id="quiz-verdict">Loading verdict...</p>
+                   </div>
+
+
+                   <!-- Lead Gate Form -->
+                   <div id="quiz-gate" class="bg-blue-900 p-8 rounded-3xl text-white shadow-2xl">
+                       <h4 class="text-xl font-bold mb-2">Uncover Your Compliance Gaps</h4>
+                       <p class="text-blue-200 text-xs mb-6 uppercase tracking-widest font-bold">Download the full Risk Mitigation Report</p>
+                       <form onsubmit="event.preventDefault(); submitLead();" class="space-y-3 text-left">
+                           <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                               <input type="text" placeholder="Full Name" required class="bg-slate-800 border-slate-700 text-white rounded-xl p-3 text-sm outline-none focus:ring-2 focus:ring-blue-500">
+                               <input type="text" placeholder="Company Name" required class="bg-slate-800 border-slate-700 text-white rounded-xl p-3 text-sm outline-none focus:ring-2 focus:ring-blue-500">
+                           </div>
+                           <input type="email" placeholder="Business Email" required class="w-full bg-slate-800 border-slate-700 text-white rounded-xl p-3 text-sm outline-none focus:ring-2 focus:ring-blue-500">
+                           <input type="tel" placeholder="Phone Number" required class="w-full bg-slate-800 border-slate-700 text-white rounded-xl p-3 text-sm outline-none focus:ring-2 focus:ring-blue-500">
+                           <button type="submit" class="w-full bg-blue-500 hover:bg-blue-400 text-white font-black py-4 rounded-xl shadow-lg transition-all mt-2 uppercase tracking-widest">
+                               Unlock My Report
+                           </button>
+                       </form>
+                   </div>
+                  
+                   <div id="success-msg" class="hidden py-8">
+                       <div class="text-4xl mb-4">🚀</div>
+                       <h4 class="text-2xl font-bold text-emerald-600">Report Sent!</h4>
+                       <p class="text-slate-500">Check your email for your personalized mitigation plan.</p>
+                       <button onclick="location.reload()" class="mt-6 text-blue-600 font-bold hover:underline">Restart Quiz</button>
+                   </div>
+               </div>
+           </div>
+          
+           <div class="bg-slate-50 p-4 text-center border-t border-slate-100">
+               <p class="text-[10px] text-slate-400 font-bold uppercase tracking-[0.2em]">© 2026 IRS HR Solutions • Data strictly confidential</p>
+           </div>
+       </div>
+   </div>
+
+
+   <script>
+       const quizData = [
+           {
+               q: "How long must you retain documents after a worker's sponsorship ends?",
+               options: ["1 year", "2 years", "The duration of the license", "Until the worker leaves the UK"],
+               correct: 0
+           },
+           {
+               q: "If a worker enters via e-Gates and has no passport stamp, what MUST you retain?",
+               options: ["A signed statement from the worker", "Evidence of travel (e.g., boarding pass)", "A copy of their eVisa share code only", "Nothing is required"],
+               correct: 1
+           },
+           {
+               q: "Which official service is mandatory for online Right to Work checks?",
+               options: ["Check someone's immigration status", "Check a tenant's right to rent", "Check a job applicant's right to work: use share code", "Universal Jobmatch portal"],
+               correct: 2
+           },
+           {
+               q: "As of 6 March 2026, what new duty is added to Section 5?",
+               options: ["Proof of pension enrolment", "Evidence of briefing workers on UK employment rights", "Copies of dental records for healthcare roles", "Background checks for social media activity"],
+               correct: 1
+           },
+           {
+               q: "After February 2026, Seasonal Workers will normally receive:",
+               options: ["A physical vignette sticker", "A Biometric Residence Permit (BRP)", "An eVisa (digital status) only", "A Home Office decision letter via post"],
+               correct: 2
+           },
+           {
+               q: "Regarding salary proof, which is NOT acceptable for an audit?",
+               options: ["Personal bank statement showing transfer", "Accounts showing 'Wages for Personnel' as a lump sum", "Forex card statement", "LLP profit share drawings proof"],
+               correct: 1
+           },
+           {
+               q: "If a job ad stated a degree was mandatory, but you hired someone without it, what must you keep?",
+               options: ["A copy of a different qualification", "Nothing, as long as the salary is high", "Detailed reasons why you waived the requirement", "A signed waiver from the candidate"],
+               correct: 2
+           },
+           {
+               q: "How often must worker contact details (address/email) be updated?",
+               options: ["Once a year", "Every 6 months", "Only when the license renews", "They must always be kept up to date"],
+               correct: 3
+           },
+           {
+               q: "For sponsored workers aged under 16, what is the Right to Work requirement?",
+               options: ["Full share code check", "Check live eVisa and retain a screenshot", "No checks required for minors", "Parental bank statement"],
+               correct: 1
+           },
+           {
+               q: "When must the Right to Work check be completed?",
+               options: ["Within 48 hours of starting", "Before the worker starts working", "At the end of the first week", "On the day the CoS is assigned"],
+               correct: 1
+           }
+       ];
+
+
+       let state = {
+           currentQ: 0,
+           score: 0
+       };
+
+
+       function startQuiz() {
+           document.getElementById('quiz-intro').classList.add('hidden');
+           document.getElementById('quiz-content').classList.remove('hidden');
+           showQuestion();
+       }
+
+
+       function showQuestion() {
+           const q = quizData[state.currentQ];
+           document.getElementById('quiz-q-number').innerText = `Question ${state.currentQ + 1} of 10`;
+           document.getElementById('quiz-q-text').innerText = q.q;
+           document.getElementById('quiz-progress-bar').style.width = `${(state.currentQ / 10) * 100}%`;
+          
+           const optionsContainer = document.getElementById('quiz-options');
+           optionsContainer.innerHTML = '';
+          
+           q.options.forEach((opt, idx) => {
+               const btn = document.createElement('button');
+               btn.className = 'quiz-option w-full text-left p-4 rounded-2xl border-2 border-slate-100 bg-slate-50 hover:bg-white hover:border-blue-500 hover:shadow-md transition-all text-slate-700 text-sm font-bold flex justify-between items-center group';
+               btn.innerHTML = `<span>${opt}</span><span class="opacity-0 group-hover:opacity-100 transition-opacity text-blue-500">→</span>`;
+               btn.onclick = () => selectOption(idx);
+               optionsContainer.appendChild(btn);
+           });
+       }
+
+
+       function selectOption(idx) {
+           if (idx === quizData[state.currentQ].correct) {
+               state.score++;
+           }
+          
+           state.currentQ++;
+           if (state.currentQ < quizData.length) {
+               showQuestion();
+           } else {
+               showResults();
+           }
+       }
+
+
+       function showResults() {
+           document.getElementById('quiz-content').classList.add('hidden');
+           document.getElementById('quiz-results').classList.remove('hidden');
+           document.getElementById('quiz-progress-bar').style.width = '100%';
+          
+           const score = state.score;
+           document.getElementById('quiz-score-text').innerText = `${score}/10`;
+          
+           let revocation = 0;
+           let icon = '🚫';
+           let iconBg = 'bg-red-100 text-red-600';
+           let verdict = '';
+           let riskClass = 'risk-high';
+
+
+           if (score === 10) {
+               revocation = 5;
+               verdict = "Expert level. Your understanding of Appendix D is excellent, though physical record-keeping errors can still occur.";
+               riskClass = 'risk-low';
+               icon = '✅';
+               iconBg = 'bg-emerald-100 text-emerald-600';
+           }
+           else if (score >= 8) {
+               revocation = 25;
+               verdict = "Minor knowledge gaps detected. While your license is likely safe, a Compliance Officer may find technical breaches in your files.";
+               riskClass = 'risk-med';
+               icon = '⚠️';
+               iconBg = 'bg-amber-100 text-amber-600';
+           }
+           else if (score >= 6) {
+               revocation = 55;
+               verdict = "High risk. You have missed key mandatory updates from March 2026. This level of error often leads to licence suspension and an Action Plan.";
+               riskClass = 'risk-med';
+               icon = '⚠️';
+               iconBg = 'bg-amber-100 text-amber-600';
+           }
+           else {
+               revocation = 90;
+               verdict = "Critical failure. Your current record-keeping processes are likely illegal under current Home Office guidance. Revocation is the standard outcome for these knowledge gaps.";
+               riskClass = 'risk-high';
+           }
+
+
+           const riskEl = document.getElementById('revocation-chance');
+           riskEl.innerText = `${revocation}%`;
+           riskEl.className = `text-6xl font-black mb-1 ${riskClass}`;
+          
+           const iconEl = document.getElementById('risk-icon');
+           iconEl.innerText = icon;
+           iconEl.className = `inline-flex items-center justify-center w-20 h-20 rounded-full text-4xl mb-4 ${iconBg}`;
+          
+           document.getElementById('quiz-verdict').innerText = verdict;
+       }
+
+
+       function submitLead() {
+           document.getElementById('quiz-gate').classList.add('hidden');
+           document.getElementById('success-msg').classList.remove('hidden');
+           // Form submission logic would go here
+       }
+   </script>
+</body>
+</html>

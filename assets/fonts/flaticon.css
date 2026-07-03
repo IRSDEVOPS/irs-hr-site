@@ -1,0 +1,80 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("./flaticon.ttf?5eb0fd03d3c4df4dff354adfc502c928") format("truetype"),
+url("./flaticon.woff?5eb0fd03d3c4df4dff354adfc502c928") format("woff"),
+url("./flaticon.woff2?5eb0fd03d3c4df4dff354adfc502c928") format("woff2"),
+url("./flaticon.eot?5eb0fd03d3c4df4dff354adfc502c928#iefix") format("embedded-opentype"),
+url("./flaticon.svg?5eb0fd03d3c4df4dff354adfc502c928#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-magnifying-glass:before {
+    content: "\f101";
+}
+.flaticon-right-arrow:before {
+    content: "\f102";
+}
+.flaticon-passport:before {
+    content: "\f103";
+}
+.flaticon-passport-1:before {
+    content: "\f104";
+}
+.flaticon-file:before {
+    content: "\f105";
+}
+.flaticon-customer-service:before {
+    content: "\f106";
+}
+.flaticon-family:before {
+    content: "\f107";
+}
+.flaticon-work-from-home:before {
+    content: "\f108";
+}
+.flaticon-travel:before {
+    content: "\f109";
+}
+.flaticon-phone-call:before {
+    content: "\f10a";
+}
+.flaticon-international-business:before {
+    content: "\f10b";
+}
+.flaticon-badge:before {
+    content: "\f10c";
+}
+.flaticon-online-payment:before {
+    content: "\f10d";
+}
+.flaticon-contact-form:before {
+    content: "\f10e";
+}
+.flaticon-document:before {
+    content: "\f10f";
+}
+.flaticon-visa:before {
+    content: "\f110";
+}
+.flaticon-travel-1:before {
+    content: "\f111";
+}
+.flaticon-reading:before {
+    content: "\f112";
+}
+.flaticon-pdf:before {
+    content: "\f113";
+}
+.flaticon-message:before {
+    content: "\f114";
+}

@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRS HR | The 2026 Sponsor Licence Survival Course</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Fav Icon -->
+    <link rel="icon" href="assets/images/favicon.webp" type="image/x-icon">
+    <!-- !-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T8ZKXHXF1K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-T8ZKXHXF1K');
+    </script>
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(6px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.35s ease-out forwards;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            /* slate-50 */
+            color: #0f172a;
+            /* slate-900 */
+        }
+
+        .bg-amber-600,
+        .bg-amber-500 {
+            --tw-bg-opacity: 1;
+            background-color: rgb(156 136 80) !important;
+        }
+
+        .text-amber-500 {
+            color: rgb(156 136 80) !important;
+        }
+
+        .hover\:bg-amber-600:hover {
+            --tw-bg-opacity: 1;
+            background-color: rgb(120 98 36) !important;
+        }
+
+        .focus\:ring-amber-500:focus {
+            --tw-ring-opacity: 1;
+            --tw-ring-color: rgb(156 136 80) !important;
+        }
+
+        .focus\:ring-2:focus {
+            --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+            --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) rgb(156 136 80) !important;
+            box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+        }
+
+        .focus\:border-amber-500:focus {
+            --tw-border-opacity: 1;
+            border-color: rgb(156 136 80) !important;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+
+        .module-content {
+            display: none;
+            animation: fadeIn 0.4s ease-in-out forwards;
+        }
+
+
+        .module-content.active {
+            display: block;
+        }
+
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        .nav-item.active {
+            background-color: #1e293b;
+            /* slate-800 */
+            color: rgb(156 136 80);
+            /* amber-500 */
+            border-left: 4px solid rgb(156 136 80);
+        }
+
+
+        .nav-item.completed .status-icon {
+            color: #10b981;
+            /* emerald-500 */
+        }
+    </style>
+</head>
+
+<body class="flex h-screen overflow-hidden bg-slate-50">
+
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-slate-900 text-slate-300 flex flex-col hidden md:flex shrink-0 z-20 shadow-xl">
+        <div class="p-6 border-b border-slate-800">
+            <div class="flex items-center space-x-2 mb-2">
+                <figure class="logo h-20"><a href="index.html"><img class="w-14" src="assets/images/logo.webp"
+                            alt=""></a>
+                </figure>
+            </div>
+            <p class="text-[12px] uppercase tracking-widest text-slate-500 font-bold">2026 DIY Course</p>
+        </div>
+
+
+        <div class="p-4 border-b border-slate-800">
+            <div class="flex justify-between items-center mb-2">
+                <span class="text-xs font-bold uppercase text-slate-400">Course Progress</span>
+                <span id="progress-text" class="text-xs font-bold text-amber-500">0%</span>
+            </div>
+            <div class="w-full bg-slate-800 rounded-full h-2">
+                <div id="progress-bar" class="bg-amber-500 h-2 rounded-full transition-all duration-500"
+                    style="width: 0%"></div>
+            </div>
+        </div>
+
+
+        <nav class="flex-1 overflow-y-auto py-4 space-y-1" id="sidebar-nav">
+            <!-- Navigation items injected via JS to keep HTML clean -->
+        </nav>
+
+
+        <div class="p-4 border-t border-slate-800">
+            <div class="bg-slate-800 p-4 rounded-xl text-center">
+                <p class="text-xs text-slate-400 mb-3">Need legal verification for your CoS allocation?</p>
+                <a href="tel:0333 577 4771"> <button
+                        class="w-full py-2 bg-amber-600 hover:bg-amber-500 text-white rounded text-xs font-bold uppercase tracking-wider transition">Contact
+                        Solicitors</button></a>
+            </div>
+        </div>
+    </aside>
+
+
+    <!-- Main Content Area -->
+    <div class="flex-1 flex flex-col h-screen overflow-hidden relative">
+
+        <!-- Mobile Header -->
+        <header class="md:hidden bg-slate-900 text-white p-4 flex justify-between items-center z-20 shadow-md">
+            <div class="flex items-center space-x-2">
+                <span class="text-lg font-bold tracking-tight uppercase">IRS <span
+                        class="text-amber-500">HR</span></span>
+            </div>
+            <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </header>
+
+
+        <!-- Mobile Dropdown Nav (Hidden by default) -->
+        <div id="mobile-nav"
+            class="md:hidden hidden absolute top-14 left-0 w-full bg-slate-900 z-30 border-b border-slate-800 shadow-xl max-h-[80vh] overflow-y-auto">
+            <nav class="py-2" id="mobile-sidebar-nav">
+                <!-- Mirrored navigation items -->
+            </nav>
+        </div>
+
+
+        <!-- Main Scrolling Content -->
+        <main class="flex-1 overflow-y-auto bg-slate-50 p-6 md:p-12" id="main-content">
+            <div class="max-w-3xl mx-auto pb-20">
+
+                <!-- Module 1 -->
+                <div id="module-1" class="module-content active">
+                    <div class="bg-slate-900 text-white p-8 rounded-2xl shadow-lg">
+                        <h2 class="text-3xl font-bold mb-4">The 2026 Sponsor Licence Survival Course</h2>
+                        <p class="text-xl text-slate-300">A DIY Course on Acing Your Home Office Audit</p>
+                    </div>
+                    <div class="prose prose-slate max-w-none">
+
+
+                        <div id="lead-capture-container"
+                            class="mt-10 bg-gradient-to-br from-slate-900 to-slate-800 p-8 rounded-3xl shadow-2xl border border-slate-700 mb-8 relative overflow-hidden transition-all duration-500">
+                            <!-- Decorative background -->
+                            <div
+                                class="absolute top-0 right-0 -mr-12 -mt-12 w-40 h-40 rounded-full bg-amber-500 opacity-20 blur-3xl">
+                            </div>
+
+                            <div class="relative z-10 text-center mb-8">
+                                <div
+                                    class="w-14 h-14 bg-amber-500/20 text-amber-500 rounded-full flex items-center justify-center mx-auto mb-4 border border-amber-500/30">
+                                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8V7z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-2xl md:text-3xl font-black text-white mb-3">Access the full 2026 Sponsor Licence survival Master Course</h3>
+                                <p class="text-slate-300 text-sm md:text-base max-w-lg mx-auto">Understand exactly what the Home Office expects you do, learn the missed duties and enhance your sponsor compliance </p>
+                                <p class="text-slate-300 text-sm md:text-base max-w-lg mx-auto mt-6"><b>Earn certification by completing the course </b></p>
+                            </div>
+
+
+                            <form id="unlock-form" class="space-y-5 max-w-md mx-auto relative z-10"
+                                onsubmit="handleUnlock(event)" method="POST" data-email="pc@irslimited.co.uk"
+                                action="https://script.google.com/macros/s/AKfycbyL5XB3vYExKxrriIoTOtiCv8C0JejOeHcHZ8vHIW_E-Th6CAVzwcue3jw7eCh-M3bjxg/exec">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
+                                        Full Name
+                                    </label>
+                                    <input type="text" required name="fullname"
+                                        class="w-full p-4 bg-slate-900/60 border border-slate-600 rounded-xl text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition placeholder-slate-500 shadow-inner"
+                                        placeholder="John Smith">
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Business
+                                        Email</label>
+                                    <input type="email" required
+                                        class="w-full p-4 bg-slate-900/60 border border-slate-600 rounded-xl text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition placeholder-slate-500 shadow-inner"
+                                        placeholder="director@company.co.uk" name="email">
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Phone
+                                        Number</label>
+                                    <input type="tel" required
+                                        class="w-full p-4 bg-slate-900/60 border border-slate-600 rounded-xl text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition placeholder-slate-500 shadow-inner"
+                                        placeholder="07000 000000" name="phone">
+                                </div>
+                                <div>
+                                    <label
+                                        class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Number
+                                        of Employees</label>
+                                    <div class="relative">
+                                        <select required name="employees"
+                                            class="w-full p-4 bg-slate-900/60 border border-slate-600 rounded-xl text-white focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none transition appearance-none shadow-inner">
+                                            <option value="" disabled selected>Select company size...</option>
+                                            <option value="1-5">1 - 5 Employees</option>
+                                            <option value="1-20">1 - 20 Employees</option>
+                                            <option value="1-50">1 - 50 Employees</option>
+                                            <option value="1-100">1 - 100 Employees</option>
+                                            <option value="1-160">1 - 160 Employees</option>
+                                            <option value="160+">160+ Employees</option>
+                                        </select>
+                                        <div
+                                            class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-400">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M19 9l-7 7-7-7"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit"
+                                    class="w-full py-4 bg-amber-500 hover:bg-amber-400 text-slate-900 font-black text-lg rounded-xl shadow-[0_0_20px_rgba(245,158,11,0.3)] transition-all transform hover:-translate-y-1 mt-6 flex justify-center items-center">
+                                    Unlock Full Access
+                                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                    </svg>
+                                </button>
+                                <p class="text-[10px] text-slate-500 text-center mt-4">By unlocking, you agree to IRS
+                                    HR's terms and privacy policy regarding communications.</p>
+                            </form>
+                        </div>
+
+
+                        <div id="gated-content" class="hidden opacity-0 transition-opacity duration-700 ease-in-out">
+                            <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 mt-10">
+                                <h3 class="text-2xl font-bold text-slate-800 mb-6 border-b pb-4">The Silent Killers of
+                                    UK Sponsor Licences</h3>
+                                <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                                    <strong class="text-slate-900">Most sponsor licences aren't revoked for fraud.
+                                        They're revoked for record-keeping.</strong>
+                                </p>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                                    <div class="bg-red-50 p-4 rounded-xl border border-red-100">
+                                        <i data-lucide="file-check" class="w-8 h-8 text-red-500 mb-3"></i>
+                                        <p class="text-sm text-red-900 font-medium">A single right-to-work check missing
+                                            from the file</p>
+                                    </div>
+                                    <div class="bg-orange-50 p-4 rounded-xl border border-orange-100">
+                                        <i data-lucide="briefcase" class="w-8 h-8 text-orange-500 mb-3"></i>
+                                        <p class="text-sm text-orange-900 font-medium">A salary change that didn't reach
+                                            the Sponsor Management System</p>
+                                    </div>
+                                    <div class="bg-amber-50 p-4 rounded-xl border border-amber-100">
+                                        <i data-lucide="alert-triangle" class="w-8 h-8 text-amber-500 mb-3"></i>
+                                        <p class="text-sm text-amber-900 font-medium">A CoS reported just four days late
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="bg-red-600 text-white p-6 rounded-xl shadow-md flex items-start space-x-4">
+                                    <i data-lucide="alert-triangle" class="w-10 h-10 flex-shrink-0"></i>
+                                    <div>
+                                        <h4 class="text-xl font-bold mb-2">The £45,000 Reality Check</h4>
+                                        <p class="text-red-100">
+                                            With Home Office compliance audits intensifying in 2026, the stakes have
+                                            never been higher. Anything missing, late, or inconsistent can trigger a
+                                            fine starting at <strong>£45,000 per breach</strong>, and in serious cases,
+                                            lead to a completely revoked sponsor licence.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Module 2 -->
+                <div id="module-2" class="module-content">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-2">Inside the Mind of a 2026 Auditor</h2>
+                    <p class="text-slate-600 text-lg mb-8">When a Home Office compliance officer reviews your business,
+                        they are looking for a sponsor file that holds together perfectly under questioning. They
+                        cross-reference everything.</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div
+                            class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                            <div class="flex items-center space-x-3 mb-4">
+                                <div class="p-3 bg-blue-100 rounded-lg"><i data-lucide="file-check"
+                                        class="w-6 h-6 text-blue-600"></i></div>
+                                <h3 class="text-xl font-bold text-slate-800">Flawless RTW Checks</h3>
+                            </div>
+                            <p class="text-slate-600">Right-to-Work checks must be dated correctly, with all statutory
+                                excuses perfectly documented and stored.</p>
+                        </div>
+
+                        <div
+                            class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                            <div class="flex items-center space-x-3 mb-4">
+                                <div class="p-3 bg-blue-100 rounded-lg"><i data-lucide="briefcase"
+                                        class="w-6 h-6 text-blue-600"></i></div>
+                                <h3 class="text-xl font-bold text-slate-800">Employment Contracts</h3>
+                            </div>
+                            <p class="text-slate-600">Must align exactly with the details stated on the worker's
+                                Certificate of Sponsorship (CoS). No discrepancies allowed.</p>
+                        </div>
+
+                        <div
+                            class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                            <div class="flex items-center space-x-3 mb-4">
+                                <div class="p-3 bg-blue-100 rounded-lg"><i data-lucide="check-circle"
+                                        class="w-6 h-6 text-blue-600"></i></div>
+                                <h3 class="text-xl font-bold text-slate-800">Payroll Records</h3>
+                            </div>
+                            <p class="text-slate-600">Proof that the migrant worker is being paid exactly what you
+                                promised on the SMS, matching their bank statements and payslips.</p>
+                        </div>
+
+                        <div
+                            class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                            <div class="flex items-center space-x-3 mb-4">
+                                <div class="p-3 bg-blue-100 rounded-lg"><i data-lucide="users"
+                                        class="w-6 h-6 text-blue-600"></i></div>
+                                <h3 class="text-xl font-bold text-slate-800">A Cohesive Narrative</h3>
+                            </div>
+                            <p class="text-slate-600">If HR says one thing, but payroll shows another, you will face
+                                heavy scrutiny. Systems must speak the same language.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Module 3 -->
+                <div id="module-3" class="module-content">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-2">The Most Missed Reporting Duties</h2>
+                    <p class="text-slate-600 text-lg mb-8">Auditors know exactly where to look because sponsors make the
+                        same mistakes year after year. The SMS requires real-time accuracy.</p>
+
+                    <div class="space-y-4">
+                        <div class="flex bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                            <div class="flex-shrink-0 mr-6">
+                                <div
+                                    class="w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center font-bold text-xl">
+                                    1</div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-800 mb-2">The "Late" CoS</h3>
+                                <p class="text-slate-600">A worker changes roles, gets a promotion, or moves office, and
+                                    it is reported to the Home Office four days late. (You have exactly 10 working days
+                                    to report changes).</p>
+                            </div>
+                        </div>
+                        <div class="flex bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                            <div class="flex-shrink-0 mr-6">
+                                <div
+                                    class="w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center font-bold text-xl">
+                                    2</div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-800 mb-2">Unreported Salary Changes</h3>
+                                <p class="text-slate-600">Giving your sponsored worker a pay rise (or a pay cut) and
+                                    forgetting to update the SMS. Payroll knows, but the Home Office doesn't.</p>
+                            </div>
+                        </div>
+                        <div class="flex bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                            <div class="flex-shrink-0 mr-6">
+                                <div
+                                    class="w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center font-bold text-xl">
+                                    3</div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-800 mb-2">Missing RTW Expiry Tracking</h3>
+                                <p class="text-slate-600">Failing to conduct follow-up checks on workers with
+                                    time-limited visas before their current leave expires.</p>
+                            </div>
+                        </div>
+                        <div class="flex bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                            <div class="flex-shrink-0 mr-6">
+                                <div
+                                    class="w-12 h-12 bg-slate-900 text-white rounded-full flex items-center justify-center font-bold text-xl">
+                                    4</div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-800 mb-2">Ghost Workers</h3>
+                                <p class="text-slate-600">Sponsored employees who fail to turn up for their first day of
+                                    work, but the sponsor forgets to report the no-show via the SMS.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Module 4 -->
+                <div id="module-4" class="module-content">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-2">Early Warning Signs & First Steps</h2>
+                    <p class="text-slate-600 text-lg mb-8">Is your licence currently at risk? Recognize these red flags
+                        before the Home Office knocks on your door.</p>
+
+                    <div class="bg-red-50 p-8 rounded-2xl border border-red-100 mb-8">
+                        <h3 class="text-2xl font-bold text-red-900 mb-6 flex items-center">
+                            <i data-lucide="alert-triangle" class="mr-3"></i> The Red Flags
+                        </h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="bg-red-200 p-1 rounded mt-1 mr-4"><i data-lucide="circle"
+                                        class="w-3 h-3 text-red-600 fill-current"></i></div>
+                                <p class="text-red-900"><strong>Siloed Information:</strong> HR holds the contracts,
+                                    Finance holds the payroll, and Operations manages the day-to-day shifts, but none of
+                                    the systems talk to each other.</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-red-200 p-1 rounded mt-1 mr-4"><i data-lucide="circle"
+                                        class="w-3 h-3 text-red-600 fill-current"></i></div>
+                                <p class="text-red-900"><strong>Spreadsheet Reliance:</strong> You are relying on manual
+                                    calendar reminders or Excel sheets to track visa expiry dates and reporting
+                                    deadlines.</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-red-200 p-1 rounded mt-1 mr-4"><i data-lucide="circle"
+                                        class="w-3 h-3 text-red-600 fill-current"></i></div>
+                                <p class="text-red-900"><strong>Key-Person Dependency:</strong> Only one person in the
+                                    entire business knows how to log into the SMS or understands the CoS allocation
+                                    process.</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-4 flex items-center">
+                            <i data-lucide="lightbulb" class="mr-3 text-amber-500"></i> Your First Step: The Mock Audit
+                        </h3>
+                        <p class="text-slate-600 text-lg">
+                            Pull three random sponsored worker files and cross-reference their CoS, employment contract,
+                            most recent payslip, and RTW check. If there is even <em>one</em> discrepancy, your systems
+                            need an overhaul immediately.
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- Module 5 -->
+                <div id="module-5" class="module-content">
+                    <h2 class="text-3xl font-bold text-slate-800 mb-2">Spreading Compliance (Without Adding Admin)</h2>
+                    <p class="text-slate-600 text-lg mb-8">You cannot afford to have compliance sit solely on the
+                        shoulders of one stressed HR manager. But you also can't expect Operations to learn immigration
+                        law.</p>
+
+                    <div class="bg-gradient-to-r from-blue-900 to-slate-900 text-white p-8 rounded-2xl shadow-lg mb-8">
+                        <h3 class="text-2xl font-bold mb-4">The Solution: Decentralize through Automation</h3>
+                        <p class="text-blue-100 text-lg">To survive a 2026 audit, compliance must be woven into your
+                            daily operations invisibly.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-t-blue-500">
+                            <h4 class="text-xl font-bold text-slate-800 mb-3">Managers</h4>
+                            <p class="text-slate-600">Should be prompted automatically if a sponsored worker has
+                                excessive unauthorized absences (triggering a reporting duty).</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-t-indigo-500">
+                            <h4 class="text-xl font-bold text-slate-800 mb-3">HR Teams</h4>
+                            <p class="text-slate-600">Should have a centralized dashboard that flags upcoming visa
+                                expirations 90, 60, and 30 days in advance.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-t-purple-500">
+                            <h4 class="text-xl font-bold text-slate-800 mb-3">Payroll</h4>
+                            <p class="text-slate-600">Integration ensures that any salary adjustments are immediately
+                                flagged for SMS reporting without manual emails.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Case Studies -->
+                <div id="module-6" class="module-content">
+                    <div class="text-center mb-10">
+                        <h2 class="text-4xl font-bold text-slate-900 mb-4">Welcome to the Forefront of Sponsor
+                            Compliance</h2>
+                        <p class="text-xl text-slate-600 max-w-2xl mx-auto">Knowing the rules is one thing; having the
+                            infrastructure to enforce them flawlessly is another.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-3xl shadow-xl border border-slate-100 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-2 h-full bg-blue-600"></div>
+                        <p class="text-lg text-slate-700 mb-8 leading-relaxed">
+                            That is why <strong class="text-blue-700 text-xl">IRS HR</strong> is at the absolute
+                            forefront of helping sponsor licence holders. We provide a solution that no one else in the
+                            UK is doing: a seamless combination of <strong>smart tech, automation, and a dedicated panel
+                                of solicitors</strong> providing expert immigration advice.
+                        </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                                <h4 class="font-bold text-slate-800 text-lg mb-2">Smart Tech & Automation</h4>
+                                <p class="text-slate-600 text-sm">Our systems replace manual spreadsheets, automating
+                                    RTW tracking, SMS reporting prompts, and discrepancy alerts.</p>
+                            </div>
+                            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                                <h4 class="font-bold text-slate-800 text-lg mb-2">Expert Solicitor Panel</h4>
+                                <p class="text-slate-600 text-sm">You aren't just relying on software. You have
+                                    immediate access to top-tier immigration solicitors who understand Home Office
+                                    audits.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col md:flex-row gap-4 justify-center mb-12">
+                            <a href="https://irshr.co.uk/IRS-HR-Home-Office-audit-Tool.html" target="_blank"
+                                rel="noreferrer"
+                                class="flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold transition shadow-lg shadow-blue-200">
+                                <span>Take the Audit Diagnostic</span>
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
+                            <a href="https://irshr.co.uk/IRS-HR-CoS-Course.html" target="_blank" rel="noreferrer"
+                                class="flex items-center justify-center space-x-2 bg-slate-800 hover:bg-slate-900 text-white px-8 py-4 rounded-xl font-bold transition shadow-lg">
+                                <span>Master the CoS Course</span>
+                                <i data-lucide="external-link" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+
+                        <div class="bg-slate-900 text-white p-8 rounded-2xl italic relative">
+    <div class="text-5xl text-slate-700 absolute top-4 left-4 opacity-50">"</div>
+
+    <!-- Google-style stars -->
+    <div class="flex justify-center items-center gap-1 mb-4 relative z-10">
+        <svg class="w-6 h-6 text-yellow-400 fill-current" viewBox="0 0 20 20">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81H7.03a1 1 0 00.95-.69l1.07-3.292z"/>
+        </svg>
+        <svg class="w-6 h-6 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81H7.03a1 1 0 00.95-.69l1.07-3.292z"/></svg>
+        <svg class="w-6 h-6 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81H7.03a1 1 0 00.95-.69l1.07-3.292z"/></svg>
+        <svg class="w-6 h-6 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81H7.03a1 1 0 00.95-.69l1.07-3.292z"/></svg>
+        <svg class="w-6 h-6 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.176 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81H7.03a1 1 0 00.95-.69l1.07-3.292z"/></svg>
+    </div>
+
+    <p class="relative z-10 text-lg text-slate-300 leading-relaxed text-center mb-6">
+       We got to know this company at exactly the right time when we were preparing for our staff visa renewals. Their system has been a great support in helping us organise all our staff information in one place, making documents easy to access, review, and manage. The team has also been very supportive, knowledgeable, and responsive whenever we needed guidance. As a care provider, having a reliable system that supports organisation and compliance gives us confidence and peace of mind.
+    </p>
+
+    <div class="text-center font-bold text-blue-400">
+        — Winnie Machazire, Director, Ignite Health Care Ltd
+    </div>
+
+    <div class="text-center text-sm text-slate-500 mt-2">
+        Google Review
+    </div>
+</div>
+                        <div class="flex flex-col md:flex-row gap-4 justify-center mb-12 mt-10">
+                         <a href="https://irshr.co.uk/Record-Sponsor-Licence-Revocations.html#assessment" target="_blank"
+                                rel="noreferrer"
+                                class="flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold transition shadow-lg shadow-blue-200">
+                                <span>Meet IRS HR for a FREE Short Audit and Compliance Check</span>
+                                </i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Footer Navigation -->
+                <div class="mt-12 pt-8 border-t border-slate-200 flex justify-between items-center pb-8">
+                    <button id="prev-btn"
+                        class="px-6 py-3 text-sm font-bold text-slate-500 hover:text-slate-800 transition hidden">←
+                        Previous</button>
+                    <div class="flex-1"></div>
+                    <button id="next-btn"
+                        class="px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-xl text-sm font-bold transition shadow-md shadow-amber-500/20">Mark
+                        Complete & Continue →</button>
+                </div>
+
+
+            </div>
+        </main>
+    </div>
+
+
+    <script>
+        lucide.createIcons();
+        // Course Data Structure
+        const courseModules = [
+            { id: 1, title: 'Introduction: The 2026 Reality', shortTitle: 'The 2026 Reality' },
+            { id: 2, title: 'Module 1: The Auditors Mind', shortTitle: 'The Auditors Mind' },
+            { id: 3, title: 'Module 2: The Most Missed Duties', shortTitle: 'The Most Missed Duties' },
+            { id: 4, title: 'Module 3: Early Warning Signs', shortTitle: 'Early Warning Signs' },
+            { id: 5, title: 'Module 4: Spreading Compliance', shortTitle: 'Spreading Compliance' },
+            { id: 6, title: 'The IRS HR Advantage', shortTitle: 'The IRS HR Advantage' }
+        ];
+
+
+        let currentModuleId = 1;
+        let completedModules = new Set();
+        let isUnlocked = false; // Tracks if user has filled the form
+
+
+        // DOM Elements
+        const sidebarNav = document.getElementById('sidebar-nav');
+        const mobileSidebarNav = document.getElementById('mobile-sidebar-nav');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const progressBar = document.getElementById('progress-bar');
+        const progressText = document.getElementById('progress-text');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileNav = document.getElementById('mobile-nav');
+
+
+        // Initialization
+        function initCourse() {
+            renderNavigation();
+            showModule(currentModuleId);
+            runCalculator(); // Init calculator values
+        }
+
+
+        // Render Navigation dynamically
+        function renderNavigation() {
+            const createNavHTML = () => {
+                return courseModules.map(m => {
+                    const isLocked = !isUnlocked && m.id > 1;
+
+                    let iconSVG = `<span class="text-[10px] border border-slate-600 rounded-full w-4 h-4 flex items-center justify-center">${m.id}</span>`;
+
+                    if (completedModules.has(m.id)) {
+                        iconSVG = '<svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>';
+                    } else if (isLocked) {
+                        iconSVG = '<svg class="w-4 h-4 text-slate-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path></svg>';
+                    }
+
+
+                    return `
+                   <a href="#" onclick="goToModule(${m.id}); return false;"
+                      id="nav-item-${m.id}"
+                      class="nav-item flex items-center px-6 py-3 text-sm font-medium border-l-4 border-transparent hover:bg-slate-800 transition-colors ${isLocked ? 'opacity-50 hover:bg-transparent cursor-not-allowed' : ''}">
+                       <span class="status-icon w-5 h-5 mr-3 flex-shrink-0 text-slate-600 flex items-center justify-center">
+                           ${iconSVG}
+                       </span>
+                       ${m.shortTitle}
+                   </a>
+               `}).join('');
+            };
+
+
+            sidebarNav.innerHTML = createNavHTML();
+            mobileSidebarNav.innerHTML = createNavHTML();
+            updateNavStyling();
+        }
+
+
+        function updateNavStyling() {
+            document.querySelectorAll('.nav-item').forEach(el => {
+                el.classList.remove('active');
+            });
+
+            // Desktop active
+            const activeDesktop = document.getElementById(`nav-item-${currentModuleId}`);
+            if (activeDesktop) activeDesktop.classList.add('active');
+
+            // Mobile active (mirrored structure)
+            const mobileItems = mobileSidebarNav.querySelectorAll('.nav-item');
+            if (mobileItems[currentModuleId - 1]) {
+                mobileItems[currentModuleId - 1].classList.add('active');
+            }
+        }
+
+
+        // Navigation Logic
+        function goToModule(id) {
+            if (!isUnlocked && id > 1) {
+                // User is trying to access a locked module
+                const formContainer = document.getElementById('lead-capture-container');
+                formContainer.classList.add('ring-4', 'ring-amber-500', 'ring-offset-4', 'ring-offset-slate-50');
+                formContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                // Remove the highlight ring after a moment
+                setTimeout(() => {
+                    formContainer.classList.remove('ring-4', 'ring-amber-500', 'ring-offset-4', 'ring-offset-slate-50');
+                }, 1500);
+
+                return;
+            }
+
+
+            currentModuleId = id;
+            showModule(id);
+            mobileNav.classList.add('hidden'); // Close mobile menu if open
+        }
+
+
+        function showModule(id) {
+            // Hide all
+            document.querySelectorAll('.module-content').forEach(el => {
+                el.classList.remove('active');
+            });
+
+            // Show target
+            document.getElementById(`module-${id}`).classList.add('active');
+
+            // Scroll to top of main content
+            document.getElementById('main-content').scrollTop = 0;
+
+
+            updateNavStyling();
+            updateButtons();
+        }
+
+
+        function updateButtons() {
+            // Prev Button
+            if (currentModuleId === 1) {
+                prevBtn.classList.add('hidden');
+            } else {
+                prevBtn.classList.remove('hidden');
+                prevBtn.onclick = () => goToModule(currentModuleId - 1);
+            }
+
+
+            // Next / Complete Button
+            if (currentModuleId === courseModules.length) {
+
+                // const certificateId = 'COS-' + Date.now();
+
+                // localStorage.setItem('certificateData', JSON.stringify({
+                //     name: localStorage.getItem('studentName'),
+                //     certificateId: certificateId,
+                //     date: new Date().toLocaleDateString('en-GB')
+                // }));
+
+                // setTimeout(() => {
+                //     window.location.href = "certificate.html";
+                // }, 4000);
+
+                if (completedModules.has(currentModuleId)) {
+                    nextBtn.innerText = "Course Completed ✓";
+                    nextBtn.classList.replace('bg-amber-500', 'bg-emerald-500');
+                    nextBtn.classList.replace('hover:bg-amber-600', 'hover:bg-emerald-400');
+                } else {
+                    nextBtn.innerText = "Finish Course";
+                }
+            } else {
+                nextBtn.innerText = completedModules.has(currentModuleId) ? "Continue →" : "Mark Complete & Continue →";
+                nextBtn.classList.replace('bg-emerald-500', 'bg-amber-500');
+                nextBtn.classList.replace('hover:bg-emerald-400', 'hover:bg-amber-600');
+            }
+
+
+            nextBtn.onclick = handleNextAction;
+        }
+
+
+        function handleNextAction() {
+            if (!isUnlocked && currentModuleId === 1) {
+                const formContainer = document.getElementById('lead-capture-container');
+                formContainer.classList.add('ring-4', 'ring-amber-500', 'ring-offset-4', 'ring-offset-slate-50');
+                formContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                setTimeout(() => formContainer.classList.remove(
+                    'ring-4',
+                    'ring-amber-500',
+                    'ring-offset-4',
+                    'ring-offset-slate-50'
+                ), 1500);
+                return;
+            }
+
+            // Mark current module as complete
+            completedModules.add(currentModuleId);
+            updateProgress();
+            renderNavigation();
+
+
+            // Move to next module
+            if (currentModuleId < courseModules.length) {
+                goToModule(currentModuleId + 1);
+            } else {
+                // User clicked "Finish Course"
+
+                const certificateId = 'COS-' + Date.now();
+
+                localStorage.setItem('certificateData', JSON.stringify({
+                    name: localStorage.getItem('studentName'),
+                    certificateId: certificateId,
+                    date: new Date().toLocaleDateString('en-GB')
+                }));
+
+                // Redirect immediately or after a short delay
+                window.location.href = "certificate2.html";
+
+                setTimeout(() => {
+                    window.location.href = "certificate2.html";
+                }, 4000);
+            }
+
+
+            // Move to next if not at end
+            // if (currentModuleId < courseModules.length) {
+            //     goToModule(currentModuleId + 1);
+            // } else {
+            //     updateButtons(); // Update button to show "Course Completed"
+
+            //     // Redirect to dashboard after 6 seconds
+            //     setTimeout(() => {
+            //         window.location.href = "2026-CoS-Masterclass-Dashboard.html#assessment";
+            //     }, 4000);
+            // }
+
+
+        }
+
+
+        function updateProgress() {
+            const percentage = Math.round((completedModules.size / courseModules.length) * 100);
+            progressBar.style.width = `${percentage}%`;
+            progressText.innerText = `${percentage}%`;
+        }
+
+
+        // Calculator Logic (Module 3)
+        function runCalculator() {
+            const contract = parseFloat(document.getElementById('calc-contract').value) || 0;
+            const staff = parseFloat(document.getElementById('calc-staff').value) || 0;
+
+            const gap = Math.max(0, contract - staff);
+            const cos = (gap / 37.5).toFixed(1);
+
+
+            document.getElementById('calc-gap').innerText = `${gap.toLocaleString()} hrs`;
+            document.getElementById('calc-cos').innerText = cos;
+        }
+        function handleUnlock(e) {
+            e.preventDefault();
+
+            const form = document.getElementById('unlock-form');
+            const formData = new FormData(form);
+
+            // Save learner name for certificate
+            localStorage.setItem(
+                'studentName',
+                formData.get('fullname')
+            );
+
+            const btn = form.querySelector('button[type="submit"]');
+
+            // Loading state
+            btn.disabled = true;
+            btn.innerHTML = 'Submitting...';
+
+            // Send form in background immediately
+            fetch(form.action, {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.text())
+                .then(data => {
+                    console.log('Lead submitted successfully');
+                })
+                .catch(error => {
+                    console.error('Submission failed:', error);
+                });
+
+            // Show loading for 2 seconds
+            setTimeout(() => {
+
+                btn.innerHTML = '✓ Access Granted';
+
+                isUnlocked = true;
+
+                const container = document.getElementById('lead-capture-container');
+                const gatedContent = document.getElementById('gated-content');
+
+                container.classList.add('opacity-0', 'scale-95');
+
+                setTimeout(() => {
+                    container.style.display = 'none';
+
+                    gatedContent.classList.remove('hidden');
+                    void gatedContent.offsetWidth;
+                    gatedContent.classList.remove('opacity-0');
+
+                    renderNavigation();
+
+                    gatedContent.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }, 300);
+
+            }, 2000);
+        }
+
+        function unlockCourse() {
+
+            isUnlocked = true;
+
+            const container = document.getElementById('lead-capture-container');
+            const gatedContent = document.getElementById('gated-content');
+
+            container.style.display = 'none';
+
+            gatedContent.classList.remove('hidden');
+            gatedContent.classList.remove('opacity-0');
+
+            renderNavigation();
+
+            gatedContent.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        function handleUnlock2(e) {
+            e.preventDefault();
+
+            // In a production app, you would send the form data to your backend here.
+
+            isUnlocked = true;
+            const container = document.getElementById('lead-capture-container');
+            const gatedContent = document.getElementById('gated-content');
+
+            // Animate the form shrinking away
+            container.classList.add('opacity-0', 'scale-95');
+
+            setTimeout(() => {
+                // Hide the form completely
+                container.style.display = 'none';
+
+                // Show the rest of module 1
+                gatedContent.classList.remove('hidden');
+
+                // Force a browser reflow to ensure the transition applies
+                void gatedContent.offsetWidth;
+
+                gatedContent.classList.remove('opacity-0');
+
+                // Re-render the sidebar to remove the padlock icons
+                renderNavigation();
+
+                // Scroll down to reveal the newly unlocked content
+                gatedContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 500);
+        }
+
+
+        // Mobile Menu Toggle
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileNav.classList.toggle('hidden');
+        });
+
+
+        // Run Initialization
+        window.onload = initCourse;
+
+
+    </script>
+</body>
+
+</html>

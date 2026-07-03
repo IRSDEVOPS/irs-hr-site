@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRS HR Demo Feedback</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- !-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T8ZKXHXF1K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-T8ZKXHXF1K');
+    </script>
+    <link rel="canonical" href="https://irshr.co.uk/IRS-HR-Demo-Feedback.html" />
+    <!-- Fav Icon -->
+    <link rel="icon" href="assets/images/favicon.webp" type="image/x-icon">
+    <!-- <script src='https://www.noupe.com/embed/0198cc80082c7c66943d495e2b84a3f0d7a4.js'></script> -->
+    <style>
+        .honeypot-field {
+            display: none;
+        }
+
+        input[type="radio"]:checked+label {
+            background-color: #fffbec;
+        }
+
+        .gform-radio {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #555;
+            transition: 0.2s all linear;
+            margin-right: 12px;
+            position: relative;
+            top: 4px;
+        }
+
+        .gform-radio:checked {
+            border: 6px solid #d2c7a1;
+        }
+
+
+
+        /* Popup styles */
+        #popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        #popup-content {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #closePopup {
+            margin-top: 10px;
+            background: #28a745;
+        }
+
+        #closePopup:hover {
+            background: #1e7e34;
+        }
+    </style>
+</head>
+
+<body class="bg-green-50 font-sans">
+
+    <div class="container max-w-2xl mx-auto py-12 px-4">
+        <form class="gform pure-form pure-form-stacked" method="POST" data-email="pc@irslimited.co.uk"
+            action="https://script.google.com/macros/s/AKfycbzijr2RdimufW7405behHr7YaYrJGLTtw90sUWfx1B2EcmDQjdZQeNReFFPim3f0gbV/exec">
+            <!-- Header -->
+            <div class="form-elements">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden border-t-8 border-green-600 mb-6">
+                    <div class="p-8">
+                        <h1 class="text-3xl font-semibold mb-2">IRS HR: Post-Demo Feedback</h1>
+                        <p class="text-gray-700 mb-4">We value your time and feedback. This quick 1-minute feedback will
+                            help us understand your needs better.</p>
+                        <hr class="my-4">
+                        <p class="text-red-600 text-sm">* Indicates required question</p>
+                    </div>
+                </div>
+
+                <!-- Question 1 -->
+                <fieldset class="bg-white rounded-lg shadow-lg mb-4 p-8 pure-group">
+                    <label class="block text-lg font-medium text-gray-800 mb-4">
+                        1. Based on the demo, how well do you feel IRS HR can solve your specific sponsor compliance
+                        challenges? <span class="text-red-600">*</span>
+                    </label>
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center text-gray-600 px-2 pt-2">
+                        <span>1 (Not at all)</span>
+                        <div class="flex space-x-2 sm:space-x-4 my-2 sm:my-0">
+                            <label class="flex flex-col items-center w-full">
+                                <span class="text-sm">1</span>
+                                <input type="radio" name="q1_rating" value="1" class="gform-radio" required>
+                            </label>
+                            <label class="flex flex-col items-center w-full">
+                                <span class="text-sm">2</span>
+                                <input type="radio" name="q1_rating" value="2" class="gform-radio" required>
+                            </label>
+                            <label class="flex flex-col items-center w-full">
+                                <span class="text-sm">3</span>
+                                <input type="radio" name="q1_rating" value="3" class="gform-radio" required>
+                            </label>
+                            <label class="flex flex-col items-center w-full">
+                                <span class="text-sm">4</span>
+                                <input type="radio" name="q1_rating" value="4" class="gform-radio" required>
+                            </label>
+                            <label class="flex flex-col items-center w-full">
+                                <span class="text-sm">5</span>
+                                <input type="radio" name="q1_rating" value="5" class="gform-radio" required>
+                            </label>
+                        </div>
+                        <span>5 (Perfectly)</span>
+                    </div>
+                </fieldset>
+
+                <!-- Question 2 -->
+                <fieldset class="bg-white rounded-lg shadow-lg mb-4 p-8 pure-group">
+                    <label class="block text-lg font-medium text-gray-800 mb-3" for="q2_valuable">
+                        2. What features of IRS HR impressed you the most during your demo?
+                    </label>
+                    <textarea id="q2_valuable" name="q2_valuable"
+                        class="w-full mt-2 p-3 border-b-2 border-gray-300 focus:border-green-600 outline-none transition duration-200"
+                        rows="3" placeholder="Your answer"></textarea>
+                </fieldset>
+
+                <!-- Question 3 -->
+                <fieldset class="bg-white rounded-lg shadow-lg mb-4 p-8 pure-group">
+                    <label class="block text-lg font-medium text-gray-800 mb-3" for="q3_concerns">
+                        3. What, if anything, is your biggest remaining question or concern about moving forward with
+                        IRS
+                        HR?
+                    </label>
+                    <textarea id="q3_concerns" name="q3_concerns"
+                        class="w-full mt-2 p-3 border-b-2 border-gray-300 focus:border-green-600 outline-none transition duration-200"
+                        rows="3" placeholder="Your answer"></textarea>
+                </fieldset>
+
+                <!-- Question 4 -->
+                <fieldset class="bg-white rounded-lg shadow-lg mb-4 p-8 pure-group">
+                    <label class="block text-lg font-medium text-gray-800 mb-4">
+                        4. To help us plan our next steps, where do you see things going from here? <span
+                            class="text-red-600">*</span>
+                    </label>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <input type="radio" name="q4_next_steps" id="q4_a"
+                                value="I'm ready to subscribe. Please send me the sign-up link" class="gform-radio"
+                                required>
+                            <label for="q4_a" class="ml-2 text-gray-700">I'm ready to subscribe. Please send me the
+                                sign-up link.</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="radio" name="q4_next_steps" id="q4_b"
+                                value="I need to discuss this with my manager / team." class="gform-radio" required>
+                            <label for="q4_b" class="ml-2 text-gray-700">I need to discuss this with my manager /
+                                team.</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="radio" name="q4_next_steps" id="q4_c"
+                                value="I'm interested, but I need to review the pricing and package details again."
+                                class="gform-radio" required>
+                            <label for="q4_c" class="ml-2 text-gray-700">I'm interested, but I need to review the
+                                pricing and package details again.</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="radio" name="q4_next_steps" id="q4_d"
+                                value="We are still evaluating other options." class="gform-radio" required>
+                            <label for="q4_d" class="ml-2 text-gray-700">We are still evaluating other options.</label>
+                        </div>
+                        <div class="flex items-center">
+                            <input type="radio" name="q4_next_steps" id="q4_e"
+                                value="We don't think this is the right fit for us at this time." class="gform-radio"
+                                required>
+                            <label for="q4_e" class="ml-2 text-gray-700">We don't think this is the right fit for us at
+                                this time.</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- 🆕 Contact Information -->
+                <fieldset class="bg-white rounded-lg shadow-lg mb-4 p-8 pure-group">
+                    <label class="block text-lg font-medium text-gray-800 mb-3">
+                        5. Please share your contact information so we can follow up with you:
+                    </label>
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <input type="text" name="name" placeholder="Full Name"
+                            class="w-full p-3 border-b-2 border-gray-300 focus:border-green-600 outline-none transition duration-200"
+                            required>
+                        <input type="email" name="email" placeholder="Email Address"
+                            class="w-full p-3 border-b-2 border-gray-300 focus:border-green-600 outline-none transition duration-200"
+                            required>
+                    </div>
+                    <input type="text" name="company" placeholder="Company" required
+                        class="w-full mt-4 p-3 border-b-2 border-gray-300 focus:border-green-600 outline-none transition duration-200">
+                </fieldset>
+                <fieldset class="pure-group honeypot-field">
+                    <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field;
+                        must be empty
+                        to submit the form! Otherwise, we assume the user is a spam bot.</label>
+                    <input id="honeypot" type="text" name="honeypot" value="" />
+                </fieldset>
+
+                <!-- Submit -->
+                <div class="flex items-center justify-between mt-8">
+                    <button type="submit"
+                        class="bg-green-600 text-white font-semibold py-2 px-6 rounded-md shadow-md hover:bg-green-700 transition duration-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">
+                        Submit
+                    </button>
+                    <a href="#" onclick="document.getElementById('feedback-form').reset(); return false;"
+                        class="text-green-600 hover:underline">
+                        Clear form
+                    </a>
+                </div>
+            </div>
+            <!-- Customise the Thankyou Message People See when they submit the form: -->
+            <div class="thankyou_message" style="display:none;text-align: center;">
+
+                <br>
+                <br>
+                <h2 class="text-2xl font-semibold mb-4 text-green-700">Thank you for your submission</h2>
+                <br>
+                <a href="all-in-one-sponsor-compliance-software.html">
+                    <button type="button"
+                        class="bg-green-600 text-white font-semibold py-2 px-6 rounded-md shadow-md hover:bg-green-700 transition duration-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">
+                        All in One Sponsor Compliance Software
+                    </button>
+                </a>
+            </div>
+        </form>
+    </div>
+
+
+    <!-- Submit the Form to Google Using "AJAX" -->
+    <script data-cfasync="false" src="form-submission-handler.js"></script>
+    <!-- END -->
+
+
+    <!--Start of http://Tawk.to  Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/6930267874bc821971130461/1jbi1chql';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of http://Tawk.to  Script-->
+    
+
+</body>
+
+</html>

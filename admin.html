@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking Availability Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen p-6">
+
+  <div class="max-w-5xl mx-auto bg-white rounded-2xl shadow-xl p-8">
+    <h1 class="text-3xl font-bold text-gray-900 mb-2">Manage Blocked Booking Slots</h1>
+    <p class="text-gray-600 mb-8">
+      Add full blocked dates or block a time range for a specific date.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-4 mb-6">
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2">Date</label>
+        <input
+          type="date"
+          id="blockDate"
+          class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none"
+        />
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2">Start Time</label>
+        <input
+          type="time"
+          id="blockStart"
+          class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none"
+        />
+      </div>
+
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2">End Time</label>
+        <input
+          type="time"
+          id="blockEnd"
+          class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none"
+        />
+      </div>
+    </div>
+
+    <div class="flex flex-wrap gap-3 mb-8">
+      <button
+        id="addFullDateBlock"
+        type="button"
+        class="bg-red-600 hover:bg-red-700 text-white font-semibold px-5 py-3 rounded-lg"
+      >
+        Block Full Date
+      </button>
+
+      <button
+        id="addTimeBlock"
+        type="button"
+        class="bg-blue-700 hover:bg-blue-800 text-white font-semibold px-5 py-3 rounded-lg"
+      >
+        Block Time Range
+      </button>
+
+      <button
+        id="reloadRulesBtn"
+        type="button"
+        class="bg-gray-700 hover:bg-gray-800 text-white font-semibold px-5 py-3 rounded-lg"
+      >
+        Reload Saved Rules
+      </button>
+    </div>
+
+    <div class="mb-8">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Current Rules</h2>
+      <div id="blockedList" class="space-y-3"></div>
+    </div>
+
+    <div class="flex flex-wrap gap-3">
+      <button
+        id="saveAvailabilityBtn"
+        type="button"
+        class="bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-3 rounded-xl"
+      >
+        Save Changes
+      </button>
+
+      <button
+        id="clearAllBtn"
+        type="button"
+        class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold px-6 py-3 rounded-xl"
+      >
+        Clear All
+      </button>
+    </div>
+
+    <p id="statusMessage" class="mt-5 text-sm font-medium"></p>
+  </div>
+
+  <script>
+    const API_URL = "https://script.google.com/macros/s/AKfycbxnMbWdAZsp0RpOvYNlhQqGnUNnYfkfxOoqMRJYysvY8Q2pIJBOG5BVq4j9cLTlC7_ygw/exec";
+
+    const availabilityData = {
+      blockedDates: [],
+      blockedTimeRanges: []
+    };
+
+    const blockedList = document.getElementById("blockedList");
+    const statusMessage = document.getElementById("statusMessage");
+
+    function showStatus(message, type = "normal") {
+      statusMessage.textContent = message;
+      statusMessage.className = "mt-5 text-sm font-medium";
+
+      if (type === "success") {
+        statusMessage.classList.add("text-green-600");
+      } else if (type === "error") {
+        statusMessage.classList.add("text-red-600");
+      } else {
+        statusMessage.classList.add("text-gray-600");
+      }
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function sortRules() {
+      availabilityData.blockedDates.sort();
+
+      availabilityData.blockedTimeRanges.sort((a, b) => {
+        if (a.date !== b.date) return a.date.localeCompare(b.date);
+        if (a.start !== b.start) return a.start.localeCompare(b.start);
+        return a.end.localeCompare(b.end);
+      });
+    }
+
+    function renderBlockedList() {
+      sortRules();
+
+      if (
+        availabilityData.blockedDates.length === 0 &&
+        availabilityData.blockedTimeRanges.length === 0
+      ) {
+        blockedList.innerHTML = `
+          <div class="border border-dashed border-gray-300 rounded-xl p-5 text-gray-500">
+            No blocked rules added yet.
+          </div>
+        `;
+        return;
+      }
+
+      let html = "";
+
+      availabilityData.blockedDates.forEach((date, index) => {
+        html += `
+          <div class="flex items-center justify-between gap-4 border rounded-xl p-4 bg-red-50">
+            <div>
+              <div class="font-semibold text-gray-900">Full date blocked</div>
+              <div class="text-gray-700">${escapeHtml(date)}</div>
+            </div>
+            <button
+              type="button"
+              class="text-red-700 font-semibold"
+              onclick="removeBlockedDate(${index})"
+            >
+              Delete
+            </button>
+          </div>
+        `;
+      });
+
+      availabilityData.blockedTimeRanges.forEach((item, index) => {
+        html += `
+          <div class="flex items-center justify-between gap-4 border rounded-xl p-4 bg-blue-50">
+            <div>
+              <div class="font-semibold text-gray-900">Blocked time range</div>
+              <div class="text-gray-700">
+                ${escapeHtml(item.date)} | ${escapeHtml(item.start)} - ${escapeHtml(item.end)}
+              </div>
+            </div>
+            <button
+              type="button"
+              class="text-red-700 font-semibold"
+              onclick="removeBlockedTimeRange(${index})"
+            >
+              Delete
+            </button>
+          </div>
+        `;
+      });
+
+      blockedList.innerHTML = html;
+    }
+
+    function removeBlockedDate(index) {
+      availabilityData.blockedDates.splice(index, 1);
+      renderBlockedList();
+      showStatus("Rule removed. Click Save Changes to persist it.");
+    }
+
+    function removeBlockedTimeRange(index) {
+      availabilityData.blockedTimeRanges.splice(index, 1);
+      renderBlockedList();
+      showStatus("Rule removed. Click Save Changes to persist it.");
+    }
+
+    function validateDate(date) {
+      return /^\d{4}-\d{2}-\d{2}$/.test(date);
+    }
+
+    function validateTime(time) {
+      return /^\d{2}:\d{2}$/.test(time);
+    }
+
+    function timeToMinutes(time) {
+      const [h, m] = time.split(":").map(Number);
+      return h * 60 + m;
+    }
+
+    function hasDuplicateTimeRange(date, start, end) {
+      return availabilityData.blockedTimeRanges.some(
+        item => item.date === date && item.start === start && item.end === end
+      );
+    }
+
+    async function loadRules() {
+      showStatus("Loading saved rules...");
+
+      try {
+        const response = await fetch(API_URL, {
+          method: "GET"
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+
+        const result = await response.json();
+
+        availabilityData.blockedDates = Array.isArray(result.blockedDates)
+          ? [...result.blockedDates]
+          : [];
+
+        availabilityData.blockedTimeRanges = Array.isArray(result.blockedTimeRanges)
+          ? [...result.blockedTimeRanges]
+          : [];
+
+        renderBlockedList();
+        showStatus("Saved rules loaded successfully.", "success");
+      } catch (error) {
+        console.error(error);
+        showStatus("Failed to load saved rules.", "error");
+      }
+    }
+
+    async function saveRules() {
+      showStatus("Saving rules...");
+
+      try {
+        const response = await fetch(API_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "text/plain;charset=utf-8"
+          },
+          body: JSON.stringify(availabilityData)
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+
+        const result = await response.json();
+
+        if (result.success) {
+          showStatus("Rules saved successfully.", "success");
+        } else {
+          showStatus(result.message || "Failed to save rules.", "error");
+        }
+      } catch (error) {
+        console.error(error);
+        showStatus("Error while saving rules.", "error");
+      }
+    }
+
+    document.getElementById("addFullDateBlock").addEventListener("click", () => {
+      const date = document.getElementById("blockDate").value;
+
+      if (!date || !validateDate(date)) {
+        alert("Please select a valid date.");
+        return;
+      }
+
+      if (!availabilityData.blockedDates.includes(date)) {
+        availabilityData.blockedDates.push(date);
+        renderBlockedList();
+        showStatus("Full date block added. Click Save Changes to persist it.");
+      } else {
+        alert("This full date is already blocked.");
+      }
+    });
+
+    document.getElementById("addTimeBlock").addEventListener("click", () => {
+      const date = document.getElementById("blockDate").value;
+      const start = document.getElementById("blockStart").value;
+      const end = document.getElementById("blockEnd").value;
+
+      if (!date || !validateDate(date)) {
+        alert("Please select a valid date.");
+        return;
+      }
+
+      if (!start || !end || !validateTime(start) || !validateTime(end)) {
+        alert("Please select both start and end times.");
+        return;
+      }
+
+      if (timeToMinutes(start) >= timeToMinutes(end)) {
+        alert("End time must be later than start time.");
+        return;
+      }
+
+      if (hasDuplicateTimeRange(date, start, end)) {
+        alert("This blocked time range already exists.");
+        return;
+      }
+
+      availabilityData.blockedTimeRanges.push({ date, start, end });
+      renderBlockedList();
+      showStatus("Blocked time range added. Click Save Changes to persist it.");
+    });
+
+    document.getElementById("saveAvailabilityBtn").addEventListener("click", saveRules);
+
+    document.getElementById("reloadRulesBtn").addEventListener("click", loadRules);
+
+    document.getElementById("clearAllBtn").addEventListener("click", () => {
+      const confirmed = confirm("Are you sure you want to clear all unsaved rules?");
+      if (!confirmed) return;
+
+      availabilityData.blockedDates = [];
+      availabilityData.blockedTimeRanges = [];
+      renderBlockedList();
+      showStatus("All current rules cleared. Click Save Changes to persist it.");
+    });
+
+    renderBlockedList();
+    loadRules();
+
+    window.removeBlockedDate = removeBlockedDate;
+    window.removeBlockedTimeRange = removeBlockedTimeRange;
+  </script>
+</body>
+</html>

@@ -1,0 +1,1827 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Care Sector Crisis: The 2026 Enforcement Crackdown</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="header/header.css?update=0077" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/images/favicon.webp">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <!-- UPDATED: Using specific UMD version of Chart.js for better browser compatibility -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero-bg {
+            background-color: #1e3a8a;
+            /* Blue-900 */
+            background-image:
+                radial-gradient(at 100% 100%, hsla(0, 100%, 60%, 0.2) 0, transparent 50%),
+                radial-gradient(at 0% 0%, hsla(210, 100%, 80%, 0.2) 0, transparent 50%);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+
+        .hero-pattern {
+
+            background-color: #ffffff;
+
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+
+            background-size: 20px 20px;
+
+        }
+
+        .py-50 {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+    </style>
+
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Bottom Popup Banner -->
+    <div id="bottomPopup" class="popup-banner shadow">
+        <div class="container d-flex align-items-center justify-content-between flex-wrap gap-3">
+
+            <!-- Text Content -->
+            <div class="popup-text">
+                <h5 class="mb-1">Get Home Office Clarity When You Need It </h5>
+                <a href="https://meet.brevo.com/irsdemo/intro" target="_blank">
+                    <p class="mb-0 sp-txt">
+                        👉 Join our daily demo any day to discover a simpler, safer way to manage HR Home Office, and
+                        sponsor duties.
+                    </p>
+                </a>
+
+                <p>Ps: For immediate help, Call our Sponsor Helpline now <a href="tel:0333 577 4771">0333 577
+                        4771</a></p>
+
+            </div>
+
+            <!-- Close Button -->
+            <button type="button" class="popup-close" onclick="closePopup()">×</button>
+
+        </div>
+    </div>
+    <!-- Urgency Banner -->
+
+    <div class="top__bar">
+        <p class="m-auto mb-0 text-center">We are part of International
+            Recruitment Solutions. <a href="https://irslimited.co.uk/" target="_blank">Click</a>
+            to learn how IRS helps your business thrive</p>
+    </div>
+    <!-- main header -->
+    <header class="main-header z-50">
+        <div class="auto-container">
+            <!-- header-top -->
+            <div class="hidden md:flex header-top z-50">
+
+                <div class="top-inner clearfix">
+                    <div class="left-column pull-left">
+                        <ul class="info-list clearfix">
+                            <li><i class="fas fa-phone-square"></i><a href="tel:0333 577 4771">0333 577 4771</a></li>
+                            <li><i class="fas fa-envelope"></i><a
+                                    href="mailto:care@irslimited.co.uk">care@irslimited.co.uk</a></li>
+                        </ul>
+                    </div>
+                    <div class="right-column pull-right">
+                        <ul class="social-links clearfix">
+                            <li><a href="https://www.linkedin.com/company/irs-limited"
+                                    aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href="https://www.youtube.com/@SponsorComplianceMadeEasy"
+                                    aria-label="Follow us on Youtube"><i class="fab fa-youtube"></i></a>
+                            </li>
+                        </ul>
+                        <div class="btn-box"><a href="https://app.irshr.co.uk/register" target="_blank">Sign up for IRS
+                                HR</a></div>
+                        <div class="btn-box gold"><a href="https://app.irshr.co.uk/login">Login</a></div>
+                    </div>
+                </div>
+            </div>
+            <!-- header-lower -->
+
+
+        </div>
+
+        <!--sticky Header-->
+        <div class="sticky-header z-50">
+            <div class="auto-container">
+                <div class="outer-box clearfix">
+                    <div class="logo-box pull-left">
+                        <figure class="logo"><a href="index.html"><img src="assets/images/logo.webp" alt=""></a>
+                        </figure>
+                    </div>
+                    <div class="menu-area clearfix pull-right">
+                        <nav class="main-menu clearfix">
+                            <!--Keep This Empty / Menu will come through Javascript-->
+                        </nav>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- main-header end -->
+
+    <!-- Mobile Menu  -->
+    <div class="mobile-menu">
+        <div class="menu-backdrop"></div>
+        <div class="close-btn"><i class="fas fa-times"></i></div>
+
+        <nav class="menu-box">
+            <div class="nav-logo"><a href="index.html"><img src="assets/images/logo.webp" alt="" title=""></a></div>
+            <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+            </div>
+            <div class="contact-info">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li> Second Floor, 189 Brompton Road, Next to Harrods, Knightsbridge London, SW3 1NE</li>
+                    <li><a href="tel:0333 577 4771">0333 577 4771</a></li>
+                    <li><a href="mailto:care@irslimited.co.uk">care@irslimited.co.uk</a></li>
+                </ul>
+                <a href="https://www.linkedin.com/company/irs-limited" target="_blank"
+                    class="inline-flex items-center mt-2 text-white hover:text-gray-300">
+                    <i class="fab fa-linkedin text-xl mr-2"></i>
+                </a>
+                <a href="https://www.youtube.com/@SponsorComplianceMadeEasy" target="_blank"
+                    class="inline-flex items-center mt-2 text-white hover:text-gray-300">
+                    <i class="fab fa-youtube text-xl mr-2"></i>
+                </a>
+            </div>
+
+        </nav>
+    </div><!-- End Mobile Menu -->
+
+    <div id="navbar" class="sticky top-0  duration-300 z-50">
+        <nav class="auto-container mx-auto px-4 sm:px-6 lg:px-4">
+            <div class="flex items-center h-24  justify-between md:justify-start">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html">
+                        <img src="assets/images/logo.webp" alt="Logo" class="h-20 w-auto">
+                    </a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden lg:flex items-center ml-105">
+                    <a href="index.html" class="text-gray-500 hover:text-[#49b280] font-medium text-sm">Home</a>
+                    <div class="relative group">
+                        <a href="benefits.html"
+                            class="text-gray-500 hover:text-[#49b280] font-medium text-sm">Benefits</a>
+                        <div
+                            class="absolute right-[-15em] top-full mt-8 w-[940px] bg-[#ffffff] text-white  shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-999 mega-menu knowledge-hub">
+                            <div class="grid grid-cols-3 gap-8">
+                                <div>
+                                    <ul class="space-y-2 text-sm text-gray-300">
+                                        <li><a class="hover:text-[#49b280]"
+                                                href="24-7-hr-compliance-home-office.html">24x7 HR Home Office
+                                                compliance</a></li>
+                                        <li><a class="hover:text-[#49b280]" href="monitor-your-migrants.html">Monitor
+                                                Your Migrants</a></li>
+                                        <li><a class="hover:text-[#49b280]" href="visa-expiry-alerts.html">Visa Expiry
+                                                Alerts</a></li>
+                                        <li><a class="hover:text-[#49b280]"
+                                                href="right-to-work-digital-records.html">RTW Digital records</a></li>
+                                        <li><a class="hover:text-[#49b280]"
+                                                href="migrants-leave-and-absence-management.html">Leave and absence
+                                                management</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="space-y-2 text-sm text-gray-300">
+                                        <li><a class="hover:text-white"
+                                                href="tailored-policies-home-office-compliance.html">Tailored Policies
+                                                for Home Office compliance</a></li>
+                                        <li><a class="hover:text-white" href="home-office-guidance.html">Home Office
+                                                Guidance</a></li>
+                                        <li><a class="hover:text-white" href="50-sponsored-employee-checklist.html">50+
+                                                Sponsored Employee Checklist</a></li>
+                                        <li><a class="hover:text-white"
+                                                href="100-sponsored-employee-staff-records.html">100+ Sponsored Employee
+                                                Staff Records</a></li>
+                                        <li><a class="hover:text-white"
+                                                href="fast-track-home-office-compliance-onboarding.html">Fast Track Home
+                                                Office Compliance Onboarding</a></li>
+                                    </ul>
+                                </div>
+
+
+                                <!-- Column 3 -->
+                                <div>
+                                    <ul class="space-y-2 text-sm text-gray-300">
+                                        <li><a class="hover:text-white" href="cos-success-strategy.html">CoS Success
+                                                Strategy</a></li>
+                                        <li><a class="hover:text-white"
+                                                href="monthly-home-office-mock-audits.html">Monthly Home Office Mock
+                                                Audits</a></li>
+                                        <li><a class="hover:text-white"
+                                                href="level-7-hr-compliance-success-manager.html">Level 7 HR Compliance
+                                                Success manager</a></li>
+                                        <li><a class="hover:text-white" href="panel-of-solicitors.html">Panel of
+                                                Solicitors</a></li>
+                                        <li><a class="hover:text-white" href="after-sales-support.html"
+                                                target="_blank">After Sales Support</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="calculate-your-savings.html"
+                        class="text-gray-500 hover:text-[#49b280] font-medium text-sm">Pricing</a>
+                    <div class="relative group">
+                        <a href="" class="text-gray-500 hover:text-[#49b280] font-medium text-sm">Businesses</a>
+                        <div
+                            class="absolute top-full mt-4 w-64 bg-[#ffffff] text-black  shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-999">
+                            <ul class="divide-y divide-gray-700">
+                                <li><a href="care.html"
+                                        class="block px-6 py-4 text-sm text-black hover:text-white hover:bg-[#49b280]">Health
+                                        And Social Care Providers</a></li>
+                                <li><a href="construction.html"
+                                        class="block px-6 py-4 text-sm text-black hover:text-white hover:bg-[#49b280]">Construction</a>
+                                </li>
+                                <li><a href="it.html"
+                                        class="block px-6 py-4 text-sm text-black hover:text-white hover:bg-[#49b280]">IT</a>
+                                </li>
+                                <li><a href="fintech.html"
+                                        class="block px-6 py-4 text-sm text-black hover:text-white hover:bg-[#49b280]">Fintech</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="about.html" class="text-gray-500 hover:text-[#49b280] font-medium text-sm">About Us</a>
+                    <div class="relative group current">
+                        <a href="knowledge-hub.html"
+                            class="text-gray-500 hover:text-[#49b280] font-medium text-sm">Knowledge hub</a>
+                        <div
+                            class="absolute right-[-15em] top-full mt-8 w-[940px] bg-[#ffffff] text-white  shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-999 mega-menu">
+                            <div class="grid grid-cols-3 gap-8">
+                                <div>
+                                    <a href="blogs.html">
+                                        <h5 class="font-bold text-black mb-3">Blogs</h5>
+                                    </a>
+                                    <ul class="space-y-2 text-sm text-gray-300">
+                                        <li><a href="is-your-car-home-hr-ready-for-the-home-office-audit.html"
+                                                class="hover:text-[#49b280]">Is Your Care Home's HR Ready for a Home
+                                                Office Audit?</a></li>
+                                        <li><a href="drowning-in-paperwork-how-to-streamline-your-care-agencys-hr-and-stay-compliant.html"
+                                                class="hover:text-[#49b280]">Drowning in Paperwork?</a></li>
+                                        <li><a href="navigating-the-maze-of-sponsor-licence-compliance-are-you-monitoring-your-migrant-workers-correctly.html"
+                                                class="hover:text-[#49b280]">Navigating the Maze of Sponsor Licence
+                                                Compliance</a></li>
+                                        <li><a href="how-hr-software-secures-a-rating-and-boosts-cos-allocation.html"
+                                                class="hover:text-[#49b280]"> How Your HR Software Can Secure Your
+                                                A-Rating and Boost Your CoS Allocation?</a></li>
+                                        <li><a href="over-50-sponsor-licence-checks-and-counting-are-you-missing-a-critical-step.html"
+                                                class="hover:text-[#49b280]">Over 50 Sponsor Licence Checks and
+                                                Counting</a></li>
+                                        <li><a href="navigating-pain-points-for-sponsor-licence-holders.html"
+                                                class="hover:text-[#49b280]">The Key
+                                                Pain Points for UK Sponsor Licence Holders</a></li>
+                                        <li><a href="home-office-updates-immigration-rules.html"
+                                                class="hover:text-[#49b280]">Home Office updates Immigration Rules</a>
+                                        </li>
+                                        <li><a href="immigration-skills-charge-price-increase.html"
+                                                class="hover:text-[#49b280]">6 Weeks to Act Before 32% Immigration
+                                                Skills Charge Increase</a></li>
+                                        <li><a href="home-office-panic-to-readiness.html"
+                                                class="hover:text-[#49b280]">From Home Office Panic to Home-Office
+                                                Readiness in 3 Hours</a></li>
+                                        <li><a href="home-office-licence-enforcement.html"
+                                                class="hover:text-[#49b280]">Home Office Licence Enforcement</a></li>
+                                        <li><a href="golden-record-sponsor-licence.html"
+                                                class="hover:text-[#49b280]">Golden Record for Sponsor Licence</a></li>
+                                        <li><a href="home-office-sms-phishing-scams.html" class="hover:text-[#49b280]">
+                                                Home Office SMS Phishing Scams</a></li>
+                                        <li class=""><a href="2026-dangerous-year-sponsor-licence-holders.html"
+                                                class="hover:text-[#49b280]">
+                                                2026 - The most dangerous year for Sponsor Licence holders</a></li>
+                                                2026 - The most dangerous year for Sponsor Licence holders</a></li>
+                                        <li class=""><a href="2026-sponsor-license-compliance-update.html"
+                                                class="hover:text-[#49b280]">
+                                                The 2026 Sponsor Licence Compliance Update</a></li>
+
+                                    </ul>
+                                </div>
+                                <div>
+                                    <a href="resources-for-businesses.html">
+                                        <h5 class="font-bold text-black mb-3">Resources for Businesses</h5>
+                                    </a>
+                                    <ul class="space-y-2 text-sm text-gray-300">
+                                        <!-- <li><a href="event.html" class="hover:text-white">Attend Cardiff Event to Safeguard your Sponsor Licence</a></li> -->
+                                        <li><a href="sponsor-compliance-knowledge-series.html"
+                                                class="hover:text-white">Sponsor Compliance Knowledge series</a></li>
+                                        <li><a href="product-showcase.html" class="hover:text-white">IRS HR Product
+                                                Showcase</a></li>
+                                        <li><a href="all-in-one-sponsor-compliance-software.html"
+                                                class="hover:text-white">All in One Sponsor Compliance Software</a></li>
+                                        <li class=""><a href="HomeOffice-HMRC-Data-matching-from-april-2026.html"
+                                                class="hover:text-white">Home Office HMRC Data Matching from April
+                                                2026</a></li>
+                                        <li class=""><a href="sponsor-licence-revocation-risk.html"
+                                                class="hover:text-white">Sponsor Licence Revocation Risk</a></li>
+                                        <li><a href="guide-right-to-work-checks.html" class="hover:text-white">Your
+                                                Guide
+                                                to Conducting Right to Work Checks</a></li>
+                                        <li><a href="sponsor-license-compliance-pitfalls.html"
+                                                class="hover:text-white">Your ultimate guide
+                                                to Sponsor Licence Compliance pitfalls</a></li>
+                                        <li><a href="guide-to-home-office-sponsor-compliance.html"
+                                                class="hover:text-white">Your Ultimate Guide
+                                                to Home Office Sponsor Compliance</a></li>
+                                        <li><a href="guide-to-home-office-digital-audits.html"
+                                                class="hover:text-white">Your Guide To Home Office Digital Audits</a>
+                                        </li>
+                                        <li><a href="guide-to-secure-certificate-of-sponsorship.html"
+                                                class="hover:text-white">
+                                                Your interactive guide to secure Certificate of sponsorship</a></li>
+                                        <li class=""><a href="true-cost-of-sponsor-license-revocation.html"
+                                                class="hover:text-white">
+                                                True cost of Sponsor Licence Revocation</a></li>
+                                        <li class=""><a href="fabs-domiciliary-homecare-casestudy.html"
+                                                class="hover:text-white">
+                                                Case Study: Fabs Domiciliary Homecare</a></li>   
+                                <li class=""><a href="care-sector-crisis.html"
+                                        class="hover:text-white">
+                                        Care Sector Crisis</a></li>         
+                                        <li class=""><a href="Home-Office-Punishing-Sponsors-and-Employers.html"
+                                                class="hover:text-white">
+                                                Home Office Punishing Sponsors and Employers</a></li>
+                                        <li><a href="applying-for-sponsor-licence.html"
+                                                class="hover:text-white">Applying for a Sponsor Licence - FAQs</a></li>
+                                        <li><a href="sponsor-duties-compliance.html" class="hover:text-white">Sponsor
+                                                Duties and Compliance - FAQs</a></li>
+                                        <li class=""><a href="2026-most-dangerous-year-for-sponsor-licence-holders.html"
+                                                class="hover:text-white">
+                                                2026 - The most dangerous year for Sponsor Licence holders</a></li>
+                                        <li class=""><a href="sponsor-guidance-appendix-d-guide.html"
+                                                class="hover:text-white">
+                                                Sponsor Guidance Appendix D Guide</a></li>
+                                        <li><a href="care-Industry-hours-and-pay-calculator.html"
+                                                class="hover:text-white">
+                                                Care Sector Sponsorship & Fiscal Year Calculator</a></li>
+
+                                    </ul>
+                                </div>
+
+
+                                <!-- Column 3 -->
+                                <div class="font-bold text-white mb-3">
+                                    <a href="quizzes.html">
+                                        <h5 class="font-bold text-black mb-3">Quizzes</h5>
+                                    </a>
+                                    <ul class="space-y-2 text-sm text-gray-300 font-medium">
+                                        <li><a href="quiz-sponsor-licence-compliance-health-check.html"
+                                                class="hover:text-white" target="_blank">Sponsor License Compliance
+                                                Health Check</a></li>
+                                        <li><a href="Sponsor-Compliance-Challenge-Quiz.html" class="hover:text-white"
+                                                target="_blank">Sponsor Compliance Challenge</a></li>
+                                        <li><a href="Home-Office-Digital-Audit-Quiz.html" class="hover:text-white"
+                                                target="_blank">Home Office Digital Audit Quiz</a></li>
+                                        <li><a href="Test-Your-CoS-Request-Knowledge-Quiz.html" class="hover:text-white"
+                                                target="_blank">Test Your CoS Knowledge Quiz</a></li>
+                                        <li class=""><a href="test-your-knowledge-of-the-golden-record.html"
+                                                class="hover:text-white" target="_blank">Test your Knowledge of the
+                                                golden record</a></li>
+                                        <li class=""><a href="revocation-risk-assessment.html" class="hover:text-white"
+                                                target="_blank">Revocation Risk Assessment</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="text-gray-500 hover:text-[#49b280] font-medium text-sm">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="lg:hidden text-gray-700 focus:outline-none">
+                    <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Fullscreen Menu -->
+        <div id="mobile-menu" class="fixed inset-0 bg-[#16142B] text-white hidden flex-col justify-between ">
+            <div>
+                <!-- Top Section -->
+                <div class="flex items-center justify-center p-0 mb-8">
+                    <img src="assets/images/logo.webp" alt="Logo" class="h-48">
+                    <button id="close-btn" class="text-white text-2xl">&times;</button>
+                </div>
+                <nav class=" ">
+                    <a href="index.html" class="px-6 block py-3 border-b border-gray-700 uppercase">Home</a>
+                    <div class="border-b border-gray-700">
+                        <button class="px-6 w-full flex justify-between items-center py-3 accordion-btn uppercase ">
+                            <a href="benefits.html">Benefits</a>
+                            <i class="fas fa-angle-down accordion-icon transition-transform duration-300 "></i>
+                        </button>
+                        <div class="accordion-content hidden pl-6 pr-4 space-y-2 uppercase">
+                            <ul>
+                                <li class="mb-3"><a class="hover:text-[#49b280]"
+                                        href="24-7-hr-compliance-home-office.html">24x7 HR Home Office compliance</a>
+                                </li>
+                                <li class="mb-3"><a class="hover:text-[#49b280]"
+                                        href="monitor-your-migrants.html">Monitor Your Migrants</a></li>
+                                <li class="mb-3"><a class="hover:text-[#49b280]" href="visa-expiry-alerts.html">Visa
+                                        Expiry Alerts</a></li>
+                                <li class="mb-3"><a class="hover:text-[#49b280]"
+                                        href="right-to-work-digital-records.html">RTW Digital records</a></li>
+                                <li class="mb-3"><a class="hover:text-[#49b280]"
+                                        href="migrants-leave-and-absence-management.html">Leave and absence
+                                        management</a></li>
+                                <li class="mb-3"><a class="hover:text-white"
+                                        href="tailored-policies-home-office-compliance.html">Tailored Policies for Home
+                                        Office compliance</a></li>
+                                <li class="mb-3"><a class="hover:text-white" href="home-office-guidance.html">Home
+                                        Office Guidance</a></li>
+                                <li class="mb-3"><a class="hover:text-white"
+                                        href="50-sponsored-employee-checklist.html">50+ Sponsored Employee Checklist</a>
+                                </li>
+                                <li class="mb-3"><a class="hover:text-white"
+                                        href="100-sponsored-employee-staff-records.html">100+ Sponsored Employee Staff
+                                        Records</a></li>
+                                <li class="mb-3"><a class="hover:text-white"
+                                        href="fast-track-home-office-compliance-onboarding.html">Fast Track Home Office
+                                        Compliance Onboarding</a></li>
+                                <li class="mb-3"><a class="hover:text-white" href="cos-success-strategy.html">CoS
+                                        Success Strategy</a></li>
+                                <li class="mb-3"><a class="hover:text-white"
+                                        href="monthly-home-office-mock-audits.html">Monthly Home Office Mock Audits</a>
+                                </li>
+                                <li class="mb-3"><a class="hover:text-white"
+                                        href="level-7-hr-compliance-success-manager.html">Level 7 HR Compliance Success
+                                        manager</a></li>
+                                <li class="mb-3"><a class="hover:text-white" href="panel-of-solicitors.html">Panel of
+                                        Solicitors</a></li>
+                                <li class="mb-3"><a class="hover:text-white" href="after-sales-support.html"
+                                        target="_blank">After Sales Support</a></li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                    <a href="calculate-your-savings.html"
+                        class="px-6 block py-3 border-b border-gray-700 uppercase">Pricing</a>
+
+                    <!-- Businesses accordion -->
+                    <div class="border-b border-gray-700">
+                        <button class="w-full flex justify-between items-center py-3 px-6 accordion-btn uppercase">
+                            Businesses
+                            <i class="fas fa-angle-down accordion-icon transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content hidden pl-6 pr-4 space-y-2 uppercase">
+                            <a href="care.html" class="block py-3">Health And Social Care Providers</a>
+                            <a href="construction.html" class="block py-3">Construction</a>
+                            <a href="it.html" class="block py-3">IT</a>
+                            <a href="fintech.html" class="block py-3">Fintech</a>
+                        </div>
+                    </div>
+
+                    <a href="about.html" class="px-6 block py-3 border-b border-gray-700 uppercase">About Us</a>
+
+                    <!-- Resources accordion -->
+                    <div class="border-b border-gray-700">
+                        <button
+                            class="px-6 w-full flex justify-between items-center py-3 accordion-btn uppercase current">
+                            <a href="knowledge-hub.html">Knowledge hub</a>
+                            <i class="fas fa-angle-down accordion-icon transition-transform duration-300 "></i>
+                        </button>
+                        <div class="accordion-content hidden pl-6 pr-4 space-y-2 uppercase">
+                            <ul>
+                                <h5 class="font-bold text-white mb-3 mt-4">Blogs</h5>
+                                <li class="mb-3"><a href="is-your-car-home-hr-ready-for-the-home-office-audit.html"
+                                        class="hover:text-[#49b280]">Is Your Care Home's HR Ready for a Home
+                                        Office Audit?</a></li>
+                                <li class="mb-3"><a
+                                        href="drowning-in-paperwork-how-to-streamline-your-care-agencys-hr-and-stay-compliant.html"
+                                        class="hover:text-[#49b280]">Drowning in Paperwork?</a></li>
+                                <li class="mb-3"><a
+                                        href="navigating-the-maze-of-sponsor-licence-compliance-are-you-monitoring-your-migrant-workers-correctly.html"
+                                        class="hover:text-[#49b280]">Navigating the Maze of Sponsor Licence
+                                        Compliance</a></li>
+                                <li class="mb-3"><a
+                                        href="how-hr-software-secures-a-rating-and-boosts-cos-allocation.html"
+                                        class="hover:text-[#49b280]">How Your HR Software Can Secure Your A-Rating and
+                                        Boost Your CoS Allocation?</a></li>
+                                <li class="mb-3"><a
+                                        href="over-50-sponsor-licence-checks-and-counting-are-you-missing-a-critical-step.html"
+                                        class="hover:text-[#49b280]">Over 50 Sponsor Licence Checks and
+                                        Counting</a></li>
+                                <li class="mb-3"><a href="navigating-pain-points-for-sponsor-licence-holders.html"
+                                        class="hover:text-[#49b280]">The
+                                        Key Pain
+                                        Points for UK Sponsor Licence Holders</a></li>
+                                <li class="mb-3"><a href="home-office-updates-immigration-rules.html"
+                                        class="hover:text-[#49b280]">Home Office updates Immigration Rules</a></li>
+                                <li class="mb-3"><a href="immigration-skills-charge-price-increase.html"
+                                        class="hover:text-[#49b280]">6 Weeks to Act Before 32% Immigration Skills Charge
+                                        Increase</a></li>
+                                <li class="mb-3"><a href="home-office-panic-to-readiness.html"
+                                        class="hover:text-[#49b280]">From Home Office Panic to Home-Office Readiness in
+                                        3 Hours</a></li>
+                                <li class="mb-3"><a href="home-office-licence-enforcement.html"
+                                        class="hover:text-[#49b280]">Home Office Licence Enforcement</a></li>
+                                <li class="mb-3"><a href="golden-record-sponsor-licence.html"
+                                        class="hover:text-[#49b280]">Golden Record for Sponsor Licence</a></li>
+                                <li class="mb-3"><a href="home-office-sms-phishing-scams.html"
+                                        class="hover:text-[#49b280]">
+                                        Home Office SMS Phishing Scams</a></li>
+                                <li class="mb-3"><a href="2026-dangerous-year-sponsor-licence-holders.html"
+                                        class="hover:text-[#49b280]">
+                                        2026 - The most dangerous year for Sponsor Licence holders</a></li>
+                                <li class="mb-3"><a href="2026-sponsor-license-compliance-update.html"
+                                        class="hover:text-[#49b280]">
+                                        The 2026 Sponsor Licence Compliance Update</a></li>
+
+
+                                <h5 class="font-bold text-white mb-3 mt-4">Resources for Businesses</h5>
+                                <!-- <li class="mb-3"><a href="event.html" class="hover:text-white">Attend Cardiff Event to Safeguard your Sponsor Licence</a></li> -->
+                                <li class="mb-3"><a href="sponsor-compliance-knowledge-series.html"
+                                        class="hover:text-white">Sponsor Compliance Knowledge series</a></li>
+                                <li class="mb-3"><a href="product-showcase.html" class="hover:text-white">IRS HR Product
+                                        Showcase</a></li>
+                                <li class="mb-3"><a href="all-in-one-sponsor-compliance-software.html"
+                                        class="hover:text-white">All in One Sponsor Compliance Software</a></li>
+                                <li class="mb-3"><a href="HomeOffice-HMRC-Data-matching-from-april-2026.html"
+                                        class="hover:text-white">Home Office HMRC Data Matching from April 2026</a></li>
+                                <li class="mb-3"><a href="HomeOffice-HMRC-Data-matching-from-april-2026.html"
+                                        class="hover:text-white">Home Office HMRC Data Matching from April 2026</a></li>
+                                <li class="mb-3"><a href="sponsor-licence-revocation-risk.html"
+                                        class="hover:text-white">Sponsor Licence Revocation Risk</a></li>
+                                <li class="mb-3"><a href="guide-right-to-work-checks.html" class="hover:text-white">A
+                                        Guide
+                                        to Conducting Right to Work Checks</a></li>
+                                <li class="mb-3"><a href="sponsor-license-compliance-pitfalls.html"
+                                        class="hover:text-white">Your ultimate guide
+                                        to Sponsor Licence Compliance pitfalls</a></li>
+                                <li class="mb-3"><a href="guide-to-home-office-sponsor-compliance.html"
+                                        class="hover:text-white">Your Ultimate Guide
+                                        to Home Office Sponsor Compliance</a></li>
+                                <li class="mb-3"><a href="guide-to-home-office-digital-audits.html"
+                                        class="hover:text-white">Your Guide To Home Office Digital Audits</a></li>
+                                <li class="mb-3"><a href="guide-to-secure-certificate-of-sponsorship.html"
+                                        class="hover:text-white">
+                                        Your interactive guide to secure Certificate of sponsorship</a></li>
+                                <li class="mb-3"><a href="true-cost-of-sponsor-license-revocation.html"
+                                        class="hover:text-white">
+                                        True cost of Sponsor Licence Revocation</a></li>
+                                <li class="mb-3"><a href="fabs-domiciliary-homecare-casestudy.html"
+                                        class="hover:text-white">
+                                        Case Study: Fabs Domiciliary Homecare</a></li>
+                                <li class="mb-3"><a href="care-sector-crisis.html"
+                                        class="hover:text-white">
+                                        Care Sector Crisis</a></li>        
+                                <li class="mb-3"><a href="Home-Office-Punishing-Sponsors-and-Employers.html"
+                                        class="hover:text-white">
+                                        Home Office Punishing Sponsors and Employers</a></li>
+                                <li class="mb-3"><a href="applying-for-sponsor-licence.html"
+                                        class="hover:text-white">Applying for a Sponsor Licence - FAQs</a></li>
+                                <li class="mb-3"><a href="sponsor-duties-compliance.html"
+                                        class="hover:text-white">Sponsor Duties and Compliance - FAQs</a></li>
+                                <li class="mb-3"><a href="2026-most-dangerous-year-for-sponsor-licence-holders.html"
+                                        class="hover:text-white">
+                                        2026 - The most dangerous year for Sponsor Licence holders</a></li>
+                                <li class="mb-3"><a href="sponsor-guidance-appendix-d-guide.html"
+                                        class="hover:text-white">
+                                        Sponsor Guidance Appendix D Guide</a></li>
+                                <li class="mb-3"><a href="care-Industry-hours-and-pay-calculator.html"
+                                        class="hover:text-white">
+                                        Care Sector Sponsorship & Fiscal Year Calculator</a></li>
+
+
+                                <h5 class="font-bold text-white mb-3 mt-4">Quizzes</h5>
+                                <li class="mb-3"><a href="quiz-sponsor-licence-compliance-health-check.html"
+                                        class="hover:text-white" target="_blank">Sponsor License Compliance Health
+                                        Check</a></li>
+                                <li class="mb-3"><a href="Sponsor-Compliance-Challenge-Quiz.html"
+                                        class="hover:text-white" target="_blank">Sponsor Compliance Challenge</a></li>
+                                <li class="mb-3"><a href="Home-Office-Digital-Audit-Quiz.html" class="hover:text-white"
+                                        target="_blank">Home Office Digital Audit Quiz</a></li>
+                                <li class="mb-3"><a href="Test-Your-CoS-Request-Knowledge-Quiz.html"
+                                        class="hover:text-white" target="_blank">Test Your CoS Knowledge Quiz</a></li>
+                                <li class="mb-3"><a href="test-your-knowledge-of-the-golden-record.html"
+                                        class="hover:text-white" target="_blank">Test your Knowledge of the golden
+                                        record</a></li>
+                                <li class="mb-3"><a href="revocation-risk-assessment.html" class="hover:text-white"
+                                        target="_blank">Revocation Risk Assessment</a></li>
+
+                            </ul>
+
+
+                        </div>
+                    </div>
+
+                    <a href="contact.html" class="px-6 block py-3 border-b border-gray-700 uppercase">Contact</a>
+                </nav>
+            </div>
+
+            <!-- Footer -->
+            <div class="border-t border-gray-700 text-sm contact-info">
+                <h4 class="font-bold mb-2">Contact Info</h4>
+                <p>Second Floor, 189 Brompton Road, Next to Harrods, Knightsbridge London, SW3 1NE</p>
+                <p>0333 577 4771</p>
+                <p>care@irslimited.co.uk</p>
+                <a href="https://www.linkedin.com/company/irs-limited"
+                    class="inline-block mt-2 text-white hover:text-gray-300"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/@SponsorComplianceMadeEasy" target="_blank"
+                    class="inline-block mt-2 text-white hover:text-gray-300">
+                    <i class="fab fa-youtube text-xl mr-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero-bg text-white py-20 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div
+                class="inline-flex items-center bg-blue-800/50 border border-blue-400 text-blue-100 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
+                <i data-lucide="activity" class="w-4 h-4 mr-2"></i> Sector Intelligence Update: Feb 2026
+            </div>
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                        The Home Office Crackdown on <br>
+                        <span class="text-blue-300">Care Sponsor Licences</span>
+                    </h1>
+                    <p class="text-xl text-blue-100 mb-8 leading-relaxed">
+                        Official figures confirm a <strong class="text-white">doubling</strong> of revocations. The era
+                        of "light-touch" regulation is over. Intelligence-led monitoring is now removing licences at
+                        record speed.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#assessment"
+                            class="bg-white text-blue-900 px-4 py-4 rounded-xl font-bold hover:bg-gray-100 transition shadow-lg flex items-center justify-center">
+                            Protect My Sponsor Licence with IRS HR
+                        </a>
+                        <a href="#analysis"
+                            class="bg-transparent border-2 border-white text-white px-4 py-4 rounded-xl font-bold hover:bg-white/10 transition flex items-center justify-center">
+                            Read the Analysis
+                        </a>
+                    </div>
+                </div>
+                <!-- Interactive Chart Container -->
+                <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+                    <h3 class="text-lg font-bold mb-4 flex items-center">
+                        <i data-lucide="trending-up" class="w-5 h-5 mr-2 text-red-400"></i>
+                        Revocations: Adult Social Care & Service Sectors
+                    </h3>
+                    <div class="relative h-64 w-full">
+                        <canvas id="revocationChart"></canvas>
+                    </div>
+                    <p class="text-xs text-blue-200 mt-4 text-center">Source: Home Office Transparency Data (July 2024 -
+                        June 2025)</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Key Insights Section -->
+    <section id="analysis" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900">What is Driving the Wave of Revocations?</h2>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+
+            </div>
+
+
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Insight 2 -->
+                <div class="stat-card bg-gray-50 p-8 rounded-2xl border border-gray-100 transition duration-300">
+                    <div class="bg-red-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="gavel" class="w-6 h-6 text-red-700"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">1. The "Prestwick" Precedent</h3>
+                    <p class="text-gray-600">
+                        The Court of Appeal ruling in <em>Prestwick Care Ltd v SSHD [2025]</em> confirmed that the Home
+                        Office <strong>does not</strong> need to consider the impact on staffing or service users before
+                        revoking a licence.
+                    </p>
+                </div>
+
+                <!-- Insight 1 -->
+                <div class="stat-card bg-gray-50 p-8 rounded-2xl border border-gray-100 transition duration-300">
+                    <div class="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="radar" class="w-6 h-6 text-blue-700"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">2. Intelligence-Led Monitoring</h3>
+                    <p class="text-gray-600">
+                        The Home Office no longer relies on site visits. They now use <strong>data-matching</strong>
+                        across HMRC/PAYE and the Sponsor Management System (SMS) to detect discrepancies remotely.
+                    </p>
+                </div>
+
+
+
+
+
+                <!-- Insight 3 -->
+                <div class="stat-card bg-gray-50 p-8 rounded-2xl border border-gray-100 transition duration-300">
+                    <div class="bg-orange-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="search-x" class="w-6 h-6 text-orange-700"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">3. Zero Tolerance</h3>
+                    <p class="text-gray-600">
+                        "Technical" breaches like late reporting or weak absence monitoring—once minor issues—now lead
+                        to immediate suspension.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- The 4 Fatal Pitfalls & IRS HR Solutions -->
+    <section id="solution" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-16">
+
+                <!-- Left: The Problems -->
+                <div>
+                    <div
+                        class="inline-block bg-red-900/50 text-red-400 font-bold px-4 py-1 rounded-full text-sm mb-6 border border-red-800">
+                        THE 4 FATAL COMPLIANCE FAILURES
+                    </div>
+                    <h2 class="text-4xl font-bold mb-8">Why Care Licences Are Lost</h2>
+
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center font-bold">
+                                    1</div>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-bold text-white">Salary & Hours Discrepancies</h3>
+                                <p class="text-gray-400 mt-2">Salaries falling below thresholds due to deductions, or
+                                    hours worked not matching the CoS.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center font-bold">
+                                    2</div>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-bold text-white">Genuine Vacancy Failure</h3>
+                                <p class="text-gray-400 mt-2">Roles described on the CoS do not exist in practice, or
+                                    resemble "labour supply" to third parties.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center font-bold">
+                                    3</div>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-bold text-white">Reporting Lag</h3>
+                                <p class="text-gray-400 mt-2">Failure to report changes in job duties, salary, or work
+                                    location within 10 working days.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-8 h-8 rounded-full bg-red-600 flex items-center justify-center font-bold">
+                                    4</div>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-bold text-white">Worker Protection Breaches</h3>
+                                <p class="text-gray-400 mt-2">Recouping Immigration Skills Charge or CoS fees from
+                                    workers (Strictly prohibited since Dec 2024).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Right: The Solution Card -->
+                <div
+                    class="bg-gradient-to-br from-blue-900 to-blue-800 p-10 rounded-3xl border border-blue-700 shadow-2xl relative overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 w-64 h-64 bg-blue-500 rounded-full mix-blend-overlay filter blur-3xl opacity-20">
+                    </div>
+
+                    <h2 class="text-3xl font-bold mb-2">How IRS HR Protects You</h2>
+                    <p class="text-blue-200 mb-8">We automate the "Practical Steps" recommended by legal experts.</p>
+
+
+                    <div class="space-y-6">
+                        <!-- Feature 1 -->
+                        <div class="bg-blue-950/50 p-4 rounded-xl border border-blue-700 flex items-center">
+                            <div class="bg-green-500/20 p-3 rounded-lg mr-4">
+                                <i data-lucide="check-circle" class="w-6 h-6 text-green-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Automated Salary Audit</h4>
+                                <p class="text-sm text-blue-200">System flags if payroll drops below CoS thresholds.</p>
+                            </div>
+                        </div>
+
+
+                        <!-- Feature 2 -->
+                        <div class="bg-blue-950/50 p-4 rounded-xl border border-blue-700 flex items-center">
+                            <div class="bg-green-500/20 p-3 rounded-lg mr-4">
+                                <i data-lucide="briefcase" class="w-6 h-6 text-green-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">Genuine Vacancy Check</h4>
+                                <p class="text-sm text-blue-200">Aligns Job Descriptions with CoS codes automatically.
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <!-- Feature 3 -->
+                        <div class="bg-blue-950/50 p-4 rounded-xl border border-blue-700 flex items-center">
+                            <div class="bg-green-500/20 p-3 rounded-lg mr-4">
+                                <i data-lucide="bell-ring" class="w-6 h-6 text-green-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">10-Day Reporting Alerts</h4>
+                                <p class="text-sm text-blue-200">Instant triggers for location or salary changes.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="mt-10">
+                        <a href="#assessment"
+                            class="block w-full bg-white text-blue-900 font-bold text-center py-4 rounded-xl hover:bg-gray-100 transition shadow-lg">
+                            Book Your Compliance Audit
+                        </a>
+                        <p class="text-center text-xs text-blue-300 mt-4">
+                            Don't wait for a suspension letter. Verify your compliance today.
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- NEW SECTION: IRS HR Benefits -->
+    <section class="py-20 bg-gray-50 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900">Why Choose IRS HR?</h2>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+                    Built specifically for Sponsor Licence holders, our platform replaces spreadsheet chaos with a
+                    legally robust digital fortress.
+                </p>
+            </div>
+
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Benefit 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="shield-check" class="w-6 h-6 text-blue-700"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">24X7 HR Compliance</h3>
+                    <p class="text-sm text-gray-600">Be prepared before the Home Office ever calls you – automated
+                        checks, instant alerts, and one unified evidence trail.</p>
+                </div>
+
+
+                <!-- Benefit 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="users" class="w-6 h-6 text-blue-700"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Monitor Your Migrants</h3>
+                    <p class="text-sm text-gray-600">Spend less time checking migrant status manually and more time
+                        focusing on building your workforce — confidently and compliantly.</p>
+                </div>
+
+
+                <!-- Benefit 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="clock" class="w-6 h-6 text-blue-700"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Visa Expiry Alerts</h3>
+                    <p class="text-sm text-gray-600">Spend less time chasing documents and more time running your
+                        business without ever missing a Home Office deadline.</p>
+                </div>
+
+
+                <!-- Benefit 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="scan-face" class="w-6 h-6 text-blue-700"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Right To Work Digital Records</h3>
+                    <p class="text-sm text-gray-600">Every check captured. Every document proven. Every audit passed.
+                        Replace paperwork panic with a compliant, time-stamped digital trail.</p>
+                </div>
+
+
+                <!-- Benefit 5 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="calendar-off" class="w-6 h-6 text-blue-700"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Leave & Absence Management</h3>
+                    <p class="text-sm text-gray-600">Stay fully aligned with Home Office rules by tracking every
+                        sponsored worker’s leave — accurately and on time.</p>
+                </div>
+
+
+                <!-- Benefit 6 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="file-text" class="w-6 h-6 text-blue-700"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Tailored Policies</h3>
+                    <p class="text-sm text-gray-600">Give your Authorising Officer confidence and your business a robust
+                        defence against audits and enforcement action.</p>
+                </div>
+
+
+                <!-- Benefit 7 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="book-open" class="w-6 h-6 text-blue-700"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Home Office Guidance</h3>
+                    <p class="text-sm text-gray-600">Stop guessing. Follow our clear, step-by-step guidance that
+                        automatically updates whenever Home Office rules update.</p>
+                </div>
+
+
+                <!-- Benefit 8 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="list-checks" class="w-6 h-6 text-blue-700"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">50+ Sponsored Employee Checklist</h3>
+                    <p class="text-sm text-gray-600">Stay ahead of rules — no gaps, no penalties. Spend less time
+                        tracking paperwork and more time running your business.</p>
+                </div>
+                <!-- Benefit 9 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="folder-archive" class="w-6 h-6 text-blue-700"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">100+ Sponsored Employee Records</h3>
+                    <p class="text-sm text-gray-600">Stay compliant. Stay protected. Stay ahead. Spend less time
+                        worrying about audits and more time growing your business.</p>
+                </div>
+
+
+                <!-- Benefit 10 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="rocket" class="w-6 h-6 text-blue-700"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Fast Track Compliance Onboarding</h3>
+                    <p class="text-sm text-gray-600">Get every sponsored worker fully compliant from day one. Zero time
+                        chasing paperwork, more time getting talent on the ground.</p>
+                </div>
+
+                <!-- Benefit 11 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="file-badge" class="w-6 h-6 text-blue-700"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">CoS Success Strategy</h3>
+                    <p class="text-sm text-gray-600">Approve confidently. Submit accurately. Protect your licence. Spend
+                        less time battling refusals and more time onboarding skilled talent.</p>
+                </div>
+
+
+                <!-- Benefit 12 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="search" class="w-6 h-6 text-blue-700"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Monthly Home Office Mock Audits</h3>
+                    <p class="text-sm text-gray-600">Fix compliance issues now — not when the inspector arrives.
+                        Identify risks early and close every gap.</p>
+                </div>
+
+                <!-- Benefit 13 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="user-check" class="w-6 h-6 text-blue-700"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">L7 HR Compliance Success Manager</h3>
+                    <p class="text-sm text-gray-600">Expert compliance guidance — built into your everyday HR
+                        operations. Take the stress off your Authorising Officer.</p>
+                </div>
+
+
+                <!-- Benefit 14 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="scale" class="w-6 h-6 text-blue-700"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Panel of Solicitors</h3>
+                    <p class="text-sm text-gray-600">Navigate every Home Office requirement with complete certainty. Our
+                        SRA-regulated panel keeps you protected year-round.</p>
+                </div>
+
+
+                <!-- Benefit 15 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                        <i data-lucide="headphones" class="w-6 h-6 text-blue-700"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">After Sales Support</h3>
+                    <p class="text-sm text-gray-600">Support built for compliance. We stay with you long after
+                        onboarding - your licence protection never pauses.</p>
+                </div>
+
+
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="https://app.irshr.co.uk/register"
+                    class="inline-flex items-center text-blue-900 font-bold hover:text-blue-700 transition">
+                    Calculate your savings to get started <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+                </a>
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <section id="assessment" class="py-24 bg-white">
+
+        <div class="max-w-7xl mx-auto px-4">
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+
+
+                <!-- Left Content -->
+
+                <div>
+
+                    <div class="inline-block bg-blue-100 text-blue-800 font-bold px-4 py-1 rounded-full text-sm mb-6">
+
+                        THE IRS HR DEFENCE
+
+                    </div>
+
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">
+
+                        Survive The New Home Office in 2026 with IRS HR
+
+                    </h2>
+
+                    <!-- <p class="text-xl text-gray-600 mb-8">
+
+                       You need a single source of truth that mirrors exactly what the Home Office sees. We automate that protection.
+
+                   </p> -->
+
+
+
+                    <div class="space-y-8">
+
+                        <div class="flex">
+
+                            <div class="flex-shrink-0">
+
+                                <div
+                                    class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white shadow-md">
+
+                                    <i data-lucide="database" class="w-6 h-6"></i>
+
+                                </div>
+
+                            </div>
+
+                            <div class="ml-4">
+
+                                <h3 class="text-lg font-bold text-gray-900">The Golden Record</h3>
+
+                                <p class="text-gray-600 mt-1">Integrate Payroll, HR, and Recruitment data streams into a
+                                    single, auditable "golden record” cloud-based secure system. The Home Office
+                                    compliance gaps is automatically secure according to the Home Office’s Appendix-D
+                                    Guidance</p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="flex">
+
+                            <div class="flex-shrink-0">
+
+                                <div
+                                    class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white shadow-md">
+
+                                    <i data-lucide="bell-ring" class="w-6 h-6"></i>
+
+
+                                </div>
+
+                            </div>
+
+                            <div class="ml-4">
+
+                                <h3 class="text-lg font-bold text-gray-900">Sponsor Automations </h3>
+
+                                <p class="text-gray-600 mt-1">Automated reminders for unauthorised absence, prolonged
+                                    sick leave and location changes — before deadlines are missed. Identify gaps and
+                                    proactively address them instead of ignoring your breaches. </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="flex">
+
+                            <div class="flex-shrink-0">
+
+                                <div
+                                    class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white shadow-md">
+
+                                    <i data-lucide="clipboard-check" class="w-6 h-6"></i>
+
+                                </div>
+
+                            </div>
+
+                            <div class="ml-4">
+
+                                <h3 class="text-lg font-bold text-gray-900">Monthly Mock Audits</h3>
+
+                                <p class="text-gray-600 mt-1">Why wait for the Home Office? We stress-test your systems
+                                    monthly. We find the gaps—missing docs, visa expiries—so you fix them before they
+                                    become a fine. Smart Tech that keeps you compliant 24X7</p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="flex">
+
+                            <div class="flex-shrink-0">
+
+                                <div
+                                    class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white shadow-md">
+
+                                    <i data-lucide="scale" class="w-6 h-6"></i>
+
+                                </div>
+
+                            </div>
+
+                            <div class="ml-4">
+
+                                <h3 class="text-lg font-bold text-gray-900">Direct Solicitor Access</h3>
+
+                                <p class="text-gray-600 mt-1">Home Office Compliance is a legal minefield. Your
+                                    subscription includes access to our panel of solicitors. Don't Google complex
+                                    issues—get expert legal guidance immediately. We don’t take introductory fees and
+                                    thus remain impartial. </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Right Form -->
+
+                <div class="bg-white p-8 rounded-3xl shadow-2xl border border-gray-100 relative">
+
+                    <!-- <div class="absolute -top-10 -right-10 w-32 h-32 bg-yellow-400 rounded-full opacity-20 blur-2xl">
+                    </div> -->
+
+
+
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Book Your Strategy Demo</h3>
+
+                    <p class="text-gray-500 mb-6 text-sm">Select a time to see how the IRS HR "Golden Record" protects
+                        you.</p>
+
+
+
+                    <form class="space-y-4" id="leadForm" method="POST" data-email="pc@irslimited.co.uk"
+                        action="https://script.google.com/macros/s/AKfycbw8tPwi2gdhbO_Q4w0t1N5g2KtBkzB6TIVnM8roZuJ7Wl7ypf9vB5FX6_9U6gWjgBwKbw/exec">
+
+                        <div>
+
+                            <label class="block text-sm font-semibold text-gray-700 mb-1">Company Name</label>
+
+                            <input type="text"
+                                class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition"
+                                placeholder="e.g. Acme Care Ltd" name="company">
+
+                        </div>
+
+
+
+                        <div class="grid grid-cols-2 gap-4">
+
+                            <div>
+
+                                <label class="block text-sm font-semibold text-gray-700 mb-1">Your Name</label>
+
+                                <input type="text"
+                                    class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-blue-500 outline-none transition"
+                                    placeholder="John Doe" name="name" required>
+
+                            </div>
+
+                            <div>
+
+                                <label class="block text-sm font-semibold text-gray-700 mb-1">Mobile</label>
+
+                                <input type="tel"
+                                    class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-blue-500 outline-none transition"
+                                    placeholder="07700..." name="phone" required>
+
+                            </div>
+
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+
+                            <div>
+
+                                <label class="block text-sm font-semibold text-gray-700 mb-1">Work Email</label>
+
+                                <input type="email"
+                                    class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-blue-500 outline-none transition"
+                                    placeholder="john@company.com" name="email" required>
+
+                            </div>
+
+                            <div>
+
+                                <label class="block text-sm font-semibold text-gray-700 mb-1">Number of
+                                    Employees</label>
+
+                                <input type="text"
+                                    class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-blue-500 outline-none transition"
+                                    placeholder="300" name="employees" required>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- <div>
+
+                           <label class="block text-sm font-semibold text-gray-700 mb-1">Work Email</label>
+
+                           <input type="email" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-blue-500 outline-none transition" placeholder="john@company.com">
+
+                       </div> -->
+
+
+
+                        <!-- Date and Time Selection -->
+
+                        <div class="grid grid-cols-2 gap-4">
+
+                            <div>
+
+                                <label class="block text-sm font-semibold text-gray-700 mb-1">Preferred Date</label>
+
+                                <input type="date"
+                                    class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-blue-500 outline-none transition"
+                                    name="date" required>
+
+                            </div>
+
+                            <div>
+
+                                <label class="block text-sm font-semibold text-gray-700 mb-1">Preferred Time</label>
+
+                                <!-- <input type="time" value="09:00"
+  step="60"
+                                    class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-blue-500 outline-none transition"
+                                    name="time" > -->
+
+                                <input id="timePicker"
+                                    class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-blue-500 outline-none transition"
+                                    placeholder="09:00 AM" name="time" required />
+
+                            </div>
+
+
+
+
+
+                        </div>
+
+
+
+                        <button type="submit" id="submitLeadBtn"
+                            class="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5 mt-2">
+
+                            Secure My Priority Demo Slot
+
+                        </button>
+
+
+
+                        <div class="text-center mt-4">
+
+                            <span class="text-xs text-gray-400 flex items-center justify-center">
+
+                                <i data-lucide="lock" class="w-3 h-3 mr-1"></i> 100% Confidential & Secure
+
+                            </span>
+
+                        </div>
+
+                    </form>
+
+                    <div id="successModal"
+                        class="fixed inset-0 z-50 flex items-center justify-center hidden bg-black bg-opacity-50 px-4">
+                        <div
+                            class="bg-white rounded-2xl p-8 max-w-sm w-full text-center shadow-2xl transform transition-all">
+                            <div
+                                class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Priority IRS HR Demo Request Received!
+                            </h3>
+                            <p class="text-gray-600 mb-6">Thank you for reaching out to IRS HR Priority Team. We've
+                                secured your slot and will
+                                be in touch shortly.</p>
+                            <button onclick="closeModal()"
+                                class="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 rounded-xl transition">
+                                Great, thanks!
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <br>
+            <br>
+            <br>
+            <p><i>We don’t provide immigration advice but connect you to our panel of solicitors for immigration advice.
+                    The information above is only for informational purposes and shouldn’t be construed as immigration
+                    advice.</i></p>
+
+        </div>
+
+    </section>
+
+
+
+
+    <footer class="bg-[#1b182f] "
+        style="background-image: url(assets/images/shape/shape-8.webp);background-repeat: no-repeat;background-position: bottom right;    background-position-y: 370px;">
+        <!-- Top Section -->
+        <div class="w-full border-b border-gray-700">
+            <div class="auto-container mx-auto flex flex-col md:flex-row items-center justify-between py-6 px-6">
+
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <img src="assets/images/logo.webp" alt="Logo" class="h-40">
+                </div>
+
+                <!-- Contact Info -->
+                <div class="flex flex-col md:flex-row items-center gap-10 mt-4 md:mt-0">
+                    <!-- Email -->
+                    <div class="flex items-center gap-2 pr-0 sm:pr-40">
+                        <i class="flaticon-message text-[#49b280] text-3xl mr-2"></i>
+                        <div>
+                            <p class="text-sm uppercase text-[#9390a7]">Email Address</p>
+                            <a href="mailto:care@irslimited.co.uk"
+                                class="font-bold hover:text-[#49b280] text-white text-lg">care@irslimited.co.uk</a>
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="flex items-center gap-2">
+                        <i class="flaticon-phone-call text-[#49b280] text-3xl mr-2"></i>
+                        <div>
+                            <p class="text-sm uppercase text-[#9390a7]">Call Now</p>
+                            <a href="tel:0333 577 4771" class="font-bold hover:text-[#49b280] text-white text-lg">0333
+                                577 4771</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="auto-container mx-auto d-block sm:grid grid-cols-3 gap-10 px-6 py-50">
+
+            <!-- About -->
+            <div class="col-span-2">
+                <h3 class="font-bold mb-3 text-white fs_20">About</h3>
+                <p class="text-[#9390a7] leading-[32px] footer-about sm:pr-100 p-0 font-medium">
+                    IRS HR is an advanced AI-Assisted HR compliance platform designed to help UK Sponsor Licence holders
+                    manage workforce compliance effortlessly. From migrant monitoring to maintaining robust
+                    International
+                    Recruitment to solicitor support, we simplify HR so businesses can focus on growth.
+                </p>
+            </div>
+
+            <!-- Address -->
+            <div class="col-span-1">
+                <h3 class="font-bold mb-3 text-white fs_20 mt-10 sm:mt-0">Address</h3>
+                <p class="text-[#9390a7] leading-[32px] font-medium ">
+                    Second Floor, 189 Brompton Road,<br>
+                    Next to Harrods, Knightsbridge London,<br>
+                    SW3 1NE
+                </p>
+                <ul class="social-links clearfix" style="display: flex;">
+                    <li><a href="https://www.linkedin.com/company/irs-limited"
+                            class="flex items-center justify-center w-12 h-12 rounded-full bg-[#1e1b3a] hover:bg-[#4ade80] transition duration-300 mt-8"><i
+                                class="fab fa-linkedin text-white"></i></a></li>
+                    <li><a href="https://www.youtube.com/@SponsorComplianceMadeEasy"
+                            class="flex items-center justify-center w-12 h-12 rounded-full bg-[#1e1b3a] hover:bg-[#4ade80] transition duration-300 mt-8"><i
+                                class="fab fa-youtube text-white"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <div class="bg-[#25223c]">
+        <p class="text-center text-gray-400 py-8">© Copyright 2024 by INTERNATIONAL RECRUITMENT SOLUTIONS LIMITED</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const navbar = document.getElementById("navbar");
+            // const navLinks = document.querySelectorAll(".links-navbar a");
+            const navLinks = document.getElementsByClassName(".links-navbar a");
+
+            // if (window.scrollY > 10) {
+            //   navbar.classList.remove("bg-white/80", "backdrop-blur-lg");
+            //   navbar.classList.add("bg-[#16132A]");
+            //   navbar.classList.add('scrolled');
+            // } else {
+            //   navbar.classList.remove("bg-[#16132A]");
+            //   navbar.classList.add("bg-white/80", "backdrop-blur-lg");
+            //   navbar.classList.remove('scrolled');
+            // }
+
+            if (window.innerWidth >= 768) {
+                if (window.scrollY > 10) {
+                    navbar.classList.add("bg-[#16132A]");
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove("bg-[#16132A]");
+                    navbar.classList.remove('scrolled');
+                }
+            }
+        });
+    </script>
+
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const closeBtn = document.getElementById("close-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const accordions = document.querySelectorAll(".accordion-btn");
+
+        menuBtn.addEventListener("click", () => mobileMenu.classList.remove("hidden"));
+        closeBtn.addEventListener("click", () => mobileMenu.classList.add("hidden"));
+
+        accordions.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const content = btn.nextElementSibling;
+                content.classList.toggle("hidden");
+            });
+        });
+    </script>
+
+    <script>
+        lucide.createIcons();
+
+
+        // Chart.js Configuration for Revocation Stats
+        document.addEventListener('DOMContentLoaded', function () {
+            const ctx = document.getElementById('revocationChart').getContext('2d');
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['2021-22', '2022-23', '2023-24', '2024-25'],
+                    datasets: [{
+                        label: 'Licences Revoked',
+                        data: [261, 247, 1600, 3000],
+                        backgroundColor: [
+                            'rgba(255, 255, 255, 0.3)',
+                            'rgba(255, 255, 255, 0.3)',
+                            'rgba(255, 99, 132, 0.6)',
+                            'rgba(255, 0, 0, 0.9)' // Red for the current year
+                        ],
+                        borderColor: 'transparent',
+                        borderRadius: 4,
+                        barPercentage: 0.6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            backgroundColor: '#1e3a8a',
+                            titleColor: '#fff',
+                            bodyColor: '#fff',
+                            callbacks: {
+                                label: function (context) {
+                                    return context.raw + ' Revocations';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: 'rgba(255,255,255,0.1)' },
+                            ticks: { color: 'rgba(255,255,255,0.7)' }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { color: 'rgba(255,255,255,0.9)', font: { weight: 'bold' } }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+
+    <script>
+        document.getElementById('leadForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent page reload
+
+            const form = e.target;
+            const btn = document.getElementById('submitLeadBtn');
+            const modal = document.getElementById('successModal');
+
+            // Disable button and show loading state
+            btn.disabled = true;
+            btn.innerText = "Processing...";
+            btn.style.opacity = "0.7";
+
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors' // Required for Google Apps Script cross-origin
+            })
+                .then(() => {
+                    // Show the success modal
+                    modal.classList.remove('hidden');
+                    form.reset(); // Clear the form
+                })
+                .catch(error => {
+                    console.error('Error!', error.message);
+                    alert("Something went wrong. Please try again.");
+                })
+                .finally(() => {
+                    // Reset button state
+                    btn.disabled = false;
+                    btn.innerText = "Secure My Priority Demo Slot";
+                    btn.style.opacity = "1";
+                });
+        });
+
+        function closeModal() {
+            document.getElementById('successModal').classList.add('hidden');
+        }
+    </script>
+
+<script>
+  // Helper: minimum allowed booking time = now + 2 hours
+  function getMinBookingDate() {
+    return new Date(Date.now() + 2 * 60 * 60 * 1000);
+  }
+
+  // NEW: dates with 1PM cutoff (YYYY-MM-DD format to match <input type="date">)
+  const cutoffDates = new Set(["2026-03-10", "2026-03-17", "2026-03-18"]);
+  const cutoffTime24 = "13:00"; // 1:00 PM
+
+  // NEW: parse "h:i K" -> minutes since midnight
+  function parse12hToMinutes(timeStr) {
+    // e.g. "10:30 AM"
+    const [t, ampmRaw] = timeStr.trim().split(" ");
+    if (!t || !ampmRaw) return null;
+
+    let [h, m] = t.split(":").map(Number);
+    const ampm = ampmRaw.toUpperCase();
+    if (ampm === "PM" && h !== 12) h += 12;
+    if (ampm === "AM" && h === 12) h = 0;
+    return h * 60 + m;
+  }
+
+  function minutesToHHMM(mins) {
+    const h = String(Math.floor(mins / 60)).padStart(2, "0");
+    const m = String(mins % 60).padStart(2, "0");
+    return `${h}:${m}`;
+  }
+
+  const timePicker = flatpickr("#timePicker", {
+    enableTime: true,
+    noCalendar: true,
+    dateFormat: "h:i K", // value sent (e.g. 10:30 AM)
+    time_24hr: false,
+    defaultHour: 9,
+    defaultMinute: 0,
+    minTime: "00:00",
+    maxTime: "23:59",
+  });
+
+  const dateInput = document.querySelector('input[name="date"]');
+
+  // Update time restrictions whenever date changes (or on page load)
+  function updateMinTimeForSelectedDate() {
+    const minBooking = getMinBookingDate();
+
+    const selectedDateStr = dateInput.value; // YYYY-MM-DD
+    if (!selectedDateStr) {
+      timePicker.set("minTime", "00:00");
+      timePicker.set("maxTime", "23:59");
+      return;
+    }
+
+    const selectedDate = new Date(selectedDateStr + "T00:00:00");
+    const minDate = new Date(
+      minBooking.getFullYear(),
+      minBooking.getMonth(),
+      minBooking.getDate()
+    );
+
+    const isSameDay =
+      selectedDate.getFullYear() === minDate.getFullYear() &&
+      selectedDate.getMonth() === minDate.getMonth() &&
+      selectedDate.getDate() === minDate.getDate();
+
+    // Base minTime: if booking for today, min time is now+2h, else open
+    let minTimeForPicker = "00:00";
+    if (isSameDay) {
+      const hh = String(minBooking.getHours()).padStart(2, "0");
+      const mm = String(minBooking.getMinutes()).padStart(2, "0");
+      minTimeForPicker = `${hh}:${mm}`;
+    }
+
+    // NEW: Apply 1PM cutoff on specific dates
+    let maxTimeForPicker = "23:59";
+    if (cutoffDates.has(selectedDateStr)) {
+      maxTimeForPicker = cutoffTime24;
+    }
+
+    // If minTime is later than maxTime (e.g., it's already after 11am+2h on a cutoff date),
+    // then no valid slots exist today — clear time and set minTime=maxTime to prevent selection.
+    const minMinutes = Number(minTimeForPicker.slice(0, 2)) * 60 + Number(minTimeForPicker.slice(3, 5));
+    const maxMinutes = Number(maxTimeForPicker.slice(0, 2)) * 60 + Number(maxTimeForPicker.slice(3, 5));
+
+    if (minMinutes > maxMinutes) {
+      timePicker.set("minTime", maxTimeForPicker);
+      timePicker.set("maxTime", maxTimeForPicker);
+      timePicker.clear();
+      return;
+    }
+
+    timePicker.set("minTime", minTimeForPicker);
+    timePicker.set("maxTime", maxTimeForPicker);
+
+    // If their currently selected time is now invalid, clear it
+    const picked = timePicker.selectedDates[0];
+    if (picked) {
+      const combined = new Date(
+        selectedDateStr +
+          "T" +
+          String(picked.getHours()).padStart(2, "0") +
+          ":" +
+          String(picked.getMinutes()).padStart(2, "0") +
+          ":00"
+      );
+
+      // invalid if before now+2h OR after cutoff on those dates
+      const pickedMinutes = picked.getHours() * 60 + picked.getMinutes();
+      const violatesCutoff = cutoffDates.has(selectedDateStr) && pickedMinutes > maxMinutes;
+
+      if (combined < minBooking || violatesCutoff) timePicker.clear();
+    }
+  }
+
+  // Set min date on the date input (HTML date picker)
+  function updateMinDate() {
+    const minBooking = getMinBookingDate();
+    const yyyy = minBooking.getFullYear();
+    const mm = String(minBooking.getMonth() + 1).padStart(2, "0");
+    const dd = String(minBooking.getDate()).padStart(2, "0");
+    dateInput.min = `${yyyy}-${mm}-${dd}`;
+  }
+
+  // Run on load
+  updateMinDate();
+  updateMinTimeForSelectedDate();
+
+  // Bind events
+  dateInput.addEventListener("change", () => {
+    updateMinDate();
+    updateMinTimeForSelectedDate();
+  });
+
+  // FINAL GUARD: block submission if date+time is < now+2h OR violates 1PM cutoff
+  document.getElementById("leadForm").addEventListener(
+    "submit",
+    function (e) {
+      const minBooking = getMinBookingDate();
+
+      const dateVal = dateInput.value; // YYYY-MM-DD
+      const timeVal = document.getElementById("timePicker").value; // "10:30 AM"
+
+      if (dateVal && timeVal) {
+        // Convert "10:30 AM" into 24h minutes
+        const mins = parse12hToMinutes(timeVal);
+        if (mins == null) return;
+
+        const hh = String(Math.floor(mins / 60)).padStart(2, "0");
+        const mm = String(mins % 60).padStart(2, "0");
+
+        const combined = new Date(`${dateVal}T${hh}:${mm}:00`);
+
+        // rule 1: at least 2 hours from now
+        if (combined < minBooking) {
+          e.preventDefault();
+          alert("Please choose a date/time at least 2 hours from now.");
+          return;
+        }
+
+        // rule 2: cutoff dates must be <= 1:00 PM
+        if (cutoffDates.has(dateVal)) {
+          const maxMinutes = 13 * 60; // 1PM
+          if (mins > maxMinutes) {
+            e.preventDefault();
+            alert("On March 10, 17, and 18, the latest available time is 1:00 PM.");
+            return;
+          }
+        }
+      }
+    },
+    true
+  );
+</script>
+
+    <script>
+        function closePopup() {
+            document.getElementById("bottomPopup").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
