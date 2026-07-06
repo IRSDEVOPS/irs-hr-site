@@ -139,11 +139,89 @@
             padding-top: 100px;
             padding-bottom: 100px;
         }
+      .module-card{
+    transition:.3s;
+    position:relative;
+}
+
+.module-card.completed{
+
+    border:2px solid #22c55e;
+    background:#f0fdf4;
+    box-shadow:0 10px 30px rgba(34,197,94,.15);
+
+}
+
+.module-card.completed::before{
+
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:5px;
+    background:#22c55e;
+    border-radius:16px 16px 0 0;
+
+}
+
+.module-card.locked{
+
+    opacity:.55;
+
+}
+
+.module-status span{
+
+    padding:6px 14px;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:600;
+
+}
+
+.lesson-btn.completed{
+
+    color:#16a34a;
+    font-weight:700;
+
+}
     </style>
 
 </head>
 
 <body class="bg-gray-50 text-gray-900">
+
+
+    <!-- Course Lesson Modal (Hidden by default) -->
+    <div id="lessonModal"
+        class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 opacity-0 transition-opacity duration-300">
+        <div class="bg-white w-full max-w-3xl max-h-[90vh] rounded-2xl shadow-2xl overflow-hidden flex flex-col transform scale-95 transition-transform duration-300"
+            id="lessonModalContent">
+            <!-- Header -->
+            <div class="px-8 py-6 border-b border-gray-100 flex justify-between items-center bg-gray-50">
+                <h3 id="modalTitle" class="text-2xl font-bold text-gray-900">Module Title</h3>
+                <button id="closeModalBtn"
+                    class="text-gray-400 hover:text-gray-600 focus:outline-none transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Body -->
+            <div class="p-8 overflow-y-auto" id="modalBody">
+                <!-- Content injected via JS -->
+            </div>
+            <!-- Footer -->
+            <div class="px-8 py-6 border-t border-gray-100 bg-gray-50 flex justify-end">
+                <button id="completeLessonBtn"
+                    class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-2.5 rounded-xl font-semibold transition-all shadow-sm">Mark
+                    as Complete</button>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Bottom Popup Banner -->
     <div id="bottomPopup" class="popup-banner shadow">
@@ -780,7 +858,6 @@
         </div>
     </div>
 
-
     <section id="why-irs" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -790,7 +867,6 @@
                     blending cutting-edge automation with a dedicated panel of immigration solicitors to guarantee your
                     Digital Statutory Excuse.</p>
             </div>
-
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-lg transition-all">
@@ -807,7 +883,6 @@
                         Home Office inspections.</p>
                 </div>
 
-
                 <div
                     class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-lg transition-all relative overflow-hidden">
                     <div class="absolute top-0 right-0 w-24 h-24 bg-brand-500 rounded-bl-full opacity-10"></div>
@@ -823,7 +898,6 @@
                         the "Self-Employed Trap." Get direct access to our panel of top-tier immigration solicitors for
                         bespoke advice.</p>
                 </div>
-
 
                 <div class="p-8 rounded-2xl bg-gray-50 border border-gray-100 hover:shadow-lg transition-all">
                     <div
@@ -843,7 +917,6 @@
         </div>
     </section>
 
-
     <section id="success" class="py-20 bg-brand-900 text-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Sponsor Licence Success Stories</h2>
@@ -858,7 +931,6 @@
                                 d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                         </svg>
                     </div>
-
 
                     <!-- Slider Track -->
                     <div id="carouselTrack"
@@ -930,7 +1002,6 @@
                                 Compliance Team, and all IRS HR staff for their outstanding support. Highly recommended
                                 for any organisation needing expert Home Office and HR compliance assistance."</p>
                         </div>
-
 
                         <!-- Slide 2: (Placeholder to drop in next review from link) -->
                         <div class="w-full flex-shrink-0 p-8 md:p-10">
@@ -1059,7 +1130,6 @@
                         </div>
                     </div>
 
-
                     <!-- Carousel Controls -->
                     <button id="prevBtn"
                         class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white p-3 rounded-full transition-all z-20 focus:outline-none focus:ring-2 focus:ring-brand-500 shadow-md">
@@ -1076,7 +1146,6 @@
                         </svg>
                     </button>
 
-
                     <!-- Indicators -->
                     <div class="absolute bottom-6 left-0 right-0 flex justify-center gap-3 z-20">
                         <button class="indicator w-3 h-3 rounded-full bg-white transition-all focus:outline-none"
@@ -1091,12 +1160,11 @@
                 </div>
             </div>
 
-
             <!-- Direct link to Google Reviews -->
             <div class="text-center mt-10">
-                <a href="https://g.page/r/CV-N2u0mmIouEAE/review" target="_blank" rel="noopener noreferrer"
+                <a href="#course"  rel="noopener noreferrer"
                     class="inline-flex items-center gap-2 text-brand-300 hover:text-white transition-colors text-base font-medium bg-brand-800/50 hover:bg-brand-800 px-6 py-3 rounded-full border border-brand-700">
-                    Read all reviews on Google
+                    Start Your Free Course
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
@@ -1106,7 +1174,6 @@
         </div>
     </section>
 
-
     <section id="course" class="py-24 bg-gray-100 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
             <div class="text-center mb-12">
@@ -1114,7 +1181,6 @@
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto">Unlock the comprehensive modules below to understand
                     your new obligations and how to safeguard your business.</p>
             </div>
-
 
             <div class="relative">
                 <!-- The Gate Overlay -->
@@ -1173,11 +1239,11 @@
                     </form>
                 </div>
 
-
                 <!-- Course Content (Locked initially) -->
                 <div id="courseContent" class="locked-content space-y-6">
                     <!-- Module 1 -->
-                    <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm">
+                    <div class="module-card bg-white rounded-2xl p-8 border border-gray-200 shadow-sm relative"
+     data-module="1">
                         <div class="flex items-center justify-between mb-4">
                             <span class="text-brand-600 font-bold text-sm tracking-wider uppercase">Module 1</span>
                             <span class="bg-gray-100 text-gray-600 py-1 px-3 rounded-full text-xs font-semibold">15
@@ -1199,12 +1265,29 @@
                                         d="M5 13l4 4L19 7"></path>
                                 </svg> The new scope of Online Matching Services</li>
                         </ul>
-                        <button class="text-brand-600 font-semibold hover:underline">Start Lesson &rarr;</button>
+                       <div class="flex items-center justify-between mt-6">
+
+                        <button
+                            onclick="openLesson(1)"
+                            class="lesson-btn text-brand-600 font-semibold hover:underline flex items-center gap-1 group">
+
+                            Start Lesson
+                            <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+
+                        </button>
+
+                        <div class="module-status">
+                            <span class="text-blue-600 font-medium">
+                                Ready
+                            </span>
+                        </div>
+
+                    </div>
                     </div>
 
-
                     <!-- Module 2 -->
-                    <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm">
+                    <div class="module-card bg-white rounded-2xl p-8 border border-gray-200 shadow-sm relative"
+     data-module="2">
                         <div class="flex items-center justify-between mb-4">
                             <span class="text-brand-600 font-bold text-sm tracking-wider uppercase">Module 2</span>
                             <span class="bg-gray-100 text-gray-600 py-1 px-3 rounded-full text-xs font-semibold">20
@@ -1226,12 +1309,29 @@
                                         d="M5 13l4 4L19 7"></path>
                                 </svg> Managing Substitution Controls Safely</li>
                         </ul>
-                        <button class="text-brand-600 font-semibold hover:underline">Start Lesson &rarr;</button>
+                       <div class="flex items-center justify-between mt-6">
+
+                        <button
+                            onclick="openLesson(2)"
+                            class="lesson-btn text-brand-600 font-semibold hover:underline flex items-center gap-1 group">
+
+                            Start Lesson
+                            <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+
+                        </button>
+
+                        <div class="module-status">
+                            <span class="text-blue-600 font-medium">
+                                Ready
+                            </span>
+                        </div>
+
+                    </div>
                     </div>
 
-
                     <!-- Module 3 -->
-                    <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm">
+                    <div class="module-card bg-white rounded-2xl p-8 border border-gray-200 shadow-sm relative"
+     data-module="3">
                         <div class="flex items-center justify-between mb-4">
                             <span class="text-brand-600 font-bold text-sm tracking-wider uppercase">Module 3</span>
                             <span class="bg-gray-100 text-gray-600 py-1 px-3 rounded-full text-xs font-semibold">15
@@ -1253,12 +1353,29 @@
                                         d="M5 13l4 4L19 7"></path>
                                 </svg> Keeping compliant records of your reasoning</li>
                         </ul>
-                        <button class="text-brand-600 font-semibold hover:underline">Start Lesson &rarr;</button>
+                       <div class="flex items-center justify-between mt-6">
+
+                        <button
+                            onclick="openLesson(3)"
+                            class="lesson-btn text-brand-600 font-semibold hover:underline flex items-center gap-1 group">
+
+                            Start Lesson
+                            <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+
+                        </button>
+
+                        <div class="module-status">
+                            <span class="text-blue-600 font-medium">
+                                Ready
+                            </span>
+                        </div>
+
+                    </div>
                     </div>
 
-
                     <!-- Module 4 -->
-                    <div class="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm">
+                    <div class="module-card bg-white rounded-2xl p-8 border border-gray-200 shadow-sm relative"
+     data-module="4">
                         <div class="flex items-center justify-between mb-4">
                             <span class="text-brand-600 font-bold text-sm tracking-wider uppercase">Module 4</span>
                             <span class="bg-gray-100 text-gray-600 py-1 px-3 rounded-full text-xs font-semibold">25
@@ -1281,15 +1398,41 @@
                                         d="M5 13l4 4L19 7"></path>
                                 </svg> Sponsor Licence Record-Keeping alignment</li>
                         </ul>
-                        <button class="text-brand-600 font-semibold hover:underline">Start Lesson &rarr;</button>
+                       <div class="flex items-center justify-between mt-6">
+
+                                    <button
+                                        onclick="openLesson(4)"
+                                        class="lesson-btn text-brand-600 font-semibold hover:underline flex items-center gap-1 group">
+
+                                        Start Lesson
+                                        <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+
+                                    </button>
+
+                                    <div class="module-status">
+                                        <span class="text-blue-600 font-medium">
+                                            Ready
+                                        </span>
+                                    </div>
+
+                                </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="text-center mt-10">
+    <button
+        id="viewCertificateBtn"
+        onclick="window.location.href='certificate4.html'"
+        class="hidden bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-xl font-bold transition">
+        <i class="fas fa-award mr-2"></i>
+        View Certificate
+    </button>
+</div>
     </section>
 
-
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-white" hidden>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row gap-16 items-center">
 
@@ -1330,7 +1473,6 @@
                         </li>
                     </ul>
                 </div>
-
 
                 <!-- Demo Form -->
                 <div class="lg:w-1/2 w-full" id="demo">
@@ -1390,14 +1532,11 @@
                     </div>
                 </div>
 
-
             </div>
         </div>
     </section>
 
-
-
-    <section id="assessment" class="py-24 bg-white" hidden>
+    <section id="assessment" class="py-24 bg-white" >
 
         <div class="max-w-7xl mx-auto px-4">
 
@@ -1408,138 +1547,40 @@
                 <!-- Left Content -->
 
                 <div>
-
-                    <div class="inline-block bg-blue-100 text-blue-800 font-bold px-4 py-1 rounded-full text-sm mb-6">
-
-                        THE IRS HR DEFENCE
-
+<div
+                        class="inline-flex items-center justify-center w-16 h-16 bg-accent-100 text-accent-600 rounded-full mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z">
+                            </path>
+                        </svg>
                     </div>
-
-                    <h2 class="text-4xl font-bold text-gray-900 mb-6">
-
-                        Survive The New Home Office in 2026 with IRS HR
-
-                    </h2>
-
-                    <!-- <p class="text-xl text-gray-600 mb-8">
-
-                       You need a single source of truth that mirrors exactly what the Home Office sees. We automate that protection.
-
-                   </p> -->
-
-
-
-                    <div class="space-y-8">
-
-                        <div class="flex">
-
-                            <div class="flex-shrink-0">
-
-                                <div
-                                    class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white shadow-md">
-
-                                    <i data-lucide="database" class="w-6 h-6"></i>
-
-                                </div>
-
-                            </div>
-
-                            <div class="ml-4">
-
-                                <h3 class="text-lg font-bold text-gray-900">The Golden Record</h3>
-
-                                <p class="text-gray-600 mt-1">Integrate Payroll, HR, and Recruitment data streams into a
-                                    single, auditable "golden record” cloud-based secure system. The Home Office
-                                    compliance gaps is automatically secure according to the Home Office’s Appendix-D
-                                    Guidance</p>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="flex">
-
-                            <div class="flex-shrink-0">
-
-                                <div
-                                    class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white shadow-md">
-
-                                    <i data-lucide="bell-ring" class="w-6 h-6"></i>
-
-
-                                </div>
-
-                            </div>
-
-                            <div class="ml-4">
-
-                                <h3 class="text-lg font-bold text-gray-900">Sponsor Automations </h3>
-
-                                <p class="text-gray-600 mt-1">Automated reminders for unauthorised absence, prolonged
-                                    sick leave and location changes — before deadlines are missed. Identify gaps and
-                                    proactively address them instead of ignoring your breaches. </p>
-
-                            </div>
-
-                        </div>
-
-                        <div class="flex">
-
-                            <div class="flex-shrink-0">
-
-                                <div
-                                    class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white shadow-md">
-
-                                    <i data-lucide="clipboard-check" class="w-6 h-6"></i>
-
-                                </div>
-
-                            </div>
-
-                            <div class="ml-4">
-
-                                <h3 class="text-lg font-bold text-gray-900">Monthly Mock Audits</h3>
-
-                                <p class="text-gray-600 mt-1">Why wait for the Home Office? We stress-test your systems
-                                    monthly. We find the gaps—missing docs, visa expiries—so you fix them before they
-                                    become a fine. Smart Tech that keeps you compliant 24X7</p>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="flex">
-
-                            <div class="flex-shrink-0">
-
-                                <div
-                                    class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white shadow-md">
-
-                                    <i data-lucide="scale" class="w-6 h-6"></i>
-
-                                </div>
-
-                            </div>
-
-                            <div class="ml-4">
-
-                                <h3 class="text-lg font-bold text-gray-900">Direct Solicitor Access</h3>
-
-                                <p class="text-gray-600 mt-1">Home Office Compliance is a legal minefield. Your
-                                    subscription includes access to our panel of solicitors. Don't Google complex
-                                    issues—get expert legal guidance immediately. We don’t take introductory fees and
-                                    thus remain impartial. </p>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Earn Your Compliance Certificate</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Upon completing the DIY modules, you will receive an IRS HR Certificate of Completion. Keep this
+                        in your compliance files to demonstrate to the Home Office that your team is proactively trained
+                        on the July 2026 Code of Practice changes.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-brand-500 flex-shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-700">Validates internal training protocols for your Sponsor
+                                Licence.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-brand-500 flex-shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-gray-700">Helps establish "Effective right to work practices" for civil
+                                penalty mitigation.</span>
+                        </li>
+                    </ul>
                 </div>
 
 
@@ -1553,10 +1594,9 @@
 
 
 
-                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Book Your Strategy Demo</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Book Platform Demo</h3>
 
-                    <p class="text-gray-500 mb-6 text-sm">Select a time to see how the IRS HR "Golden Record" protects
-                        you.</p>
+                   <br>
 
 
 
@@ -1677,7 +1717,7 @@
                         <button type="submit" id="submitLeadBtn"
                             class="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5 mt-2">
 
-                            Secure My Priority Demo Slot
+                           Book Platform Demo 
 
                         </button>
 
@@ -1725,9 +1765,9 @@
             <br>
             <br>
             <br>
-            <p><i>We don’t provide immigration advice but connect you to our panel of solicitors for immigration advice.
+            <!-- <p><i>We don’t provide immigration advice but connect you to our panel of solicitors for immigration advice.
                     The information above is only for informational purposes and shouldn’t be construed as immigration
-                    advice.</i></p>
+                    advice.</i></p> -->
 
         </div>
 
@@ -1804,6 +1844,7 @@
             </div>
         </div>
     </footer>
+
     <div class="bg-[#25223c]">
         <p class="text-center text-gray-400 py-8">© Copyright 2024 by INTERNATIONAL RECRUITMENT SOLUTIONS LIMITED</p>
     </div>
@@ -1857,12 +1898,10 @@
 
 
     <script>
-
         // Course Unlock Logic
         const unlockForm = document.getElementById('unlockForm');
         const courseGate = document.getElementById('courseGate');
         const courseContent = document.getElementById('courseContent');
-
 
         unlockForm.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -1872,7 +1911,6 @@
             const phone = document.getElementById('phone').value;
             const name = document.getElementById('fullName').value;
             const size = document.getElementById('empSize').value;
-
 
             if (email && phone && name && size) {
                 // Simulate processing
@@ -1892,16 +1930,13 @@
                         courseContent.classList.add('unlocked-content');
                     }, 500);
 
-
                 }, 800);
             }
         });
 
-
         // Demo Booking Form Logic
         const demoForm = document.getElementById('demoForm');
         const demoSuccess = document.getElementById('demoSuccess');
-
 
         demoForm.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -1911,7 +1946,6 @@
             }, 400);
         });
 
-
         // Carousel Logic
         const track = document.getElementById('carouselTrack');
         const prevBtn = document.getElementById('prevBtn');
@@ -1920,7 +1954,6 @@
         let currentIndex = 0;
         const totalSlides = indicators.length;
         let autoSlideInterval;
-
 
         function updateCarousel() {
             track.style.transform = `translateX(-${currentIndex * 100}%)`;
@@ -1935,28 +1968,23 @@
             });
         }
 
-
         function nextSlide() {
             currentIndex = (currentIndex + 1) % totalSlides;
             updateCarousel();
         }
-
 
         function prevSlide() {
             currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
             updateCarousel();
         }
 
-
         function startAutoSlide() {
             autoSlideInterval = setInterval(nextSlide, 8000); // Auto-slides every 8 seconds
         }
 
-
         function stopAutoSlide() {
             clearInterval(autoSlideInterval);
         }
-
 
         nextBtn.addEventListener('click', () => {
             nextSlide();
@@ -1964,13 +1992,11 @@
             startAutoSlide();
         });
 
-
         prevBtn.addEventListener('click', () => {
             prevSlide();
             stopAutoSlide();
             startAutoSlide();
         });
-
 
         indicators.forEach(indicator => {
             indicator.addEventListener('click', (e) => {
@@ -1981,15 +2007,367 @@
             });
         });
 
-
         // Pause on hover
         const carouselContainer = track.parentElement;
         carouselContainer.addEventListener('mouseenter', stopAutoSlide);
         carouselContainer.addEventListener('mouseleave', startAutoSlide);
 
-
         // Start auto-slide initially
         startAutoSlide();
+
+        // --------------------------------------------------------
+        // Course Content Data & Modal Logic
+        // --------------------------------------------------------
+        const courseData = {
+            1: {
+                title: 'Module 1: The Expanding Definition of "Employer"',
+                content: `
+                    <div class="space-y-6 text-gray-700 leading-relaxed">
+                        <p>Welcome to Module 1. Under Section 48 of the Border Security, Asylum and Immigration Act 2025, the right to work regime officially expands beyond conventional employment relationships. As a Sponsor Licence Holder, failing to understand these new definitions puts your licence at immediate risk.</p>
+                        
+                        <h4 class="text-xl font-bold text-gray-900 mt-6">Who is now considered an "Employer"?</h4>
+                        <p>The duty to check (and liability for failing to do so properly) now applies to businesses engaging individuals in three new ways:</p>
+                        <ul class="list-disc pl-5 space-y-2 bg-gray-50 p-6 rounded-xl border border-gray-100">
+                            <li><strong class="text-brand-600">Under a worker's contract:</strong> Where the individual undertakes to perform work personally, and the other party is not a client/customer of the individual's own business.</li>
+                            <li><strong class="text-brand-600">Individual sub-contractors:</strong> Anyone engaged as an individual sub-contractor in a contractual chain.</li>
+                            <li><strong class="text-brand-600">Online Matching Services:</strong> Platforms that match service providers with clients/customers for a fee or commission.</li>
+                        </ul>
+
+                        <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mt-6">
+                            <p class="font-semibold text-blue-900">Key Takeaway:</p>
+                            <p class="text-blue-800 text-sm mt-1">The issue is no longer simply whether a check was done. The Home Office will scrutinise whether it was done in the prescribed way, <em>before</em> work started, by the correct party, and on the person actually carrying out the work.</p>
+                        </div>
+                    </div>
+                `
+            },
+            2: {
+                title: 'Module 2: Navigating Extended Liability',
+                content: `
+                    <div class="space-y-6 text-gray-700 leading-relaxed">
+                        <p>Extended liability is arguably the most dangerous aspect of the new regime. It makes a business further up a contractual chain liable for illegal working—even if you have no direct contract with the worker.</p>
+                        
+                        <h4 class="text-xl font-bold text-gray-900 mt-6">How the Chain Works</h4>
+                        <p>If you contract an agency or labour supplier to provide workers to fulfil a service, the Home Office will initially look for the direct employer. However, if that employer cannot be identified, or if prescribed checks failed, the liability moves upstream to you.</p>
+
+                        <h4 class="text-xl font-bold text-gray-900 mt-6">Protecting Your Business</h4>
+                        <p>To establish a statutory excuse against upstream liability, your contracts with suppliers MUST include "Prescribed Requirements", specifically written statements that:</p>
+                        <ul class="space-y-3 mt-4">
+                            <li class="flex gap-3"><svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Require the supplier to conduct prescribed RtW checks.</li>
+                            <li class="flex gap-3"><svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Prevent further subcontracting without prior written consent.</li>
+                            <li class="flex gap-3"><svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Permit your business to conduct audits of their compliance.</li>
+                            <li class="flex gap-3"><svg class="w-6 h-6 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Allow contract termination where illegal working is identified.</li>
+                        </ul>
+                        <p class="mt-4 font-semibold">IRS HR Automation: Our platform automatically issues and tracks these flow-down clauses with your suppliers, ensuring you maintain a bulletproof audit trail.</p>
+                    </div>
+                `
+            },
+            3: {
+                title: 'Module 3: The "Self-Employed" Trap',
+                content: `
+                    <div class="space-y-6 text-gray-700 leading-relaxed">
+                        <p>For many businesses, contractor misclassification will be the hardest part of the new regime. The draft Code makes it clear: a contract that labels someone "self-employed" or "contractor" will not protect you if the reality of the arrangement dictates otherwise.</p>
+                        
+                        <h4 class="text-xl font-bold text-gray-900 mt-6">The IRS HR Checklist for Contractors</h4>
+                        <p>You must scrutinise the arrangement using criteria similar to IR35 tax laws:</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                            <div class="bg-accent-50 p-4 rounded-lg border border-accent-100">
+                                <strong class="text-accent-900 block mb-1">Personal Service</strong>
+                                Does the individual have to do the work personally, or can they genuinely send a substitute?
+                            </div>
+                            <div class="bg-accent-50 p-4 rounded-lg border border-accent-100">
+                                <strong class="text-accent-900 block mb-1">Commercial Risk</strong>
+                                Are they genuinely running their own business with their own clients and pricing?
+                            </div>
+                            <div class="bg-accent-50 p-4 rounded-lg border border-accent-100">
+                                <strong class="text-accent-900 block mb-1">Integration</strong>
+                                Are they deeply integrated into your workforce or service-delivery model?
+                            </div>
+                            <div class="bg-accent-50 p-4 rounded-lg border border-accent-100">
+                                <strong class="text-accent-900 block mb-1">Substitution Controls</strong>
+                                If substitution is allowed, you MUST ensure the substitute is checked before they start work.
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-900 text-white p-6 rounded-xl mt-6">
+                            <h4 class="font-bold text-lg mb-2">Legal Panel Advice</h4>
+                            <p class="text-gray-300 text-sm">Do not assume. Keep a written record of your reasoning for borderline cases. If you are an IRS HR client, our panel of immigration solicitors can be called upon to provide a legally backed determination for complex contractor setups.</p>
+                        </div>
+                    </div>
+                `
+            },
+            4: {
+                title: 'Module 4: Establishing Your Digital Statutory Excuse',
+                content: `
+                    <div class="space-y-6 text-gray-700 leading-relaxed">
+                        <p>A "Statutory Excuse" protects you from the £45,000 - £60,000 civil penalties per illegal worker. With the 2026 rules, establishing and retaining this excuse requires rigorous, ongoing verification.</p>
+                        
+                        <h4 class="text-xl font-bold text-gray-900 mt-6">The 3 Pillars of Compliance</h4>
+                        <ul class="space-y-4 mt-4">
+                            <li class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                                <strong class="text-brand-600 text-lg block mb-2">1. Pre-Engagement Checks</strong>
+                                <p class="text-sm">Checks must be carried out using prescribed routes: manual checks, Home Office online checks (eVisas), or via a registered DVSP. Remember, the Home Office online check is mandatory for eVisa holders.</p>
+                            </li>
+                            <li class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                                <strong class="text-brand-600 text-lg block mb-2">2. Identity Verification Throughout</strong>
+                                <p class="text-sm">For contractors and platform workers, the draft Code expects you to maintain systems to ensure the person doing the work is the <em>exact same person</em> you checked initially. (e.g., access passes, shift re-verification).</p>
+                            </li>
+                            <li class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm">
+                                <strong class="text-brand-600 text-lg block mb-2">3. Sponsor Record Keeping</strong>
+                                <p class="text-sm">Appendix D requires you to retain evidence of RtW checks for <em>any</em> worker you employ (sponsored or not). Failure here creates severe Sponsor Licence compliance issues on top of civil penalties.</p>
+                            </li>
+                        </ul>
+
+                        <p class="mt-6 font-semibold text-center text-gray-900">This is exactly why Sponsor Licence holders trust IRS HR to automate the Digital Statutory Excuse.</p>
+                    </div>
+                `
+            }
+        };
+
+
+      const lessonModal = document.getElementById('lessonModal');
+const lessonModalContent = document.getElementById('lessonModalContent');
+const modalTitle = document.getElementById('modalTitle');
+const modalBody = document.getElementById('modalBody');
+const closeModalBtn = document.getElementById('closeModalBtn');
+const completeLessonBtn = document.getElementById('completeLessonBtn');
+
+const TOTAL_MODULES = Object.keys(courseData).length;
+
+let currentModule = 1;
+
+// Load progress
+let completedModules = JSON.parse(localStorage.getItem("completedModules")) || [];
+
+// ----------------------------
+// Refresh Module UI
+// ----------------------------
+function updateModulesUI(){
+
+    document.querySelectorAll(".module-card").forEach(card=>{
+
+        const moduleId = Number(card.dataset.module);
+
+        const status = card.querySelector(".module-status");
+
+        const btn = card.querySelector(".lesson-btn");
+
+        const completed = completedModules.includes(moduleId);
+
+        const unlocked =
+            moduleId===1 ||
+            completed ||
+            completedModules.includes(moduleId-1);
+
+        card.classList.remove("completed","locked");
+
+        btn.classList.remove("completed");
+
+        if(completed){
+
+            card.classList.add("completed");
+
+            btn.innerHTML=`
+               
+                See Module &nbsp; &rarr;
+            `;
+
+            btn.classList.add("completed");
+
+            status.innerHTML=`
+                <span class="bg-green-100 text-green-700">
+                    ✓ Completed
+                </span>
+            `;
+
+        }
+        else if(unlocked){
+
+            status.innerHTML=`
+                <span class="bg-blue-100 text-blue-700">
+                    Ready
+                </span>
+            `;
+
+            btn.innerHTML=`
+                Start Lesson
+                <span>&rarr;</span>
+            `;
+
+        }
+        else{
+
+            card.classList.add("locked");
+
+            status.innerHTML=`
+                <span class="bg-gray-100 text-gray-500">
+                    Locked
+                </span>
+            `;
+
+            btn.innerHTML=`
+                <i class="fas fa-lock"></i>
+                Locked
+            `;
+
+        }
+
+    });
+const certificateBtn = document.getElementById("viewCertificateBtn");
+
+if (certificateBtn) {
+    if (completedModules.length === TOTAL_MODULES) {
+        certificateBtn.classList.remove("hidden");
+    } else {
+        certificateBtn.classList.add("hidden");
+    }
+}
+}
+// ----------------------------
+// Open Lesson
+// ----------------------------
+window.openLesson = function(moduleId){
+
+    const unlocked =
+        moduleId === 1 ||
+        completedModules.includes(moduleId) ||
+        completedModules.includes(moduleId-1);
+
+    if(!unlocked){
+        alert("Complete the previous module first.");
+        return;
+    }
+
+    currentModule = moduleId;
+
+    const data = courseData[moduleId];
+
+    modalTitle.innerHTML = data.title;
+    modalBody.innerHTML = data.content;
+
+    if(completedModules.includes(moduleId)){
+
+        completeLessonBtn.disabled = true;
+
+        completeLessonBtn.innerHTML =
+            '<i class="fas fa-check mr-2"></i>Completed';
+
+        completeLessonBtn.className =
+            "bg-green-600 text-white px-6 py-2.5 rounded-xl font-semibold";
+
+    }else{
+
+        completeLessonBtn.disabled = false;
+
+        completeLessonBtn.innerHTML =
+            "Mark as Completed";
+
+        completeLessonBtn.className =
+            "bg-brand-600 hover:bg-brand-700 text-white px-6 py-2.5 rounded-xl font-semibold";
+
+    }
+
+    lessonModal.classList.remove("hidden");
+
+    setTimeout(()=>{
+        lessonModal.classList.remove("opacity-0");
+        lessonModalContent.classList.remove("scale-95");
+        lessonModalContent.classList.add("scale-100");
+    },10);
+
+};
+
+// ----------------------------
+// Close
+// ----------------------------
+function closeLesson(){
+
+    lessonModal.classList.add("opacity-0");
+
+    lessonModalContent.classList.remove("scale-100");
+    lessonModalContent.classList.add("scale-95");
+
+    setTimeout(()=>{
+        lessonModal.classList.add("hidden");
+    },300);
+
+}
+
+closeModalBtn.onclick = closeLesson;
+
+lessonModal.onclick = function(e){
+
+    if(e.target===lessonModal){
+        closeLesson();
+    }
+
+};
+
+// ----------------------------
+// Complete Lesson
+// ----------------------------
+completeLessonBtn.onclick = function(){
+
+    if(!completedModules.includes(currentModule)){
+
+        completedModules.push(currentModule);
+
+        localStorage.setItem(
+            "completedModules",
+            JSON.stringify(completedModules)
+        );
+
+    }
+
+    updateModulesUI();
+
+    completeLessonBtn.innerHTML =
+        '<i class="fas fa-check mr-2"></i>Completed';
+
+    completeLessonBtn.className =
+        "bg-green-600 text-white px-6 py-2.5 rounded-xl font-semibold";
+
+    completeLessonBtn.disabled = true;
+
+    setTimeout(()=>{
+
+        closeLesson();
+
+        if(currentModule < TOTAL_MODULES){
+
+            openLesson(currentModule+1);
+
+        }else{
+
+            const certificateId =
+                "COS-" + Date.now();
+
+            localStorage.setItem("certificateData",
+                JSON.stringify({
+
+                    name:
+                        localStorage.getItem("studentName") ||
+                        document.getElementById("fullName")?.value ||
+                        "Student",
+
+                    certificateId,
+
+                    date:new Date().toLocaleDateString("en-GB")
+
+                })
+            );
+
+           document
+    .getElementById("viewCertificateBtn")
+    .classList.remove("hidden");
+
+        }
+
+    },700);
+
+};
+
+updateModulesUI();
+
 
 
     </script>
