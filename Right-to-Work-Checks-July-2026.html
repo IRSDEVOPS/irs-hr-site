@@ -1427,7 +1427,7 @@
             <button id="viewCertificateBtn" onclick="window.location.href='certificate4.html'"
                 class="hidden bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-xl font-bold transition">
                 <i class="fas fa-award mr-2"></i>
-                View Certificate
+                Download Your RTW Certification
             </button>
         </div>
     </section>
@@ -2143,7 +2143,24 @@
         let currentModule = 1;
 
         // Load progress
-        let completedModules = JSON.parse(localStorage.getItem("completedModules")) || [];
+        //const COURSE_EXPIRY_DAYS = 2;
+
+        // Check expiry
+        const savedExpiry = localStorage.getItem("courseExpiry");
+
+        if (savedExpiry && Date.now() > Number(savedExpiry)) {
+
+            localStorage.removeItem("completedModules");
+            localStorage.removeItem("certificateData");
+            localStorage.removeItem("courseExpiry");
+
+            completedModules = [];
+
+        } else {
+
+            completedModules = JSON.parse(localStorage.getItem("completedModules")) || [];
+
+        }
 
         // ----------------------------
         // Refresh Module UI
@@ -2377,11 +2394,18 @@
                         })
                     );
 
+                   // Start 2-day expiry countdown
+                    //const expiry = Date.now() + (7 * 24 * 60 * 60 * 1000);
+                    const expiry = Date.now() + (60 * 1000); // 30 seconds
+                    localStorage.setItem("courseExpiry", expiry);
+
                     document
                         .getElementById("viewCertificateBtn")
                         .classList.remove("hidden");
 
                 }
+
+                
 
             }, 700);
 
