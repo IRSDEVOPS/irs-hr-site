@@ -1422,20 +1422,21 @@
                 </div>
 
                 <!-- certificate download -->
-                 <div class="text-center mt-10">
+                <div class="text-center mt-10">
                     <button id="viewCertificateBtn" onclick="window.location.href='certificate4.html'"
                         class="hidden bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-xl font-bold transition">
                         <i class="fas fa-award mr-2"></i>
                         Download Your RTW Certification
                     </button>
                     <br>
-                    <p id="viewCertificateTxt" class="text-center mt-6"><b>You can download this certificate anytime before the end of 7 days</b></p>
+                    <p id="viewCertificateTxt" class="text-center mt-6"><b>You can download this certificate anytime
+                            before the end of 7 days</b></p>
                 </div>
 
             </div>
         </div>
 
-       
+
     </section>
 
     <section class="py-20 bg-white" hidden>
@@ -2152,28 +2153,28 @@
         //const COURSE_EXPIRY_DAYS = 2;
 
         // Check expiry
-      let completedModules = [];
+        let completedModules = [];
 
-const savedExpiry = localStorage.getItem("courseExpiry");
+        const savedExpiry = localStorage.getItem("courseExpiry");
 
-// Old users (completed before expiry feature existed)
-if (!savedExpiry && localStorage.getItem("completedModules")) {
+        // Old users (completed before expiry feature existed)
+        if (!savedExpiry && localStorage.getItem("completedModules")) {
 
-    localStorage.removeItem("completedModules");
-    localStorage.removeItem("certificateData");
+            localStorage.removeItem("completedModules");
+            localStorage.removeItem("certificateData");
 
-}
+        }
 
-// Expired users
-else if (savedExpiry && Date.now() > Number(savedExpiry)) {
+        // Expired users
+        else if (savedExpiry && Date.now() > Number(savedExpiry)) {
 
-    localStorage.removeItem("completedModules");
-    localStorage.removeItem("certificateData");
-    localStorage.removeItem("courseExpiry");
+            localStorage.removeItem("completedModules");
+            localStorage.removeItem("certificateData");
+            localStorage.removeItem("courseExpiry");
 
-}
+        }
 
-completedModules = JSON.parse(localStorage.getItem("completedModules")) || [];
+        completedModules = JSON.parse(localStorage.getItem("completedModules")) || [];
 
         // ----------------------------
         // Refresh Module UI
@@ -2410,9 +2411,9 @@ completedModules = JSON.parse(localStorage.getItem("completedModules")) || [];
                         })
                     );
 
-                   // Start 2-day expiry countdown
-                    //const expiry = Date.now() + (7 * 24 * 60 * 60 * 1000);
-                    const expiry = Date.now() + (60 * 1000); // 30 seconds
+                    // Start 7-day expiry countdown
+                    const expiry = Date.now() + (7 * 24 * 60 * 60 * 1000);
+                    //const expiry = Date.now() + (60 * 1000); // 30 seconds
                     localStorage.setItem("courseExpiry", expiry);
 
                     document
@@ -2424,7 +2425,7 @@ completedModules = JSON.parse(localStorage.getItem("completedModules")) || [];
 
                 }
 
-                
+
 
             }, 700);
 
