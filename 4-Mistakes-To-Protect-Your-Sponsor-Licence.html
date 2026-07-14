@@ -14,7 +14,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <link href="header/header.css?update=0077" rel="stylesheet">
+    <link href="header/header.css?update=0078" rel="stylesheet">
     <link rel="shortcut icon" href="assets/images/favicon.webp">
 
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -1273,12 +1273,22 @@
     </script>
 
    <script>
-const checkbox = document.getElementById('urgentCheckbox');
-const hiddenInput = document.getElementById('urgentCheckboxValue');
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('leadForm'); // Or use your form ID
+    const checkbox = document.getElementById('urgentCheckbox');
+    const hiddenInput = document.getElementById('urgentCheckboxValue');
 
-// Sync on change
-checkbox.addEventListener('change', function() {
-    hiddenInput.value = this.checked ? 'Yes' : 'No';
+    // 1. Sync value when checkbox is clicked
+    checkbox.addEventListener('change', function () {
+        hiddenInput.value = this.checked ? 'Yes' : 'No';
+        console.log("Value changed to:", hiddenInput.value);
+    });
+
+    // 2. CRITICAL: Reset hidden input to "No" when the form resets
+    form.addEventListener('reset', function () {
+        hiddenInput.value = 'No';
+        console.log("Form reset: Hidden value reverted to No");
+    });
 });
 </script>
 

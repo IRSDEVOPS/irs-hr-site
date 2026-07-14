@@ -4740,3 +4740,24 @@ aside img {
     z-index: 9;
         overflow: hidden;
 }
+    .form-card {
+			background: #fff;
+			border-radius: 20px;
+			box-shadow: 0 20px 45px rgba(16, 24, 40, .08);
+			padding: 40px;
+		}
+        .form-card .form-label {
+			font-size: 15px;
+			font-weight: 600;
+			color: #495057;
+			margin-bottom: 8px;
+		}
+
+		.form-card .form-control {
+			height: 56px;
+			border-radius: 12px;
+			border: 1px solid #dce3ea;
+			padding: 0 18px;
+			font-size: 16px;
+			transition: .3s;
+		}
