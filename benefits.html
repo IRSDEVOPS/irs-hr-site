@@ -4,15 +4,15 @@
 <head>
 	<meta charset="utf-8">
 	<title>IRS HR | Benefit</title>
-	 <!-- !-- Google tag (gtag.js) --> 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T8ZKXHXF1K"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+	<!-- !-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-T8ZKXHXF1K"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
 
-        gtag('config', 'G-T8ZKXHXF1K');
-    </script>
+		gtag('config', 'G-T8ZKXHXF1K');
+	</script>
 	<link rel="canonical" href="https://irshr.co.uk/benefits.html" />
 	<!-- Stylesheets -->
 	<link href="benefit/css/bootstrap.css" rel="stylesheet">
@@ -24,34 +24,116 @@
 	<link rel="shortcut icon" href="assets/images/favicon.webp?update=0077" type="image/x-icon">
 	<link rel="icon" href="assets/images/favicon.webp" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="pricing-assets/css/tabler-icons.min.css" />
-    <link href="assets/css/owl.css" rel="stylesheet">
+	<link href="assets/css/owl.css" rel="stylesheet">
 	<!-- <script src='https://www.noupe.com/embed/0198cc80082c7c66943d495e2b84a3f0d7a4.js'></script> -->
 
+	<script src="https://unpkg.com/lucide@latest"></script>
 	<!-- Responsive -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
 	<!-- Meta tags -->
-    <meta name="description" content="Stay HR Sponsor compliance-ready with IRS HR. Automate visa alerts, Right-to-Work checks, document management, and workforce monitoring while protecting your UK Sponsor Licence. Book a free demo today.">
-    <meta property="og:author" content="IRS HR" />
-    <meta property="og:site_name" content="IRS HR" />
-    <meta name="robots" content="index, follow">
-	<meta name="keywords" content="IRS HR benefits, sponsor compliance software, UK Sponsor Licence management, HR compliance, automated visa alerts, Right-to-Work checks, workforce monitoring, audit-ready HR software">
-    <meta property="og:title" content="Benefits of IRS HR | Stay HR Sponsor Compliance-Ready Every Day">
-    <meta property="og:description" content="Stay HR Sponsor compliance-ready with IRS HR. Automate visa alerts, Right-to-Work checks, document management, and workforce monitoring while protecting your UK Sponsor Licence. Book a free demo today.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://irshr.co.uk/benefits.html">
-    <meta property="og:image" content="https://irshr.co.uk/assets/images/og-image.png">
+	<meta name="description"
+		content="Stay HR Sponsor compliance-ready with IRS HR. Automate visa alerts, Right-to-Work checks, document management, and workforce monitoring while protecting your UK Sponsor Licence. Book a free demo today.">
+	<meta property="og:author" content="IRS HR" />
+	<meta property="og:site_name" content="IRS HR" />
+	<meta name="robots" content="index, follow">
+	<meta name="keywords"
+		content="IRS HR benefits, sponsor compliance software, UK Sponsor Licence management, HR compliance, automated visa alerts, Right-to-Work checks, workforce monitoring, audit-ready HR software">
+	<meta property="og:title" content="Benefits of IRS HR | Stay HR Sponsor Compliance-Ready Every Day">
+	<meta property="og:description"
+		content="Stay HR Sponsor compliance-ready with IRS HR. Automate visa alerts, Right-to-Work checks, document management, and workforce monitoring while protecting your UK Sponsor Licence. Book a free demo today.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://irshr.co.uk/benefits.html">
+	<meta property="og:image" content="https://irshr.co.uk/assets/images/og-image.png">
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Benefits of IRS HR | Stay HR Sponsor Compliance-Ready Every Day">
-    <meta name="twitter:description" content="Stay HR Sponsor compliance-ready with IRS HR. Automate visa alerts, Right-to-Work checks, document management, and workforce monitoring while protecting your UK Sponsor Licence. Book a free demo today.">
-    <meta name="twitter:image" content="https://irshr.co.uk/assets/images/og-image.png">
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Benefits of IRS HR | Stay HR Sponsor Compliance-Ready Every Day">
+	<meta name="twitter:description"
+		content="Stay HR Sponsor compliance-ready with IRS HR. Automate visa alerts, Right-to-Work checks, document management, and workforce monitoring while protecting your UK Sponsor Licence. Book a free demo today.">
+	<meta name="twitter:image" content="https://irshr.co.uk/assets/images/og-image.png">
 
 
 
 	<style>
+		.sec-contact {
+			background: #f7f9fc;
+			padding: 90px 0;
+		}
+
+		.sec-contact .card {
+			border: none;
+			border-radius: 20px;
+			overflow: hidden;
+		}
+
+
+		.form-card {
+			background: #fff;
+			border-radius: 20px;
+			box-shadow: 0 20px 45px rgba(16, 24, 40, .08);
+			padding: 40px;
+		}
+
+		.form-label {
+			font-size: 15px;
+			font-weight: 600;
+			color: #495057;
+			margin-bottom: 8px;
+		}
+
+		.form-control {
+			height: 56px;
+			border-radius: 12px;
+			border: 1px solid #dce3ea;
+			padding: 0 18px;
+			font-size: 16px;
+			transition: .3s;
+		}
+
+		.form-control:focus {
+			border-color: #2bb673;
+			box-shadow: 0 0 0 .2rem rgba(43, 182, 115, .15);
+		}
+
+		.btn-submit {
+			background: linear-gradient(135deg, #2bb673, #22a36a);
+			color: #fff;
+			border: none;
+			border-radius: 50px;
+			padding: 15px 42px;
+			font-size: 17px;
+			font-weight: 600;
+			transition: .35s;
+			box-shadow: 0 12px 30px rgba(43, 182, 115, .3);
+		}
+
+		.btn-submit:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 18px 35px rgba(43, 182, 115, .4);
+			color: #fff;
+		}
+
+		.required {
+			color: #e63946;
+		}
+
+		.sec-title .badge {
+			border-radius: 30px;
+			padding: 10px 20px !important;
+		}
+
+		.section-heading {
+			font-size: 42px;
+			font-weight: 700;
+		}
+
+		.section-subtitle {
+			color: #6c757d;
+			font-size: 18px;
+		}
+
 		.benefit-cc {
 			background-color: #c0b594bf;
 			padding: 10px 20px;
@@ -159,8 +241,8 @@
 								<li><a href="https://www.linkedin.com/company/irs-limited"
 										aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin"></i></a></li>
 								<li><a href="https://www.youtube.com/@SponsorComplianceMadeEasy"
-                                                aria-label="Follow us on Youtube"><i class="fab fa-youtube"></i></a>
-                                        </li>
+										aria-label="Follow us on Youtube"><i class="fab fa-youtube"></i></a>
+								</li>
 							</ul>
 							<div class="btn-box"><a href="https://app.irshr.co.uk/register" target="_blank">Sign up for
 									IRS HR</a></div>
@@ -198,95 +280,97 @@
 									<ul class="navigation clearfix">
 										<li class=""><a href="index.html">Home</a></li>
 										<li class="dropdown mega-menu benefit-menu current">
-                                            <a href="benefits.html">Benefits</a>
-                                            <ul class="mega-menu-content" style="display: none;">
-                                                <li>
-                                                     <div class="row">
-                                                        <!-- Column 1 -->
-                                                        <div class="col">
-                                                            <ul>
-                                                                <li><a href="24-7-hr-compliance-home-office.html"><span
-                                                                            class="fal fa-long-arrow-right benefit-arrow"></span>24x7
-                                                                        HR Home Office compliance</a></li>
-                                                                <li><a href="monitor-your-migrants.html"><span
-                                                                            class="fal fa-long-arrow-right benefit-arrow"></span>Monitor
-                                                                        Your Migrants</a></li>
-                                                                <li><a href="visa-expiry-alerts.html"><span
-                                                                            class="fal fa-long-arrow-right benefit-arrow"></span>Visa
-                                                                        Expiry Alerts</a></li>
-                                                                <li><a href="right-to-work-digital-records.html"><span
-                                                                            class="fal fa-long-arrow-right benefit-arrow"></span>RTW
-                                                                        Digital records</a></li>
-                                                                <li><a
-                                                                        href="migrants-leave-and-absence-management.html"><span
-                                                                            class="fal fa-long-arrow-right benefit-arrow"></span>Leave
-                                                                        and absence management</a></li>
-                                                                         <li><a
-                                                                        href="tailored-policies-home-office-compliance.html"><span
-                                                                            class="fal fa-long-arrow-right benefit-arrow"></span>Tailored
-                                                                        Policies for Home Office compliance</a></li>
-                                                            </ul>
+											<a href="benefits.html">Benefits</a>
+											<ul class="mega-menu-content" style="display: none;">
+												<li>
+													<div class="row">
+														<!-- Column 1 -->
+														<div class="col">
+															<ul>
+																<li><a href="24-7-hr-compliance-home-office.html"><span
+																			class="fal fa-long-arrow-right benefit-arrow"></span>24x7
+																		HR Home Office compliance</a></li>
+																<li><a href="monitor-your-migrants.html"><span
+																			class="fal fa-long-arrow-right benefit-arrow"></span>Monitor
+																		Your Migrants</a></li>
+																<li><a href="visa-expiry-alerts.html"><span
+																			class="fal fa-long-arrow-right benefit-arrow"></span>Visa
+																		Expiry Alerts</a></li>
+																<li><a href="right-to-work-digital-records.html"><span
+																			class="fal fa-long-arrow-right benefit-arrow"></span>RTW
+																		Digital records</a></li>
+																<li><a
+																		href="migrants-leave-and-absence-management.html"><span
+																			class="fal fa-long-arrow-right benefit-arrow"></span>Leave
+																		and absence management</a></li>
+																<li><a
+																		href="tailored-policies-home-office-compliance.html"><span
+																			class="fal fa-long-arrow-right benefit-arrow"></span>Tailored
+																		Policies for Home Office compliance</a></li>
+															</ul>
 
-                                                        </div>
+														</div>
 
-                                                        <!-- Column 2 -->
-                                                        <div class="col">
-                                                            <ul>
-                                                               
-                                                                <li><a href="home-office-guidance.html"><span
-                                                                            class="fal fa-long-arrow-right benefit-arrow"></span>Home
-                                                                        Office Guidance</a></li>
-                                                                <li><a href="50-sponsored-employee-checklist.html"><span
-                                                                            class="fal fa-long-arrow-right benefit-arrow"></span>50+
-                                                                        Sponsored Employee Checklist</a></li>
-                                                                <li><a href="100-sponsored-employee-staff-records.html"><span
-                                                                            class="fal fa-long-arrow-right benefit-arrow"></span>100+
-                                                                        Sponsored Employee Staff Records</a></li>
-                                                                <li><a
-                                                                        href="fast-track-home-office-compliance-onboarding.html"><span
-                                                                            class="fal fa-long-arrow-right benefit-arrow"></span>Fast
-                                                                        Track Home Office Compliance Onboarding</a></li>
-                                                                 <li><a href="cos-success-strategy.html"><span
-                                                                            class="fal fa-long-arrow-right benefit-arrow"></span>CoS
-                                                                        Success Strategy</a></li>
-                                                                <li><a href="monthly-home-office-mock-audits.html"><span
-                                                                            class="fal fa-long-arrow-right benefit-arrow"></span>Monthly
-                                                                        Home Office Mock Audits</a></li>
+														<!-- Column 2 -->
+														<div class="col">
+															<ul>
 
-                                                            </ul>
-                                                        </div>
+																<li><a href="home-office-guidance.html"><span
+																			class="fal fa-long-arrow-right benefit-arrow"></span>Home
+																		Office Guidance</a></li>
+																<li><a href="50-sponsored-employee-checklist.html"><span
+																			class="fal fa-long-arrow-right benefit-arrow"></span>50+
+																		Sponsored Employee Checklist</a></li>
+																<li><a href="100-sponsored-employee-staff-records.html"><span
+																			class="fal fa-long-arrow-right benefit-arrow"></span>100+
+																		Sponsored Employee Staff Records</a></li>
+																<li><a
+																		href="fast-track-home-office-compliance-onboarding.html"><span
+																			class="fal fa-long-arrow-right benefit-arrow"></span>Fast
+																		Track Home Office Compliance Onboarding</a></li>
+																<li><a href="cos-success-strategy.html"><span
+																			class="fal fa-long-arrow-right benefit-arrow"></span>CoS
+																		Success Strategy</a></li>
+																<li><a href="monthly-home-office-mock-audits.html"><span
+																			class="fal fa-long-arrow-right benefit-arrow"></span>Monthly
+																		Home Office Mock Audits</a></li>
 
-                                                        <!-- Column 3 -->
-                                                        <div class="col">
-                                                            <ul>
-                                                               
-                                                                <li><a
-                                                                        href="level-7-hr-compliance-success-manager.html"><span
-                                                                            class="fal fa-long-arrow-right benefit-arrow"></span>Level
-                                                                        7 HR Compliance Success manager</a></li>
-                                                                <li><a href="panel-of-solicitors.html"><span
-                                                                            class="fal fa-long-arrow-right benefit-arrow"></span>Panel
-                                                                        of Solicitors</a></li>
-                                                                <li><a href="after-sales-support.html"
-                                                                        target="_blank"><span
-                                                                            class="fal fa-long-arrow-right benefit-arrow"></span>After
-                                                                        Sales Support</a></li>
-                                                                <li><a href="payroll.html"
-                                                                        target="_blank"><span
-                                                                            class="fal fa-long-arrow-right benefit-arrow"></span>Payroll</a></li>
-                                                                <li><a href="golden-sponsor-licence-defence.html"
-                                                                        target="_blank"><span
-                                                                            class="fal fa-long-arrow-right benefit-arrow"></span>The Golden Sponsor Licence Defence</a></li>
-                                                                <li><a href="cos-weekly-hours.html"
-                                                                        target="_blank"><span
-                                                                            class="fal fa-long-arrow-right benefit-arrow"></span>CoS Weekly Hours</a></li>
-                                                            </ul>
-                                                        </div>
+															</ul>
+														</div>
 
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </li>
+														<!-- Column 3 -->
+														<div class="col">
+															<ul>
+
+																<li><a
+																		href="level-7-hr-compliance-success-manager.html"><span
+																			class="fal fa-long-arrow-right benefit-arrow"></span>Level
+																		7 HR Compliance Success manager</a></li>
+																<li><a href="panel-of-solicitors.html"><span
+																			class="fal fa-long-arrow-right benefit-arrow"></span>Panel
+																		of Solicitors</a></li>
+																<li><a href="after-sales-support.html"
+																		target="_blank"><span
+																			class="fal fa-long-arrow-right benefit-arrow"></span>After
+																		Sales Support</a></li>
+																<li><a href="payroll.html" target="_blank"><span
+																			class="fal fa-long-arrow-right benefit-arrow"></span>Payroll</a>
+																</li>
+																<li><a href="golden-sponsor-licence-defence.html"
+																		target="_blank"><span
+																			class="fal fa-long-arrow-right benefit-arrow"></span>The
+																		Golden Sponsor Licence Defence</a></li>
+																<li><a href="cos-weekly-hours.html"
+																		target="_blank"><span
+																			class="fal fa-long-arrow-right benefit-arrow"></span>CoS
+																		Weekly Hours</a></li>
+															</ul>
+														</div>
+
+													</div>
+												</li>
+											</ul>
+										</li>
 										<li class=""><a href="calculate-your-savings.html">Pricing</a></li>
 										<li class="dropdown "><a href="">Businesses</a>
 											<ul>
@@ -317,7 +401,9 @@
 																		href="navigating-the-maze-of-sponsor-licence-compliance-are-you-monitoring-your-migrant-workers-correctly.html">Navigating
 																		the Maze of Sponsor Licence Compliance</a></li>
 																<li><a
-																		href="how-hr-software-secures-a-rating-and-boosts-cos-allocation.html">How Your HR Software Can Secure Your A-Rating and Boost Your CoS Allocation?</a></li>
+																		href="how-hr-software-secures-a-rating-and-boosts-cos-allocation.html">How
+																		Your HR Software Can Secure Your A-Rating and
+																		Boost Your CoS Allocation?</a></li>
 																<li><a
 																		href="over-50-sponsor-licence-checks-and-counting-are-you-missing-a-critical-step.html">Over
 																		50 Sponsor Licence Checks and Counting</a></li>
@@ -328,49 +414,56 @@
 																<li><a
 																		href="home-office-updates-immigration-rules.html">Home
 																		Office updates Immigration Rules</a></li>
-                                                                <li><a href="immigration-skills-charge-price-increase.html">
-                                                                    6 Weeks to Act Before 32% Immigration Skills Charge Increase
-                                                                </a></li>
-                                                                <li><a href="home-office-panic-to-readiness.html">
-                                                                    From Home Office Panic to Home-Office Readiness in 3 Hours
-                                                                </a></li>
-                                                                <li><a href="home-office-licence-enforcement.html">
-                                                                    Home Office Licence Enforcement</a>
-																	</li>
-                                                                <li><a href="golden-record-sponsor-licence.html">
-                                                                    Golden Record for Sponsor Licence</a>
-                                                                </li>
-                                                                <li><a href="home-office-sms-phishing-scams.html">
-                                                                    Home Office SMS Phishing Scams</a></li>
-                                                                <li><a href="2026-dangerous-year-sponsor-licence-holders.html">
-                                                                   2026 - The most dangerous year for Sponsor Licence holders</a></li>
-                                                                <li><a
-                                                                        href="2026-sponsor-license-compliance-update.html">
-                                                                        The 2026 Sponsor Licence Compliance Update</a></li>
-                                                                <li><a
-                                                                        href="3000-Sponsor-Licences-Revoked.html">
-                                                                        3,000 Sponsor Licences Revoked in 2025</a></li>
+																<li><a
+																		href="immigration-skills-charge-price-increase.html">
+																		6 Weeks to Act Before 32% Immigration Skills
+																		Charge Increase
+																	</a></li>
+																<li><a href="home-office-panic-to-readiness.html">
+																		From Home Office Panic to Home-Office Readiness
+																		in 3 Hours
+																	</a></li>
+																<li><a href="home-office-licence-enforcement.html">
+																		Home Office Licence Enforcement</a>
+																</li>
+																<li><a href="golden-record-sponsor-licence.html">
+																		Golden Record for Sponsor Licence</a>
+																</li>
+																<li><a href="home-office-sms-phishing-scams.html">
+																		Home Office SMS Phishing Scams</a></li>
+																<li><a
+																		href="2026-dangerous-year-sponsor-licence-holders.html">
+																		2026 - The most dangerous year for Sponsor
+																		Licence holders</a></li>
+																<li><a
+																		href="2026-sponsor-license-compliance-update.html">
+																		The 2026 Sponsor Licence Compliance Update</a>
+																</li>
+																<li><a href="3000-Sponsor-Licences-Revoked.html">
+																		3,000 Sponsor Licences Revoked in 2025</a></li>
 															</ul>
 
 														</div>
 
 														<!-- Column 2 -->
 														<div class="col">
-															<h4><a href="resources-for-businesses.html">Resources for Businesses</a></h4>
+															<h4><a href="resources-for-businesses.html">Resources for
+																	Businesses</a></h4>
 															<ul>
-                                                                <!-- <li><a href="event.html">Attend Cardiff Event to Safeguard your Sponsor Licence</a></li> -->
-                                                                <li><a href="sponsor-compliance-knowledge-series.html">Sponsor Compliance Knowledge series</a></li>
+																<!-- <li><a href="event.html">Attend Cardiff Event to Safeguard your Sponsor Licence</a></li> -->
+																<li><a href="sponsor-compliance-knowledge-series.html">Sponsor
+																		Compliance Knowledge series</a></li>
 																<li><a href="product-showcase.html">IRS HR Product
 																		Showcase</a></li>
 																<li><a
 																		href="all-in-one-sponsor-compliance-software.html">All
 																		in One Sponsor Compliance Software</a></li>
-                                                                <li><a
-                                                                        href="HomeOffice-HMRC-Data-matching-from-april-2026.html">Home Office
-                                                                    HMRC Data Matching from April 2026</a></li>
-                                                                <li><a
-                                                                        href="sponsor-licence-revocation-risk.html">Sponsor
-                                                                        Licence Revocation Risk</a></li>
+																<li><a
+																		href="HomeOffice-HMRC-Data-matching-from-april-2026.html">Home
+																		Office
+																		HMRC Data Matching from April 2026</a></li>
+																<li><a href="sponsor-licence-revocation-risk.html">Sponsor
+																		Licence Revocation Risk</a></li>
 																<li><a href="guide-right-to-work-checks.html">Your Guide
 																		to
 																		Conducting Right to Work Checks</a></li>
@@ -383,42 +476,49 @@
 																		to Home Office Sponsor Compliance</a></li>
 																<li><a href="guide-to-home-office-digital-audits.html">Your
 																		Guide To Home Office Digital Audits</a></li>
-																
-                                                                <li><a href="guide-to-secure-certificate-of-sponsorship.html">Your interactive guide to secure Certificate of sponsorship</a></li>
-                                                                <li><a
-                                                                        href="true-cost-of-sponsor-license-revocation.html">True 
-                                                                    cost of Sponsor Licence Revocation</a></li>
-                                                                <li><a
-                                                                        href="fabs-domiciliary-homecare-casestudy.html">
-                                                                        Case Study: Fabs Domiciliary Homecare</a></li>
-                                                                <li><a
-                                                                        href="How-Gain-Care-Protected-their-licence.html">
-                                                                        How Gain Care Protected Their Sponsor Licence from Revocation</a></li>
-                                                                <li><a
-                                                                        href="care-sector-crisis.html">
-                                                                        Care Sector Crisis</a></li>
-                                                                <li><a
-                                                                        href="Home-Office-Punishing-Sponsors-and-Employers.html">
-                                                                        Home Office Punishing Sponsors and Employers</a></li>
+
+																<li><a
+																		href="guide-to-secure-certificate-of-sponsorship.html">Your
+																		interactive guide to secure Certificate of
+																		sponsorship</a></li>
+																<li><a
+																		href="true-cost-of-sponsor-license-revocation.html">True
+																		cost of Sponsor Licence Revocation</a></li>
+																<li><a href="fabs-domiciliary-homecare-casestudy.html">
+																		Case Study: Fabs Domiciliary Homecare</a></li>
+																<li><a
+																		href="How-Gain-Care-Protected-their-licence.html">
+																		How Gain Care Protected Their Sponsor Licence
+																		from Revocation</a></li>
+																<li><a href="care-sector-crisis.html">
+																		Care Sector Crisis</a></li>
+																<li><a
+																		href="Home-Office-Punishing-Sponsors-and-Employers.html">
+																		Home Office Punishing Sponsors and Employers</a>
+																</li>
 																<li><a href="applying-for-sponsor-licence.html">Applying
 																		for a Sponsor Licence - FAQs</a></li>
 																<li><a href="sponsor-duties-compliance.html">Sponsor
 																		Duties and Compliance - FAQs</a></li>
-                                                                <li><a href="2026-most-dangerous-year-for-sponsor-licence-holders.html">
-                                                                    2026 - The most dangerous year for Sponsor Licence holders</a>
-                                                                </li>
-                                                                <li><a href="sponsor-guidance-appendix-d-guide.html">
-                                                                    Sponsor Guidance Appendix D Guide</a>
-                                                                </li>
-                                                                <li><a href="care-Industry-hours-and-pay-calculator.html">
-                                                                       Care Sector Sponsorship & Fiscal Year Calculator</a>
-                                                                </li>
-                                                                <li><a href="UK-Sponsorship-Compliance-Guide.html">
-                                                                      UK Sponsorship Compliance Guide (Mar 2026)</a>
-                                                                </li>
-                                                                <li><a href="UK-Employment-Law-Updates.html">
-                                                                      UK Employment Law Updates</a>
-                                                                </li>
+																<li><a
+																		href="2026-most-dangerous-year-for-sponsor-licence-holders.html">
+																		2026 - The most dangerous year for Sponsor
+																		Licence holders</a>
+																</li>
+																<li><a href="sponsor-guidance-appendix-d-guide.html">
+																		Sponsor Guidance Appendix D Guide</a>
+																</li>
+																<li><a
+																		href="care-Industry-hours-and-pay-calculator.html">
+																		Care Sector Sponsorship & Fiscal Year
+																		Calculator</a>
+																</li>
+																<li><a href="UK-Sponsorship-Compliance-Guide.html">
+																		UK Sponsorship Compliance Guide (Mar 2026)</a>
+																</li>
+																<li><a href="UK-Employment-Law-Updates.html">
+																		UK Employment Law Updates</a>
+																</li>
 															</ul>
 														</div>
 
@@ -435,12 +535,18 @@
 																<li><a href="Home-Office-Digital-Audit-Quiz.html"
 																		target="_blank">Home Office Digital Audit
 																		Quiz</a></li>
-                                                                <li><a href="Test-Your-CoS-Request-Knowledge-Quiz.html" target="_blank">Test Your CoS Knowledge Quiz</a></li>
-                                                                <li><a href="test-your-knowledge-of-the-golden-record.html" target="_blank">Test your Knowledge of the golden record</a></li>
-                                                                <li><a href="revocation-risk-assessment.html" target="_blank">Revocation Risk Assessment</a></li>
-                                                                <li><a href="Sponsor-duties-risk-assessment.html">
-                                                                      Sponsor Duties Risk Assessment</a>
-                                                                </li>
+																<li><a href="Test-Your-CoS-Request-Knowledge-Quiz.html"
+																		target="_blank">Test Your CoS Knowledge Quiz</a>
+																</li>
+																<li><a href="test-your-knowledge-of-the-golden-record.html"
+																		target="_blank">Test your Knowledge of the
+																		golden record</a></li>
+																<li><a href="revocation-risk-assessment.html"
+																		target="_blank">Revocation Risk Assessment</a>
+																</li>
+																<li><a href="Sponsor-duties-risk-assessment.html">
+																		Sponsor Duties Risk Assessment</a>
+																</li>
 															</ul>
 														</div>
 
@@ -464,8 +570,10 @@
 								</div>
 								<div class="social-links">
 									<ul class="clearfix">
-										<li><a href="https://www.linkedin.com/company/irs-limited"><span class="fab fa-linkedin"></span></a></li>
-                        				<li><a href="https://www.youtube.com/@SponsorComplianceMadeEasy"><span class="fab fa-youtube"></span></a></li>
+										<li><a href="https://www.linkedin.com/company/irs-limited"><span
+													class="fab fa-linkedin"></span></a></li>
+										<li><a href="https://www.youtube.com/@SponsorComplianceMadeEasy"><span
+													class="fab fa-youtube"></span></a></li>
 									</ul>
 								</div>
 
@@ -519,7 +627,8 @@
 
 							</div>
 							<div class="newsletter-form">
-								<form  id="submitForm" method="POST" data-email="pc@irslimited.co.uk" action="https://script.google.com/macros/s/AKfycbzbue2UM5ty74rkuvoNiQJcDA0dprIgIMKRPHDucEVR8u9mUKAha6U0FOqZ3eFAVakHNA/exec">
+								<form id="submitForm" method="POST" data-email="pc@irslimited.co.uk"
+									action="https://script.google.com/macros/s/AKfycbzbue2UM5ty74rkuvoNiQJcDA0dprIgIMKRPHDucEVR8u9mUKAha6U0FOqZ3eFAVakHNA/exec">
 									<div class="form-group">
 										<input type="email" name="email" value=""
 											placeholder="Enter your work email address to" required="">
@@ -528,7 +637,8 @@
 									</div>
 								</form>
 								<!-- Success message -->
-								<p id="successMessage" style="display:none;     color: #ffffff;    background-color: #49b280cf;    margin-top: 10px;    max-width: max-content;    padding: 0px 30px;">
+								<p id="successMessage"
+									style="display:none;     color: #ffffff;    background-color: #49b280cf;    margin-top: 10px;    max-width: max-content;    padding: 0px 30px;">
 									✅ Email successfully sent! Let's get you started with IRS HR now.
 								</p>
 							</div>
@@ -627,8 +737,8 @@
 								<li>Identify compliance gaps early with real-time reminders.</li>
 								<li>14-day Money-back-guarantee. Enjoy our after subscription support promise.</li>
 							</ul>
-							<a href="calculate-your-savings.html" style="text-transform: initial;" class="theme-btn btn-style-three"><span
-									class="txt">Calculate your Savings</span></a>
+							<a href="calculate-your-savings.html" style="text-transform: initial;"
+								class="theme-btn btn-style-three"><span class="txt">Calculate your Savings</span></a>
 
 							<!-- <p><b>14-day–money back-guarantee</b></p> -->
 						</div>
@@ -787,7 +897,8 @@
 
 								</ul>
 
-								<a href="https://app.irshr.co.uk/register" target="_blank" style="text-transform: initial;" class="theme-btn btn-style-three"><span
+								<a href="https://app.irshr.co.uk/register" target="_blank"
+									style="text-transform: initial;" class="theme-btn btn-style-three"><span
 										class="txt">Create your account to become HR Home Office Compliant</span></a>
 
 
@@ -801,294 +912,321 @@
 		</section>
 		<!-- End Steps Section -->
 
-<section class="py-5" style="background:#f9fff3;">
-	<div class="container">
-		<div class="row g-4">
+		<section class="py-5" style="background:#f9fff3;">
+			<div class="container">
+				<div class="row g-4">
 
-			<!-- ================= ROW 1 ================= -->
+					<!-- ================= ROW 1 ================= -->
 
-			<div class="col-xl-3 col-lg-6 col-md-6">
-				<a href="24-7-hr-compliance-home-office.html" class="text-decoration-none text-dark">
-					<div class="service-block-two">
-						<div class="flip-card">
-							<div class="flip-card-inner">
-								<div class="flip-front">
-									<h4>24X7 HR Home Office Compliance</h4>
-									<img src="benefit/images/icons/24-7-hr-compliance.png" class="icon1">
-								</div>
-								<div class="flip-back">
-									<p>Be prepared before the Home Office ever calls you – automated checks, instant
-										alerts, and one unified evidence trail.</p>
+					<div class="col-xl-3 col-lg-6 col-md-6">
+						<a href="24-7-hr-compliance-home-office.html" class="text-decoration-none text-dark">
+							<div class="service-block-two">
+								<div class="flip-card">
+									<div class="flip-card-inner">
+										<div class="flip-front">
+											<h4>24X7 HR Home Office Compliance</h4>
+											<img src="benefit/images/icons/24-7-hr-compliance.png" class="icon1">
+										</div>
+										<div class="flip-back">
+											<p>Be prepared before the Home Office ever calls you – automated checks,
+												instant
+												alerts, and one unified evidence trail.</p>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
+						</a>
 					</div>
-				</a>
-			</div>
 
-			<div class="col-xl-3 col-lg-6 col-md-6">
-				<a href="monitor-your-migrants.html" class="text-decoration-none text-dark">
-					<div class="service-block-two">
-						<div class="flip-card">
-							<div class="flip-card-inner">
-								<div class="flip-front">
-									<h4>Monitor Your Migrants</h4>
-									<img src="benefit/images/icons/monitor-your-migrants.png" class="icon1">
-								</div>
-								<div class="flip-back">
-									<p>The smart way to monitor your sponsored workers - Spend less time checking migrant status manually and more time focusing on building your workforce — confidently and compliantly.</p>
+					<div class="col-xl-3 col-lg-6 col-md-6">
+						<a href="monitor-your-migrants.html" class="text-decoration-none text-dark">
+							<div class="service-block-two">
+								<div class="flip-card">
+									<div class="flip-card-inner">
+										<div class="flip-front">
+											<h4>Monitor Your Migrants</h4>
+											<img src="benefit/images/icons/monitor-your-migrants.png" class="icon1">
+										</div>
+										<div class="flip-back">
+											<p>The smart way to monitor your sponsored workers - Spend less time
+												checking migrant status manually and more time focusing on building your
+												workforce — confidently and compliantly.</p>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
+						</a>
 					</div>
-				</a>
-			</div>
 
-			<div class="col-xl-3 col-lg-6 col-md-6">
-				<a href="visa-expiry-alerts.html" class="text-decoration-none text-dark">
-					<div class="service-block-two">
-						<div class="flip-card">
-							<div class="flip-card-inner">
-								<div class="flip-front">
-									<h4>Visa Expiry Alerts</h4>
-									<img src="benefit/images/icons/visa-expiry-alerts.png" class="icon1">
-								</div>
-								<div class="flip-back">
-									<p>The reliable way to track visa expiries - Spend less time chasing documents and more time running your business without ever missing a Home Office deadline.
-</p>
+					<div class="col-xl-3 col-lg-6 col-md-6">
+						<a href="visa-expiry-alerts.html" class="text-decoration-none text-dark">
+							<div class="service-block-two">
+								<div class="flip-card">
+									<div class="flip-card-inner">
+										<div class="flip-front">
+											<h4>Visa Expiry Alerts</h4>
+											<img src="benefit/images/icons/visa-expiry-alerts.png" class="icon1">
+										</div>
+										<div class="flip-back">
+											<p>The reliable way to track visa expiries - Spend less time chasing
+												documents and more time running your business without ever missing a
+												Home Office deadline.
+											</p>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
+						</a>
 					</div>
-				</a>
-			</div>
 
-			<div class="col-xl-3 col-lg-6 col-md-6">
-				<a href="right-to-work-digital-records.html" class="text-decoration-none text-dark">
-					<div class="service-block-two">
-						<div class="flip-card">
-							<div class="flip-card-inner">
-								<div class="flip-front">
-									<h4>Right To Work Digital Records</h4>
-									<img src="benefit/images/icons/right-to-work.png" class="icon1">
-								</div>
-								<div class="flip-back">
-									<p>Every check captured. Every document proven. Every audit passed. - Replace paperwork panic with a compliant, time-stamped digital trail.</p>
+					<div class="col-xl-3 col-lg-6 col-md-6">
+						<a href="right-to-work-digital-records.html" class="text-decoration-none text-dark">
+							<div class="service-block-two">
+								<div class="flip-card">
+									<div class="flip-card-inner">
+										<div class="flip-front">
+											<h4>Right To Work Digital Records</h4>
+											<img src="benefit/images/icons/right-to-work.png" class="icon1">
+										</div>
+										<div class="flip-back">
+											<p>Every check captured. Every document proven. Every audit passed. -
+												Replace paperwork panic with a compliant, time-stamped digital trail.
+											</p>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
+						</a>
 					</div>
-				</a>
-			</div>
 
-			<!-- ================= ROW 2 ================= -->
+					<!-- ================= ROW 2 ================= -->
 
-			<div class="col-xl-3 col-lg-6 col-md-6">
-				<a href="migrants-leave-and-absence-management.html" class="text-decoration-none text-dark">
-					<div class="service-block-two">
-						<div class="flip-card">
-							<div class="flip-card-inner">
-								<div class="flip-front">
-									<h4>Leave & Absence Management</h4>
-									<img src="benefit/images/icons/leave-and-absence.png" class="icon1">
-								</div>
-								<div class="flip-back">
-									<p>Monitor attendance. Prevent compliance breaches. Protect your Sponsor Licence - Stay fully aligned with Home Office rules by tracking every sponsored worker’s leave — accurately and on time.</p>
+					<div class="col-xl-3 col-lg-6 col-md-6">
+						<a href="migrants-leave-and-absence-management.html" class="text-decoration-none text-dark">
+							<div class="service-block-two">
+								<div class="flip-card">
+									<div class="flip-card-inner">
+										<div class="flip-front">
+											<h4>Leave & Absence Management</h4>
+											<img src="benefit/images/icons/leave-and-absence.png" class="icon1">
+										</div>
+										<div class="flip-back">
+											<p>Monitor attendance. Prevent compliance breaches. Protect your Sponsor
+												Licence - Stay fully aligned with Home Office rules by tracking every
+												sponsored worker’s leave — accurately and on time.</p>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
+						</a>
 					</div>
-				</a>
-			</div>
 
-			<div class="col-xl-3 col-lg-6 col-md-6">
-				<a href="tailored-policies-home-office-compliance.html" class="text-decoration-none text-dark">
-					<div class="service-block-two">
-						<div class="flip-card">
-							<div class="flip-card-inner">
-								<div class="flip-front">
-									<h4>Tailored Policies for Home Office compliance</h4>
-									<img src="benefit/images/icons/tailored-policies.png" class="icon1">
-								</div>
-								<div class="flip-back">
-									<p>Give your Authorising Officer confidence and your business a robust defence against audits and enforcement action.</p>
+					<div class="col-xl-3 col-lg-6 col-md-6">
+						<a href="tailored-policies-home-office-compliance.html" class="text-decoration-none text-dark">
+							<div class="service-block-two">
+								<div class="flip-card">
+									<div class="flip-card-inner">
+										<div class="flip-front">
+											<h4>Tailored Policies for Home Office compliance</h4>
+											<img src="benefit/images/icons/tailored-policies.png" class="icon1">
+										</div>
+										<div class="flip-back">
+											<p>Give your Authorising Officer confidence and your business a robust
+												defence against audits and enforcement action.</p>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
+						</a>
 					</div>
-				</a>
-			</div>
 
-			<div class="col-xl-3 col-lg-6 col-md-6">
-				<a href="home-office-guidance.html" class="text-decoration-none text-dark">
-					<div class="service-block-two">
-						<div class="flip-card">
-							<div class="flip-card-inner">
-								<div class="flip-front">
-									<h4>Home Office Guidance</h4>
-									<img src="benefit/images/icons/home-office-guidance.png" class="icon1">
-								</div>
-								<div class="flip-back">
-									<p>Stay one step ahead of the Home Office Always - Stop guessing with complex regulations of the Home Office. Follow our clear, step-by-step HR Home Office Guidance that automatically updates whenever Home Office rules updates.</p>
+					<div class="col-xl-3 col-lg-6 col-md-6">
+						<a href="home-office-guidance.html" class="text-decoration-none text-dark">
+							<div class="service-block-two">
+								<div class="flip-card">
+									<div class="flip-card-inner">
+										<div class="flip-front">
+											<h4>Home Office Guidance</h4>
+											<img src="benefit/images/icons/home-office-guidance.png" class="icon1">
+										</div>
+										<div class="flip-back">
+											<p>Stay one step ahead of the Home Office Always - Stop guessing with
+												complex regulations of the Home Office. Follow our clear, step-by-step
+												HR Home Office Guidance that automatically updates whenever Home Office
+												rules updates.</p>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
+						</a>
 					</div>
-				</a>
-			</div>
 
-			<div class="col-xl-3 col-lg-6 col-md-6">
-				<a href="50-sponsored-employee-checklist.html" class="text-decoration-none text-dark">
-					<div class="service-block-two">
-						<div class="flip-card">
-							<div class="flip-card-inner">
-								<div class="flip-front">
-									<h4>50+ Sponsored Employee Checklist</h4>
-									<img src="benefit/images/icons/50-sponsored-employee-checklist.png" class="icon1">
-								</div>
-								<div class="flip-back">
-									<p>Stay ahead of Home Office rules — no gaps, no penalties, no panic. Spend less time tracking paperwork and more time running your business.</p>
+					<div class="col-xl-3 col-lg-6 col-md-6">
+						<a href="50-sponsored-employee-checklist.html" class="text-decoration-none text-dark">
+							<div class="service-block-two">
+								<div class="flip-card">
+									<div class="flip-card-inner">
+										<div class="flip-front">
+											<h4>50+ Sponsored Employee Checklist</h4>
+											<img src="benefit/images/icons/50-sponsored-employee-checklist.png"
+												class="icon1">
+										</div>
+										<div class="flip-back">
+											<p>Stay ahead of Home Office rules — no gaps, no penalties, no panic. Spend
+												less time tracking paperwork and more time running your business.</p>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
+						</a>
 					</div>
-				</a>
-			</div>
 
-			<!-- ================= ROW 3 ================= -->
+					<!-- ================= ROW 3 ================= -->
 
-			<div class="col-xl-3 col-lg-6 col-md-6">
-				<a href="100-sponsored-employee-staff-records.html" class="text-decoration-none text-dark">
-					<div class="service-block-two">
-						<div class="flip-card">
-							<div class="flip-card-inner">
-								<div class="flip-front">
-									<h4>100+ Sponsored Employee Records</h4>
-									<img src="benefit/images/icons/100-sponsored-employee-staff-records.png"
-										class="icon1">
-								</div>
-								<div class="flip-back">
-									<p>Stay compliant. Stay protected. Stay ahead of the Home Office. - Spend less time worrying about audits and more time growing your business.</p>
+					<div class="col-xl-3 col-lg-6 col-md-6">
+						<a href="100-sponsored-employee-staff-records.html" class="text-decoration-none text-dark">
+							<div class="service-block-two">
+								<div class="flip-card">
+									<div class="flip-card-inner">
+										<div class="flip-front">
+											<h4>100+ Sponsored Employee Records</h4>
+											<img src="benefit/images/icons/100-sponsored-employee-staff-records.png"
+												class="icon1">
+										</div>
+										<div class="flip-back">
+											<p>Stay compliant. Stay protected. Stay ahead of the Home Office. - Spend
+												less time worrying about audits and more time growing your business.</p>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
+						</a>
 					</div>
-				</a>
-			</div>
 
-			<div class="col-xl-3 col-lg-6 col-md-6">
-				<a href="fast-track-home-office-compliance-onboarding.html" class="text-decoration-none text-dark">
-					<div class="service-block-two">
-						<div class="flip-card">
-							<div class="flip-card-inner">
-								<div class="flip-front">
-									<h4>Fast Track Compliance Onboarding</h4>
-									<img src="benefit/images/icons/fast-track.png" class="icon1">
-								</div>
-								<div class="flip-back">
-									<p>Get every sponsored worker fully compliant — from day one. Spend zero time chasing paperwork and more time getting talent on the ground.</p>
+					<div class="col-xl-3 col-lg-6 col-md-6">
+						<a href="fast-track-home-office-compliance-onboarding.html"
+							class="text-decoration-none text-dark">
+							<div class="service-block-two">
+								<div class="flip-card">
+									<div class="flip-card-inner">
+										<div class="flip-front">
+											<h4>Fast Track Compliance Onboarding</h4>
+											<img src="benefit/images/icons/fast-track.png" class="icon1">
+										</div>
+										<div class="flip-back">
+											<p>Get every sponsored worker fully compliant — from day one. Spend zero
+												time chasing paperwork and more time getting talent on the ground.</p>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
+						</a>
 					</div>
-				</a>
-			</div>
 
-			<div class="col-xl-3 col-lg-6 col-md-6">
-				<a href="cos-success-strategy.html" class="text-decoration-none text-dark">
-					<div class="service-block-two">
-						<div class="flip-card">
-							<div class="flip-card-inner">
-								<div class="flip-front">
-									<h4>CoS Success Strategy</h4>
-									<img src="benefit/images/icons/cos-success-strategy.png" class="icon1">
-								</div>
-								<div class="flip-back">
-									<p>Approve confidently. Submit accurately. Protect your licence. Spend less time battling refusals — and more time onboarding skilled talent into your business.</p>
+					<div class="col-xl-3 col-lg-6 col-md-6">
+						<a href="cos-success-strategy.html" class="text-decoration-none text-dark">
+							<div class="service-block-two">
+								<div class="flip-card">
+									<div class="flip-card-inner">
+										<div class="flip-front">
+											<h4>CoS Success Strategy</h4>
+											<img src="benefit/images/icons/cos-success-strategy.png" class="icon1">
+										</div>
+										<div class="flip-back">
+											<p>Approve confidently. Submit accurately. Protect your licence. Spend less
+												time battling refusals — and more time onboarding skilled talent into
+												your business.</p>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
+						</a>
 					</div>
-				</a>
-			</div>
 
-			<div class="col-xl-3 col-lg-6 col-md-6">
-				<a href="monthly-home-office-mock-audits.html" class="text-decoration-none text-dark">
-					<div class="service-block-two">
-						<div class="flip-card">
-							<div class="flip-card-inner">
-								<div class="flip-front">
-									<h4>Monthly Home Office Mock Audits</h4>
-									<img src="benefit/images/icons/monthly-home-office-mock-audits.png" class="icon1">
-								</div>
-								<div class="flip-back">
-									<p>Fix compliance issues now — not when the inspector arrives. Identify risks early, close every gap, and protect your sponsorship with continuous audit defence.</p>
+					<div class="col-xl-3 col-lg-6 col-md-6">
+						<a href="monthly-home-office-mock-audits.html" class="text-decoration-none text-dark">
+							<div class="service-block-two">
+								<div class="flip-card">
+									<div class="flip-card-inner">
+										<div class="flip-front">
+											<h4>Monthly Home Office Mock Audits</h4>
+											<img src="benefit/images/icons/monthly-home-office-mock-audits.png"
+												class="icon1">
+										</div>
+										<div class="flip-back">
+											<p>Fix compliance issues now — not when the inspector arrives. Identify
+												risks early, close every gap, and protect your sponsorship with
+												continuous audit defence.</p>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
+						</a>
 					</div>
-				</a>
-			</div>
 
-			<!-- ================= ROW 4 ================= -->
+					<!-- ================= ROW 4 ================= -->
 
-			<div class="col-xl-3 col-lg-6 col-md-6">
-				<a href="level-7-hr-compliance-success-manager.html" class="text-decoration-none text-dark">
-					<div class="service-block-two">
-						<div class="flip-card">
-							<div class="flip-card-inner">
-								<div class="flip-front">
-									<h4>Level 7 HR Compliance Success Manager</h4>
-									<img src="benefit/images/icons/level-7.png" class="icon1">
-								</div>
-								<div class="flip-back">
-									<p>Expert compliance guidance — built into your everyday HR operations. Take the stress off your Authorising Officer.</p>
+					<div class="col-xl-3 col-lg-6 col-md-6">
+						<a href="level-7-hr-compliance-success-manager.html" class="text-decoration-none text-dark">
+							<div class="service-block-two">
+								<div class="flip-card">
+									<div class="flip-card-inner">
+										<div class="flip-front">
+											<h4>Level 7 HR Compliance Success Manager</h4>
+											<img src="benefit/images/icons/level-7.png" class="icon1">
+										</div>
+										<div class="flip-back">
+											<p>Expert compliance guidance — built into your everyday HR operations. Take
+												the stress off your Authorising Officer.</p>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
+						</a>
 					</div>
-				</a>
-			</div>
 
-			<div class="col-xl-3 col-lg-6 col-md-6">
-				<a href="panel-of-solicitors.html" class="text-decoration-none text-dark">
-					<div class="service-block-two">
-						<div class="flip-card">
-							<div class="flip-card-inner">
-								<div class="flip-front">
-									<h4>Panel of Solicitors</h4>
-									<img src="benefit/images/icons/panel-of-solicitors.png" class="icon1">
-								</div>
-								<div class="flip-back">
-									<p>Navigate every Home Office requirement with complete certainty. Our panel of SRA-regulated immigration solicitors keeps your licence protected and your business audit-ready all year round.</p>
+					<div class="col-xl-3 col-lg-6 col-md-6">
+						<a href="panel-of-solicitors.html" class="text-decoration-none text-dark">
+							<div class="service-block-two">
+								<div class="flip-card">
+									<div class="flip-card-inner">
+										<div class="flip-front">
+											<h4>Panel of Solicitors</h4>
+											<img src="benefit/images/icons/panel-of-solicitors.png" class="icon1">
+										</div>
+										<div class="flip-back">
+											<p>Navigate every Home Office requirement with complete certainty. Our panel
+												of SRA-regulated immigration solicitors keeps your licence protected and
+												your business audit-ready all year round.</p>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
+						</a>
 					</div>
-				</a>
-			</div>
 
-			<div class="col-xl-3 col-lg-6 col-md-6">
-				<a href="after-sales-support.html" class="text-decoration-none text-dark">
-					<div class="service-block-two">
-						<div class="flip-card">
-							<div class="flip-card-inner">
-								<div class="flip-front">
-									<h4>After Sales Support</h4>
-									<img src="benefit/images/icons/after-sales-support.png" class="icon1">
-								</div>
-								<div class="flip-back">
-									<p>After-Sales support, built for compliance. We stay with you long after onboarding - your licence protection never pauses.</p>
+					<div class="col-xl-3 col-lg-6 col-md-6">
+						<a href="after-sales-support.html" class="text-decoration-none text-dark">
+							<div class="service-block-two">
+								<div class="flip-card">
+									<div class="flip-card-inner">
+										<div class="flip-front">
+											<h4>After Sales Support</h4>
+											<img src="benefit/images/icons/after-sales-support.png" class="icon1">
+										</div>
+										<div class="flip-back">
+											<p>After-Sales support, built for compliance. We stay with you long after
+												onboarding - your licence protection never pauses.</p>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
+						</a>
 					</div>
-				</a>
-			</div>
 
-		</div>
-	</div>
-</section>
+				</div>
+			</div>
+		</section>
 		<!-- Apps Section -->
 		<section class="apps-section" id="how-works">
 			<div class="auto-container">
@@ -1142,8 +1280,9 @@
 									<div class="text">Stay Home Office audit-ready 24/7 with automated alerts for visa
 										expiry, Home-office sponsor licence compliance inspections and 50 plus migrant
 										documents checklist.</div>
-									<a href="https://app.irshr.co.uk/register" class="theme-btn btn-style-two" style="text-transform: initial;" ><span
-											class="txt">Start my compliance journey</span></a>
+									<a href="https://app.irshr.co.uk/register" class="theme-btn btn-style-two"
+										style="text-transform: initial;"><span class="txt">Start my compliance
+											journey</span></a>
 									<p class="text"><b>14-day–money back-guarantee</b></p>
 								</div>
 							</div>
@@ -1168,8 +1307,9 @@
 									<div class="text">Right-to-work evidence, absences and location updates. IRS HR
 										tracks key dates, and surfaces live status at a glance. Know where your hybrid
 										or mobile employees are working from, and remain stress-free</div>
-									<a href="https://meet.brevo.com/irsdemo/intro" class="theme-btn btn-style-four" style="text-transform: initial;"><span
-											class="txt" >Book your free demo</span></a>
+									<a href="https://meet.brevo.com/irsdemo/intro" class="theme-btn btn-style-four"
+										style="text-transform: initial;"><span class="txt">Book your free
+											demo</span></a>
 									<p class="text"><b>14-day–money back-guarantee</b></p>
 								</div>
 							</div>
@@ -1337,7 +1477,7 @@
 		</section>
 		<!-- End Counter Section -->
 
-	
+
 
 		<!-- Integration Section -->
 		<section class="integration-section">
@@ -1525,6 +1665,8 @@
 		</section>
 		<!-- End Faq Section -->
 
+
+
 		<!-- contact -->
 		<section class="section  sec-contact" id="contact">
 			<div class="container">
@@ -1578,57 +1720,118 @@
                     </div> -->
 					</div>
 					<div class="col-lg-8">
-						<iframe width="90%" height="805"
-							src="https://3dd82cc7.sibforms.com/serve/MUIFAFAH2Boa1Xn-uL2nelK2_EQR96yXiHSa-yaPQ3onDG_KRNc-Qxb1QAup8cYjSnQDDhkm5xd1abILU-31ReBuh8XYCZ2drT_0KlsJqJM1ummy2IQOlhdGMUhnaWhWfRkFMIAGH-uhldKUUF9x3GqKWleDlryp3wU256-mNQmJJLagVxU09g2lqL1pZ1ZAvlVxi3eUG5RsVjl9"
-							frameborder="0" scrolling="auto" allowfullscreen
-							style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
 
-						<!-- <div class="custom-form p-3">
-							<form>
+						<div class="form-card">
+
+							<form id="leadForm" data-email="sasini.lassana@gmail.com" method="POST"
+								action="https://script.google.com/macros/s/AKfycbxdsEmGPtPZiSKmuIe6HhOfXWZgcGnDM_mXsSz27cwyZF8_LNzBOmid0ZjFK7KVOW75fw/exec">
+
 								<div class="row">
-									<div class="col-lg-6">
-										<div class="mb-3">
-											<input name="name" id="name" type="text" class="form-control border"
-												placeholder="First Name" required="">
-										</div>
-									</div>
-									<div class="col-lg-6">
-										<div class="mb-3">
-											<input type="text" class="form-control border" id="last-name"
-												placeholder="Last Name" required="">
-										</div>
-									</div>
-									<div class="col-lg-12">
-										<div class="mb-3">
-											<input name="email" id="email" type="email" class="form-control border"
-												placeholder="Work Email Address" required="">
 
-										</div>
+									<div class="col-md-6 mb-4">
+
+										<label class="form-label">
+											First Name <span>*</span>
+										</label>
+
+										<input type="text" name="firstName" class="form-control"
+											placeholder="Enter first name" required>
+
 									</div>
 
-									<div class="col-lg-6">
-										<div class="mb-3">
-											<input name="contact" id="contact" type="text" class="form-control border"
-												placeholder="Work Contact Number" required="">
-										</div>
+									<div class="col-md-6 mb-4">
+
+										<label class="form-label">
+											Last Name 
+										</label>
+
+										<input type="text" name="lastName" class="form-control"
+											placeholder="Enter last name">
+
 									</div>
-									<div class="col-lg-6">
-										<div class="mb-3">
-											<input name="employees" id="employees" type="text"
-												class="form-control border" placeholder="Number of employees"
-												required="">
-										</div>
+
+									<div class="col-md-6 mb-4">
+
+										<label class="form-label">
+											Work Email <span>*</span>
+										</label>
+
+										<input type="email" name="email" class="form-control"
+											placeholder="example@company.com" required>
+
 									</div>
-								</div>
-								<div class="row">
-									<div class="col-sm-12">
-										<button type="submit" class="btn btn-primary">
-											Send Message
+
+									<div class="col-md-6 mb-4">
+
+										<label class="form-label">
+											Contact Number <span>*</span>
+										</label>
+
+										<input type="tel" name="contactNumber" class="form-control"
+											placeholder="+44 1234 567890" required>
+
+									</div>
+
+									<div class="col-12 mb-4">
+
+										<label class="form-label">
+											Number of Employees <span>*</span>
+										</label>
+
+										<input type="text" name="employees" class="form-control"
+											placeholder="Number of employees" required>
+
+									</div>
+
+									<div class="col-12">
+
+										<button class="btn btn-submit" type="submit" id="submitLeadBtn">
+											Submit
+											<i class="ti ti-arrow-right ms-2"></i>
 										</button>
+
 									</div>
+
 								</div>
+
 							</form>
-						</div> -->
+
+						</div>
+						<!-- Success Modal -->
+						<!-- Success Popup -->
+						<div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered">
+								<div class="modal-content border-0 shadow-lg rounded-4">
+
+									<div class="modal-body text-center p-5">
+
+										<div class="mb-4">
+											<div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center"
+												style="width:80px;height:80px;">
+												<!-- <i class="bi bi-check-circle-fill text-success fs-1"></i> -->
+												<i class="ti ti-check text-white" style="font-size:60px;"></i>
+											</div>
+										</div>
+
+										<h3 class="fw-bold mb-2">Success!</h3>
+
+										<p class="text-muted mb-4">
+											Thank you! Your enquiry has been submitted successfully.
+										</p>
+
+										<button class="btn btn-success px-4" data-dismiss="modal"
+											onclick="closeModal()">
+											Close
+										</button>
+
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+
+
 					</div>
 				</div>
 			</div>
@@ -1636,15 +1839,15 @@
 		</section>
 		<!-- end contact -->
 
-  <!-- Success Stories-section -->
-        <section class="success-section pt_85 pb_120">
-            <div class="auto-container">
-                <div class="row clearfix">
-                    <h2 class="p_relative d_block lh_55 fw_exbold pl_12 pb_30 scs-h2">A few of our Success Stories</h2>
-                    <div class="col-lg-12 col-md-12 col-sm-12 inner-column">
-                        <div class="inner-content centred">
-                            <div class="sucess-stories-carousel owl-carousel owl-theme owl-nav-none">
-                                <!-- <div class="single-item p_relative d_block">
+		<!-- Success Stories-section -->
+		<section class="success-section pt_85 pb_120" style="padding-top: 60px;">
+			<div class="auto-container">
+				<div class="row clearfix">
+					<h2 class="p_relative d_block lh_55 fw_exbold pl_12 pb_30 scs-h2">A few of our Success Stories</h2>
+					<div class="col-lg-12 col-md-12 col-sm-12 inner-column">
+						<div class="inner-content centred">
+							<div class="sucess-stories-carousel owl-carousel owl-theme owl-nav-none">
+								<!-- <div class="single-item p_relative d_block">
                                     <figure class="image-box p_relative d_block b_radius_10"><img
                                             src="assets/images/home/1.webp"
                                             alt="Elikem - safe environment for young people"></figure>
@@ -1737,32 +1940,32 @@
 
                                 </div> -->
 								<div class="single-item p_relative d_block">
-                                    <figure class="image-box p_relative d_block b_radius_10"><img
-                                            src="assets/images/home/19.png" alt="SUKHIS Construction"></figure>
+									<figure class="image-box p_relative d_block b_radius_10"><img
+											src="assets/images/home/19.png" alt="SUKHIS Construction"></figure>
 
-                                </div>
+								</div>
 								<div class="single-item p_relative d_block">
-                                    <figure class="image-box p_relative d_block b_radius_10"><img
-                                            src="assets/images/home/20.png" alt="SUKHIS Construction"></figure>
+									<figure class="image-box p_relative d_block b_radius_10"><img
+											src="assets/images/home/20.png" alt="SUKHIS Construction"></figure>
 
-                                </div>
+								</div>
 								<div class="single-item p_relative d_block">
-                                    <figure class="image-box p_relative d_block b_radius_10"><img
-                                            src="assets/images/home/21.png" alt="SUKHIS Construction"></figure>
+									<figure class="image-box p_relative d_block b_radius_10"><img
+											src="assets/images/home/21.png" alt="SUKHIS Construction"></figure>
 
-                                </div>
+								</div>
 								<div class="single-item p_relative d_block">
-                                    <figure class="image-box p_relative d_block b_radius_10"><img
-                                            src="assets/images/home/22.png" alt="SUKHIS Construction"></figure>
+									<figure class="image-box p_relative d_block b_radius_10"><img
+											src="assets/images/home/22.png" alt="SUKHIS Construction"></figure>
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Success Stories-section -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Success Stories-section -->
 
 		<!-- main-footer -->
 		<section class="main-footer">
@@ -1825,8 +2028,8 @@
 												aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin"></i></a>
 										</li>
 										<li><a href="https://www.youtube.com/@SponsorComplianceMadeEasy"
-                                                aria-label="Follow us on Youtube"><i class="fab fa-youtube"></i></a>
-                                        </li>
+												aria-label="Follow us on Youtube"><i class="fab fa-youtube"></i></a>
+										</li>
 									</ul>
 								</div>
 							</div>
@@ -1862,7 +2065,7 @@
 	<script src="benefit/js/parallax.min.js"></script>
 	<script src="benefit/js/validate.js"></script>
 	<script src="benefit/js/bxslider.js"></script>
-    <script src="assets/js/owl.js"></script>
+	<script src="assets/js/owl.js"></script>
 
 	<script src="benefit/js/swiper.min.js"></script>
 	<script src="benefit/js/tilt.jquery.min.js"></script>
@@ -1870,115 +2073,116 @@
 	<script src="benefit/js/wow.js"></script>
 	<script src="benefit/js/jquery-ui.js"></script>
 	<script src="benefit/js/script.js"></script>
+	<script src="assets/js/contactForm.js"></script>
 
 
 	<!-- <script src="assets/js/script.js"></script> -->
-<script>
-document.getElementById("submitForm").addEventListener("submit", function(e) {
-    e.preventDefault(); // stop normal form submit
-
-    var form = this;
-    var formData = new FormData(form);
-    var action = form.action;
-
-    fetch(action, {
-        method: "POST",
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-
-        // Show success message
-        document.getElementById("successMessage").style.display = "block";
-
-        // Optional: reset form
-        form.reset();
-
-        // Open new page in new tab after 1 second
-        // setTimeout(function(){
-        //     window.open("https://app.irshr.co.uk/register", "_blank"); 
-        // }, 1000);
-
-		// Redirect after 2 seconds
-        setTimeout(function(){
-            window.location.href = "https://app.irshr.co.uk/register";
-        }, 2000);
-
-    })
-    .catch(error => {
-        alert("Something went wrong. Please try again.");
-        console.error(error);
-    });
-});
-</script>
-
- <script>
-        //sucess-stories-carousel
-        if ($('.sucess-stories-carousel').length) {
-            $('.sucess-stories-carousel').owlCarousel({
-                loop: true,
-                margin: 30,
-                nav: true,
-                smartSpeed: 500,
-                autoplay: true,
-                navText: ['<span class="fas fa-angle-left"></span>', '<span class="fas fa-angle-right"></span>'],
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    480: {
-                        items: 2
-                    },
-                    600: {
-                        items: 2
-                    },
-                    800: {
-                        items: 3
-                    },
-                    1024: {
-                        items: 4
-                    }
-                }
-            });
-        }
-
-    </script>
 	<script>
-		// const backendUrl = "http://localhost:4700/api/";
-		const backendUrl = "https://irshr.co.uk:4701/api/";
-		function submitLead(email) {
-			const data = {
-				email: email
-			};
+		document.getElementById("submitForm").addEventListener("submit", function (e) {
+			e.preventDefault(); // stop normal form submit
 
-			fetch(backendUrl + "tenant/add-email/brevo", {
-				method: "POST", // HTTP method
-				headers: {
-					"Content-Type": "application/json"
-				},
-				body: JSON.stringify(data) // Convert JS object to JSON string
+			var form = this;
+			var formData = new FormData(form);
+			var action = form.action;
+
+			fetch(action, {
+				method: "POST",
+				body: formData
 			})
-				.then(response => response.json()) // Parse JSON response
-				.then(result => {
-					console.log("Success:", result);
-					alert("Message sent successfully!");
-					document.querySelector("input[name='email']").value = '';
+				.then(response => response.json())
+				.then(data => {
+
+					// Show success message
+					document.getElementById("successMessage").style.display = "block";
+
+					// Optional: reset form
+					form.reset();
+
+					// Open new page in new tab after 1 second
+					// setTimeout(function(){
+					//     window.open("https://app.irshr.co.uk/register", "_blank"); 
+					// }, 1000);
+
+					// Redirect after 2 seconds
+					setTimeout(function () {
+						window.location.href = "https://app.irshr.co.uk/register";
+					}, 2000);
+
 				})
 				.catch(error => {
-					console.error("Error:", error);
-					alert("Sorry, there was an error sending your message.");
+					alert("Something went wrong. Please try again.");
+					console.error(error);
 				});
-		}
-		document.getElementById("contact-form").addEventListener("submit", function (e) {
-			e.preventDefault(); // Prevent actual form submission
-
-			if ($('#contact-form').valid()) {
-				let email = document.querySelector("input[name='email']").value;
-				submitLead(email);
-			}
 		});
 	</script>
-	<script src="https://cdn.brevo.com/js/sdk-loader.js" async></script>
+
+	<script>
+		//sucess-stories-carousel
+		if ($('.sucess-stories-carousel').length) {
+			$('.sucess-stories-carousel').owlCarousel({
+				loop: true,
+				margin: 30,
+				nav: true,
+				smartSpeed: 500,
+				autoplay: true,
+				navText: ['<span class="fas fa-angle-left"></span>', '<span class="fas fa-angle-right"></span>'],
+				responsive: {
+					0: {
+						items: 1
+					},
+					480: {
+						items: 2
+					},
+					600: {
+						items: 2
+					},
+					800: {
+						items: 3
+					},
+					1024: {
+						items: 4
+					}
+				}
+			});
+		}
+
+	</script>
+	<script>
+		// const backendUrl = "http://localhost:4700/api/";
+		// const backendUrl = "https://irshr.co.uk:4701/api/";
+		// function submitLead(email) {
+		// 	const data = {
+		// 		email: email
+		// 	};
+
+		// 	fetch(backendUrl + "tenant/add-email/brevo", {
+		// 		method: "POST", // HTTP method
+		// 		headers: {
+		// 			"Content-Type": "application/json"
+		// 		},
+		// 		body: JSON.stringify(data) // Convert JS object to JSON string
+		// 	})
+		// 		.then(response => response.json()) // Parse JSON response
+		// 		.then(result => {
+		// 			console.log("Success:", result);
+		// 			alert("Message sent successfully!");
+		// 			document.querySelector("input[name='email']").value = '';
+		// 		})
+		// 		.catch(error => {
+		// 			console.error("Error:", error);
+		// 			alert("Sorry, there was an error sending your message.");
+		// 		});
+		// }
+		// document.getElementById("contact-form").addEventListener("submit", function (e) {
+		// 	e.preventDefault(); // Prevent actual form submission
+
+		// 	if ($('#contact-form').valid()) {
+		// 		let email = document.querySelector("input[name='email']").value;
+		// 		submitLead(email);
+		// 	}
+		// });
+	</script>
+	<!-- <script src="https://cdn.brevo.com/js/sdk-loader.js" async></script>
 	<script>
 		// Version: 2.0
 		window.Brevo = window.Brevo || [];
@@ -1989,24 +2193,24 @@ document.getElementById("submitForm").addEventListener("submit", function(e) {
 				// Optional: Add other initialization options, see documentation
 			}
 		]);
-	</script>
+	</script> -->
 
-	
-    <!--Start of http://Tawk.to  Script-->
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-        (function () {
-            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/6930267874bc821971130461/1jbi1chql';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-    </script>
-    <!--End of http://Tawk.to  Script-->
-    
-	
+
+	<!--Start of http://Tawk.to  Script-->
+	<script type="text/javascript">
+		var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+		(function () {
+			var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+			s1.async = true;
+			s1.src = 'https://embed.tawk.to/6930267874bc821971130461/1jbi1chql';
+			s1.charset = 'UTF-8';
+			s1.setAttribute('crossorigin', '*');
+			s0.parentNode.insertBefore(s1, s0);
+		})();
+	</script>
+	<!--End of http://Tawk.to  Script-->
+
+
 </body>
 
 </html>
