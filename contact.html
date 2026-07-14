@@ -558,30 +558,115 @@
                                 <h4 class="p_relative d_block lh_55 fw_exbold">Leave a message to receive a call within
                                     4 hours</h4>
                             </div>
-                            <div class="">
-                                <iframe width="100%" height="805"
-                                    src="https://3dd82cc7.sibforms.com/serve/MUIFAFAH2Boa1Xn-uL2nelK2_EQR96yXiHSa-yaPQ3onDG_KRNc-Qxb1QAup8cYjSnQDDhkm5xd1abILU-31ReBuh8XYCZ2drT_0KlsJqJM1ummy2IQOlhdGMUhnaWhWfRkFMIAGH-uhldKUUF9x3GqKWleDlryp3wU256-mNQmJJLagVxU09g2lqL1pZ1ZAvlVxi3eUG5RsVjl9"
-                                    frameborder="0" scrolling="auto" allowfullscreen
-                                    style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
+                            <div >
+						<div class="form-card">
 
-                                <!-- <form method="post" id="contact-form" class="default-form">
-                                    <div class="row clearfix">
-                                        <div class="col-lg-6 col-md-6 col-sm-12 form-group mb_20">
-                                            <input type="text" name="username" placeholder="Your Name" required="">
-                                        </div>
-                                        <div class="col-lg-6 col-md-6 col-sm-12 form-group mb_20">
-                                            <input type="email" name="email" placeholder="Email Address" required="">
-                                        </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 form-group mb_20">
-                                            <textarea name="message" placeholder="Leave A Comment"></textarea>
-                                        </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn mr-0">
-                                            <button class="theme-btn btn-one" type="submit"
-                                                name="submit-form"><span>Send A Message</span></button>
-                                        </div>
-                                    </div>
-                                </form> -->
-                            </div>
+							<form id="leadForm" data-email="pc@irslimited.co.uk" method="POST"
+								action="https://script.google.com/macros/s/AKfycbxdsEmGPtPZiSKmuIe6HhOfXWZgcGnDM_mXsSz27cwyZF8_LNzBOmid0ZjFK7KVOW75fw/exec">
+
+								<div class="row">
+
+									<div class="col-md-6 mb-4">
+
+										<label class="form-label">
+											First Name <span>*</span>
+										</label>
+
+										<input type="text" name="firstName" class="form-control"
+											placeholder="Enter first name" required>
+
+									</div>
+
+									<div class="col-md-6 mb-4">
+
+										<label class="form-label">
+											Last Name 
+										</label>
+
+										<input type="text" name="lastName" class="form-control"
+											placeholder="Enter last name">
+
+									</div>
+
+									<div class="col-md-6 mb-4">
+
+										<label class="form-label">
+											Work Email <span>*</span>
+										</label>
+
+										<input type="email" name="email" class="form-control"
+											placeholder="example@company.com" required>
+
+									</div>
+
+									<div class="col-md-6 mb-4">
+
+										<label class="form-label">
+											Contact Number <span>*</span>
+										</label>
+
+										<input type="tel" name="contactNumber" class="form-control"
+											placeholder="+44 1234 567890" required>
+
+									</div>
+
+									<div class="col-12 mb-4">
+
+										<label class="form-label">
+											Number of Employees <span>*</span>
+										</label>
+
+										<input type="text" name="employees" class="form-control"
+											placeholder="Number of employees" required>
+
+									</div>
+
+									<div class="col-12">
+
+										<button class="btn btn-submit" type="submit" id="submitLeadBtn">
+											Submit
+											<i class="ti ti-arrow-right ms-2"></i>
+										</button>
+
+									</div>
+
+								</div>
+
+							</form>
+
+						</div>
+                        <!-- Success Popup -->
+						<div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+							<div class="modal-dialog modal-dialog-centered">
+								<div class="modal-content border-0 shadow-lg rounded-4">
+
+									<div class="modal-body text-center p-5">
+
+										<div class="mb-4">
+											<div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center"
+												style="width:80px;height:80px;">
+												<!-- <i class="bi bi-check-circle-fill text-success fs-1"></i> -->
+												<i class="ti ti-check text-white" style="font-size:60px;"></i>
+											</div>
+										</div>
+
+										<h3 class="fw-bold mb-2">Success!</h3>
+
+										<p class="text-muted mb-4">
+											Thank you! Your enquiry has been submitted successfully.
+										</p>
+
+										<button class="btn btn-success px-4" data-dismiss="modal"
+											onclick="closeModal()">
+											Close
+										</button>
+
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12 col-sm-12 info-column">
@@ -745,59 +830,9 @@
     <script src="assets/js/script.js"></script>
 
 
-    <script>
-        // const backendUrl = "http://localhost:4700/api/";
-        const backendUrl = "https://irshr.co.uk:4701/api/";
-        function submitLead(name, email, comment) {
-            const data = {
-                name: name,
-                email: email,
-                comment: comment,
-            };
+	<script src="https://unpkg.com/lucide@latest"></script>
+	<script src="assets/js/contactForm.js"></script>
 
-            fetch(backendUrl + "tenant/add-message/brevo", {
-                method: "POST", // HTTP method
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(data) // Convert JS object to JSON string
-            })
-                .then(response => response.json()) // Parse JSON response
-                .then(result => {
-                    console.log("Success:", result);
-                    alert("Message sent successfully!");
-                    document.querySelector("input[name='username']").value = '';
-                    document.querySelector("input[name='email']").value = '';
-                    document.querySelector("textarea[name='message']").value = '';
-                })
-                .catch(error => {
-                    console.error("Error:", error);
-                    alert("Sorry, there was an error sending your message.");
-                });
-        }
-        // document.getElementById("contact-form").addEventListener("submit", function (e) {
-        //     e.preventDefault(); // Prevent actual form submission
-
-        //     if ($('#contact-form').valid()) {
-        //         let username = document.querySelector("input[name='username']").value;
-        //         let email = document.querySelector("input[name='email']").value;
-        //         let message = document.querySelector("textarea[name='message']").value;
-        //         submitLead(username, email, message);
-        //     }
-        // });
-    </script>
-    <script src="https://cdn.brevo.com/js/sdk-loader.js" async></script>
-    <script>
-        // Version: 2.0
-        window.Brevo = window.Brevo || [];
-        Brevo.push([
-            "init",
-            {
-                client_key: "f4hrymkjsfgk1j9gbt6efthq",
-                // Optional: Add other initialization options, see documentation
-            }
-        ]);
-    </script>
 
     <!--Start of http://Tawk.to  Script-->
     <script type="text/javascript">
