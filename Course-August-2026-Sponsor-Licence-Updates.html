@@ -861,12 +861,11 @@
             </div>
         </section>
 
-
         <section id="course" class="py-20 bg-gray-50 border-t border-gray-200">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl font-bold text-gray-900 mb-4">Course Curriculum: August 2026 Updates</h2>
-                    <p class="text-gray-600">Register below to unlock the full DIY Course modules instantly.</p>
+                    <p class="text-gray-600">Register below to unlock the full DIY CPD modules instantly.</p>
                 </div>
 
 
@@ -874,9 +873,10 @@
 
                     <!-- Unlocked Module (Preview) -->
                     <div
-                        class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-200 mb-6 relative overflow-hidden">
+                        class="bg-white rounded-2xl shadow-sm border border-gray-200 mb-6 relative overflow-hidden transition-all duration-300">
                         <div class="absolute top-0 left-0 w-2 h-full bg-brand-500"></div>
-                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div class="p-6 md:p-8 flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer hover:bg-gray-50 transition"
+                            onclick="toggleModule('mod1')">
                             <div>
                                 <span
                                     class="text-sm font-bold text-brand-600 uppercase tracking-wider mb-1 block">Module
@@ -886,9 +886,61 @@
                                     clearance vignettes and the shift to the "form for accompanying an eVisa".</p>
                             </div>
                             <button
-                                class="flex-shrink-0 bg-brand-50 text-brand-700 font-semibold px-4 py-2 rounded-lg border border-brand-200 hover:bg-brand-100 transition flex items-center gap-2">
-                                <i class="fa-solid fa-play"></i> Watch Module
+                                class="flex-shrink-0 bg-brand-50 text-brand-700 font-semibold px-4 py-2 rounded-lg border border-brand-200 hover:bg-brand-100 transition flex items-center gap-2 pointer-events-none">
+                                <i id="icon-mod1"
+                                    class="fa-solid fa-chevron-down transition-transform duration-300"></i> Read
                             </button>
+                        </div>
+
+                        <!-- Module 1 Expanded Content -->
+                        <div id="content-mod1" class="hidden border-t border-gray-100 p-6 md:p-8 bg-gray-50">
+                            <div class="prose max-w-none text-gray-700">
+                                <h4 class="text-lg font-bold text-gray-900 mb-2">Lesson Overview: The Digital Shift</h4>
+                                <p class="mb-4">As of 1 July 2026, the Home Office has permanently ceased issuing
+                                    physical entry clearance vignettes for new sponsored workers entering the UK. The
+                                    digital eVisa share code is now the exclusive method of entry clearance.</p>
+                                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg mb-4">
+                                    <h5 class="font-bold text-blue-900 text-sm mb-1">Key Takeaway</h5>
+                                    <p class="text-sm text-blue-800">For individuals without a recognized national
+                                        passport, the historical "form for affixing a visa" has been completely replaced
+                                        by the newly mandated "form for accompanying an eVisa".</p>
+                                </div>
+                                <h4 class="text-lg font-bold text-gray-900 mb-2">Action Items for HR:</h4>
+                                <ul class="list-disc pl-5 space-y-2 text-sm mb-6">
+                                    <li>Update internal onboarding checklists to remove requests for physical vignette
+                                        scans.</li>
+                                    <li>Ensure recruitment teams are trained to accept and verify the "form for
+                                        accompanying an eVisa".</li>
+                                    <li>Utilize IRS HR's automated share-code validation tool to instantly securely
+                                        store digital border statuses.</li>
+                                </ul>
+
+                                <!-- Exercise -->
+                                <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+                                    <h5 class="font-bold text-brand-600 mb-2"><i
+                                            class="fa-solid fa-pen-to-square mr-2"></i> Module 1 Exercise: Scenario
+                                        Check</h5>
+                                    <p class="text-sm text-gray-700 mb-3"><strong>Scenario:</strong> A new recruit from
+                                        overseas hands you a physical travel document without a vignette. They do not
+                                        hold a standard national passport. What specific document must they present to
+                                        prove entry clearance under the August 2026 rules?</p>
+                                    <div class="space-y-2">
+                                        <details class="group cursor-pointer">
+                                            <summary
+                                                class="text-sm font-semibold text-gray-900 bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg list-none flex justify-between items-center transition">
+                                                Reveal Answer <i
+                                                    class="fa-solid fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                                            </summary>
+                                            <div
+                                                class="p-4 bg-green-50 text-green-800 text-sm rounded-b-lg border border-green-100 mt-1">
+                                                <strong>Answer:</strong> They must present their digital eVisa share
+                                                code AND the new "form for accompanying an eVisa". The old "form for
+                                                affixing a visa" is no longer valid.
+                                            </div>
+                                        </details>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -904,7 +956,7 @@
 
                             <h3 class="text-xl font-bold text-center mt-4 mb-2">Unlock the Full Course</h3>
                             <p class="text-sm text-gray-500 text-center mb-6">Enter your details to instantly access all
-                                Free modules, materials, and certification.</p>
+                                CPD modules, materials, and certification.</p>
 
                             <form id="unlock-form" onsubmit="unlockCourse(event)" class="space-y-4">
                                 <div>
@@ -959,60 +1011,262 @@
                     <div class="space-y-4">
                         <!-- Module 2 -->
                         <div
-                            class="locked-content bg-white rounded-2xl p-6 shadow-sm border border-gray-200 flex flex-col md:flex-row md:items-center justify-between gap-4">
-                            <div>
-                                <span class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-1 block">Module
-                                    2</span>
-                                <h3 class="text-lg font-bold text-gray-900">Mastering Appendix D & Date of Entry</h3>
-                                <p class="text-gray-500 mt-1 text-sm">How to execute the new two-step verification
-                                    process for finding wet-ink stamps vs. digital share codes.</p>
+                            class="locked-content bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden transition-all duration-300 group">
+                            <div class="p-6 flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer group-hover:bg-gray-50 transition"
+                                onclick="if(document.getElementById('course-container').classList.contains('unlocked')) toggleModule('mod2')">
+                                <div>
+                                    <span
+                                        class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-1 block module-subtitle">Module
+                                        2</span>
+                                    <h3 class="text-lg font-bold text-gray-900">Mastering Appendix D & Date of Entry
+                                    </h3>
+                                    <p class="text-gray-500 mt-1 text-sm">How to execute the new two-step verification
+                                        process for finding wet-ink stamps vs. digital share codes.</p>
+                                </div>
+                                <div class="flex-shrink-0 text-gray-300 text-2xl px-4 unlock-action-btn"><i
+                                        class="fa-solid fa-lock"></i></div>
                             </div>
-                            <div class="flex-shrink-0 text-gray-300 text-2xl px-4"><i class="fa-solid fa-lock"></i>
+                            <div id="content-mod2" class="hidden border-t border-gray-100 p-6 md:p-8 bg-gray-50">
+                                <h4 class="text-lg font-bold text-gray-900 mb-2">The Two-Step Verification Process</h4>
+                                <p class="text-gray-700 mb-4 text-sm">Because eVisas do not get physically stamped at
+                                    the border, Appendix D strictly requires sponsors to verify a worker's actual date
+                                    of entry into the UK independently of their digital visa start date.</p>
+                                <ul class="list-disc pl-5 space-y-2 text-sm text-gray-700 mb-4">
+                                    <li><strong>Primary Evidence:</strong> You must retain a copy of the wet-ink stamp
+                                        in the worker's passport.</li>
+                                    <li><strong>Secondary Evidence:</strong> If no stamp is provided (e.g., they used
+                                        eGates), you must retain a copy of their boarding passes or travel tickets.</li>
+                                </ul>
+                                <div class="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg mb-6">
+                                    <h5 class="font-bold text-red-900 text-sm mb-1">Compliance Warning</h5>
+                                    <p class="text-sm text-red-800">Failing to properly record the Date of Entry can
+                                        invalidate your statutory excuse, leading to a maximum civil penalty of £45,000
+                                        per worker for a first breach. IRS HR's platform automatically prompts for and
+                                        archives these specific travel documents during onboarding.</p>
+                                </div>
+
+
+                                <!-- Exercise -->
+                                <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+                                    <h5 class="font-bold text-brand-600 mb-2"><i
+                                            class="fa-solid fa-pen-to-square mr-2"></i> Module 2 Exercise: Compliance
+                                        Audit</h5>
+                                    <p class="text-sm text-gray-700 mb-3"><strong>Task:</strong> Review your current
+                                        onboarding checklist. Which of the following is acceptable primary evidence of a
+                                        worker's date of entry?</p>
+                                    <div class="space-y-2">
+                                        <details class="group cursor-pointer">
+                                            <summary
+                                                class="text-sm font-semibold text-gray-900 bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg list-none flex justify-between items-center transition">
+                                                Reveal Answer <i
+                                                    class="fa-solid fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                                            </summary>
+                                            <div
+                                                class="p-4 bg-green-50 text-green-800 text-sm rounded-b-lg border border-green-100 mt-1">
+                                                <strong>Answer:</strong> The wet-ink stamp in the worker's passport. A
+                                                verbal declaration or a screenshot of their eVisa valid-from date is NOT
+                                                acceptable evidence of the actual date of entry under Appendix D.
+                                            </div>
+                                        </details>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
 
                         <!-- Module 3 -->
                         <div
-                            class="locked-content bg-white rounded-2xl p-6 shadow-sm border border-gray-200 flex flex-col md:flex-row md:items-center justify-between gap-4">
-                            <div>
-                                <span class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-1 block">Module
-                                    3</span>
-                                <h3 class="text-lg font-bold text-gray-900">Immigration Bail, Overstayers & HC 259</h3>
-                                <p class="text-gray-500 mt-1 text-sm">Leveraging paragraph SUI 13.1 to sponsor workers
-                                    trapped in administrative delays.</p>
+                            class="locked-content bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden transition-all duration-300 group">
+                            <div class="p-6 flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer group-hover:bg-gray-50 transition"
+                                onclick="if(document.getElementById('course-container').classList.contains('unlocked')) toggleModule('mod3')">
+                                <div>
+                                    <span
+                                        class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-1 block module-subtitle">Module
+                                        3</span>
+                                    <h3 class="text-lg font-bold text-gray-900">Immigration Bail, Overstayers & HC 259
+                                    </h3>
+                                    <p class="text-gray-500 mt-1 text-sm">Leveraging paragraph SUI 13.1 to sponsor
+                                        workers trapped in administrative delays.</p>
+                                </div>
+                                <div class="flex-shrink-0 text-gray-300 text-2xl px-4 unlock-action-btn"><i
+                                        class="fa-solid fa-lock"></i></div>
                             </div>
-                            <div class="flex-shrink-0 text-gray-300 text-2xl px-4"><i class="fa-solid fa-lock"></i>
+                            <div id="content-mod3" class="hidden border-t border-gray-100 p-6 md:p-8 bg-gray-50">
+                                <h4 class="text-lg font-bold text-gray-900 mb-2">Navigating Bail Status</h4>
+                                <p class="text-gray-700 mb-4 text-sm">Under the revised Section S7.8 and HC 259,
+                                    understanding how the Home Office treats applicants on immigration bail is crucial
+                                    to retaining essential care staff who have fallen victim to administrative delays.
+                                </p>
+                                <div class="bg-brand-50 border-l-4 border-brand-500 p-4 rounded-r-lg mb-4">
+                                    <h5 class="font-bold text-brand-900 text-sm mb-1">The 14-Day Overstay Exception</h5>
+                                    <p class="text-sm text-brand-800">If a worker meets the criteria for a valid 14-day
+                                        overstay exception, the new immigration rules dictate that the Home Office will
+                                        completely disregard the fact that the applicant is currently on immigration
+                                        bail. Their application can proceed normally.</p>
+                                </div>
+                                <p class="text-sm text-gray-700 font-medium mb-6"><i
+                                        class="fa-solid fa-scale-balanced text-brand-500 mr-2"></i> IRS HR Advantage:
+                                    Our panel of expert immigration solicitors can instantly step in to assess if your
+                                    worker qualifies for SUI 13.1 relief before you make the tough decision to terminate
+                                    employment.</p>
+
+
+                                <!-- Exercise -->
+                                <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+                                    <h5 class="font-bold text-brand-600 mb-2"><i
+                                            class="fa-solid fa-pen-to-square mr-2"></i> Module 3 Exercise: Policy
+                                        Application</h5>
+                                    <p class="text-sm text-gray-700 mb-3"><strong>Scenario:</strong> An existing care
+                                        worker's visa expired 5 days ago due to an administrative error, and they are
+                                        now technically on immigration bail. They have a valid CoS and are ready to
+                                        apply for an extension. Can they still apply?</p>
+                                    <div class="space-y-2">
+                                        <details class="group cursor-pointer">
+                                            <summary
+                                                class="text-sm font-semibold text-gray-900 bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg list-none flex justify-between items-center transition">
+                                                Reveal Answer <i
+                                                    class="fa-solid fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                                            </summary>
+                                            <div
+                                                class="p-4 bg-green-50 text-green-800 text-sm rounded-b-lg border border-green-100 mt-1">
+                                                <strong>Answer: Yes.</strong> Because they fall within the 14-day
+                                                overstay exception period, the Home Office will disregard their current
+                                                bail status for the purpose of the application processing.
+                                            </div>
+                                        </details>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
 
                         <!-- Module 4 -->
                         <div
-                            class="locked-content bg-white rounded-2xl p-6 shadow-sm border border-gray-200 flex flex-col md:flex-row md:items-center justify-between gap-4">
-                            <div>
-                                <span class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-1 block">Module
-                                    4</span>
-                                <h3 class="text-lg font-bold text-gray-900">Supplementary Work & The ISL</h3>
-                                <p class="text-gray-500 mt-1 text-sm">Navigating RQF levels and the 20-hour rule for
-                                    secondary employment under August 2026 rules.</p>
+                            class="locked-content bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden transition-all duration-300 group">
+                            <div class="p-6 flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer group-hover:bg-gray-50 transition"
+                                onclick="if(document.getElementById('course-container').classList.contains('unlocked')) toggleModule('mod4')">
+                                <div>
+                                    <span
+                                        class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-1 block module-subtitle">Module
+                                        4</span>
+                                    <h3 class="text-lg font-bold text-gray-900">Supplementary Work & The ISL</h3>
+                                    <p class="text-gray-500 mt-1 text-sm">Navigating RQF levels and the 20-hour rule for
+                                        secondary employment under August 2026 rules.</p>
+                                </div>
+                                <div class="flex-shrink-0 text-gray-300 text-2xl px-4 unlock-action-btn"><i
+                                        class="fa-solid fa-lock"></i></div>
                             </div>
-                            <div class="flex-shrink-0 text-gray-300 text-2xl px-4"><i class="fa-solid fa-lock"></i>
+                            <div id="content-mod4" class="hidden border-t border-gray-100 p-6 md:p-8 bg-gray-50">
+                                <h4 class="text-lg font-bold text-gray-900 mb-2">Rules for Second Jobs</h4>
+                                <p class="text-gray-700 mb-4 text-sm">Many sponsored workers seek supplementary
+                                    employment to supplement their income. As an employer, you must ensure they do not
+                                    breach their visa conditions, which would put your own licence at risk.</p>
+                                <ul class="list-disc pl-5 space-y-2 text-sm text-gray-700 mb-4">
+                                    <li><strong>The Hard Cap:</strong> Supplementary employment remains strictly capped
+                                        at <strong>20 hours per week</strong> and must be outside their normal sponsored
+                                        working hours.</li>
+                                    <li><strong>The ISL Loophole:</strong> Part 2 of the updated guidance clarifies that
+                                        if a secondary job is listed on the <strong>Immigration Salary List
+                                            (ISL)</strong>, the worker can undertake it even if it does not match their
+                                        primary sponsored profession or RQF skill level.</li>
+                                </ul>
+                                <p class="text-sm text-gray-700 font-medium mb-6"><i
+                                        class="fa-solid fa-clock-rotate-left text-brand-500 mr-2"></i> IRS HR's payroll
+                                    integration automatically flags timesheets that approach the 20-hour supplementary
+                                    threshold across linked care facilities.</p>
+
+                                <!-- Exercise -->
+                                <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+                                    <h5 class="font-bold text-brand-600 mb-2"><i
+                                            class="fa-solid fa-pen-to-square mr-2"></i> Module 4 Exercise: Timesheet
+                                        Review</h5>
+                                    <p class="text-sm text-gray-700 mb-3"><strong>True or False:</strong> A sponsored
+                                        senior care worker can work 22 hours a week in a secondary job as a standard
+                                        care worker, provided both roles are on the Immigration Salary List.</p>
+                                    <div class="space-y-2">
+                                        <details class="group cursor-pointer">
+                                            <summary
+                                                class="text-sm font-semibold text-gray-900 bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg list-none flex justify-between items-center transition">
+                                                Reveal Answer <i
+                                                    class="fa-solid fa-chevron-down group-open:rotate-180 transition-transform"></i>
+                                            </summary>
+                                            <div
+                                                class="p-4 bg-green-50 text-green-800 text-sm rounded-b-lg border border-green-100 mt-1">
+                                                <strong>Answer: False.</strong> While being on the ISL allows them to
+                                                take the role, the absolute maximum limit for supplementary employment
+                                                remains strictly capped at 20 hours per week under all circumstances.
+                                                Working 22 hours is a breach of visa conditions.
+                                            </div>
+                                        </details>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
 
                         <!-- Module 5 -->
                         <div
-                            class="locked-content bg-white rounded-2xl p-6 shadow-sm border border-gray-200 flex flex-col md:flex-row md:items-center justify-between gap-4">
-                            <div>
-                                <span class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-1 block">Module
-                                    5</span>
-                                <h3 class="text-lg font-bold text-gray-900">Automating Compliance with IRS HR</h3>
-                                <p class="text-gray-500 mt-1 text-sm">A practical walk-through of establishing an
-                                    ironclad statutory excuse using smart tech.</p>
+                            class="locked-content bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden transition-all duration-300 group">
+                            <div class="p-6 flex flex-col md:flex-row md:items-center justify-between gap-4 cursor-pointer group-hover:bg-gray-50 transition"
+                                onclick="if(document.getElementById('course-container').classList.contains('unlocked')) toggleModule('mod5')">
+                                <div>
+                                    <span
+                                        class="text-sm font-bold text-gray-400 uppercase tracking-wider mb-1 block module-subtitle">Module
+                                        5</span>
+                                    <h3 class="text-lg font-bold text-gray-900">Automating Compliance with IRS HR</h3>
+                                    <p class="text-gray-500 mt-1 text-sm">A practical walk-through of establishing an
+                                        ironclad statutory excuse using smart tech.</p>
+                                </div>
+                                <div class="flex-shrink-0 text-gray-300 text-2xl px-4 unlock-action-btn"><i
+                                        class="fa-solid fa-lock"></i></div>
                             </div>
-                            <div class="flex-shrink-0 text-gray-300 text-2xl px-4"><i class="fa-solid fa-lock"></i>
+                            <div id="content-mod5" class="hidden border-t border-gray-100 p-6 md:p-8 bg-gray-50">
+                                <h4 class="text-xl font-bold text-gray-900 mb-2">Executing Your Compliance Strategy</h4>
+                                <p class="text-sm text-gray-700 mb-6">You have learned the theory of the August 2026
+                                    updates, but enforcing them manually across a care organization is nearly
+                                    impossible. IRS HR is the only platform in the UK designed specifically to automate
+                                    these new Home Office nuances.</p>
+
+                                <!-- Exercise -->
+                                <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm mb-6">
+                                    <h5 class="font-bold text-brand-600 mb-2"><i
+                                            class="fa-solid fa-pen-to-square mr-2"></i> Final Module Exercise:
+                                        Self-Assessment</h5>
+                                    <p class="text-sm text-gray-700 mb-3"><strong>Task:</strong> Evaluate your current
+                                        internal systems against the 3 core pillars of August 2026 compliance. Rate your
+                                        organization as "Ready" or "At Risk":</p>
+                                    <ul class="list-none space-y-3 text-sm text-gray-700 mb-4">
+                                        <li class="flex items-start gap-2">
+                                            <input type="checkbox"
+                                                class="mt-1 w-4 h-4 text-brand-600 border-gray-300 rounded focus:ring-brand-500 cursor-pointer">
+                                            <span><strong>Digital Visas:</strong> We have a system to extract and store
+                                                eVisa share-codes before a worker's start date.</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <input type="checkbox"
+                                                class="mt-1 w-4 h-4 text-brand-600 border-gray-300 rounded focus:ring-brand-500 cursor-pointer">
+                                            <span><strong>Appendix D:</strong> We require and retain wet-ink border
+                                                stamps or boarding passes for all new overseas arrivals.</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <input type="checkbox"
+                                                class="mt-1 w-4 h-4 text-brand-600 border-gray-300 rounded focus:ring-brand-500 cursor-pointer">
+                                            <span><strong>Hours Monitoring:</strong> Our payroll system automatically
+                                                prevents sponsored workers from exceeding 20 supplementary hours.</span>
+                                        </li>
+                                    </ul>
+                                    <div
+                                        class="p-3 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-600 italic">
+                                        If you left any box unchecked, your organization is at high risk of a £45,000
+                                        civil penalty.
+                                    </div>
+                                </div>
+
+
+                                <a href="#assessment"
+                                    class="inline-flex bg-brand-600 hover:bg-brand-500 text-white px-6 py-3 rounded-lg font-bold text-sm transition shadow-lg items-center gap-2">
+                                    Book Your Tech & Legal Demo Now <i class="fa-solid fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1023,358 +1277,375 @@
         </section>
 
 
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-<section class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                        Success Stories: Why Care Providers Trust Us
+                    </h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        We don't just teach compliance; we enforce it through our
+                        software and legal team. See how we've helped organizations
+                        secure their operations.
+                    </p>
+                </div>
 
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-gray-900 mb-4">
-                Success Stories: Why Care Providers Trust Us
-            </h2>
-            <p class="text-gray-600 max-w-2xl mx-auto">
-                We don't just teach compliance; we enforce it through our
-                software and legal team. See how we've helped organizations
-                secure their operations.
-            </p>
-        </div>
+                <!-- Reviews Carousel -->
+                <div class="relative max-w-5xl mx-auto">
 
-        <!-- Reviews Carousel -->
-        <div class="relative max-w-5xl mx-auto">
-
-            <!-- Left Arrow -->
-            <button id="prevReview"
-                class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-5 lg:-translate-x-16
+                    <!-- Left Arrow -->
+                    <button id="prevReview" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-5 lg:-translate-x-16
                 w-12 h-12 rounded-full bg-white border border-gray-200 shadow-lg
                 flex items-center justify-center text-gray-600
-                hover:bg-gray-50 hover:text-gray-900 transition-all z-20"
-                aria-label="Previous review">
-                <i class="fa-solid fa-chevron-left"></i>
-            </button>
+                hover:bg-gray-50 hover:text-gray-900 transition-all z-20" aria-label="Previous review">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
 
-            <!-- Review Slides -->
-            <div class="overflow-hidden rounded-3xl">
-                <div id="reviewsTrack"
-                    class="flex transition-transform duration-500 ease-in-out">
+                    <!-- Review Slides -->
+                    <div class="overflow-hidden rounded-3xl">
+                        <div id="reviewsTrack" class="flex transition-transform duration-500 ease-in-out">
 
-                    <!-- Review 1 -->
-                    <div class="min-w-full px-1">
-                        <div class="bg-white rounded-3xl p-8 md:p-10 border border-gray-200 shadow-xls relative overflow-hidden">
+                            <!-- Review 1 -->
+                            <div class="min-w-full px-1">
+                                <div
+                                    class="bg-white rounded-3xl p-8 md:p-10 border border-gray-200 shadow-xls relative overflow-hidden">
 
-                            <div class="absolute top-0 right-0 w-32 h-32 bg-brand-50 rounded-bl-full -z-0"></div>
+                                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-50 rounded-bl-full -z-0">
+                                    </div>
 
-                            <div class="relative z-10">
+                                    <div class="relative z-10">
 
-                                <div class="flex items-start justify-between mb-6">
-                                    <div class="flex items-center gap-4">
+                                        <div class="flex items-start justify-between mb-6">
+                                            <div class="flex items-center gap-4">
 
-                                        <div
-                                            class="w-14 h-14 bg-[#b555ca] rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-md">
-                                            L
-                                        </div>
-
-                                        <div>
-                                            <h4 class="text-lg font-bold text-gray-900 flex items-center gap-2">
-                                                Lilian
-                                                <a href="#"
-                                                    class="text-gray-400 hover:text-blue-500 transition">
-                                                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
-                                                </a>
-                                            </h4>
-
-                                            <div class="flex items-center gap-2">
-                                                <div class="flex text-[#fbbc04] text-sm">
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
+                                                <div
+                                                    class="w-14 h-14 bg-[#b555ca] rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-md">
+                                                    L
                                                 </div>
-                                                <span class="text-sm text-gray-500">
-                                                    • 8 weeks ago
-                                                </span>
+
+                                                <div>
+                                                    <h4 class="text-lg font-bold text-gray-900 flex items-center gap-2">
+                                                        Lilian
+                                                        <a href="#"
+                                                            class="text-gray-400 hover:text-blue-500 transition">
+                                                            <i
+                                                                class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                                                        </a>
+                                                    </h4>
+
+                                                    <div class="flex items-center gap-2">
+                                                        <div class="flex text-[#fbbc04] text-sm">
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                        </div>
+                                                        <span class="text-sm text-gray-500">
+                                                            • 8 weeks ago
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="text-gray-400">
+                                                <i class="fa-brands fa-google text-2xl"></i>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <div class="text-gray-400">
-                                        <i class="fa-brands fa-google text-2xl"></i>
+                                        <h5 class="font-bold text-gray-900 mb-3 text-lg">
+                                            Excellent HR & Payroll Support
+                                        </h5>
+
+                                        <div
+                                            class="text-gray-700 space-y-4 text-sm md:text-base leading-relaxed italic">
+                                            <p>
+                                                "We have been working with HR IRS and have found their service
+                                                to be highly professional and reliable. Their knowledge of payroll,
+                                                compliance, and HR processes is excellent."
+                                            </p>
+
+                                            <p>
+                                                "The team is very patient, supportive, and well organised.
+                                                They take the time to understand queries and ensure issues are
+                                                resolved thoroughly."
+                                            </p>
+
+                                            <p>
+                                                "Their software has also been very useful, providing a structured
+                                                and efficient system that supports our processes and aligns well
+                                                with Home Office compliance requirements."
+                                            </p>
+
+                                            <p class="font-semibold text-brand-900 not-italic">
+                                                "I would highly recommend HR IRS to any organisation looking
+                                                for a trustworthy, knowledgeable, and dependable HR partner."
+                                            </p>
+                                        </div>
+
                                     </div>
                                 </div>
-
-                                <h5 class="font-bold text-gray-900 mb-3 text-lg">
-                                    Excellent HR & Payroll Support
-                                </h5>
-
-                                <div class="text-gray-700 space-y-4 text-sm md:text-base leading-relaxed italic">
-                                    <p>
-                                        "We have been working with HR IRS and have found their service
-                                        to be highly professional and reliable. Their knowledge of payroll,
-                                        compliance, and HR processes is excellent."
-                                    </p>
-
-                                    <p>
-                                        "The team is very patient, supportive, and well organised.
-                                        They take the time to understand queries and ensure issues are
-                                        resolved thoroughly."
-                                    </p>
-
-                                    <p>
-                                        "Their software has also been very useful, providing a structured
-                                        and efficient system that supports our processes and aligns well
-                                        with Home Office compliance requirements."
-                                    </p>
-
-                                    <p class="font-semibold text-brand-900 not-italic">
-                                        "I would highly recommend HR IRS to any organisation looking
-                                        for a trustworthy, knowledgeable, and dependable HR partner."
-                                    </p>
-                                </div>
-
                             </div>
+
+
+                            <!-- Review 2 -->
+                            <div class="min-w-full px-1">
+                                <div
+                                    class="bg-white rounded-3xl p-8 md:p-10 border border-gray-200 shadow-xls relative overflow-hidden">
+
+                                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-50 rounded-bl-full -z-0">
+                                    </div>
+
+                                    <div class="relative z-10">
+
+                                        <div class="flex items-start justify-between mb-6">
+                                            <div class="flex items-center gap-4">
+
+                                                <div
+                                                    class="w-14 h-14 bg-[#4f8cc9] rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-md">
+                                                    G
+                                                </div>
+
+                                                <div>
+                                                    <h4 class="text-lg font-bold text-gray-900">
+                                                        Gifty Gead
+                                                    </h4>
+
+                                                    <div class="flex items-center gap-2">
+                                                        <div class="flex text-[#fbbc04] text-sm">
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                        </div>
+
+                                                        <span class="text-sm text-gray-500">
+                                                            • 11 months ago
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="text-gray-400">
+                                                <i class="fa-brands fa-google text-2xl"></i>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div
+                                            class="text-gray-700 space-y-4 text-sm md:text-base leading-relaxed italic">
+                                            <p>
+                                                "IRS has turned out to be a crucial life saver for our new business and
+                                                while we are still in the process of being fully functioning, I must say
+                                                we couldn't have come this far without you."
+                                            </p>
+
+                                            <p>
+                                                "Always willing to support, always making time to meet with us at
+                                                times/days that suit us whether outside of working times or days or
+                                                not."
+                                            </p>
+                                            <p>"You've always been professional, always promptly responding to our
+                                                numerous questiond and showed experience in guiding us and most
+                                                importantly paying attention to what we want as clients and prioritising
+                                                us.
+                                                You treat our business with genuine interest as if your own."</p>
+
+                                            <p class="font-semibold text-brand-900 not-italic">
+                                                "Thanks so much to all of you at IRS; Parakh and Team!"
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Review 3 -->
+                            <div class="min-w-full px-1">
+                                <div
+                                    class="bg-white rounded-3xl p-8 md:p-10 border border-gray-200 shadow-xls relative overflow-hidden">
+
+                                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-50 rounded-bl-full -z-0">
+                                    </div>
+
+                                    <div class="relative z-10">
+
+                                        <div class="flex items-start justify-between mb-6">
+                                            <div class="flex items-center gap-4">
+
+                                                <div
+                                                    class="w-14 h-14 bg-[#5eaa78] rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-md">
+                                                    I
+                                                </div>
+
+                                                <div>
+                                                    <h4 class="text-lg font-bold text-gray-900">
+                                                        Ignite Health Care Ltd
+                                                    </h4>
+
+                                                    <div class="flex items-center gap-2">
+                                                        <div class="flex text-[#fbbc04] text-sm">
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                        </div>
+
+                                                        <span class="text-sm text-gray-500">
+                                                            • a month ago
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="text-gray-400">
+                                                <i class="fa-brands fa-google text-2xl"></i>
+                                            </div>
+                                        </div>
+
+
+                                        <div
+                                            class="text-gray-700 space-y-4 text-sm md:text-base leading-relaxed italic">
+                                            <p>
+                                                "We got to know this company at exactly the right time when
+                                                we were preparing for our staff visa renewals."
+                                            </p>
+
+                                            <p>
+                                                " Their system has been a great support in helping us organise all our
+                                                staff
+                                                information in one place, making documents easy to access, review, and
+                                                manage."
+                                            </p>
+
+                                            <p class="font-semibold text-brand-900 not-italic">
+                                                "The team has also been very supportive, knowledgeable, and responsive
+                                                whenever
+                                                we needed guidance. As a care provider, having a reliable system that
+                                                supports
+                                                organisation and compliance gives us confidence and peace of mind."
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Review 4 -->
+                            <div class="min-w-full px-1">
+                                <div
+                                    class="bg-white rounded-3xl p-8 md:p-10 border border-gray-200 shadow-xl relative overflow-hidden">
+
+                                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand-50 rounded-bl-full -z-0">
+                                    </div>
+
+                                    <div class="relative z-10">
+
+                                        <div class="flex items-start justify-between mb-6">
+                                            <div class="flex items-center gap-4">
+
+                                                <div
+                                                    class="w-14 h-14 bg-[#e08b5d] rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-md">
+                                                    E
+                                                </div>
+
+                                                <div>
+                                                    <h4 class="text-lg font-bold text-gray-900">
+                                                        Elisabeth Fabiyi
+                                                    </h4>
+
+                                                    <div class="flex items-center gap-2">
+                                                        <div class="flex text-[#fbbc04] text-sm">
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                            <i class="fa-solid fa-star"></i>
+                                                        </div>
+
+                                                        <span class="text-sm text-gray-500">
+                                                            • 6 months ago
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="text-gray-400">
+                                                <i class="fa-brands fa-google text-2xl"></i>
+                                            </div>
+                                        </div>
+
+
+                                        <div
+                                            class="text-gray-700 space-y-4 text-sm md:text-base leading-relaxed italic">
+                                            <p>
+                                                "We had been struggling since August 2025 to secure Certificates of
+                                                Sponsorship (CoS) for our existing care workers. After long delays, we
+                                                registered with IRS HR for support with Home Office compliance, and it
+                                                was the best decision we made."
+                                            </p>
+
+                                            <p>
+                                                "Their knowledge of sponsor licence compliance and the CoS process is
+                                                exceptional. With their guidance, we were granted a Priority Slot and
+                                                successfully secured the CoS required was approvals. Their support was
+                                                professional, responsive, and truly day and night."
+                                            </p>
+
+                                            <p class="font-semibold text-brand-900 not-italic">
+                                                "Special thanks to Parakh Chouhan, the Compliance Team, and all IRS HR
+                                                staff for their outstanding support. Highly recommended for any
+                                                organisation needing expert Home Office and HR compliance assistance."
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
 
 
-                    <!-- Review 2 -->
-                    <div class="min-w-full px-1">
-                        <div class="bg-white rounded-3xl p-8 md:p-10 border border-gray-200 shadow-xls relative overflow-hidden">
-
-                            <div class="absolute top-0 right-0 w-32 h-32 bg-brand-50 rounded-bl-full -z-0"></div>
-
-                            <div class="relative z-10">
-
-                                <div class="flex items-start justify-between mb-6">
-                                    <div class="flex items-center gap-4">
-
-                                        <div
-                                            class="w-14 h-14 bg-[#4f8cc9] rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-md">
-                                            G
-                                        </div>
-
-                                        <div>
-                                            <h4 class="text-lg font-bold text-gray-900">
-                                                Gifty Gead
-                                            </h4>
-
-                                            <div class="flex items-center gap-2">
-                                                <div class="flex text-[#fbbc04] text-sm">
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </div>
-
-                                                <span class="text-sm text-gray-500">
-                                                    • 11 months ago
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="text-gray-400">
-                                        <i class="fa-brands fa-google text-2xl"></i>
-                                    </div>
-                                </div>
-
-                            
-
-                                <div class="text-gray-700 space-y-4 text-sm md:text-base leading-relaxed italic">
-                                    <p>
-                                        "IRS has turned out to be a crucial life saver for our new business and while we are still in the process of being fully functioning, I must say we couldn't have come this far without you."
-                                    </p>
-
-                                    <p>
-                                        "Always willing to support, always making time to meet with us at times/days that suit us whether outside of working times or days or not."
-                                    </p>
-                                    <p>"You've always been professional, always promptly responding to our numerous questiond and showed experience in guiding us and most importantly paying attention to what we want as clients and prioritising us.
-You treat our business with genuine interest as if your own."</p>
-
-                                    <p class="font-semibold text-brand-900 not-italic">
-                                        "Thanks so much to all of you at IRS; Parakh and Team!"
-                                    </p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Right Arrow -->
+                    <button id="nextReview" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-5 lg:translate-x-16
+                w-12 h-12 rounded-full bg-white border border-gray-200 shadow-lg
+                flex items-center justify-center text-gray-600
+                hover:bg-gray-50 hover:text-gray-900 transition-all z-20" aria-label="Next review">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
 
 
-                    <!-- Review 3 -->
-                    <div class="min-w-full px-1">
-                        <div class="bg-white rounded-3xl p-8 md:p-10 border border-gray-200 shadow-xls relative overflow-hidden">
+                    <!-- Dots -->
+                    <div id="reviewDots" class="flex justify-center items-center gap-2 mt-8">
 
-                            <div class="absolute top-0 right-0 w-32 h-32 bg-brand-50 rounded-bl-full -z-0"></div>
+                        <button class="review-dot w-2.5 h-2.5 rounded-full bg-gray-900 transition-all" data-slide="0"
+                            aria-label="Review 1">
+                        </button>
 
-                            <div class="relative z-10">
+                        <button class="review-dot w-2.5 h-2.5 rounded-full bg-gray-300 transition-all" data-slide="1"
+                            aria-label="Review 2">
+                        </button>
 
-                                <div class="flex items-start justify-between mb-6">
-                                    <div class="flex items-center gap-4">
+                        <button class="review-dot w-2.5 h-2.5 rounded-full bg-gray-300 transition-all" data-slide="2"
+                            aria-label="Review 3">
+                        </button>
 
-                                        <div
-                                            class="w-14 h-14 bg-[#5eaa78] rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-md">
-                                            I
-                                        </div>
+                        <button class="review-dot w-2.5 h-2.5 rounded-full bg-gray-300 transition-all" data-slide="3"
+                            aria-label="Review 4">
+                        </button>
 
-                                        <div>
-                                            <h4 class="text-lg font-bold text-gray-900">
-                                                Ignite Health Care Ltd
-                                            </h4>
-
-                                            <div class="flex items-center gap-2">
-                                                <div class="flex text-[#fbbc04] text-sm">
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </div>
-
-                                                <span class="text-sm text-gray-500">
-                                                    • a month ago
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="text-gray-400">
-                                        <i class="fa-brands fa-google text-2xl"></i>
-                                    </div>
-                                </div>
-
-                               
-                                <div class="text-gray-700 space-y-4 text-sm md:text-base leading-relaxed italic">
-                                    <p>
-                                        "We got to know this company at exactly the right time when 
-                                        we were preparing for our staff visa renewals."
-                                    </p>
-
-                                    <p>
-                                        " Their system has been a great support in helping us organise all our staff 
-                                        information in one place, making documents easy to access, review, and manage."
-                                    </p>
-
-                                    <p class="font-semibold text-brand-900 not-italic">
-                                        "The team has also been very supportive, knowledgeable, and responsive whenever 
-                                        we needed guidance. As a care provider, having a reliable system that supports 
-                                        organisation and compliance gives us confidence and peace of mind."
-                                    </p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- Review 4 -->
-                    <div class="min-w-full px-1">
-                        <div class="bg-white rounded-3xl p-8 md:p-10 border border-gray-200 shadow-xl relative overflow-hidden">
-
-                            <div class="absolute top-0 right-0 w-32 h-32 bg-brand-50 rounded-bl-full -z-0"></div>
-
-                            <div class="relative z-10">
-
-                                <div class="flex items-start justify-between mb-6">
-                                    <div class="flex items-center gap-4">
-
-                                        <div
-                                            class="w-14 h-14 bg-[#e08b5d] rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-md">
-                                            E
-                                        </div>
-
-                                        <div>
-                                            <h4 class="text-lg font-bold text-gray-900">
-                                                Elisabeth Fabiyi
-                                            </h4>
-
-                                            <div class="flex items-center gap-2">
-                                                <div class="flex text-[#fbbc04] text-sm">
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </div>
-
-                                                <span class="text-sm text-gray-500">
-                                                    • 6 months ago
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="text-gray-400">
-                                        <i class="fa-brands fa-google text-2xl"></i>
-                                    </div>
-                                </div>
-
-
-                                <div class="text-gray-700 space-y-4 text-sm md:text-base leading-relaxed italic">
-                                    <p>
-                                        "We had been struggling since August 2025 to secure Certificates of Sponsorship (CoS) for our existing care workers. After long delays, we registered with IRS HR for support with Home Office compliance, and it was the best decision we made."
-                                    </p>
-
-                                    <p>
-                                        "Their knowledge of sponsor licence compliance and the CoS process is exceptional. With their guidance, we were granted a Priority Slot and successfully secured the CoS required was approvals. Their support was professional, responsive, and truly day and night."
-                                    </p>
-
-                                    <p class="font-semibold text-brand-900 not-italic">
-                                        "Special thanks to Parakh Chouhan, the Compliance Team, and all IRS HR staff for their outstanding support. Highly recommended for any organisation needing expert Home Office and HR compliance assistance."
-                                    </p>
-                                </div>
-
-                            </div>
-                        </div>
                     </div>
 
                 </div>
             </div>
-
-
-            <!-- Right Arrow -->
-            <button id="nextReview"
-                class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-5 lg:translate-x-16
-                w-12 h-12 rounded-full bg-white border border-gray-200 shadow-lg
-                flex items-center justify-center text-gray-600
-                hover:bg-gray-50 hover:text-gray-900 transition-all z-20"
-                aria-label="Next review">
-                <i class="fa-solid fa-chevron-right"></i>
-            </button>
-
-
-            <!-- Dots -->
-            <div id="reviewDots"
-                class="flex justify-center items-center gap-2 mt-8">
-
-                <button
-                    class="review-dot w-2.5 h-2.5 rounded-full bg-gray-900 transition-all"
-                    data-slide="0"
-                    aria-label="Review 1">
-                </button>
-
-                <button
-                    class="review-dot w-2.5 h-2.5 rounded-full bg-gray-300 transition-all"
-                    data-slide="1"
-                    aria-label="Review 2">
-                </button>
-
-                <button
-                    class="review-dot w-2.5 h-2.5 rounded-full bg-gray-300 transition-all"
-                    data-slide="2"
-                    aria-label="Review 3">
-                </button>
-
-                <button
-                    class="review-dot w-2.5 h-2.5 rounded-full bg-gray-300 transition-all"
-                    data-slide="3"
-                    aria-label="Review 4">
-                </button>
-
-            </div>
-
-        </div>
-    </div>
-</section>
+        </section>
 
         <section class="py-16 bg-accent-500 text-white relative overflow-hidden">
             <div class="absolute right-0 top-0 opacity-10 transform translate-x-1/4 -translate-y-1/4">
@@ -1754,12 +2025,19 @@ You treat our business with genuine interest as if your own."</p>
                 // Remove locks and blurs by adding class to container
                 container.classList.add('unlocked');
 
-                // Swap the lock icons to play icons in the revealed modules
+                // Swap the lock icons to chevron icons in the revealed modules, update styles
                 const modules = document.querySelectorAll('.locked-content');
-                modules.forEach(mod => {
-                    const iconContainer = mod.querySelector('.flex-shrink-0');
-                    if (iconContainer) {
-                        iconContainer.innerHTML = '<button class="bg-brand-50 text-brand-700 font-semibold px-4 py-2 rounded-lg border border-brand-200 hover:bg-brand-100 transition flex items-center gap-2 text-sm"><i class="fa-solid fa-play"></i> Watch</button>';
+                modules.forEach((mod, index) => {
+                    const actionBtn = mod.querySelector('.unlock-action-btn');
+                    if (actionBtn) {
+                        actionBtn.innerHTML = `<button class="bg-brand-50 text-brand-700 font-semibold px-4 py-2 rounded-lg border border-brand-200 hover:bg-brand-100 transition flex items-center gap-2 text-sm pointer-events-none"><i id="icon-mod${index + 2}" class="fa-solid fa-chevron-down transition-transform duration-300"></i> Read</button>`;
+                        actionBtn.classList.remove('text-2xl', 'text-gray-300');
+                    }
+
+                    const subtitle = mod.querySelector('.module-subtitle');
+                    if (subtitle) {
+                        subtitle.classList.remove('text-gray-400');
+                        subtitle.classList.add('text-brand-600');
                     }
                 });
 
@@ -1772,82 +2050,81 @@ You treat our business with genuine interest as if your own."</p>
         }
 
 
+        // Accordion Logic for Modules
+        function toggleModule(modId) {
+            const content = document.getElementById('content-' + modId);
+            const icon = document.getElementById('icon-' + modId);
+
+            if (content.classList.contains('hidden')) {
+                // Expand
+                content.classList.remove('hidden');
+                if (icon) icon.classList.add('rotate-180');
+            } else {
+                // Collapse
+                content.classList.add('hidden');
+                if (icon) icon.classList.remove('rotate-180');
+            }
+        }
+
+
     </script>
 
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
 
-        const track = document.getElementById("reviewsTrack");
-        const prevBtn = document.getElementById("prevReview");
-        const nextBtn = document.getElementById("nextReview");
-        const dots = document.querySelectorAll(".review-dot");
+            const track = document.getElementById("reviewsTrack");
+            const prevBtn = document.getElementById("prevReview");
+            const nextBtn = document.getElementById("nextReview");
+            const dots = document.querySelectorAll(".review-dot");
 
-        let currentSlide = 0;
-        const totalSlides = dots.length;
+            let currentSlide = 0;
+            const totalSlides = dots.length;
 
-        function updateCarousel() {
+            function updateCarousel() {
 
-            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+                track.style.transform = `translateX(-${currentSlide * 100}%)`;
 
-            dots.forEach((dot, index) => {
-                if (index === currentSlide) {
-                    dot.classList.remove("bg-gray-300");
-                    dot.classList.add("bg-gray-900", "w-6");
-                } else {
-                    dot.classList.remove("bg-gray-900", "w-6");
-                    dot.classList.add("bg-gray-300", "w-2.5");
+                dots.forEach((dot, index) => {
+                    if (index === currentSlide) {
+                        dot.classList.remove("bg-gray-300");
+                        dot.classList.add("bg-gray-900", "w-6");
+                    } else {
+                        dot.classList.remove("bg-gray-900", "w-6");
+                        dot.classList.add("bg-gray-300", "w-2.5");
+                    }
+                });
+            }
+
+            nextBtn.addEventListener("click", function () {
+                currentSlide++;
+
+                if (currentSlide >= totalSlides) {
+                    currentSlide = 0;
                 }
-            });
-        }
 
-        nextBtn.addEventListener("click", function () {
-            currentSlide++;
-
-            if (currentSlide >= totalSlides) {
-                currentSlide = 0;
-            }
-
-            updateCarousel();
-        });
-
-        prevBtn.addEventListener("click", function () {
-            currentSlide--;
-
-            if (currentSlide < 0) {
-                currentSlide = totalSlides - 1;
-            }
-
-            updateCarousel();
-        });
-
-        dots.forEach((dot) => {
-            dot.addEventListener("click", function () {
-                currentSlide = Number(this.dataset.slide);
                 updateCarousel();
             });
-        });
 
-        // Optional auto-slide
-        let autoSlide = setInterval(() => {
-            currentSlide++;
+            prevBtn.addEventListener("click", function () {
+                currentSlide--;
 
-            if (currentSlide >= totalSlides) {
-                currentSlide = 0;
-            }
+                if (currentSlide < 0) {
+                    currentSlide = totalSlides - 1;
+                }
 
-            updateCarousel();
-        }, 6000);
+                updateCarousel();
+            });
 
-        // Pause autoplay when user interacts
-        const carousel = document.getElementById("reviewsTrack");
+            dots.forEach((dot) => {
+                dot.addEventListener("click", function () {
+                    currentSlide = Number(this.dataset.slide);
+                    updateCarousel();
+                });
+            });
 
-        carousel.addEventListener("mouseenter", () => {
-            clearInterval(autoSlide);
-        });
-
-        carousel.addEventListener("mouseleave", () => {
-            autoSlide = setInterval(() => {
+            // Optional auto-slide
+            let autoSlide = setInterval(() => {
                 currentSlide++;
 
                 if (currentSlide >= totalSlides) {
@@ -1856,10 +2133,28 @@ You treat our business with genuine interest as if your own."</p>
 
                 updateCarousel();
             }, 6000);
-        });
 
-    });
-</script>
+            // Pause autoplay when user interacts
+            const carousel = document.getElementById("reviewsTrack");
+
+            carousel.addEventListener("mouseenter", () => {
+                clearInterval(autoSlide);
+            });
+
+            carousel.addEventListener("mouseleave", () => {
+                autoSlide = setInterval(() => {
+                    currentSlide++;
+
+                    if (currentSlide >= totalSlides) {
+                        currentSlide = 0;
+                    }
+
+                    updateCarousel();
+                }, 6000);
+            });
+
+        });
+    </script>
 </body>
 
 </html>
