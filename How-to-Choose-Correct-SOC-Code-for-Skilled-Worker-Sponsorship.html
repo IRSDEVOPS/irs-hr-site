@@ -8,23 +8,139 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>The True Cost of Sponsor Licence Revocation</title>
+   <title>How to Choose the Correct SOC Code for Skilled Worker Sponsorship | IRS HR</title>
+   <meta name="description" content="Master UK Skilled Worker Sponsorship with IRS HR. Learn how to choose the correct SOC 2020 code, understand salary thresholds, and avoid costly visa refusals.">
+   <meta name="keywords" content="SOC Code, Skilled Worker Visa, UK Sponsor Licence, IRS HR, CoS, Certificate of Sponsorship, SOC 2020, UKVI compliance">
+   <meta name="author" content="IRS HR">
+  
+   <!-- Open Graph / Social -->
+   <meta property="og:title" content="How to Choose the Correct SOC Code for Skilled Worker Sponsorship | IRS HR">
+   <meta property="og:description" content="Avoid costly visa refusals and protect your sponsor licence. Use our interactive tools and expert guide to get your SOC codes right every time.">
+   <meta property="og:type" content="website">
+
 
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+   <!-- Fonts & Icons -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+   <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="header/header.css?update=0078" rel="stylesheet">
     <link rel="shortcut icon" href="assets/images/favicon.webp">
 
     <script src="https://unpkg.com/lucide@latest"></script>
+ <script>
+       tailwind.config = {
+           theme: {
+               extend: {
+                   fontFamily: {
+                       sans: ['Inter', 'sans-serif'],
+                   },
+                   colors: {
+                       irs: {
+                           blue: '#0B3366',
+                           lightblue: '#1A5BB8',
+                           accent: '#F59E0B',
+                           light: '#F8FAFC',
+                           dark: '#0F172A'
+                       }
+                   }
+               }
+           }
+       }
+   </script>
+  <!-- Structured Data (JSON-LD) for SEO -->
+   <script type="application/ld+json">
+   {
+     "@context": "https://schema.org",
+     "@type": "FAQPage",
+     "mainEntity": [{
+       "@type": "Question",
+       "name": "What happens if I use the wrong SOC code on a Certificate of Sponsorship?",
+       "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "A Defined CoS request will be refused. An assigned Undefined CoS used in a visa application will prompt further information requests, delaying the application and potentially leading to a visa refusal."
+       }
+     }, {
+       "@type": "Question",
+       "name": "Can I change the SOC code after a CoS has been assigned?",
+       "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "If a CoS has not been 'used' (i.e., the visa application hasn't been decided), the SOC code can be changed by adding a sponsor note to the live CoS to specify the correct code."
+       }
+     }, {
+       "@type": "Question",
+       "name": "How do I find the going rate for a specific SOC code?",
+       "acceptedAnswer": {
+         "@type": "Answer",
+         "text": "All going rates are included in the UKVI Appendix Skilled Occupation or the Immigration Salary List, depending on the role and when the worker was first sponsored."
+       }
+     }]
+   }
+   </script>
+   <script type="application/ld+json">
+   {
+     "@context": "https://schema.org",
+     "@type": "LegalService",
+     "name": "IRS HR",
+     "description": "Expert UK immigration and HR services for businesses managing Sponsor Licences and Skilled Worker Visas.",
+     "url": "https://irslimited.co.uk/",
+     "address": {
+       "@type": "PostalAddress",
+       "streetAddress": "189 Brompton Rd",
+       "addressLocality": "London",
+       "postalCode": "SW3 1NE",
+       "addressCountry": "UK"
+     },
+     "telephone": "+44 333 577 4771"
+   }
+   </script>
 
+
+
+    <!-- !-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T8ZKXHXF1K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-T8ZKXHXF1K');
+    </script>
     <!-- UPDATED: Using specific UMD version of Chart.js for better browser compatibility -->
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
     <style>
+         /* Custom Styles for Interactive Elements */
+       .tab-content { display: none; animation: fadeIn 0.3s ease-in-out; }
+       .tab-content.active { display: block; }
+       @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+      
+       .accordion-content {
+           max-height: 0;
+           overflow: hidden;
+           transition: max-height 0.3s ease-out;
+       }
+      
+       .progress-bar-fill {
+           transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+       }
+
+
+       /* Checkbox styling */
+       input[type="checkbox"] {
+           accent-color: #1A5BB8;
+           width: 1.25rem;
+           height: 1.25rem;
+           cursor: pointer;
+       }
+
         body {
             font-family: 'Inter', sans-serif;
         }
@@ -98,14 +214,6 @@
         </div>
     </div>
     <!-- Urgency Banner -->
-
-    <div class="bg-red-600 text-white text-center py-3 border-b border-red-800">
-        <span class="flex items-center justify-center text-sm font-bold tracking-wider uppercase animate-pulse">
-            <i data-lucide="siren" class="w-4 h-4 mr-2"></i> Legislative Alert: Personal Liability for Directors
-            Increased (Jan 2026)
-        </span>
-    </div>
-
 
     <div class="top__bar">
         <p class="m-auto mb-0 text-center">We are part of International
@@ -381,6 +489,9 @@
                                         <li class=""><a href="fabs-domiciliary-homecare-casestudy.html"
                                                 class="hover:text-white">
                                                 Case Study: Fabs Domiciliary Homecare</a></li>
+                                        <li class=""><a href="How-Gain-Care-Protected-their-licence.html"
+                                                class="hover:text-white">
+                                                How Gain Care Protected Their Sponsor Licence from Revocation</a></li>
                                         <li class=""><a href="care-sector-crisis.html" class="hover:text-white">
                                                 Care Sector Crisis</a></li>        
                                         <li class=""><a href="Home-Office-Punishing-Sponsors-and-Employers.html"
@@ -673,469 +784,514 @@
         </div>
     </div>
 
-    <!-- Hero Section -->
-    <header class="hero-bg text-white pt-24 pb-32 relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900"></div>
-        <div class="max-w-5xl mx-auto px-4 text-center relative z-10">
-            <div
-                class="inline-flex items-center bg-red-900/40 border border-red-700 text-red-400 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
-                Business Critical Risk
-            </div>
-            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-tight text-shadow">
-                What Happens When Your <br> <span class="text-red-600">Licence is Revoked?</span>
-            </h1>
-            <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed">
-                It is not just a fine. It is the immediate curtailment of your workforce, a freeze on recruitment, and a
-                black mark against your directors. <br><span class="text-white font-bold">For many businesses, it is the
-                    end.</span>
-            </p>
-            <a href="#assessment"
-                class="inline-flex items-center justify-center bg-red-600 hover:bg-red-700 text-white text-lg px-10 py-4 rounded-xl font-bold transition shadow-lg hover:shadow-red-500/20 transform hover:-translate-y-1">
-                Protect My Business Now <i data-lucide="shield-alert" class="ml-2 w-6 h-6"></i>
-            </a>
-        </div>
-    </header>
-
-
-    <!-- MOVED & HIGHLIGHTED: Criminal & Civil Proceedings (2026 Act) -->
-    <section class="py-16 mt-20 relative z-20 px-4">
-        <div class="max-w-6xl mx-auto">
-            <div class="bg-gray-900 rounded-3xl shadow-2xl border-2 border-red-600 overflow-hidden relative">
-                <!-- Decorative background -->
-                <div class="absolute inset-0 alert-pattern opacity-10 pointer-events-none"></div>
-
-                <div class="p-8 md:p-12">
-                    <div class="text-center mb-10">
-                        <div
-                            class="inline-flex items-center bg-red-600 text-white px-6 py-2 rounded-full text-sm font-bold uppercase tracking-widest mb-4 shadow-lg shadow-red-600/30">
-                            <i data-lucide="gavel" class="w-5 h-5 mr-2"></i> New Legislation: Feb 2026
-                        </div>
-                        <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Criminal & Civil Escalation</h2>
-                        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-                            Under <em>The Border Security, Asylum and Immigration Act 2025 (Commencement No. 2)
-                                Regulations 2026</em>, the corporate veil has been pierced. <br><span
-                                class="text-red-400 font-bold">Directors and Key Personnel are now personally
-                                liable.</span>
-                        </p>
-                    </div>
-
-
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <!-- Criminal Proceedings -->
-                        <div
-                            class="bg-gray-800 p-8 rounded-2xl border border-gray-700 relative overflow-hidden group hover:border-red-500 transition duration-300 transform hover:-translate-y-1">
-                            <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition">
-                                <i data-lucide="handcuffs" class="w-32 h-32 text-red-500"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white mb-2 flex items-center">
-                                <div class="bg-red-600 p-2 rounded-lg mr-3">
-                                    <i data-lucide="scale" class="w-6 h-6 text-white"></i>
-                                </div>
-                                Criminal Liability
-                            </h3>
-                            <h4 class="text-red-400 text-sm font-bold uppercase tracking-wider mb-6 ml-14">For Directors
-                                & Key Personnel</h4>
-                            <ul class="space-y-6 text-gray-300 relative z-10">
-                                <li class="flex items-start bg-gray-900/50 p-4 rounded-lg border border-gray-700/50">
-                                    <i data-lucide="alert-triangle"
-                                        class="w-6 h-6 text-red-500 mr-4 mt-1 flex-shrink-0"></i>
-                                    <span>
-                                        <strong class="text-white block text-lg mb-1">5-Year Custodial
-                                            Sentences</strong>
-                                        The Act cements the penalty for employing illegal workers where you "had
-                                        reasonable cause to believe" they lacked status.
-                                    </span>
-                                </li>
-                                <li class="flex items-start bg-gray-900/50 p-4 rounded-lg border border-gray-700/50">
-                                    <i data-lucide="user-x" class="w-6 h-6 text-red-500 mr-4 mt-1 flex-shrink-0"></i>
-                                    <span>
-                                        <strong class="text-white block text-lg mb-1">Director Disqualification</strong>
-                                        Automatic referral to the Insolvency Service for disqualification orders (up to
-                                        15 years), ending your career as a company director.
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-
-
-                        <!-- Civil Proceedings -->
-                        <div
-                            class="bg-gray-800 p-8 rounded-2xl border border-gray-700 relative overflow-hidden group hover:border-orange-500 transition duration-300 transform hover:-translate-y-1">
-                            <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition">
-                                <i data-lucide="landmark" class="w-32 h-32 text-orange-500"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white mb-2 flex items-center">
-                                <div class="bg-orange-600 p-2 rounded-lg mr-3">
-                                    <i data-lucide="file-warning" class="w-6 h-6 text-white"></i>
-                                </div>
-                                Civil Proceedings
-                            </h3>
-                            <h4 class="text-orange-400 text-sm font-bold uppercase tracking-wider mb-6 ml-14">Against
-                                the Entity</h4>
-                            <ul class="space-y-6 text-gray-300 relative z-10">
-                                <li class="flex items-start bg-gray-900/50 p-4 rounded-lg border border-gray-700/50">
-                                    <i data-lucide="banknote"
-                                        class="w-6 h-6 text-orange-500 mr-4 mt-1 flex-shrink-0"></i>
-                                    <span>
-                                        <strong class="text-white block text-lg mb-1">Unlimited Fines</strong>
-                                        Statutory caps have been removed for repeat offenders under the new regulations,
-                                        allowing for business-ending penalties.
-                                    </span>
-                                </li>
-                                <li class="flex items-start bg-gray-900/50 p-4 rounded-lg border border-gray-700/50">
-                                    <i data-lucide="lock" class="w-6 h-6 text-orange-500 mr-4 mt-1 flex-shrink-0"></i>
-                                    <span>
-                                        <strong class="text-white block text-lg mb-1">Asset Seizure (POCA)</strong>
-                                        Proceeds of Crime Act provisions now explicitly cover revenue generated through
-                                        "non-compliant labour", allowing state seizure of assets.
-                                    </span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="mt-8 text-center border-t border-gray-800 pt-6">
-                        <a href="https://www.legislation.gov.uk/uksi/2026/59/made" target="_blank"
-                            class="text-sm text-gray-500 hover:text-white transition underline flex items-center justify-center">
-                            <i data-lucide="external-link" class="w-4 h-4 mr-2"></i> Verify Legislation: SI 2026 No. 59
-                            (C. 8)
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- The 4 Pillars of Ruin (Moved Down) -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900">Operational Consequences</h2>
-                <p class="text-gray-600 mt-2">Beyond the courts, revocation halts your daily operations immediately.</p>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-                <!-- Card 1 -->
-                <div class="bg-gray-50 p-8 rounded-2xl shadow-md border-t-4 border-red-600 hover:shadow-xl transition">
-                    <div class="bg-red-100 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
-                        <i data-lucide="users-round" class="w-7 h-7 text-red-600"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Workforce Curtailment</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Every worker you sponsor typically has their visa curtailed to 60 days. They must leave the UK
-                        or find a new sponsor immediately. You lose your staff overnight.
-                    </p>
-                </div>
-
-
-                <!-- Card 2 -->
-                <div
-                    class="bg-gray-50 p-8 rounded-2xl shadow-md border-t-4 border-orange-600 hover:shadow-xl transition">
-                    <div class="bg-orange-100 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
-                        <i data-lucide="user-x" class="w-7 h-7 text-orange-600"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Key Personnel Flagging</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        Your Authorising Officer and Key Contact are flagged on the Home Office system. They are often
-                        barred from holding these positions at <em>any</em> other company.
-                    </p>
-                </div>
-
-
-                <!-- Card 3 -->
-                <div
-                    class="bg-gray-50 p-8 rounded-2xl shadow-md border-t-4 border-yellow-600 hover:shadow-xl transition">
-                    <div class="bg-yellow-100 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
-                        <i data-lucide="ban" class="w-7 h-7 text-yellow-600"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">12-Month Cooling Off</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        You cannot simply re-apply. You are banned from holding a sponsor licence for a minimum of 12
-                        months (the "cooling-off period").
-                    </p>
-                </div>
-
-
-                <!-- Card 4 -->
-                <div class="bg-gray-50 p-8 rounded-2xl shadow-md border-t-4 border-gray-800 hover:shadow-xl transition">
-                    <div class="bg-gray-100 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
-                        <i data-lucide="briefcase" class="w-7 h-7 text-gray-800"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Operational Paralysis</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        You cannot hire <em>any</em> new migrant workers. If you rely on overseas talent (e.g., Care,
-                        Tech, Hospitality), your recruitment pipeline freezes.
-                    </p>
-                </div>
-
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- The Timeline of a Shutdown -->
-    <section class="py-20 bg-gray-50 border-t border-gray-200">
-        <div class="max-w-4xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-900">The Anatomy of a Revocation</h2>
-                <p class="text-gray-500 mt-2">How quickly a business unravels after a compliance failure.</p>
-            </div>
-
-
-            <div class="relative border-l-4 border-blue-200 ml-4 md:ml-0 space-y-12">
-
-                <!-- Step 1 -->
-                <div class="relative flex flex-col md:flex-row items-start md:items-center group">
-                    <div
-                        class="absolute -left-[22px] bg-red-600 w-10 h-10 rounded-full border-4 border-white shadow flex items-center justify-center text-white font-bold z-10">
-                        1</div>
-                    <div
-                        class="md:ml-16 w-full bg-white p-6 rounded-xl border border-gray-200 shadow-sm group-hover:border-red-200 group-hover:shadow-md transition">
-                        <h4 class="text-lg font-bold text-gray-900">The Suspension Letter</h4>
-                        <p class="text-gray-600 mt-1">You receive a notice of suspension. You have 20 working days to
-                            respond. Your SMS access is restricted immediately.</p>
-                    </div>
-                </div>
-
-
-                <!-- Step 2 -->
-                <div class="relative flex flex-col md:flex-row items-start md:items-center group">
-                    <div
-                        class="absolute -left-[22px] bg-gray-400 w-10 h-10 rounded-full border-4 border-white shadow flex items-center justify-center text-white font-bold z-10">
-                        2</div>
-                    <div
-                        class="md:ml-16 w-full bg-white p-6 rounded-xl border border-gray-200 shadow-sm group-hover:border-gray-300 group-hover:shadow-md transition">
-                        <h4 class="text-lg font-bold text-gray-900">The Decision</h4>
-                        <p class="text-gray-600 mt-1">If your representations fail (often due to poor data records), the
-                            licence is formally revoked.</p>
-                    </div>
-                </div>
-
-
-                <!-- Step 3 -->
-                <div class="relative flex flex-col md:flex-row items-start md:items-center group">
-                    <div
-                        class="absolute -left-[22px] bg-gray-400 w-10 h-10 rounded-full border-4 border-white shadow flex items-center justify-center text-white font-bold z-10">
-                        3</div>
-                    <div
-                        class="md:ml-16 w-full bg-white p-6 rounded-xl border border-gray-200 shadow-sm group-hover:border-gray-300 group-hover:shadow-md transition">
-                        <h4 class="text-lg font-bold text-gray-900">The Curtailment</h4>
-                        <p class="text-gray-600 mt-1">The Home Office writes to your sponsored employees. Their visas
-                            are cut short (usually to 60 days). They stop coming to work.</p>
-                    </div>
-                </div>
-
-
-                <!-- Step 4 -->
-                <div class="relative flex flex-col md:flex-row items-start md:items-center group">
-                    <div
-                        class="absolute -left-[22px] bg-gray-400 w-10 h-10 rounded-full border-4 border-white shadow flex items-center justify-center text-white font-bold z-10">
-                        4</div>
-                    <div
-                        class="md:ml-16 w-full bg-white p-6 rounded-xl border border-gray-200 shadow-sm group-hover:border-gray-300 group-hover:shadow-md transition">
-                        <h4 class="text-lg font-bold text-gray-900">The Reputational Hit</h4>
-                        <p class="text-gray-600 mt-1">Contracts with local authorities (Care) or main contractors
-                            (Construction) are often terminated due to "breach of compliance" clauses.</p>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- The Solution CTA -->
-    <section class="bg-blue-900 py-20 text-white relative overflow-hidden">
-        <!-- Abstract Background -->
-        <div class="absolute inset-0 opacity-10">
-            <svg class="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                <path d="M0 100 C 20 0 50 0 100 100 Z" fill="white" />
-            </svg>
-        </div>
-
-
-        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
-            <h2 class="text-3xl md:text-5xl font-bold mb-6">Don't Let A Spreadsheet Error End Your Business.</h2>
-            <p class="text-xl text-blue-200 mb-10 max-w-2xl mx-auto">
-                Revocation usually happens because what you told the Home Office doesn't match what is in your files.
-                IRS HR fixes the data gap automatically.
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="HomeOffice-HMRC-Data-matching-from-april-2026.html"
-                    class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition flex items-center justify-center">
-                    Read What's Changing from April 2026
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="assessment" class="py-24 bg-white">
-
-        <div class="max-w-7xl mx-auto px-4">
-
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-
-
-
-                <!-- Left Content -->
-
-                <div>
-
-                    <div class="inline-block bg-blue-100 text-blue-800 font-bold px-4 py-1 rounded-full text-sm mb-6">
-
-                        THE IRS HR DEFENCE
-
-                    </div>
-
-                    <h2 class="text-4xl font-bold text-gray-900 mb-6">
-
-                        Survive The New Home  Office in 2026 with IRS HR
-
-                    </h2>
-
-                    <!-- <p class="text-xl text-gray-600 mb-8">
-
-                       You need a single source of truth that mirrors exactly what the Home Office sees. We automate that protection.
-
-                   </p> -->
-
-
-
-                    <div class="space-y-8">
-
-                        <div class="flex">
-
-                            <div class="flex-shrink-0">
-
-                                <div
-                                    class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white shadow-md">
-
-                                    <i data-lucide="database" class="w-6 h-6"></i>
-
-                                </div>
-
-                            </div>
-
-                            <div class="ml-4">
-
-                                <h3 class="text-lg font-bold text-gray-900">The Golden Record</h3>
-
-                                <p class="text-gray-600 mt-1">Integrate Payroll, HR, and Recruitment data streams into a
-                                    single, auditable "golden record” cloud-based secure system. The Home Office
-                                    compliance gaps is automatically secure according to the Home Office’s Appendix-D
-                                    Guidance</p>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="flex">
-
-                            <div class="flex-shrink-0">
-
-                                <div
-                                    class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white shadow-md">
-
-                                    <i data-lucide="bell-ring" class="w-6 h-6"></i>
-
-
-                                </div>
-
-                            </div>
-
-                            <div class="ml-4">
-
-                                <h3 class="text-lg font-bold text-gray-900">Sponsor Automations </h3>
-
-                                <p class="text-gray-600 mt-1">Automated reminders for unauthorised absence, prolonged
-                                    sick leave and location changes — before deadlines are missed. Identify gaps and
-                                    proactively address them instead of ignoring your breaches. </p>
-
-                            </div>
-
-                        </div>
-
-                        <div class="flex">
-
-                            <div class="flex-shrink-0">
-
-                                <div
-                                    class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white shadow-md">
-
-                                    <i data-lucide="clipboard-check" class="w-6 h-6"></i>
-
-                                </div>
-
-                            </div>
-
-                            <div class="ml-4">
-
-                                <h3 class="text-lg font-bold text-gray-900">Monthly Mock Audits</h3>
-
-                                <p class="text-gray-600 mt-1">Why wait for the Home Office? We stress-test your systems
-                                    monthly. We find the gaps—missing docs, visa expiries—so you fix them before they
-                                    become a fine. Smart Tech that keeps you compliant 24X7</p>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="flex">
-
-                            <div class="flex-shrink-0">
-
-                                <div
-                                    class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white shadow-md">
-
-                                    <i data-lucide="scale" class="w-6 h-6"></i>
-
-                                </div>
-
-                            </div>
-
-                            <div class="ml-4">
-
-                                <h3 class="text-lg font-bold text-gray-900">Direct Solicitor Access</h3>
-
-                                <p class="text-gray-600 mt-1">Home Office Compliance is a legal minefield. Your
-                                    subscription includes access to our panel of solicitors. Don't Google complex
-                                    issues—get expert legal guidance immediately. We don’t take introductory fees and
-                                    thus remain impartial. </p>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- Right Form -->
-
-                <div class="bg-white p-8 rounded-3xl shadow-2xl border border-gray-100 relative">
-
-                    <!-- <div class="absolute -top-10 -right-10 w-32 h-32 bg-yellow-400 rounded-full opacity-20 blur-2xl">
-                    </div> -->
-
-
-
-                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Book Your Strategy Demo</h3>
-
-                    <p class="text-gray-500 mb-6 text-sm">Select a time to see how the IRS HR "Golden Record" protects
-                        you.</p>
-
-
-
-                    <form class="space-y-4" id="leadForm" method="POST" data-email="pc@irslimited.co.uk"
+   
+    
+
+   <main>
+       <section class="relative bg-irs-dark text-white overflow-hidden">
+           <!-- Background Decoration -->
+           <div class="absolute inset-0 z-0 opacity-10">
+               <svg class="absolute left-0 top-0 h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                   <polygon fill="currentColor" points="0,100 100,0 100,100"/>
+               </svg>
+           </div>
+
+
+           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20 pb-24 lg:pt-32 lg:pb-36 flex flex-col lg:flex-row items-center gap-12">
+               <div class="lg:w-3/5">
+                   <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-irs-lightblue/20 text-irs-accent font-semibold text-sm mb-6 border border-irs-lightblue/30">
+                       <i class="ph-fill ph-certificate"></i> UK Sponsor Licence Guide
+                   </div>
+                   <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+                       Choosing the Correct <span class="text-transparent bg-clip-text bg-gradient-to-r from-irs-accent to-yellow-200">SOC Code</span> for Skilled Workers
+                   </h1>
+                   <p class="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl leading-relaxed">
+                       The SOC Code sets the foundation for every sponsored role. One mistake can lead to rejected Certificates of Sponsorship (CoS), visa refusals, and UKVI compliance audits. Protect your licence with IRS HR.
+                   </p>
+                   <div class="flex flex-col sm:flex-row gap-4">
+                       <a href="#verification-tool" class="bg-irs-accent hover:bg-yellow-500 text-irs-dark px-8 py-4 rounded-full font-bold text-lg shadow-lg shadow-irs-accent/30 transition text-center flex items-center justify-center gap-2">
+                           <i class="ph-bold ph-check-circle"></i> Try Free SOC Tool
+                       </a>
+                       <a href="#assessment" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-8 py-4 rounded-full font-bold text-lg transition text-center flex items-center justify-center gap-2">
+                           <i class="ph-bold ph-calendar-plus"></i> Speak to an Expert
+                       </a>
+                   </div>
+               </div>
+               <div class="lg:w-2/5 w-full hidden lg:block">
+                   <div class="bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-sm shadow-2xl relative">
+                       <div class="absolute -top-4 -right-4 bg-red-500 text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg animate-pulse">
+                           Avoid Refusals
+                       </div>
+                       <h3 class="font-bold text-xl mb-4 border-b border-white/10 pb-2">Why It Matters</h3>
+                       <ul class="space-y-4">
+                           <li class="flex items-start gap-3">
+                               <i class="ph-fill ph-warning-circle text-red-400 text-xl mt-0.5"></i>
+                               <p class="text-sm text-slate-300">Incorrect codes inevitably mean CoS requests are rejected.</p>
+                           </li>
+                           <li class="flex items-start gap-3">
+                               <i class="ph-fill ph-x-circle text-red-400 text-xl mt-0.5"></i>
+                               <p class="text-sm text-slate-300">Visa applications refused if salary rules aren't strictly met.</p>
+                           </li>
+                           <li class="flex items-start gap-3">
+                               <i class="ph-fill ph-magnifying-glass text-yellow-400 text-xl mt-0.5"></i>
+                               <p class="text-sm text-slate-300">Triggers intrusive UKVI compliance inspections.</p>
+                           </li>
+                           <li class="flex items-start gap-3">
+                               <i class="ph-fill ph-shield-check text-green-400 text-xl mt-0.5"></i>
+                               <p class="text-sm text-white font-semibold">IRS HR ensures 100% compliance before submission.</p>
+                           </li>
+                       </ul>
+                   </div>
+               </div>
+           </div>
+       </section>
+
+
+       <section id="why-it-matters" class="py-20 bg-white">
+           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+               <div class="text-center max-w-3xl mx-auto mb-16">
+                   <h2 class="text-3xl font-bold text-irs-dark mb-4">The Dual Salary Requirement</h2>
+                   <p class="text-slate-600 text-lg">
+                       To sponsor a Skilled Worker, you cannot just pick any salary. The UKVI requires employers to pay the <strong>higher</strong> of two specific minimums. Understanding this is crucial.
+                   </p>
+               </div>
+
+
+               <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                   <!-- Standard Rate Card -->
+                   <div class="bg-irs-light rounded-2xl p-8 border border-slate-200 shadow-sm relative overflow-hidden group hover:shadow-md transition">
+                       <div class="absolute top-0 right-0 w-24 h-24 bg-irs-lightblue/10 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+                       <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 border border-slate-100 text-irs-blue relative z-10">
+                           <i class="ph-bold ph-coins text-3xl"></i>
+                       </div>
+                       <h3 class="text-xl font-bold text-irs-dark mb-3">1. The Standard Rate</h3>
+                       <p class="text-slate-600 mb-4">
+                           This is the absolute salary floor below which a person cannot be paid under this visa route.
+                       </p>
+                       <div class="bg-white p-4 rounded-lg border border-slate-200 flex items-center justify-between font-semibold">
+                           <span class="text-slate-500">Current General Standard:</span>
+                           <span class="text-xl text-irs-blue">£41,700</span>
+                       </div>
+                       <p class="text-xs text-slate-400 mt-2">*Unless a lower rate applies, such as the new entrant rate.</p>
+                   </div>
+
+
+                   <!-- Going Rate Card -->
+                   <div class="bg-irs-light rounded-2xl p-8 border border-slate-200 shadow-sm relative overflow-hidden group hover:shadow-md transition">
+                       <div class="absolute top-0 right-0 w-24 h-24 bg-irs-accent/10 rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-110"></div>
+                       <div class="w-14 h-14 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6 border border-slate-100 text-irs-accent relative z-10">
+                           <i class="ph-bold ph-trend-up text-3xl"></i>
+                       </div>
+                       <h3 class="text-xl font-bold text-irs-dark mb-3">2. The Going Rate</h3>
+                       <p class="text-slate-600 mb-4">
+                           This is the market salary specific to the individual SOC code assigned to the job role.
+                       </p>
+                       <div class="bg-irs-dark p-4 rounded-lg flex items-center justify-between font-semibold text-white">
+                           <span>The Golden Rule:</span>
+                           <span class="text-irs-accent">Pay whichever is HIGHER</span>
+                       </div>
+                       <p class="text-xs text-slate-500 mt-2">A common mistake is paying the standard rate when the SOC going rate is actually higher.</p>
+                   </div>
+               </div>
+           </div>
+       </section>
+
+
+       <section id="salary-tool" class="py-20 bg-slate-50 border-y border-slate-200">
+           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+               <div class="text-center max-w-3xl mx-auto mb-12">
+                   <span class="text-irs-lightblue font-semibold uppercase tracking-wider text-sm mb-2 block">Interactive Guide</span>
+                   <h2 class="text-3xl font-bold text-irs-dark mb-4">Decoding Appendix Skilled Occupation Tables</h2>
+                   <p class="text-slate-600">
+                       Since the transition to <strong>SOC 2020</strong>, the UKVI tables have become highly complex, divided by when the worker was first sponsored. Use our navigator below to find which table applies to your candidate.
+                   </p>
+               </div>
+
+
+               <!-- Tabbed UI -->
+               <div class="bg-white rounded-2xl shadow-lg border border-slate-200 overflow-hidden max-w-5xl mx-auto">
+                   <!-- Tab Headers -->
+                   <div class="flex flex-col sm:flex-row border-b border-slate-200" role="tablist">
+                       <button onclick="switchTab('tab-new')" class="tab-btn flex-1 py-4 px-6 text-center font-semibold text-sm sm:text-base border-b-2 border-irs-blue text-irs-blue bg-blue-50/50 transition" id="btn-tab-new" role="tab" aria-selected="true">
+                           New Applications
+                       </button>
+                       <button onclick="switchTab('tab-existing')" class="tab-btn flex-1 py-4 px-6 text-center font-semibold text-sm sm:text-base border-b-2 border-transparent text-slate-500 hover:text-irs-blue hover:bg-slate-50 transition" id="btn-tab-existing" role="tab" aria-selected="false">
+                           Existing / Extensions
+                       </button>
+                       <button onclick="switchTab('tab-health')" class="tab-btn flex-1 py-4 px-6 text-center font-semibold text-sm sm:text-base border-b-2 border-transparent text-slate-500 hover:text-irs-blue hover:bg-slate-50 transition" id="btn-tab-health" role="tab" aria-selected="false">
+                           Health & Education
+                       </button>
+                   </div>
+
+
+                   <!-- Tab Contents -->
+                   <div class="p-6 sm:p-10">
+                       <!-- Tab 1: New Applications -->
+                       <div id="tab-new" class="tab-content active" role="tabpanel">
+                           <div class="flex items-start gap-4 mb-6">
+                               <div class="bg-irs-lightblue/10 p-3 rounded-full text-irs-lightblue">
+                                   <i class="ph-bold ph-user-plus text-2xl"></i>
+                               </div>
+                               <div>
+                                   <h3 class="text-2xl font-bold text-irs-dark">Table 1</h3>
+                                   <p class="text-slate-600 mt-1">For occupations eligible for <strong>new</strong> Skilled Worker sponsorship applications.</p>
+                               </div>
+                           </div>
+                           <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+                               <ul class="space-y-3">
+                                   <li class="flex items-start gap-2">
+                                       <i class="ph-bold ph-check text-green-500 mt-1"></i>
+                                       <span>Uses the new <strong>SOC 2020</strong> structure.</span>
+                                   </li>
+                                   <li class="flex items-start gap-2">
+                                       <i class="ph-bold ph-check text-green-500 mt-1"></i>
+                                       <span>Subject to the higher £41,700 standard threshold (unless exceptions apply).</span>
+                                   </li>
+                               </ul>
+                               <div class="mt-6 pt-6 border-t border-slate-200">
+                                   <p class="text-sm font-semibold text-irs-dark mb-2">Also look out for:</p>
+                                   <p class="text-sm text-slate-600"><strong>Immigration Salary List (ISL):</strong> Retiring Dec 31, 2026. Roles on this list can be sponsored at a lower skill level and have lower rate thresholds.</p>
+                               </div>
+                           </div>
+                       </div>
+
+
+                       <!-- Tab 2: Existing -->
+                       <div id="tab-existing" class="tab-content" role="tabpanel">
+                           <div class="flex items-start gap-4 mb-6">
+                               <div class="bg-irs-accent/10 p-3 rounded-full text-irs-accent">
+                                   <i class="ph-bold ph-users-three text-2xl"></i>
+                               </div>
+                               <div>
+                                   <h3 class="text-2xl font-bold text-irs-dark">Tables 1a, 2, and 2a</h3>
+                                   <p class="text-slate-600 mt-1">Transitional provisions for workers already sponsored before recent rule changes.</p>
+                               </div>
+                           </div>
+                           <div class="grid md:grid-cols-2 gap-4">
+                               <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                                   <h4 class="font-bold text-irs-dark mb-2">Table 1a</h4>
+                                   <p class="text-sm text-slate-600">For SOC codes that qualified <em>before</em> 22 July 2025. Used to extend visas for those sponsored before that date.</p>
+                               </div>
+                               <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                                   <h4 class="font-bold text-irs-dark mb-2">Table 2 & 2a</h4>
+                                   <p class="text-sm text-slate-600">Applies to those sponsored before 4 April 2024. Table 2 aligns old SOC 2010 to SOC 2020 for RQF 6+. Table 2a covers lower skilled (RQF 3-5) roles.</p>
+                               </div>
+                           </div>
+                       </div>
+
+
+                       <!-- Tab 3: Health -->
+                       <div id="tab-health" class="tab-content" role="tabpanel">
+                           <div class="flex items-start gap-4 mb-6">
+                               <div class="bg-green-500/10 p-3 rounded-full text-green-600">
+                                   <i class="ph-bold ph-heartbeat text-2xl"></i>
+                               </div>
+                               <div>
+                                   <h3 class="text-2xl font-bold text-irs-dark">Tables 3 and 3a</h3>
+                                   <p class="text-slate-600 mt-1">Specific provisions for Health and Education sectors.</p>
+                               </div>
+                           </div>
+                           <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+                               <p class="text-slate-600 mb-4">These tables dictate the going rates for specific health and education roles based on national pay scales.</p>
+                               <ul class="space-y-3">
+                                   <li class="flex items-start gap-2">
+                                       <i class="ph-bold ph-caret-right text-irs-blue mt-0.5"></i>
+                                       <span><strong>Table 3:</strong> Sponsored before 22 July 2025.</span>
+                                   </li>
+                                   <li class="flex items-start gap-2">
+                                       <i class="ph-bold ph-caret-right text-irs-blue mt-0.5"></i>
+                                       <span><strong>Table 3a:</strong> Sponsored after 22 July 2025.</span>
+                                   </li>
+                               </ul>
+                               <div class="mt-4 p-3 bg-blue-50 text-irs-blue rounded-lg text-sm font-medium flex gap-2 items-center">
+                                   <i class="ph-fill ph-info"></i> Health and Care workers are exempt from the Immigration Health Surcharge.
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="text-center mt-8">
+                   <p class="text-slate-500 text-sm italic">Confused by the tables? Don't risk a refusal. <a href="#assessment" class="text-irs-lightblue font-semibold hover:underline">Let IRS HR map your roles accurately.</a></p>
+               </div>
+           </div>
+       </section>
+
+
+       <section class="py-20 bg-white">
+           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+               <div class="mb-12">
+                   <h2 class="text-3xl font-bold text-irs-dark mb-4">4 Fatal SOC Code Mistakes</h2>
+                   <p class="text-slate-600">Avoid these common pitfalls that trigger immediate UKVI rejections and put your Sponsor Licence at risk.</p>
+               </div>
+
+
+               <div class="grid md:grid-cols-2 gap-6">
+                   <!-- Mistake 1 -->
+                   <div class="flex gap-4 p-6 rounded-xl border border-red-100 bg-red-50/30">
+                       <div class="flex-shrink-0 mt-1">
+                           <i class="ph-fill ph-warning-octagon text-3xl text-red-500"></i>
+                       </div>
+                       <div>
+                           <h4 class="font-bold text-lg text-slate-800 mb-2">Matching by Job Title Only</h4>
+                           <p class="text-slate-600 text-sm leading-relaxed">
+                               Selecting a code based purely on the job title rather than the actual daily responsibilities. UKVI assesses the job description, not just the title. If they decide another code is more applicable, your CoS will be rejected.
+                           </p>
+                       </div>
+                   </div>
+
+
+                   <!-- Mistake 2 -->
+                   <div class="flex gap-4 p-6 rounded-xl border border-red-100 bg-red-50/30">
+                       <div class="flex-shrink-0 mt-1">
+                           <i class="ph-fill ph-warning-octagon text-3xl text-red-500"></i>
+                       </div>
+                       <div>
+                           <h4 class="font-bold text-lg text-slate-800 mb-2">Ignoring Applicant History</h4>
+                           <p class="text-slate-600 text-sm leading-relaxed">
+                               Using a SOC code that the specific applicant doesn't qualify for based on whether they already hold a Skilled Worker visa. Transitional rules (Tables 1a, 2) apply strictly based on their initial sponsorship date.
+                           </p>
+                       </div>
+                   </div>
+
+
+                   <!-- Mistake 3 -->
+                   <div class="flex gap-4 p-6 rounded-xl border border-red-100 bg-red-50/30">
+                       <div class="flex-shrink-0 mt-1">
+                           <i class="ph-fill ph-warning-octagon text-3xl text-red-500"></i>
+                       </div>
+                       <div>
+                           <h4 class="font-bold text-lg text-slate-800 mb-2">Salary Shopping (Licence Revocation Risk)</h4>
+                           <p class="text-slate-600 text-sm leading-relaxed">
+                               Deliberately choosing a less accurate SOC code simply because it has a lower minimum salary threshold. If UKVI discovers this during an audit, it can lead to <strong>Sponsor Licence revocation</strong> and visa cancellations.
+                           </p>
+                       </div>
+                   </div>
+
+
+                   <!-- Mistake 4 -->
+                   <div class="flex gap-4 p-6 rounded-xl border border-red-100 bg-red-50/30">
+                       <div class="flex-shrink-0 mt-1">
+                           <i class="ph-fill ph-warning-octagon text-3xl text-red-500"></i>
+                       </div>
+                       <div>
+                           <h4 class="font-bold text-lg text-slate-800 mb-2">CoS vs. Interview Inconsistencies</h4>
+                           <p class="text-slate-600 text-sm leading-relaxed">
+                               Writing generic CoS descriptions copied from the internet. If the CoS description doesn't match what the applicant actually does, or how they describe their role during a Home Office interview, the visa will be refused.
+                           </p>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </section>
+
+
+       <section id="verification-tool" class="py-20 bg-irs-dark text-white relative overflow-hidden">
+           <!-- Background element -->
+           <div class="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-irs-lightblue/20 to-transparent pointer-events-none"></div>
+
+
+           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+               <div class="grid lg:grid-cols-5 gap-12 items-center">
+                   <div class="lg:col-span-2">
+                       <div class="inline-block bg-irs-accent text-irs-dark font-bold px-3 py-1 rounded-md text-sm mb-4">HR Tool</div>
+                       <h2 class="text-3xl lg:text-4xl font-bold mb-4">Pre-Submission Verification Checklist</h2>
+                       <p class="text-slate-300 mb-8">
+                           Before assigning a Certificate of Sponsorship, complete this IRS HR verification checklist. Don't submit your CoS until you hit 100%.
+                       </p>
+                      
+                       <!-- Progress indicator -->
+                       <div class="bg-white/10 p-6 rounded-xl border border-white/20 backdrop-blur-sm">
+                           <div class="flex justify-between items-end mb-2">
+                               <span class="font-semibold text-lg text-white">Compliance Score</span>
+                               <span id="checklist-text" class="text-irs-accent font-bold text-xl">0%</span>
+                           </div>
+                           <div class="w-full bg-slate-700 rounded-full h-3 mb-2 overflow-hidden">
+                               <div id="checklist-progress" class="bg-irs-accent h-3 rounded-full progress-bar-fill" style="width: 0%"></div>
+                           </div>
+                           <p id="checklist-msg" class="text-sm text-slate-400 mt-3 transition-colors">Start checking items to verify your readiness.</p>
+                       </div>
+                   </div>
+
+
+                   <div class="lg:col-span-3">
+                       <div class="bg-white rounded-2xl p-6 md:p-8 shadow-2xl text-slate-800">
+                           <div class="space-y-4" id="checklist-container">
+                               <!-- Checkbox Item 1 -->
+                               <label class="checklist-item flex items-start gap-4 p-4 rounded-lg border border-slate-200 hover:bg-slate-50 transition cursor-pointer group">
+                                   <div class="mt-0.5">
+                                       <input type="checkbox" class="form-checkbox h-5 w-5 text-irs-blue rounded border-gray-300 focus:ring-irs-blue transition duration-150 ease-in-out">
+                                   </div>
+                                   <div>
+                                       <h4 class="font-bold text-slate-800 group-hover:text-irs-blue transition">Deep Role Understanding</h4>
+                                       <p class="text-sm text-slate-600 mt-1">I have reviewed the job description thoroughly, consulting sector specialists if the role is highly technical.</p>
+                                   </div>
+                               </label>
+
+
+                               <!-- Checkbox Item 2 -->
+                               <label class="checklist-item flex items-start gap-4 p-4 rounded-lg border border-slate-200 hover:bg-slate-50 transition cursor-pointer group">
+                                   <div class="mt-0.5">
+                                       <input type="checkbox" class="form-checkbox h-5 w-5 text-irs-blue rounded border-gray-300 focus:ring-irs-blue transition duration-150 ease-in-out">
+                                   </div>
+                                   <div>
+                                       <h4 class="font-bold text-slate-800 group-hover:text-irs-blue transition">Cascot Tool & Appendix Verification</h4>
+                                       <p class="text-sm text-slate-600 mt-1">I have identified a SOC 2020 code using the ONS Cascot tool and verified it in the UKVI Appendix Skilled Occupation.</p>
+                                   </div>
+                               </label>
+
+
+                               <!-- Checkbox Item 3 -->
+                               <label class="checklist-item flex items-start gap-4 p-4 rounded-lg border border-slate-200 hover:bg-slate-50 transition cursor-pointer group">
+                                   <div class="mt-0.5">
+                                       <input type="checkbox" class="form-checkbox h-5 w-5 text-irs-blue rounded border-gray-300 focus:ring-irs-blue transition duration-150 ease-in-out">
+                                   </div>
+                                   <div>
+                                       <h4 class="font-bold text-slate-800 group-hover:text-irs-blue transition">Salary Check (Standard + Going Rate)</h4>
+                                       <p class="text-sm text-slate-600 mt-1">I have calculated that the salary meets both the standard threshold and the specific going rate based on contracted weekly hours.</p>
+                                   </div>
+                               </label>
+
+
+                               <!-- Checkbox Item 4 -->
+                               <label class="checklist-item flex items-start gap-4 p-4 rounded-lg border border-slate-200 hover:bg-slate-50 transition cursor-pointer group">
+                                   <div class="mt-0.5">
+                                       <input type="checkbox" class="form-checkbox h-5 w-5 text-irs-blue rounded border-gray-300 focus:ring-irs-blue transition duration-150 ease-in-out">
+                                   </div>
+                                   <div>
+                                       <h4 class="font-bold text-slate-800 group-hover:text-irs-blue transition">CoS Description Clarity</h4>
+                                       <p class="text-sm text-slate-600 mt-1">The CoS description explains daily tasks accurately, avoids vague corporate jargon, and aligns with the chosen SOC code level.</p>
+                                   </div>
+                               </label>
+                              
+                               <!-- Checkbox Item 5 -->
+                               <label class="checklist-item flex items-start gap-4 p-4 rounded-lg border border-slate-200 hover:bg-slate-50 transition cursor-pointer group">
+                                   <div class="mt-0.5">
+                                       <input type="checkbox" class="form-checkbox h-5 w-5 text-irs-blue rounded border-gray-300 focus:ring-irs-blue transition duration-150 ease-in-out">
+                                   </div>
+                                   <div>
+                                       <h4 class="font-bold text-slate-800 group-hover:text-irs-blue transition">Transitional Rules Applied</h4>
+                                       <p class="text-sm text-slate-600 mt-1">I have verified when the candidate was first sponsored to ensure I am referencing the correct UKVI Table (e.g., Table 1 vs Table 2).</p>
+                                   </div>
+                               </label>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </section>
+
+
+       <section id="faqs" class="py-20 bg-slate-50">
+           <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+               <div class="text-center mb-12">
+                   <h2 class="text-3xl font-bold text-irs-dark mb-4">Frequently Asked Questions</h2>
+                   <p class="text-slate-600">Expert answers to the most common SOC code queries.</p>
+               </div>
+
+
+               <div class="space-y-4">
+                   <!-- FAQ 1 -->
+                   <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+                       <button class="accordion-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none" aria-expanded="false">
+                           <span class="font-bold text-slate-800 text-lg">What happens if I use the wrong SOC code on a CoS?</span>
+                           <i class="ph-bold ph-caret-down text-slate-400 transition-transform duration-300"></i>
+                       </button>
+                       <div class="accordion-content bg-slate-50 border-t border-slate-100">
+                           <p class="px-6 py-5 text-slate-600">
+                               A Defined CoS request will be refused entirely. If you use an assigned Undefined CoS in a visa application, it will prompt further information and document requests, severely delaying the application and potentially leading to a final visa refusal. It also raises red flags on your Sponsor Licence.
+                           </p>
+                       </div>
+                   </div>
+
+
+                   <!-- FAQ 2 -->
+                   <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+                       <button class="accordion-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none" aria-expanded="false">
+                           <span class="font-bold text-slate-800 text-lg">Can I change the SOC code after a CoS has been assigned?</span>
+                           <i class="ph-bold ph-caret-down text-slate-400 transition-transform duration-300"></i>
+                       </button>
+                       <div class="accordion-content bg-slate-50 border-t border-slate-100">
+                           <p class="px-6 py-5 text-slate-600">
+                               If a CoS has not been "used" (meaning the visa application has not yet been decided by the Home Office), the SOC code can be changed by adding a sponsor note to the live CoS on the SMS portal to specify the correct SOC code.
+                           </p>
+                       </div>
+                   </div>
+
+
+                   <!-- FAQ 3 -->
+                   <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+                       <button class="accordion-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none" aria-expanded="false">
+                           <span class="font-bold text-slate-800 text-lg">How do I find the going rate for a specific SOC code?</span>
+                           <i class="ph-bold ph-caret-down text-slate-400 transition-transform duration-300"></i>
+                       </button>
+                       <div class="accordion-content bg-slate-50 border-t border-slate-100">
+                           <p class="px-6 py-5 text-slate-600">
+                               All going rates are listed in the UKVI <strong>Appendix Skilled Occupation</strong> or the <strong>Immigration Salary List</strong>. You must navigate to the correct table (Table 1, 2, 3, etc.) based on when the employee was first sponsored on the Skilled Worker route.
+                           </p>
+                       </div>
+                   </div>
+                  
+                   <!-- FAQ 4 -->
+                   <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+                       <button class="accordion-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none" aria-expanded="false">
+                           <span class="font-bold text-slate-800 text-lg">Does the SOC code affect the Immigration Health Surcharge (IHS)?</span>
+                           <i class="ph-bold ph-caret-down text-slate-400 transition-transform duration-300"></i>
+                       </button>
+                       <div class="accordion-content bg-slate-50 border-t border-slate-100">
+                           <p class="px-6 py-5 text-slate-600">
+                               Yes. Workers sponsored under designated Health and Care SOC codes do not need to pay the Immigration Health Surcharge. Additionally, some specific SOC codes for scientist and researcher roles are exempt from the Immigration Skills Charge.
+                           </p>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </section>
+
+
+       <section id="assessment" class="py-24 bg-white relative">
+           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+               <div class="bg-irs-blue rounded-3xl overflow-hidden shadow-2xl flex flex-col lg:flex-row">
+                   <!-- Left side info -->
+                   <div class="lg:w-5/12 bg-irs-dark text-white p-10 lg:p-16 flex flex-col justify-center relative overflow-hidden">
+                       <!-- BG pattern -->
+                       <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 20px 20px;"></div>
+                      
+                       <div class="relative z-10">
+                           <h2 class="text-3xl lg:text-4xl font-bold mb-6">Don't risk a refusal. Let IRS HR verify your CoS.</h2>
+                           <p class="text-slate-300 mb-8 leading-relaxed">
+                               Selecting the correct SOC code is one of the most vital steps in the Skilled Worker sponsorship process. If you are unsure which code applies, or if your salary offer meets the rules, get professional advice from our experts.
+                           </p>
+                          
+                           <div class="space-y-6">
+                               <div class="flex items-center gap-4">
+                                   <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-irs-accent">
+                                       <i class="ph-fill ph-phone-call text-2xl"></i>
+                                   </div>
+                                   <div>
+                                       <p class="text-sm text-slate-400">Call Us directly</p>
+                                       <p class="text-lg font-bold">+44 333 577 4771</p>
+                                   </div>
+                               </div>
+                               <div class="flex items-center gap-4">
+                                   <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-irs-accent">
+                                       <i class="ph-fill ph-map-pin text-2xl"></i>
+                                   </div>
+                                   <div>
+                                       <p class="text-sm text-slate-400">Visit Our Office</p>
+                                       <p class="text-lg font-bold">189 Brompton Rd, London SW3 1NE</p>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                  
+                   <!-- Right side Form -->
+                   <div class="lg:w-7/12 p-10 lg:p-16 bg-white">
+                       <div class="mb-8">
+                           <h3 class="text-2xl font-bold text-irs-dark mb-2">Book a Free SOC Code Assessment</h3>
+                           <p class="text-slate-500">Fill in your details below and an IRS HR immigration specialist will be in touch within 24 hours.</p>
+                       </div>
+                      <form class="space-y-4" id="leadForm" method="POST" data-email="pc@irslimited.co.uk"
                         action="https://script.google.com/macros/s/AKfycbw8tPwi2gdhbO_Q4w0t1N5g2KtBkzB6TIVnM8roZuJ7Wl7ypf9vB5FX6_9U6gWjgBwKbw/exec">
 
                         <div>
@@ -1269,44 +1425,38 @@
                         </div>
 
                     </form>
-
-                    <div id="successModal"
-                        class="fixed inset-0 z-50 flex items-center justify-center hidden bg-black bg-opacity-50 px-4">
-                        <div
-                            class="bg-white rounded-2xl p-8 max-w-sm w-full text-center shadow-2xl transform transition-all">
-                            <div
-                                class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                        d="M5 13l4 4L19 7" />
-                                </svg>
+                      
+                     <div id="successModal"
+                                class="fixed inset-0 z-50 flex items-center justify-center hidden bg-black bg-opacity-50 px-4">
+                                <div
+                                    class="bg-white rounded-2xl p-8 max-w-sm w-full text-center shadow-2xl transform transition-all">
+                                    <div
+                                        class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Priority IRS HR Demo Request
+                                        Received!
+                                    </h3>
+                                    <p class="text-gray-600 mb-6">Thank you for reaching out to IRS HR Priority Team.
+                                        We've
+                                        secured your slot and will
+                                        be in touch shortly.</p>
+                                    <button onclick="closeModal()"
+                                        class="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 rounded-xl transition">
+                                        Great, thanks!
+                                    </button>
+                                </div>
                             </div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-2">Priority IRS HR Demo Request Received!
-                            </h3>
-                            <p class="text-gray-600 mb-6">Thank you for reaching out to IRS HR Priority Team. We've
-                                secured your slot and will
-                                be in touch shortly.</p>
-                            <button onclick="closeModal()"
-                                class="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 rounded-xl transition">
-                                Great, thanks!
-                            </button>
-                        </div>
-                    </div>
+                   </div>
+               </div>
+           </div>
+       </section>
+   </main>
 
-                </div>
-
-            </div>
-            <br>
-            <br>
-            <br>
-            <p><i>We don’t provide immigration advice but connect you to our panel of solicitors for immigration advice.
-                    The information above is only for informational purposes and shouldn’t be construed as immigration
-                    advice.</i></p>
-
-        </div>
-
-    </section>
 
 
 
@@ -1384,23 +1534,13 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="assets/js/bookingForm.js"></script>
 
 
     <script>
         window.addEventListener("scroll", function () {
             const navbar = document.getElementById("navbar");
-            // const navLinks = document.querySelectorAll(".links-navbar a");
             const navLinks = document.getElementsByClassName(".links-navbar a");
-
-            // if (window.scrollY > 10) {
-            //   navbar.classList.remove("bg-white/80", "backdrop-blur-lg");
-            //   navbar.classList.add("bg-[#16132A]");
-            //   navbar.classList.add('scrolled');
-            // } else {
-            //   navbar.classList.remove("bg-[#16132A]");
-            //   navbar.classList.add("bg-white/80", "backdrop-blur-lg");
-            //   navbar.classList.remove('scrolled');
-            // }
 
             if (window.innerWidth >= 768) {
                 if (window.scrollY > 10) {
@@ -1418,12 +1558,12 @@
         const menuBtn = document.getElementById("menu-btn");
         const closeBtn = document.getElementById("close-btn");
         const mobileMenu = document.getElementById("mobile-menu");
-        const accordions = document.querySelectorAll(".accordion-btn");
+        const accordionss = document.querySelectorAll(".accordion-btn");
 
         menuBtn.addEventListener("click", () => mobileMenu.classList.remove("hidden"));
         closeBtn.addEventListener("click", () => mobileMenu.classList.add("hidden"));
 
-        accordions.forEach(btn => {
+        accordionss.forEach(btn => {
             btn.addEventListener("click", () => {
                 const content = btn.nextElementSibling;
                 content.classList.toggle("hidden");
@@ -1431,229 +1571,149 @@
         });
     </script>
 
-    <script>
-        lucide.createIcons();
-    </script>
-    <script>
-        document.getElementById('leadForm').addEventListener('submit', function (e) {
-            e.preventDefault(); // Prevent page reload
 
-            const form = e.target;
-            const btn = document.getElementById('submitLeadBtn');
-            const modal = document.getElementById('successModal');
-
-            // Disable button and show loading state
-            btn.disabled = true;
-            btn.innerText = "Processing...";
-            btn.style.opacity = "0.7";
-
-            const formData = new FormData(form);
-
-            fetch(form.action, {
-                method: 'POST',
-                body: formData,
-                mode: 'no-cors' // Required for Google Apps Script cross-origin
-            })
-                .then(() => {
-                    // Show the success modal
-                    modal.classList.remove('hidden');
-                    form.reset(); // Clear the form
-                })
-                .catch(error => {
-                    console.error('Error!', error.message);
-                    alert("Something went wrong. Please try again.");
-                })
-                .finally(() => {
-                    // Reset button state
-                    btn.disabled = false;
-                    btn.innerText = "Secure My Priority Demo Slot";
-                    btn.style.opacity = "1";
-                });
-        });
-
-        function closeModal() {
-            document.getElementById('successModal').classList.add('hidden');
-        }
-    </script>
-<script>
-  // Helper: minimum allowed booking time = now + 2 hours
-  function getMinBookingDate() {
-    return new Date(Date.now() + 2 * 60 * 60 * 1000);
-  }
-
-  // NEW: dates with 1PM cutoff (YYYY-MM-DD format to match <input type="date">)
-  const cutoffDates = new Set(["2026-03-10", "2026-03-17", "2026-03-18"]);
-  const cutoffTime24 = "13:00"; // 1:00 PM
-
-  // NEW: parse "h:i K" -> minutes since midnight
-  function parse12hToMinutes(timeStr) {
-    // e.g. "10:30 AM"
-    const [t, ampmRaw] = timeStr.trim().split(" ");
-    if (!t || !ampmRaw) return null;
-
-    let [h, m] = t.split(":").map(Number);
-    const ampm = ampmRaw.toUpperCase();
-    if (ampm === "PM" && h !== 12) h += 12;
-    if (ampm === "AM" && h === 12) h = 0;
-    return h * 60 + m;
-  }
-
-  function minutesToHHMM(mins) {
-    const h = String(Math.floor(mins / 60)).padStart(2, "0");
-    const m = String(mins % 60).padStart(2, "0");
-    return `${h}:${m}`;
-  }
-
-  const timePicker = flatpickr("#timePicker", {
-    enableTime: true,
-    noCalendar: true,
-    dateFormat: "h:i K", // value sent (e.g. 10:30 AM)
-    time_24hr: false,
-    defaultHour: 9,
-    defaultMinute: 0,
-    minTime: "00:00",
-    maxTime: "23:59",
-  });
-
-  const dateInput = document.querySelector('input[name="date"]');
-
-  // Update time restrictions whenever date changes (or on page load)
-  function updateMinTimeForSelectedDate() {
-    const minBooking = getMinBookingDate();
-
-    const selectedDateStr = dateInput.value; // YYYY-MM-DD
-    if (!selectedDateStr) {
-      timePicker.set("minTime", "00:00");
-      timePicker.set("maxTime", "23:59");
-      return;
-    }
-
-    const selectedDate = new Date(selectedDateStr + "T00:00:00");
-    const minDate = new Date(
-      minBooking.getFullYear(),
-      minBooking.getMonth(),
-      minBooking.getDate()
-    );
-
-    const isSameDay =
-      selectedDate.getFullYear() === minDate.getFullYear() &&
-      selectedDate.getMonth() === minDate.getMonth() &&
-      selectedDate.getDate() === minDate.getDate();
-
-    // Base minTime: if booking for today, min time is now+2h, else open
-    let minTimeForPicker = "00:00";
-    if (isSameDay) {
-      const hh = String(minBooking.getHours()).padStart(2, "0");
-      const mm = String(minBooking.getMinutes()).padStart(2, "0");
-      minTimeForPicker = `${hh}:${mm}`;
-    }
-
-    // NEW: Apply 1PM cutoff on specific dates
-    let maxTimeForPicker = "23:59";
-    if (cutoffDates.has(selectedDateStr)) {
-      maxTimeForPicker = cutoffTime24;
-    }
-
-    // If minTime is later than maxTime (e.g., it's already after 11am+2h on a cutoff date),
-    // then no valid slots exist today — clear time and set minTime=maxTime to prevent selection.
-    const minMinutes = Number(minTimeForPicker.slice(0, 2)) * 60 + Number(minTimeForPicker.slice(3, 5));
-    const maxMinutes = Number(maxTimeForPicker.slice(0, 2)) * 60 + Number(maxTimeForPicker.slice(3, 5));
-
-    if (minMinutes > maxMinutes) {
-      timePicker.set("minTime", maxTimeForPicker);
-      timePicker.set("maxTime", maxTimeForPicker);
-      timePicker.clear();
-      return;
-    }
-
-    timePicker.set("minTime", minTimeForPicker);
-    timePicker.set("maxTime", maxTimeForPicker);
-
-    // If their currently selected time is now invalid, clear it
-    const picked = timePicker.selectedDates[0];
-    if (picked) {
-      const combined = new Date(
-        selectedDateStr +
-          "T" +
-          String(picked.getHours()).padStart(2, "0") +
-          ":" +
-          String(picked.getMinutes()).padStart(2, "0") +
-          ":00"
-      );
-
-      // invalid if before now+2h OR after cutoff on those dates
-      const pickedMinutes = picked.getHours() * 60 + picked.getMinutes();
-      const violatesCutoff = cutoffDates.has(selectedDateStr) && pickedMinutes > maxMinutes;
-
-      if (combined < minBooking || violatesCutoff) timePicker.clear();
-    }
-  }
-
-  // Set min date on the date input (HTML date picker)
-  function updateMinDate() {
-    const minBooking = getMinBookingDate();
-    const yyyy = minBooking.getFullYear();
-    const mm = String(minBooking.getMonth() + 1).padStart(2, "0");
-    const dd = String(minBooking.getDate()).padStart(2, "0");
-    dateInput.min = `${yyyy}-${mm}-${dd}`;
-  }
-
-  // Run on load
-  updateMinDate();
-  updateMinTimeForSelectedDate();
-
-  // Bind events
-  dateInput.addEventListener("change", () => {
-    updateMinDate();
-    updateMinTimeForSelectedDate();
-  });
-
-  // FINAL GUARD: block submission if date+time is < now+2h OR violates 1PM cutoff
-  document.getElementById("leadForm").addEventListener(
-    "submit",
-    function (e) {
-      const minBooking = getMinBookingDate();
-
-      const dateVal = dateInput.value; // YYYY-MM-DD
-      const timeVal = document.getElementById("timePicker").value; // "10:30 AM"
-
-      if (dateVal && timeVal) {
-        // Convert "10:30 AM" into 24h minutes
-        const mins = parse12hToMinutes(timeVal);
-        if (mins == null) return;
-
-        const hh = String(Math.floor(mins / 60)).padStart(2, "0");
-        const mm = String(mins % 60).padStart(2, "0");
-
-        const combined = new Date(`${dateVal}T${hh}:${mm}:00`);
-
-        // rule 1: at least 2 hours from now
-        if (combined < minBooking) {
-          e.preventDefault();
-          alert("Please choose a date/time at least 2 hours from now.");
-          return;
-        }
-
-        // rule 2: cutoff dates must be <= 1:00 PM
-        if (cutoffDates.has(dateVal)) {
-          const maxMinutes = 13 * 60; // 1PM
-          if (mins > maxMinutes) {
-            e.preventDefault();
-            alert("On March 10, 17, and 18, the latest available time is 1:00 PM.");
-            return;
-          }
-        }
-      }
-    },
-    true
-  );
-</script>
 
     <script>
         function closePopup() {
             document.getElementById("bottomPopup").style.display = "none";
         }
     </script>
+
+    
+
+   <script>
+       // Tab switching logic for Salary Tools
+       function switchTab(tabId) {
+           // Hide all contents
+           document.querySelectorAll('.tab-content').forEach(el => {
+               el.classList.remove('active');
+           });
+          
+           // Reset all buttons styling
+           document.querySelectorAll('.tab-btn').forEach(btn => {
+               btn.classList.remove('border-irs-blue', 'text-irs-blue', 'bg-blue-50/50');
+               btn.classList.add('border-transparent', 'text-slate-500');
+               btn.setAttribute('aria-selected', 'false');
+           });
+
+
+           // Show selected content
+           document.getElementById(tabId).classList.add('active');
+          
+           // Highlight selected button
+           const activeBtn = document.getElementById('btn-' + tabId);
+           activeBtn.classList.remove('border-transparent', 'text-slate-500');
+           activeBtn.classList.add('border-irs-blue', 'text-irs-blue', 'bg-blue-50/50');
+           activeBtn.setAttribute('aria-selected', 'true');
+       }
+
+
+       // Checklist Progress Logic
+       document.addEventListener('DOMContentLoaded', () => {
+           const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
+           const progressBar = document.getElementById('checklist-progress');
+           const progressText = document.getElementById('checklist-text');
+           const progressMsg = document.getElementById('checklist-msg');
+
+
+           const updateProgress = () => {
+               const total = checkboxes.length;
+               const checked = document.querySelectorAll('.checklist-item input[type="checkbox"]:checked').length;
+               const percentage = Math.round((checked / total) * 100);
+              
+               // Update UI
+               progressBar.style.width = `${percentage}%`;
+               progressText.textContent = `${percentage}%`;
+              
+               // Update visual styling based on completion
+               if(percentage === 100) {
+                   progressBar.classList.remove('bg-irs-accent');
+                   progressBar.classList.add('bg-green-500');
+                   progressText.classList.remove('text-irs-accent');
+                   progressText.classList.add('text-green-500');
+                   progressMsg.textContent = "100% Verified! You are ready to safely assign the CoS.";
+                   progressMsg.classList.add('text-green-400');
+               } else {
+                   progressBar.classList.add('bg-irs-accent');
+                   progressBar.classList.remove('bg-green-500');
+                   progressText.classList.add('text-irs-accent');
+                   progressText.classList.remove('text-green-500');
+                   progressMsg.classList.remove('text-green-400');
+                  
+                   if(checked === 0) {
+                       progressMsg.textContent = "Start checking items to verify your readiness.";
+                   } else {
+                       progressMsg.textContent = `${checked} of ${total} steps completed. Don't submit yet.`;
+                   }
+               }
+           };
+
+
+           checkboxes.forEach(box => {
+               box.addEventListener('change', updateProgress);
+           });
+       });
+
+
+       // FAQ Accordion Logic
+       const accordions = document.querySelectorAll('.accordion-btn');
+       accordions.forEach(acc => {
+           acc.addEventListener('click', function() {
+               // Toggle active state for button
+               this.classList.toggle('active');
+              
+               // Toggle icon rotation
+               const icon = this.querySelector('i');
+               if(this.classList.contains('active')) {
+                   icon.classList.add('rotate-180');
+                   this.setAttribute('aria-expanded', 'true');
+               } else {
+                   icon.classList.remove('rotate-180');
+                   this.setAttribute('aria-expanded', 'false');
+               }
+
+
+               // Toggle content height
+               const content = this.nextElementSibling;
+               if (content.style.maxHeight) {
+                   content.style.maxHeight = null;
+               } else {
+                   content.style.maxHeight = content.scrollHeight + "px";
+               }
+           });
+       });
+
+
+       // Form submission simulation
+       function handleFormSubmit(e) {
+           e.preventDefault(); // Prevent page reload
+           const submitBtn = e.target.querySelector('button[type="submit"]');
+           const originalText = submitBtn.innerHTML;
+          
+           // Loading state
+           submitBtn.innerHTML = '<i class="ph-bold ph-spinner animate-spin"></i> Submitting...';
+           submitBtn.disabled = true;
+           submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+
+
+           // Simulate API call delay
+           setTimeout(() => {
+               document.getElementById('form-success-msg').classList.remove('hidden');
+               e.target.reset(); // Clear form
+              
+               // Reset button
+               submitBtn.innerHTML = originalText;
+               submitBtn.disabled = false;
+               submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+              
+               // Hide success message after 5 seconds
+               setTimeout(() => {
+                   document.getElementById('form-success-msg').classList.add('hidden');
+               }, 5000);
+           }, 1500);
+       }
+   </script>
+
 </body>
 
 </html>
