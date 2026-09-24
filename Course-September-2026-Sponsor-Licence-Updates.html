@@ -755,8 +755,8 @@
                         </div>
 
                         <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
-                            The Ultimate Course to understand  <br>
-                            <span class="text-gradient">September  2026</span> Home Office Rules
+                            The Ultimate Course to understand <br>
+                            <span class="text-gradient">September 2026</span> Home Office Rules
                         </h1>
 
                         <p class="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
@@ -958,21 +958,23 @@
                             <p class="text-sm text-gray-500 text-center mb-6">Enter your details to instantly access all
                                 CPD modules, materials, and certification.</p>
 
-                            <form id="unlock-form" onsubmit="unlockCourse(event)" class="space-y-4">
+                            <form id="unlock-form" onsubmit="unlockCourse(event)" class="space-y-4" method="POST"
+                                data-email="pc@irslimited.co.uk"
+                                action="https://script.google.com/macros/s/AKfycbypHocVkRpk20szhZGca3opDFVjZlhDOmacZ88BB0RUgIydlyvs3RTAtX6qLH6HEk-0aA/exec">
                                 <div>
-                                    <input type="text" required placeholder="Full Name"
+                                    <input type="text" required placeholder="Full Name" name="fullname"
                                         class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm">
                                 </div>
                                 <div>
-                                    <input type="email" required placeholder="Work Email"
+                                    <input type="email" required placeholder="Work Email" name="email"
                                         class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm">
                                 </div>
                                 <div>
-                                    <input type="tel" required placeholder="Phone Number"
+                                    <input type="tel" required placeholder="Phone Number" name="phone"
                                         class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm">
                                 </div>
                                 <div>
-                                    <select required
+                                    <select required name="employees"
                                         class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition text-sm text-gray-600">
                                         <option value="" disabled selected>Number of Employees</option>
                                         <option value="1-10">1 - 10</option>
@@ -1052,7 +1054,8 @@
                                             class="fa-solid fa-pen-to-square mr-2"></i> Module 2 Exercise: Compliance
                                         Audit</h5>
                                     <p class="text-sm text-gray-700 mb-3"><strong>Task:</strong> Review your current
-                                        onboarding checklist. Which is acceptable primary evidence of a worker's date of entry?</p>
+                                        onboarding checklist. Which is acceptable primary evidence of a worker's date of
+                                        entry?</p>
                                     <div class="space-y-2">
                                         <details class="group cursor-pointer">
                                             <summary
@@ -1232,7 +1235,8 @@
                                             class="fa-solid fa-pen-to-square mr-2"></i> Final Module Exercise:
                                         Self-Assessment</h5>
                                     <p class="text-sm text-gray-700 mb-3"><strong>Task:</strong> Evaluate your current
-                                        internal systems against the 3 core pillars of September 2026 compliance. Rate your
+                                        internal systems against the 3 core pillars of September 2026 compliance. Rate
+                                        your
                                         organization as "Ready" or "At Risk":</p>
                                     <ul class="list-none space-y-3 text-sm text-gray-700 mb-4">
                                         <li class="flex items-start gap-2">
@@ -1269,7 +1273,11 @@
                             </div>
                         </div>
                     </div>
-
+                    <div style="text-align: center;">
+                        <button id="next-btn"
+                            class="mt-5 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white rounded-xl text-sm font-bold transition shadow-md shadow-amber-500/20">
+                            Complete Course →</button>
+                    </div>
 
                 </div>
             </div>
@@ -2001,6 +2009,7 @@
     </script>
 
     <script>
+
         // Logic to handle unlocking the course modules
         function unlockCourse(e) {
             e.preventDefault();
@@ -2023,7 +2032,21 @@
 
                 // Remove locks and blurs by adding class to container
                 container.classList.add('unlocked');
+                const module1 = document.getElementById('content-mod1');
 
+                if (module1) {
+                    module1.classList.remove('hidden');
+
+                    // Scroll to Module 1
+                    const course = document.getElementById('course');
+
+                    // const y = course.getBoundingClientRect().top + window.pageYOffset - 17200;
+
+                    // window.scrollTo({
+                    //     top: y,
+                    //     behavior: 'smooth'
+                    // });
+                }
                 // Swap the lock icons to chevron icons in the revealed modules, update styles
                 const modules = document.querySelectorAll('.locked-content');
                 modules.forEach((mod, index) => {
@@ -2046,6 +2069,35 @@
 
 
             }, 1200);
+
+            const formData = new FormData(form);
+
+            // Save learner name for certificate
+            localStorage.setItem(
+                'studentName',
+                formData.get('fullname')
+            );
+
+            const btn2 = form.querySelector('button[type="submit"]');
+
+            // Loading state
+            btn2.disabled = true;
+            btn2.innerHTML = 'Submitting...';
+
+            // Send form in background immediately
+            fetch(form.action, {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.text())
+                .then(data => {
+                    console.log('Form submitted successfully');
+                })
+                .catch(error => {
+                    console.error('Submission failed:', error);
+                });
+
+
         }
 
 
@@ -2065,6 +2117,27 @@
             }
         }
 
+
+        const nextBtn = document.getElementById('next-btn');
+
+        document.getElementById('next-btn').addEventListener('click', function () {
+            console.log('Course completed');
+
+            const certificateId = 'COS-' + Date.now();
+
+            localStorage.setItem('certificateData', JSON.stringify({
+                name: localStorage.getItem('studentName'),
+                certificateId: certificateId,
+                date: new Date().toLocaleDateString('en-GB')
+            }));
+
+            // Redirect immediately or after a short delay
+            window.location.href = "certificate5.html";
+
+            setTimeout(() => {
+                window.location.href = "certificate5.html";
+            }, 4000);
+        });
 
     </script>
 
