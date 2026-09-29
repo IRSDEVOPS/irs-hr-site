@@ -1737,7 +1737,7 @@
 
                 const vatText = plan.name === "Plan 9999" ? "" : " + VAT";
                 const saveText = (plan.name === "Plan 9999" || !plan.save) ? "" 
-                    : (type === "monthly" ? `<span class="save"><small>Save ${plan.save} </small></span><br/><span class="save"><small>For the first 3 months only</small></span>` 
+                    : (type === "monthly" ? `<span class="save"><small>Save ${plan.save} </small></span><br/><span class="save"><small>For the first 2 months only</small></span>` 
                         : `<span class="save"><small>Save ${plan.save} </small></span>`);
                 const priceDisplay = plan.newPrice ? `<h3>${plan.newPrice}</h3>` : '';
                 const origPriceDisplay = plan.originalPrice ? `<h3 class="original-price">${plan.originalPrice}</h3>` : '';
