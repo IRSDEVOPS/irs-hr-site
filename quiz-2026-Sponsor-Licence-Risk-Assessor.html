@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sponsor Licence Compliance Health Check Quiz | IRS HR</title>
+    <title>Sponsor Licence Risk Assessor Quiz | IRS HR</title>
     <!-- !-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T8ZKXHXF1K"></script>
     <script>
@@ -19,10 +19,10 @@
     <meta name="description"
         content="Are your HR processes fully compliant with UKVI rules? Take this 2-minute quiz to assess your risk level and see how prepared your business is to maintain its Sponsor Licence." />
     <meta name="keywords"
-        content="sponsor licence compliance quiz, UKVI compliance health check, HR compliance quiz UK, Sponsor Licence risk assessment, UK employer compliance quiz, IRS HR quiz" />
+        content=Sponsor Licence Risk Assessor quiz, UKVI compliance health check, HR compliance quiz UK, Sponsor Licence risk assessment, UK employer compliance quiz, IRS HR quiz" />
 
     <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="Sponsor Licence Compliance Health Check | Free 2-Minute Quiz | IRS HR" />
+    <meta property="og:title" content="Sponsor Licence Risk Assessor | Free 2-Minute Quiz | IRS HR" />
     <meta property="og:description"
         content="Quickly assess whether your HR processes meet UKVI compliance standards with our free health-check quiz for Sponsor Licence holders." />
     <meta property="og:url" content="https://irshr.co.uk/quiz-sponsor-licence-compliance-health-check.html" />
@@ -31,7 +31,7 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Sponsor Licence Compliance Health Check | Free 2-Minute Quiz | IRS HR" />
+    <meta name="twitter:title" content="Sponsor Licence Risk Assessor | Free 2-Minute Quiz | IRS HR" />
     <meta name="twitter:description"
         content="Check your HR processes against UKVI rules with our 2-minute quiz — find your risk level and strengthen your compliance." />
     <meta name="twitter:image" content="https://irshr.co.uk/assets/images/og-image.png" />
@@ -696,10 +696,10 @@
 
 
 
-   <div class="max-w-2xl w-full bg-white rounded-2xl shadow-xl overflow-hidden m-auto">
+   <div class="max-w-2xl w-full bg-white rounded-2xl shadow-xl overflow-hidden m-auto mt-20 mb-20">
       
        <!-- Header -->
-       <div class="bg-slate-900 p-6 text-white text-center">
+       <div class="bg-[#927634] p-6 text-white text-center">
            <h1 class="text-2xl md:text-3xl font-bold mb-2">Quarter 4 (October - December 2026) Sponsor Licence Risk Assessor</h1>
            <p class="text-slate-300 text-sm md:text-base">Home Office revocations are at an all-time high. Assess your compliance risk in 60 seconds.</p>
        </div>
@@ -717,7 +717,7 @@
                <p class="text-slate-600 mb-8 leading-relaxed">
                    With the severe restriction on Certificates of Sponsorship (CoS) and heightened compliance checks, sponsors are under unprecedented scrutiny. Answer 10 critical questions to identify your vulnerability.
                </p>
-               <button onclick="startAssessment()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-200 shadow-md w-full md:w-auto">
+               <button onclick="startAssessment()" class="bg-[#927634] hover:bg-[#ba902d] text-white font-bold py-3 px-8 rounded-lg transition duration-200 shadow-md w-full md:w-auto">
                    Start Risk Assessment
                </button>
            </div>
@@ -732,7 +732,7 @@
                        <span id="progress-text">0%</span>
                    </div>
                    <div class="w-full bg-slate-200 rounded-full h-2.5">
-                       <div id="progress-bar" class="bg-blue-600 h-2.5 rounded-full progress-transition" style="width: 0%"></div>
+                       <div id="progress-bar" class="bg-[#ba902d] h-2.5 rounded-full progress-transition" style="width: 0%"></div>
                    </div>
                </div>
 
@@ -760,6 +760,72 @@
                </div>
            </div>
 
+             <!-- Lead Capture Screen -->
+        <div id="lead-capture-screen" class="hidden text-center bg-whites p-8 md:p-12 rounded-2xl shadow-lgs fade-in">
+            <h2 class="text-3xl font-bold text-slate-900 mb-3">You're All Done!</h2>
+            <p class="text-slate-600 mb-6">Enter your details below to get your personalized compliance score.</p>
+            <form id="lead-form" class="space-y-4 gform pure-form pure-form-stacked" method="POST"
+                data-email="pc@irslimited.co.uk"
+                action="https://script.google.com/macros/s/AKfycbzglqWCokVxcmkDJ7DPiyYan0cVC8QEFgUOnpNYZ_i5uMY3pDH-Ce8GQFhNv3-FsjQqiA/exec">
+                <div class="form-elements">
+                    <fieldset class="pure-group">
+                        <input type="text" id="name" placeholder="Your Name" name="name"
+                            class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-gold mb-4"
+                            required>
+                    </fieldset>
+                    <fieldset class="pure-group">
+                        <input type="email" id="email" placeholder="Work Email" name="email"
+                            class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-gold mb-4"
+                            required>
+                    </fieldset>
+                    <fieldset class="pure-group">
+                        <input type="text" id="company" placeholder="Company Name" name="company"
+                            class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-gold mb-4"
+                            required>
+                    </fieldset>
+
+                    <!-- Hidden inputs for quiz answers -->
+                    <fieldset class="pure-group">
+                        <input type="hidden" name="question_1" id="answer_1" value="">
+                    </fieldset>
+                    <fieldset class="pure-group">
+                        <input type="hidden" name="question_2" id="answer_2" value="">
+                    </fieldset>
+                    <fieldset class="pure-group">
+                        <input type="hidden" name="question_3" id="answer_3" value="">
+                    </fieldset>
+                    <fieldset class="pure-group">
+                        <input type="hidden" name="question_4" id="answer_4" value="">
+                    </fieldset>
+                    <fieldset class="pure-group">
+                        <input type="hidden" name="question_5" id="answer_5" value="">
+                    </fieldset>
+                    <fieldset class="pure-group">
+                        <input type="hidden" name="question_6" id="answer_6" value="">
+                    </fieldset>
+                    <fieldset class="pure-group">
+                        <input type="hidden" name="question_7" id="answer_7" value="">
+                    </fieldset>
+                    <fieldset class="pure-group">
+                        <input type="hidden" name="question_8" id="answer_8" value="">
+                    </fieldset>
+                    <fieldset class="pure-group">
+                        <input type="hidden" name="question_9" id="answer_9" value="">
+                    </fieldset>
+                    <fieldset class="pure-group">
+                        <input type="hidden" name="question_10" id="answer_10" value="">
+                    </fieldset>
+                    <fieldset class="pure-group">
+                        <input type="hidden" name="final_score" id="final_score" value="">
+                    </fieldset>
+                    <input type="hidden" name="risk_level" id="risk_level" value="">
+
+                    <button type="submit" id="submit-lead-btn"
+                        class="w-full bg-gold text-white font-bold py-4 px-6  transition-all duration-300 text-lg">Get
+                        My Results</button>
+                </div>
+            </form>
+        </div>
 
            <!-- Results Screen -->
            <div id="results-screen" class="hidden fade-in">
@@ -785,9 +851,9 @@
 
                <div class="text-center">
                    <p class="text-sm text-slate-500 mb-4">Protect your business before the Half-Term break.</p>
-                   <button class="bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 px-6 rounded-lg transition duration-200 shadow-md w-full md:w-auto mb-3" onclick="alert('In a live environment, this would open a calendar to book a meeting or trigger an email.')">
+                   <a href="https://meet.brevo.com/irsdemo/intro" target="_blank"><button class="bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 px-6 rounded-lg transition duration-200 shadow-md w-full md:w-auto mb-3" onclick="alert('In a live environment, this would open a calendar to book a meeting or trigger an email.')">
                        Book Emergency Audit Consultation
-                   </button>
+                   </button></a>
                    <button onclick="resetAssessment()" class="text-blue-600 hover:text-blue-800 text-sm font-medium underline block mx-auto">
                        Retake Assessment
                    </button>
@@ -868,7 +934,7 @@
     </footer>
 
 
-    <script data-cfasync="false" src="form-submission-handler.js"></script>
+    <!-- <script data-cfasync="false" src="form-submission-handler.js"></script> -->
    
 
    <script>
@@ -927,125 +993,470 @@
        ];
 
 
-       let currentQuestionIndex = 0;
-       let totalRiskScore = 0;
-       const maxScore = questions.reduce((acc, curr) => acc + curr.weight, 0); // Max risk score
+    // DOM Elements
+    const introScreen = document.getElementById('intro-screen');
+    const questionScreen = document.getElementById('question-screen');
+    const leadCaptureScreen = document.getElementById('lead-capture-screen');
+    const resultsScreen = document.getElementById('results-screen');
+
+    const questionText = document.getElementById('question-text');
+    const progressBar = document.getElementById('progress-bar');
+    const progressText = document.getElementById('progress-text');
+
+    const leadForm = document.getElementById('lead-form');
+
+    let currentQuestionIndex = 0;
+    let totalRiskScore = 0;
+
+    const maxScore = questions.reduce(
+        (acc, curr) => acc + curr.weight,
+        0
+    );
 
 
-       // DOM Elements
-       const introScreen = document.getElementById('intro-screen');
-       const questionScreen = document.getElementById('question-screen');
-       const resultsScreen = document.getElementById('results-screen');
-       const questionText = document.getElementById('question-text');
-       const progressBar = document.getElementById('progress-bar');
-       const progressText = document.getElementById('progress-text');
+    // ==========================================
+    // START ASSESSMENT
+    // ==========================================
+
+    function startAssessment() {
+
+        introScreen.classList.add('hidden');
+        questionScreen.classList.remove('hidden');
+
+        // Make sure other screens are hidden
+        leadCaptureScreen.classList.add('hidden');
+        resultsScreen.classList.add('hidden');
+
+        currentQuestionIndex = 0;
+        totalRiskScore = 0;
+
+        renderQuestion();
+    }
 
 
-       function startAssessment() {
-           introScreen.classList.add('hidden');
-           questionScreen.classList.remove('hidden');
-           renderQuestion();
-       }
+    // ==========================================
+    // RENDER QUESTION
+    // ==========================================
+
+    function renderQuestion() {
+
+        questionText.classList.remove('fade-in');
+
+        void questionText.offsetWidth;
+
+        questionText.classList.add('fade-in');
+
+        questionText.innerText =
+            questions[currentQuestionIndex].text;
 
 
-       function renderQuestion() {
-           // Re-trigger animation
-           questionText.classList.remove('fade-in');
-           void questionText.offsetWidth; // trigger reflow
-           questionText.classList.add('fade-in');
+        // Progress
+        const progressPercentage =
+            Math.round(
+                (currentQuestionIndex / questions.length) * 100
+            );
+
+        progressBar.style.width =
+            `${progressPercentage}%`;
+
+        progressText.innerText =
+            `${progressPercentage}%`;
+    }
 
 
-           questionText.innerText = questions[currentQuestionIndex].text;
-          
-           // Update Progress
-           const progressPercentage = Math.round((currentQuestionIndex / questions.length) * 100);
-           progressBar.style.width = `${progressPercentage}%`;
-           progressText.innerText = `${progressPercentage}%`;
-       }
+    // ==========================================
+    // HANDLE ANSWER
+    // ==========================================
+
+    function handleAnswer(answer) {
+
+        const currentWeight =
+            questions[currentQuestionIndex].weight;
 
 
-       function handleAnswer(answer) {
-           const currentWeight = questions[currentQuestionIndex].weight;
-          
-           // Calculate Risk (Yes = 0 risk, Partial = half weight risk, No = full weight risk)
-           if (answer === 'partial') {
-               totalRiskScore += (currentWeight / 2);
-           } else if (answer === 'no') {
-               totalRiskScore += currentWeight;
-           }
+        // ------------------------------------------
+        // Save actual visible answer text
+        // ------------------------------------------
+
+        const answerTextMap = {
+            yes: "Yes, completely",
+            partial: "Partially / Sometimes",
+            no: "No / Unsure"
+        };
+
+        const hiddenInput =
+            document.getElementById(
+                `answer_${currentQuestionIndex + 1}`
+            );
+
+        if (hiddenInput) {
+            hiddenInput.value =
+                answerTextMap[answer] || answer;
+        }
 
 
-           currentQuestionIndex++;
+        // ------------------------------------------
+        // Calculate risk
+        // ------------------------------------------
+
+        if (answer === 'partial') {
+
+            totalRiskScore += currentWeight / 2;
+
+        } else if (answer === 'no') {
+
+            totalRiskScore += currentWeight;
+        }
 
 
-           if (currentQuestionIndex < questions.length) {
-               renderQuestion();
-           } else {
-               showResults();
-           }
-       }
+        // ------------------------------------------
+        // Next question
+        // ------------------------------------------
+
+        currentQuestionIndex++;
 
 
-       function showResults() {
-           questionScreen.classList.add('hidden');
-           resultsScreen.classList.remove('hidden');
+        if (currentQuestionIndex < questions.length) {
+
+            renderQuestion();
+
+        } else {
+
+            // Quiz finished
+            questionScreen.classList.add('hidden');
+
+            // Show lead capture BEFORE results
+            leadCaptureScreen.classList.remove('hidden');
+
+            // Make absolutely sure results are hidden
+            resultsScreen.classList.add('hidden');
+        }
+    }
 
 
-           const riskPercentage = (totalRiskScore / maxScore) * 100;
-           const riskLevelText = document.getElementById('risk-level-text');
-           const iconContainer = document.getElementById('risk-icon-container');
-           const mitigationList = document.getElementById('mitigation-list');
-          
-           mitigationList.innerHTML = ''; // Clear previous
+    // ==========================================
+    // SUBMIT LEAD FORM
+    // ==========================================
+
+    leadForm.addEventListener('submit', async function (e) {
+
+    e.preventDefault();
+
+    const submitButton =
+        document.getElementById('submit-lead-btn');
+
+    submitButton.disabled = true;
+    submitButton.innerText = 'Submitting...';
 
 
-           // Logic for Risk Tiers
-           if (riskPercentage < 20) {
-               // LOW RISK
-               riskLevelText.innerHTML = `Your Risk Level: <span class="text-green-600 font-bold uppercase">Low (Stable)</span>`;
-               iconContainer.className = "inline-flex items-center justify-center w-20 h-20 rounded-full mb-4 bg-green-100 text-green-600";
-               iconContainer.innerHTML = `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`;
-              
-               mitigationList.innerHTML = `
-                   <li class="mb-2">Your compliance appears strong. Continue regular internal monitoring.</li>
-                   <li class="mb-2">Focus on CoS optimization: start preparing your 2027 CoS allocation strategy now.</li>
-                   <li>Ensure Key Personnel remain trained on the latest Quarter 4 (October - December 2026) Home Office guidance changes.</li>
-               `;
-           } else if (riskPercentage < 60) {
-               // MEDIUM RISK
-               riskLevelText.innerHTML = `Your Risk Level: <span class="text-amber-500 font-bold uppercase">Medium (Vulnerable)</span>`;
-               iconContainer.className = "inline-flex items-center justify-center w-20 h-20 rounded-full mb-4 bg-amber-100 text-amber-500";
-               iconContainer.innerHTML = `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>`;
-              
-               mitigationList.innerHTML = `
-                   <li class="mb-2"><strong>Warning:</strong> You have compliance gaps that could trigger a downgrade or suspension if audited.</li>
-                   <li class="mb-2">Review SMS reporting delays immediately. Ensure all changes to worker circumstances are logged.</li>
-                   <li>Conduct a targeted review of your Right-to-Work documentation.</li>
-               `;
-           } else {
-               // HIGH RISK
-               riskLevelText.innerHTML = `Your Risk Level: <span class="text-red-600 font-bold uppercase">High (Critical)</span>`;
-               iconContainer.className = "inline-flex items-center justify-center w-20 h-20 rounded-full mb-4 bg-red-100 text-red-600";
-               iconContainer.innerHTML = `<svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`;
-              
-               mitigationList.innerHTML = `
-                   <li class="mb-2"><strong>CRITICAL:</strong> Your licence is at high risk of revocation under current Home Office scrutiny.</li>
-                   <li class="mb-2">Halt new CoS assignments until existing compliance files are remediated.</li>
-                   <li class="font-bold text-red-600">Action: We strongly recommend booking an Emergency Mock Audit before the end of the month.</li>
-               `;
-           }
-       }
+    // Calculate score
+    const riskPercentage =
+        Math.round((totalRiskScore / maxScore) * 100);
 
 
-       function resetAssessment() {
-           currentQuestionIndex = 0;
-           totalRiskScore = 0;
-           resultsScreen.classList.add('hidden');
-           introScreen.classList.remove('hidden');
-           progressBar.style.width = '0%';
-           progressText.innerText = '0%';
-       }
-   </script>
+    // Determine risk level
+    let riskLevel = '';
+
+    if (riskPercentage < 20) {
+        riskLevel = 'Low (Stable)';
+    } else if (riskPercentage < 60) {
+        riskLevel = 'Medium (Vulnerable)';
+    } else {
+        riskLevel = 'High (Critical)';
+    }
+
+
+    // Save final score
+    document.getElementById('final_score').value =
+        `${riskPercentage}%`;
+
+
+    // Save risk level
+    document.getElementById('risk_level').value =
+        riskLevel;
+
+
+    // Submit everything
+    const formData = new FormData(leadForm);
+
+    try {
+
+        await fetch(
+            leadForm.action,
+            {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors'
+            }
+        );
+
+    } catch (error) {
+
+        console.error(
+            'Form submission error:',
+            error
+        );
+    }
+
+
+    // Hide form
+    leadCaptureScreen.classList.add('hidden');
+
+    // Show results
+    resultsScreen.classList.remove('hidden');
+
+    submitButton.disabled = false;
+    submitButton.innerText = 'Get My Results';
+
+    showResults();
+});
+
+    // ==========================================
+    // SHOW RESULTS
+    // ==========================================
+
+    function showResults() {
+
+        // IMPORTANT:
+        // Hide both previous screens
+        questionScreen.classList.add('hidden');
+        leadCaptureScreen.classList.add('hidden');
+
+        // Show ONLY results
+        resultsScreen.classList.remove('hidden');
+
+
+        const riskPercentage =
+            (totalRiskScore / maxScore) * 100;
+
+
+        const riskLevelText =
+            document.getElementById('risk-level-text');
+
+        const iconContainer =
+            document.getElementById('risk-icon-container');
+
+        const mitigationList =
+            document.getElementById('mitigation-list');
+
+
+        mitigationList.innerHTML = '';
+
+
+        // ==========================================
+        // LOW RISK
+        // ==========================================
+
+        if (riskPercentage < 20) {
+
+            riskLevelText.innerHTML =
+                `Your Risk Level:
+                <span class="text-green-600 font-bold uppercase">
+                    Low (Stable)
+                </span>`;
+
+
+            iconContainer.className =
+                "inline-flex items-center justify-center w-20 h-20 rounded-full mb-4 bg-green-100 text-green-600";
+
+
+            iconContainer.innerHTML = `
+                <svg class="w-10 h-10"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24">
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0
+                        9 9 0 0118 0z">
+                    </path>
+
+                </svg>
+            `;
+
+
+            mitigationList.innerHTML = `
+                <li class="mb-2">
+                    Your compliance appears strong.
+                    Continue regular internal monitoring.
+                </li>
+
+                <li class="mb-2">
+                    Focus on CoS optimization:
+                    start preparing your 2027 CoS allocation strategy now.
+                </li>
+
+                <li>
+                    Ensure Key Personnel remain trained on the latest
+                    Quarter 4 (October - December 2026)
+                    Home Office guidance changes.
+                </li>
+            `;
+        }
+
+
+        // ==========================================
+        // MEDIUM RISK
+        // ==========================================
+
+        else if (riskPercentage < 60) {
+
+            riskLevelText.innerHTML =
+                `Your Risk Level:
+                <span class="text-amber-500 font-bold uppercase">
+                    Medium (Vulnerable)
+                </span>`;
+
+
+            iconContainer.className =
+                "inline-flex items-center justify-center w-20 h-20 rounded-full mb-4 bg-amber-100 text-amber-500";
+
+
+            iconContainer.innerHTML = `
+                <svg class="w-10 h-10"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24">
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 9v2m0 4h.01m-6.938 4h13.856
+                        c1.54 0 2.502-1.667 1.732-3L13.732 4
+                        c-.77-1.333-2.694-1.333-3.464 0L3.34 16
+                        c-.77 1.333.192 3 1.732 3z">
+                    </path>
+
+                </svg>
+            `;
+
+
+            mitigationList.innerHTML = `
+                <li class="mb-2">
+                    <strong>Warning:</strong>
+                    You have compliance gaps that could trigger
+                    a downgrade or suspension if audited.
+                </li>
+
+                <li class="mb-2">
+                    Review SMS reporting delays immediately.
+                    Ensure all changes to worker circumstances are logged.
+                </li>
+
+                <li>
+                    Conduct a targeted review of your
+                    Right-to-Work documentation.
+                </li>
+            `;
+        }
+
+
+        // ==========================================
+        // HIGH RISK
+        // ==========================================
+
+        else {
+
+            riskLevelText.innerHTML =
+                `Your Risk Level:
+                <span class="text-red-600 font-bold uppercase">
+                    High (Critical)
+                </span>`;
+
+
+            iconContainer.className =
+                "inline-flex items-center justify-center w-20 h-20 rounded-full mb-4 bg-red-100 text-red-600";
+
+
+            iconContainer.innerHTML = `
+                <svg class="w-10 h-10"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24">
+
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 8v4m0 4h.01M21 12a9 9
+                        0 11-18 0 9 9 0 0118 0z">
+                    </path>
+
+                </svg>
+            `;
+
+
+            mitigationList.innerHTML = `
+                <li class="mb-2">
+                    <strong>CRITICAL:</strong>
+                    Your licence is at high risk of revocation
+                    under current Home Office scrutiny.
+                </li>
+
+                <li class="mb-2">
+                    Halt new CoS assignments until existing
+                    compliance files are remediated.
+                </li>
+
+                <li class="font-bold text-red-600">
+                    Action: We strongly recommend booking an
+                    Emergency Mock Audit before the end of the month.
+                </li>
+            `;
+        }
+         // Save risk level
+document.getElementById('risk_level').value =
+    riskLevel;
+    }
+
+
+    // ==========================================
+    // RETAKE ASSESSMENT
+    // ==========================================
+
+    function resetAssessment() {
+
+        // Reset variables
+        currentQuestionIndex = 0;
+        totalRiskScore = 0;
+
+
+        // Hide EVERYTHING first
+        questionScreen.classList.add('hidden');
+        leadCaptureScreen.classList.add('hidden');
+        resultsScreen.classList.add('hidden');
+
+
+        // Show intro
+        introScreen.classList.remove('hidden');
+
+
+        // Reset progress
+        progressBar.style.width = '0%';
+        progressText.innerText = '0%';
+
+
+        // Reset form
+        leadForm.reset();
+
+
+        // Clear hidden answer fields
+        document
+            .querySelectorAll(
+                '#lead-form input[type="hidden"]'
+            )
+            .forEach(input => {
+
+                input.value = '';
+
+            });
+    }
+
+</script>
 
     <script src="https://cdn.brevo.com/js/sdk-loader.js" async></script>
     <script>
