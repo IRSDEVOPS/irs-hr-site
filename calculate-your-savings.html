@@ -71,6 +71,318 @@
             padding: 20px;
             border: 3px solid #0c3c7b;
         }
+
+        .cta-section .inner-container .theme-btn {
+            background: #fff;
+            padding: 13.5px 70px;
+        }
+
+        .discount-txt {
+            color: #b88900;
+            font-weight: 700;
+        }
+
+        .unlock-cta {
+            width: 100%;
+            max-width: 1080px;
+            margin: 34px auto 15px;
+            cursor: pointer;
+        }
+
+        .unlock-content {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 22px;
+
+            min-height: 105px;
+            padding: 18px 22px;
+
+            background: linear-gradient(135deg,
+                    #fffdf5 0%,
+                    #fff9df 100%);
+
+            border: 2px solid #e8b91d;
+            border-radius: 18px;
+
+            box-shadow:
+                0 5px 18px rgba(220, 170, 20, 0.15),
+                0 0 0 rgba(232, 185, 29, 0);
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease,
+                border-color 0.25s ease;
+        }
+
+        /* Hover = clearly clickable */
+        .unlock-cta:hover .unlock-content {
+            transform: translateY(-3px);
+
+            /* border-color: #dca900;
+
+  box-shadow:
+    0 10px 28px rgba(220, 170, 20, 0.25),
+    0 0 22px rgba(255, 202, 40, 0.18); */
+            border-color: #49b280;
+            background: linear-gradient(135deg, #f6fffb 0%, #deffef 100%);
+        }
+
+        .unlock-cta:hover .discount {
+            color: #49b280;
+        }
+
+        .unlock-cta:hover .unlock-divider {
+            background: #49b280;
+        }
+
+        /* =========================
+   GIFT ICON
+========================= */
+
+        .gift-icon {
+            position: relative;
+            width: 58px;
+            height: 58px;
+            flex: 0 0 58px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gift-box {
+            position: absolute;
+
+            width: 34px;
+            height: 27px;
+
+            bottom: 7px;
+
+            border: 4px solid #c39400;
+            border-radius: 3px;
+        }
+
+        .gift-top {
+            position: absolute;
+
+            width: 40px;
+            height: 9px;
+
+            top: 15px;
+
+            background: #c39400;
+            border-radius: 3px;
+        }
+
+        .gift-ribbon {
+            position: absolute;
+
+            width: 5px;
+            height: 40px;
+
+            top: 10px;
+
+            background: #c39400;
+            border-radius: 3px;
+        }
+
+
+        /* =========================
+   OFFER
+========================= */
+
+        .unlock-offer {
+            min-width: auto;
+        }
+
+        .unlock-label {
+            margin-bottom: 2px;
+
+            font-size: 17px;
+            font-weight: 800;
+            line-height: 1.1;
+
+            color: #171735;
+            letter-spacing: 0.2px;
+        }
+
+        .discount {
+            font-size: 25px;
+            font-weight: 900;
+            line-height: 1;
+
+            color: #b88900;
+            letter-spacing: -1px;
+        }
+
+        .discount span {
+            color: #171735;
+        }
+
+
+        /* =========================
+   DIVIDER
+========================= */
+
+        .unlock-divider {
+            width: 2px;
+            height: 58px;
+
+            background: #d7b64d;
+            opacity: 0.8;
+        }
+
+
+        /* =========================
+   DESCRIPTION
+========================= */
+
+        .unlock-description {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+
+            font-size: 16px;
+            line-height: 1.2;
+
+            color: #24243d;
+        }
+
+        .unlock-description strong {
+            font-size: 17px;
+            font-weight: 800;
+        }
+
+
+        /* =========================
+   ARROW BUTTON
+========================= */
+
+        .unlock-arrow {
+            margin-left: auto;
+
+            width: 35px;
+            height: 35px;
+
+            flex: 0 0 35px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #c99a00;
+
+            border-radius: 50%;
+
+            color: white;
+
+            box-shadow:
+                0 5px 14px rgba(180, 135, 0, 0.3);
+
+            transition:
+                transform 0.25s ease,
+                background 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .unlock-arrow span {
+            font-size: 16px;
+            line-height: 1;
+
+            transition: transform 0.25s ease;
+        }
+
+        .unlock-cta:hover .unlock-arrow {
+            background: #3ea172;
+
+            transform: scale(1.08);
+            /* 
+  box-shadow:
+    0 7px 18px rgba(180, 135, 0, 0.4); */
+        }
+
+        .unlock-cta:hover .unlock-arrow span {
+            transform: translateX(3px);
+        }
+
+        @media (max-width: 1367px) {
+            /* .discount {
+    font-size: 16px;
+    font-weight: 700;
+    }
+    .unlock-label {
+    margin-bottom: 2px;
+    font-size: 14px;
+        font-weight: 700;
+    } */
+        }
+
+        /* =========================
+   MOBILE
+========================= */
+
+        @media (max-width: 700px) {
+            .pricing-card {
+                width: 360px;
+            }
+
+            .unlock-content {
+                gap: 7px;
+                padding: 18px 15px 5px;
+                flex-wrap: wrap;
+            }
+
+            .gift-icon {
+                width: 45px;
+                flex-basis: 45px;
+            }
+
+            .unlock-offer {
+                min-width: 0;
+                flex: 1;
+            }
+
+            .discount {
+                font-size: 24px;
+            }
+
+            .unlock-label {
+                font-size: 14px;
+            }
+
+            .unlock-divider {
+                display: none;
+            }
+
+            .unlock-description {
+                width: 100%;
+                padding-left: initial;
+                padding-bottom: 15px;
+                font-size: 14px;
+            }
+
+            .unlock-arrow {
+                position: relative;
+                right: auto;
+                left: auto;
+                /* top: 50%; */
+                width: 35px;
+                height: 35px;
+                flex: 0 0 35px;
+                margin-left: auto;
+                margin-right: auto;
+                transform: translateY(-50%);
+            }
+
+            .unlock-cta:hover .unlock-arrow {
+                transform: translateY(-50%) scale(1.08);
+            }
+
+            .unlock-arrow span {
+                font-size: 13px;
+            }
+        }
     </style>
 
 </head>
@@ -91,7 +403,8 @@
                     <h5 class="mb-1">Get Home Office Clarity When You Need It </h5>
                     <a href="https://meet.brevo.com/irsdemo/intro" target="_blank">
                         <p class="mb-0 sp-txt">
-                            👉 Join our daily demo any day to discover a simpler, safer way to manage HR Home Office, and
+                            👉 Join our daily demo any day to discover a simpler, safer way to manage HR Home Office,
+                            and
                             sponsor duties.
                         </p>
                     </a>
@@ -203,7 +516,7 @@
                                             <a href="benefits.html">Benefits</a>
                                             <ul class="mega-menu-content" style="display: none;">
                                                 <li>
-                                                     <div class="row">
+                                                    <div class="row">
                                                         <!-- Column 1 -->
                                                         <div class="col">
                                                             <ul>
@@ -223,7 +536,7 @@
                                                                         href="migrants-leave-and-absence-management.html"><span
                                                                             class="fal fa-long-arrow-right benefit-arrow"></span>Leave
                                                                         and absence management</a></li>
-                                                                         <li><a
+                                                                <li><a
                                                                         href="tailored-policies-home-office-compliance.html"><span
                                                                             class="fal fa-long-arrow-right benefit-arrow"></span>Tailored
                                                                         Policies for Home Office compliance</a></li>
@@ -234,7 +547,7 @@
                                                         <!-- Column 2 -->
                                                         <div class="col">
                                                             <ul>
-                                                               
+
                                                                 <li><a href="home-office-guidance.html"><span
                                                                             class="fal fa-long-arrow-right benefit-arrow"></span>Home
                                                                         Office Guidance</a></li>
@@ -248,7 +561,7 @@
                                                                         href="fast-track-home-office-compliance-onboarding.html"><span
                                                                             class="fal fa-long-arrow-right benefit-arrow"></span>Fast
                                                                         Track Home Office Compliance Onboarding</a></li>
-                                                                 <li><a href="cos-success-strategy.html"><span
+                                                                <li><a href="cos-success-strategy.html"><span
                                                                             class="fal fa-long-arrow-right benefit-arrow"></span>CoS
                                                                         Success Strategy</a></li>
                                                                 <li><a href="monthly-home-office-mock-audits.html"><span
@@ -261,7 +574,7 @@
                                                         <!-- Column 3 -->
                                                         <div class="col">
                                                             <ul>
-                                                               
+
                                                                 <li><a
                                                                         href="level-7-hr-compliance-success-manager.html"><span
                                                                             class="fal fa-long-arrow-right benefit-arrow"></span>Level
@@ -273,15 +586,17 @@
                                                                         target="_blank"><span
                                                                             class="fal fa-long-arrow-right benefit-arrow"></span>After
                                                                         Sales Support</a></li>
-                                                                <li><a href="payroll.html"
-                                                                        target="_blank"><span
-                                                                            class="fal fa-long-arrow-right benefit-arrow"></span>Payroll</a></li>
+                                                                <li><a href="payroll.html" target="_blank"><span
+                                                                            class="fal fa-long-arrow-right benefit-arrow"></span>Payroll</a>
+                                                                </li>
                                                                 <li><a href="golden-sponsor-licence-defence.html"
                                                                         target="_blank"><span
-                                                                            class="fal fa-long-arrow-right benefit-arrow"></span>The Golden Sponsor Licence Defence</a></li>
+                                                                            class="fal fa-long-arrow-right benefit-arrow"></span>The
+                                                                        Golden Sponsor Licence Defence</a></li>
                                                                 <li><a href="cos-weekly-hours.html"
                                                                         target="_blank"><span
-                                                                            class="fal fa-long-arrow-right benefit-arrow"></span>CoS Weekly Hours</a></li>
+                                                                            class="fal fa-long-arrow-right benefit-arrow"></span>CoS
+                                                                        Weekly Hours</a></li>
                                                             </ul>
                                                         </div>
 
@@ -346,19 +661,21 @@
                                                                         in 3 Hours
                                                                     </a></li>
                                                                 <li><a href="home-office-licence-enforcement.html">
-                                                                    Home Office Licence Enforcement</a></li>
+                                                                        Home Office Licence Enforcement</a></li>
                                                                 <li><a href="golden-record-sponsor-licence.html">
-                                                                    Golden Record for Sponsor Licence</a>
+                                                                        Golden Record for Sponsor Licence</a>
                                                                 </li>
                                                                 <li><a href="home-office-sms-phishing-scams.html">
-                                                                    Home Office SMS Phishing Scams</a></li>
-                                                                <li><a href="2026-dangerous-year-sponsor-licence-holders.html">
-                                                                   2026 - The most dangerous year for Sponsor Licence holders</a></li>
+                                                                        Home Office SMS Phishing Scams</a></li>
+                                                                <li><a
+                                                                        href="2026-dangerous-year-sponsor-licence-holders.html">
+                                                                        2026 - The most dangerous year for Sponsor
+                                                                        Licence holders</a></li>
                                                                 <li><a
                                                                         href="2026-sponsor-license-compliance-update.html">
-                                                                        The 2026 Sponsor Licence Compliance Update</a></li>
-                                                                <li><a
-                                                                        href="3000-Sponsor-Licences-Revoked.html">
+                                                                        The 2026 Sponsor Licence Compliance Update</a>
+                                                                </li>
+                                                                <li><a href="3000-Sponsor-Licences-Revoked.html">
                                                                         3,000 Sponsor Licences Revoked in 2025</a></li>
                                                             </ul>
 
@@ -379,10 +696,10 @@
                                                                         href="all-in-one-sponsor-compliance-software.html">All
                                                                         in One Sponsor Compliance Software</a></li>
                                                                 <li><a
-                                                                        href="HomeOffice-HMRC-Data-matching-from-april-2026.html">Home Office
-                                                                    HMRC Data Matching from April 2026</a></li>
-                                                                <li><a
-                                                                        href="sponsor-licence-revocation-risk.html">Sponsor
+                                                                        href="HomeOffice-HMRC-Data-matching-from-april-2026.html">Home
+                                                                        Office
+                                                                        HMRC Data Matching from April 2026</a></li>
+                                                                <li><a href="sponsor-licence-revocation-risk.html">Sponsor
                                                                         Licence Revocation Risk</a></li>
                                                                 <li><a href="guide-right-to-work-checks.html">Your Guide
                                                                         to
@@ -401,38 +718,42 @@
                                                                         interactive guide to secure Certificate of
                                                                         sponsorship</a></li>
                                                                 <li><a
-                                                                        href="true-cost-of-sponsor-license-revocation.html">True 
-                                                                    cost of Sponsor Licence Revocation</a></li>
-                                                                <li><a
-                                                                        href="fabs-domiciliary-homecare-casestudy.html">
+                                                                        href="true-cost-of-sponsor-license-revocation.html">True
+                                                                        cost of Sponsor Licence Revocation</a></li>
+                                                                <li><a href="fabs-domiciliary-homecare-casestudy.html">
                                                                         Case Study: Fabs Domiciliary Homecare</a></li>
                                                                 <li><a
                                                                         href="How-Gain-Care-Protected-their-licence.html">
-                                                                        How Gain Care Protected Their Sponsor Licence from Revocation</a></li>
-                                                                <li><a
-                                                                        href="care-sector-crisis.html">
+                                                                        How Gain Care Protected Their Sponsor Licence
+                                                                        from Revocation</a></li>
+                                                                <li><a href="care-sector-crisis.html">
                                                                         Care Sector Crisis</a></li>
                                                                 <li><a
                                                                         href="Home-Office-Punishing-Sponsors-and-Employers.html">
-                                                                        Home Office Punishing Sponsors and Employers</a></li>
+                                                                        Home Office Punishing Sponsors and Employers</a>
+                                                                </li>
                                                                 <li><a href="applying-for-sponsor-licence.html">Applying
                                                                         for a Sponsor Licence - FAQs</a></li>
                                                                 <li><a href="sponsor-duties-compliance.html">Sponsor
                                                                         Duties and Compliance - FAQs</a></li>
-                                                                <li><a href="2026-most-dangerous-year-for-sponsor-licence-holders.html">
-                                                                    2026 - The most dangerous year for Sponsor Licence holders</a>
+                                                                <li><a
+                                                                        href="2026-most-dangerous-year-for-sponsor-licence-holders.html">
+                                                                        2026 - The most dangerous year for Sponsor
+                                                                        Licence holders</a>
                                                                 </li>
                                                                 <li><a href="sponsor-guidance-appendix-d-guide.html">
-                                                                    Sponsor Guidance Appendix D Guide</a>
+                                                                        Sponsor Guidance Appendix D Guide</a>
                                                                 </li>
-                                                                <li><a href="care-Industry-hours-and-pay-calculator.html">
-                                                                       Care Sector Sponsorship & Fiscal Year Calculator</a>
+                                                                <li><a
+                                                                        href="care-Industry-hours-and-pay-calculator.html">
+                                                                        Care Sector Sponsorship & Fiscal Year
+                                                                        Calculator</a>
                                                                 </li>
                                                                 <li><a href="UK-Sponsorship-Compliance-Guide.html">
-                                                                      UK Sponsorship Compliance Guide (Mar 2026)</a>
+                                                                        UK Sponsorship Compliance Guide (Mar 2026)</a>
                                                                 </li>
                                                                 <li><a href="UK-Employment-Law-Updates.html">
-                                                                      UK Employment Law Updates</a>
+                                                                        UK Employment Law Updates</a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -456,9 +777,11 @@
                                                                 <li><a href="test-your-knowledge-of-the-golden-record.html"
                                                                         target="_blank">Test your Knowledge of the
                                                                         golden record</a></li>
-                                                                <li><a href="revocation-risk-assessment.html" target="_blank">Revocation Risk Assessment</a></li>
+                                                                <li><a href="revocation-risk-assessment.html"
+                                                                        target="_blank">Revocation Risk Assessment</a>
+                                                                </li>
                                                                 <li><a href="Sponsor-duties-risk-assessment.html">
-                                                                      Sponsor Duties Risk Assessment</a>
+                                                                        Sponsor Duties Risk Assessment</a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -544,14 +867,14 @@
         </div><!-- End Mobile Menu -->
 
 
-<!-- Bootstrap 4 Banner Carousel -->
-        <section class="banner-section centred p_relative" >
+        <!-- Bootstrap 4 Banner Carousel -->
+        <section class="banner-section centred p_relative">
             <div id="bannerCarousel" class="carousel slide" data-ride="carousel">
 
                 <!-- Slides -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <a href="#pricing-intro" >
+                        <a href="#pricing-intro">
                             <div class="slide-item p_relative pb_banner">
                                 <div class="image-layer p_absolute"
                                     style="background-image: url('./pricing-assets/images/banner.png'); background-size: cover; background-position: center; width: 100%; height: 100%;">
@@ -560,11 +883,14 @@
                                     <h2 class="cc-heading">Simple, Transparent Pricing</h2>
                                     <p class="cc-p">
                                     <ul class="cc-p-ul">
-                                        <li><img src="assets/images/banner/tick.webp" alt="Tick Icon" class="tick-img" />Protect your sponsor licence
+                                        <li><img src="assets/images/banner/tick.webp" alt="Tick Icon"
+                                                class="tick-img" />Protect your sponsor licence
                                         </li>
-                                        <li><img src="assets/images/banner/tick.webp" alt="Tick Icon" class="tick-img" />Empower your HR team
+                                        <li><img src="assets/images/banner/tick.webp" alt="Tick Icon"
+                                                class="tick-img" />Empower your HR team
                                         </li>
-                                        <li><img src="assets/images/banner/tick.webp" alt="Tick Icon" class="tick-img" />Stay compliant</li>
+                                        <li><img src="assets/images/banner/tick.webp" alt="Tick Icon"
+                                                class="tick-img" />Stay compliant</li>
                                     </ul>
                                     </p>
                                 </div>
@@ -601,7 +927,8 @@
 
 
         <div class="pricing-container container-fluid ">
-            <h2 class="fw-bold mx-auto d-block margin-auto text-center" style="margin-bottom: 110px;    font-size: 25px;">Choose a plan that works best for you</h2>
+            <h2 class="fw-bold mx-auto d-block margin-auto text-center"
+                style="margin-bottom: 110px;    font-size: 25px;">Choose a plan that works best for you</h2>
             <div class="pricing-toggle-container">
                 <div id="quarterly-discount-label" class="pricing-discount-label" style="display: none;">
                     Save 50% more with Quarterly plan
@@ -635,23 +962,24 @@
                             alt="Ladies in office attire">
                     </figure>
                     <div class="text pull-left">
-                        <h5 class="d_block fw_bold color-white">Secure the entire HR Home Office Compliance
-                            <br> and Risk Assurance for one simple price.
+                        <h5 class="d_block fw_bold color-white">Easy Straightforward Price With IRS HR
+                            <br> Annual Subscription
+                            Pay for only 6 months, <br> Secure next 6 months for Free
 
                         </h5>
                     </div>
                     <div class="btn-box pull-right mt_5">
-                        <a href="#assessment" class="theme-btn">Book Your Priority Demo</a>
+                        <a href="#assessment" class="theme-btn">Book Free Audit Demo <br> & Claim 75% Discount</a>
                     </div>
                 </div>
             </div>
         </section>
 
-                <!-- clients-section -->
+        <!-- clients-section -->
         <section class="clients-section p_relative pt_120 pb_120">
             <div class="auto-container">
                 <h4>Trusted By 100+ clients</h4>
-                <div class="five-item-carousel owl-carousel owl-theme owl-nav-none owl-dots-none">                   
+                <div class="five-item-carousel owl-carousel owl-theme owl-nav-none owl-dots-none">
                     <div class="clients-logo-box">
                         <a href="index.html"><img src="assets/images/logos/1.png" alt=""></a>
                     </div>
@@ -697,7 +1025,7 @@
                     <div class="clients-logo-box">
                         <a href="index.html"><img src="assets/images/logos/15.png" alt=""></a>
                     </div>
-                     <div class="clients-logo-box">
+                    <div class="clients-logo-box">
                         <a href="index.html"><img src="assets/images/logos/16.png" alt=""></a>
                     </div>
                     <div class="clients-logo-box">
@@ -706,7 +1034,7 @@
                     <div class="clients-logo-box">
                         <a href="index.html"><img src="assets/images/logos/18.png" alt=""></a>
                     </div>
-                     <div class="clients-logo-box">
+                    <div class="clients-logo-box">
                         <a href="index.html"><img src="assets/images/logos/19.png" alt=""></a>
                     </div>
                     <!-- <div class="clients-logo-box">
@@ -715,7 +1043,7 @@
                     <div class="clients-logo-box">
                         <a href="index.html"><img src="assets/images/logos/21.png" alt=""></a>
                     </div>
-                     <div class="clients-logo-box">
+                    <div class="clients-logo-box">
                         <a href="index.html"><img src="assets/images/logos/22.png" alt=""></a>
                     </div>
                     <div class="clients-logo-box">
@@ -724,7 +1052,7 @@
                     <div class="clients-logo-box">
                         <a href="index.html"><img src="assets/images/logos/24.png" alt=""></a>
                     </div>
-                     <div class="clients-logo-box">
+                    <div class="clients-logo-box">
                         <a href="index.html"><img src="assets/images/logos/25.png" alt=""></a>
                     </div>
                     <div class="clients-logo-box">
@@ -766,7 +1094,8 @@
                             </ul>
 
                             <div class="main-btn mt-4">
-                                <a href="https://app.irshr.co.uk/register" target="_blank" class="btn btn-info ms-1">Secure Peace of mind from the Home Office with IRS HR</a>
+                                <a href="https://app.irshr.co.uk/register" target="_blank"
+                                    class="btn btn-info ms-1">Secure Peace of mind from the Home Office with IRS HR</a>
                             </div>
                         </div>
 
@@ -784,7 +1113,7 @@
                 <div class="row justify-content-between g-3">
                     <div class="col-lg-4">
                         <div class="about-content">
-                           
+
                             <h3>Why IRS HR subscription is beneficial for Your Business? </h3>
 
                         </div>
@@ -874,7 +1203,7 @@
             </div>
         </section>
 
-               <section class="section-sm creative-us" id="creative">
+        <section class="section-sm creative-us" id="creative">
             <div class="container">
                 <div class="row align-items-center justify-content-between">
                     <div class="col-lg-6">
@@ -882,7 +1211,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="ps-lg-5">
-                            
+
                             <h4>What happens when your HR software is not Sponsor Licence compliant?</h4>
 
                             <br />
@@ -903,7 +1232,8 @@
                             </p>
 
                             <div class="main-btn mt-4">
-                                <a href="https://app.irshr.co.uk/register" class="btn btn-info ms-1">Sign-up to become 100%
+                                <a href="https://app.irshr.co.uk/register" class="btn btn-info ms-1">Sign-up to become
+                                    100%
                                     HR sponsor compliant</a>
                             </div>
                         </div>
@@ -913,7 +1243,7 @@
             </div>
         </section>
 
-          <!-- feautures start -->
+        <!-- feautures start -->
         <section class="section bg-light feature-sec" id="features">
             <div class="container">
 
@@ -961,7 +1291,8 @@
                                 </ul>
                                 <p class="fw-medium text-dark mt-2">& much more</p>
                                 <div class="main-btn mt-4">
-                                <a href="https://meet.brevo.com/irsdemo/intro" target="_blank" class="btn btn-info ms-1 new-btn">Risk protect your Sponsor Licence</a>
+                                    <a href="https://meet.brevo.com/irsdemo/intro" target="_blank"
+                                        class="btn btn-info ms-1 new-btn">Risk protect your Sponsor Licence</a>
                                 </div>
                             </div>
                         </div>
@@ -970,7 +1301,7 @@
             </div>
         </section>
 
-         <section class="section bg-light feature-sec">
+        <section class="section bg-light feature-sec">
             <div class="container">
                 <div class="row justify-content-center mt-5">
                     <div class="col-lg-7">
@@ -1199,7 +1530,7 @@
             </div>
         </section>
 
-                <!-- cta start -->
+        <!-- cta start -->
         <section class="section cta-bg">
             <div class="bg-overlay"></div>
             <div class="container">
@@ -1227,7 +1558,7 @@
         </section>
         <!-- cta end -->
 
-            <section id="assessment" class="hero-wrap">
+        <section id="assessment" class="hero-wrap">
             <div class="container">
                 <div class="row align-items-start g-5">
                     <!-- Left content -->
@@ -1244,7 +1575,7 @@
                             <!-- Feature 1 -->
                             <div class="feature">
                                 <div class="icon-box">
-                                     <i data-lucide="database" class="w-6 h-6"></i>
+                                    <i data-lucide="database" class="w-6 h-6"></i>
                                 </div>
                                 <div>
                                     <h6>The Golden Record</h6>
@@ -1363,8 +1694,9 @@
                                         <input
                                             class="w-full custom-input px-4 py-2 rounded-lg bg-gray-50 border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition"
                                             name="time" type="time" placeholder="09:00 AM" id="timePicker" required />
-                                           
-                                            <p class="block text-sm text-gray-700 mb-1 mt-2">Choose a time 2 hours from now</p>
+
+                                        <p class="block text-sm text-gray-700 mb-1 mt-2">Choose a time 2 hours from now
+                                        </p>
                                     </div>
                                 </div>
 
@@ -1383,29 +1715,30 @@
                             </form>
 
                             <div id="outerDiv">
-                            <div id="successModal"
-                                class="success-modal-card fixed inset-0 z-50 flex items-center justify-center hidden bg-black bg-opacity-50 px-4">
-                                <div
-                                    class="bg-white rounded-2xl p-8 max-w-sm w-full text-center shadow-2xl transform transition-all">
+                                <div id="successModal"
+                                    class="success-modal-card fixed inset-0 z-50 flex items-center justify-center hidden bg-black bg-opacity-50 px-4">
                                     <div
-                                        class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4 success-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none"
-                                            viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                                d="M5 13l4 4L19 7" />
-                                        </svg>
+                                        class="bg-white rounded-2xl p-8 max-w-sm w-full text-center shadow-2xl transform transition-all">
+                                        <div
+                                            class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4 success-icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                                    d="M5 13l4 4L19 7" />
+                                            </svg>
+                                        </div>
+                                        <h3 class="success-title text-2xl font-bold text-gray-900 mb-2">Priority IRS HR
+                                            Demo
+                                            Request Received!</h3>
+                                        <p class="success-text  text-gray-600 mb-6">Thank you for reaching out to IRS HR
+                                            Priority Team. We've secured your slot and will
+                                            be in touch shortly.</p>
+                                        <button onclick="closeModal()"
+                                            class="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 rounded-xl transition success-btn">
+                                            Great, thanks!
+                                        </button>
                                     </div>
-                                    <h3 class="success-title text-2xl font-bold text-gray-900 mb-2">Priority IRS HR Demo
-                                        Request Received!</h3>
-                                    <p class="success-text  text-gray-600 mb-6">Thank you for reaching out to IRS HR
-                                        Priority Team. We've secured your slot and will
-                                        be in touch shortly.</p>
-                                    <button onclick="closeModal()"
-                                        class="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 rounded-xl transition success-btn">
-                                        Great, thanks!
-                                    </button>
                                 </div>
-                            </div>
                             </div>
 
 
@@ -1416,7 +1749,7 @@
             </div>
         </section>
 
-               <!-- Success Stories-section -->
+        <!-- Success Stories-section -->
         <section class="success-section pt_85 pb_120">
             <div class="auto-container">
                 <div class="row clearfix">
@@ -1618,7 +1951,7 @@
     <!-- main-js -->
     <script src="assets/js/script.js"></script>
 
-     <script>
+    <script>
         //sucess-stories-carousel
         if ($('.sucess-stories-carousel').length) {
             $('.sucess-stories-carousel').owlCarousel({
@@ -1733,11 +2066,11 @@
 
             if (plan) {
                 const card = document.createElement("div");
-                card.className = "col-xl-4 col-lg-5 col-md-8 col-sm-12 mx-auto col-pricing";
+                card.className = "mx-auto col-pricing";
 
                 const vatText = plan.name === "Plan 9999" ? "" : " + VAT";
-                const saveText = (plan.name === "Plan 9999" || !plan.save) ? "" 
-                    : (type === "monthly" ? `<span class="save"><small>Save ${plan.save} </small></span><br/><span class="save"><small>For the first 2 months only</small></span>` 
+                const saveText = (plan.name === "Plan 9999" || !plan.save) ? ""
+                    : (type === "monthly" ? `<span class="save"><small>Save ${plan.save} </small></span><br/><span class="save"><small>For the first 2 months only</small></span>`
                         : `<span class="save"><small>Save ${plan.save} </small></span>`);
                 const priceDisplay = plan.newPrice ? `<h3>${plan.newPrice}</h3>` : '';
                 const origPriceDisplay = plan.originalPrice ? `<h3 class="original-price">${plan.originalPrice}</h3>` : '';
@@ -1749,7 +2082,7 @@
                        <h3 class="plan-name" style="margin-top: 10px;">Please enter employee count</h3>
                     </div>                   
                 `;
-                
+
                 } else {
                     card.innerHTML = `
                         <div class="pricing-card animated fadeInUp text-center" style="box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
@@ -1764,7 +2097,37 @@
                             <h3 class="plan-subtitle" style="margin-bottom: 25px;">Your pricing for ${employeeInput.value} employees</h3>
                             
                             <a href="https://app.irshr.co.uk/register" target="_blank" class="sign-btn btn btn-sign-up w-100 mt-3">Sign Up</a>
-                            <p class="offer-deadline"><img src="assets/images/hourglass.png"> Offer Only Valid Till <span>7 October 2026</span></p>
+
+                            <a href="#assessment">
+                                
+                                <div class="unlock-cta">
+                                    <div class="unlock-content">
+
+                                        
+
+                                        <!-- Main Offer -->
+                                        <div class="unlock-offer">
+                                        <div class="unlock-label">UNLOCK UP TO</div>
+                                        <div class="discount">75% <span>&nbsp;DISCOUNT</span></div>
+                                        </div>
+
+                                        <div class="unlock-divider"></div>
+
+                                        <!-- Description -->
+                                        <div class="unlock-description">
+                                        <span>by booking your</span>
+                                        <strong>Free Audit &amp; Demo</strong>
+                                        </div>
+
+                                        <!-- Click Arrow -->
+                                        <div class="unlock-arrow">
+                                        <span>→</span>
+                                        </div>
+
+                                    </div>
+                                 </div>
+                            </a>
+                            <p class="discount-txt">(55% Annual + 20% Demo Bonus = Total 75% Discount)</p>
 
                             
                         </div>
@@ -1854,7 +2217,7 @@
         }
     </script>
 
-    <script>       
+    <script>
         lucide.createIcons();
     </script>
 
@@ -1908,179 +2271,179 @@
         }
 
     </script>
-<script>
-  // Helper: minimum allowed booking time = now + 2 hours
-  function getMinBookingDate() {
-    return new Date(Date.now() + 2 * 60 * 60 * 1000);
-  }
-
-  // NEW: dates with 1PM cutoff (YYYY-MM-DD format to match <input type="date">)
-  const cutoffDates = new Set(["2026-03-10", "2026-03-17", "2026-03-18"]);
-  const cutoffTime24 = "13:00"; // 1:00 PM
-
-  // NEW: parse "h:i K" -> minutes since midnight
-  function parse12hToMinutes(timeStr) {
-    // e.g. "10:30 AM"
-    const [t, ampmRaw] = timeStr.trim().split(" ");
-    if (!t || !ampmRaw) return null;
-
-    let [h, m] = t.split(":").map(Number);
-    const ampm = ampmRaw.toUpperCase();
-    if (ampm === "PM" && h !== 12) h += 12;
-    if (ampm === "AM" && h === 12) h = 0;
-    return h * 60 + m;
-  }
-
-  function minutesToHHMM(mins) {
-    const h = String(Math.floor(mins / 60)).padStart(2, "0");
-    const m = String(mins % 60).padStart(2, "0");
-    return `${h}:${m}`;
-  }
-
-  const timePicker = flatpickr("#timePicker", {
-    enableTime: true,
-    noCalendar: true,
-    dateFormat: "h:i K", // value sent (e.g. 10:30 AM)
-    time_24hr: false,
-    defaultHour: 9,
-    defaultMinute: 0,
-    minTime: "00:00",
-    maxTime: "23:59",
-  });
-
-  const dateInput = document.querySelector('input[name="date"]');
-
-  // Update time restrictions whenever date changes (or on page load)
-  function updateMinTimeForSelectedDate() {
-    const minBooking = getMinBookingDate();
-
-    const selectedDateStr = dateInput.value; // YYYY-MM-DD
-    if (!selectedDateStr) {
-      timePicker.set("minTime", "00:00");
-      timePicker.set("maxTime", "23:59");
-      return;
-    }
-
-    const selectedDate = new Date(selectedDateStr + "T00:00:00");
-    const minDate = new Date(
-      minBooking.getFullYear(),
-      minBooking.getMonth(),
-      minBooking.getDate()
-    );
-
-    const isSameDay =
-      selectedDate.getFullYear() === minDate.getFullYear() &&
-      selectedDate.getMonth() === minDate.getMonth() &&
-      selectedDate.getDate() === minDate.getDate();
-
-    // Base minTime: if booking for today, min time is now+2h, else open
-    let minTimeForPicker = "00:00";
-    if (isSameDay) {
-      const hh = String(minBooking.getHours()).padStart(2, "0");
-      const mm = String(minBooking.getMinutes()).padStart(2, "0");
-      minTimeForPicker = `${hh}:${mm}`;
-    }
-
-    // NEW: Apply 1PM cutoff on specific dates
-    let maxTimeForPicker = "23:59";
-    if (cutoffDates.has(selectedDateStr)) {
-      maxTimeForPicker = cutoffTime24;
-    }
-
-    // If minTime is later than maxTime (e.g., it's already after 11am+2h on a cutoff date),
-    // then no valid slots exist today — clear time and set minTime=maxTime to prevent selection.
-    const minMinutes = Number(minTimeForPicker.slice(0, 2)) * 60 + Number(minTimeForPicker.slice(3, 5));
-    const maxMinutes = Number(maxTimeForPicker.slice(0, 2)) * 60 + Number(maxTimeForPicker.slice(3, 5));
-
-    if (minMinutes > maxMinutes) {
-      timePicker.set("minTime", maxTimeForPicker);
-      timePicker.set("maxTime", maxTimeForPicker);
-      timePicker.clear();
-      return;
-    }
-
-    timePicker.set("minTime", minTimeForPicker);
-    timePicker.set("maxTime", maxTimeForPicker);
-
-    // If their currently selected time is now invalid, clear it
-    const picked = timePicker.selectedDates[0];
-    if (picked) {
-      const combined = new Date(
-        selectedDateStr +
-          "T" +
-          String(picked.getHours()).padStart(2, "0") +
-          ":" +
-          String(picked.getMinutes()).padStart(2, "0") +
-          ":00"
-      );
-
-      // invalid if before now+2h OR after cutoff on those dates
-      const pickedMinutes = picked.getHours() * 60 + picked.getMinutes();
-      const violatesCutoff = cutoffDates.has(selectedDateStr) && pickedMinutes > maxMinutes;
-
-      if (combined < minBooking || violatesCutoff) timePicker.clear();
-    }
-  }
-
-  // Set min date on the date input (HTML date picker)
-  function updateMinDate() {
-    const minBooking = getMinBookingDate();
-    const yyyy = minBooking.getFullYear();
-    const mm = String(minBooking.getMonth() + 1).padStart(2, "0");
-    const dd = String(minBooking.getDate()).padStart(2, "0");
-    dateInput.min = `${yyyy}-${mm}-${dd}`;
-  }
-
-  // Run on load
-  updateMinDate();
-  updateMinTimeForSelectedDate();
-
-  // Bind events
-  dateInput.addEventListener("change", () => {
-    updateMinDate();
-    updateMinTimeForSelectedDate();
-  });
-
-  // FINAL GUARD: block submission if date+time is < now+2h OR violates 1PM cutoff
-  document.getElementById("leadForm").addEventListener(
-    "submit",
-    function (e) {
-      const minBooking = getMinBookingDate();
-
-      const dateVal = dateInput.value; // YYYY-MM-DD
-      const timeVal = document.getElementById("timePicker").value; // "10:30 AM"
-
-      if (dateVal && timeVal) {
-        // Convert "10:30 AM" into 24h minutes
-        const mins = parse12hToMinutes(timeVal);
-        if (mins == null) return;
-
-        const hh = String(Math.floor(mins / 60)).padStart(2, "0");
-        const mm = String(mins % 60).padStart(2, "0");
-
-        const combined = new Date(`${dateVal}T${hh}:${mm}:00`);
-
-        // rule 1: at least 2 hours from now
-        if (combined < minBooking) {
-          e.preventDefault();
-          alert("Please choose a date/time at least 2 hours from now.");
-          return;
+    <script>
+        // Helper: minimum allowed booking time = now + 2 hours
+        function getMinBookingDate() {
+            return new Date(Date.now() + 2 * 60 * 60 * 1000);
         }
 
-        // rule 2: cutoff dates must be <= 1:00 PM
-        if (cutoffDates.has(dateVal)) {
-          const maxMinutes = 13 * 60; // 1PM
-          if (mins > maxMinutes) {
-            e.preventDefault();
-            alert("On March 10, 17, and 18, the latest available time is 1:00 PM.");
-            return;
-          }
+        // NEW: dates with 1PM cutoff (YYYY-MM-DD format to match <input type="date">)
+        const cutoffDates = new Set(["2026-03-10", "2026-03-17", "2026-03-18"]);
+        const cutoffTime24 = "13:00"; // 1:00 PM
+
+        // NEW: parse "h:i K" -> minutes since midnight
+        function parse12hToMinutes(timeStr) {
+            // e.g. "10:30 AM"
+            const [t, ampmRaw] = timeStr.trim().split(" ");
+            if (!t || !ampmRaw) return null;
+
+            let [h, m] = t.split(":").map(Number);
+            const ampm = ampmRaw.toUpperCase();
+            if (ampm === "PM" && h !== 12) h += 12;
+            if (ampm === "AM" && h === 12) h = 0;
+            return h * 60 + m;
         }
-      }
-    },
-    true
-  );
-</script>
+
+        function minutesToHHMM(mins) {
+            const h = String(Math.floor(mins / 60)).padStart(2, "0");
+            const m = String(mins % 60).padStart(2, "0");
+            return `${h}:${m}`;
+        }
+
+        const timePicker = flatpickr("#timePicker", {
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "h:i K", // value sent (e.g. 10:30 AM)
+            time_24hr: false,
+            defaultHour: 9,
+            defaultMinute: 0,
+            minTime: "00:00",
+            maxTime: "23:59",
+        });
+
+        const dateInput = document.querySelector('input[name="date"]');
+
+        // Update time restrictions whenever date changes (or on page load)
+        function updateMinTimeForSelectedDate() {
+            const minBooking = getMinBookingDate();
+
+            const selectedDateStr = dateInput.value; // YYYY-MM-DD
+            if (!selectedDateStr) {
+                timePicker.set("minTime", "00:00");
+                timePicker.set("maxTime", "23:59");
+                return;
+            }
+
+            const selectedDate = new Date(selectedDateStr + "T00:00:00");
+            const minDate = new Date(
+                minBooking.getFullYear(),
+                minBooking.getMonth(),
+                minBooking.getDate()
+            );
+
+            const isSameDay =
+                selectedDate.getFullYear() === minDate.getFullYear() &&
+                selectedDate.getMonth() === minDate.getMonth() &&
+                selectedDate.getDate() === minDate.getDate();
+
+            // Base minTime: if booking for today, min time is now+2h, else open
+            let minTimeForPicker = "00:00";
+            if (isSameDay) {
+                const hh = String(minBooking.getHours()).padStart(2, "0");
+                const mm = String(minBooking.getMinutes()).padStart(2, "0");
+                minTimeForPicker = `${hh}:${mm}`;
+            }
+
+            // NEW: Apply 1PM cutoff on specific dates
+            let maxTimeForPicker = "23:59";
+            if (cutoffDates.has(selectedDateStr)) {
+                maxTimeForPicker = cutoffTime24;
+            }
+
+            // If minTime is later than maxTime (e.g., it's already after 11am+2h on a cutoff date),
+            // then no valid slots exist today — clear time and set minTime=maxTime to prevent selection.
+            const minMinutes = Number(minTimeForPicker.slice(0, 2)) * 60 + Number(minTimeForPicker.slice(3, 5));
+            const maxMinutes = Number(maxTimeForPicker.slice(0, 2)) * 60 + Number(maxTimeForPicker.slice(3, 5));
+
+            if (minMinutes > maxMinutes) {
+                timePicker.set("minTime", maxTimeForPicker);
+                timePicker.set("maxTime", maxTimeForPicker);
+                timePicker.clear();
+                return;
+            }
+
+            timePicker.set("minTime", minTimeForPicker);
+            timePicker.set("maxTime", maxTimeForPicker);
+
+            // If their currently selected time is now invalid, clear it
+            const picked = timePicker.selectedDates[0];
+            if (picked) {
+                const combined = new Date(
+                    selectedDateStr +
+                    "T" +
+                    String(picked.getHours()).padStart(2, "0") +
+                    ":" +
+                    String(picked.getMinutes()).padStart(2, "0") +
+                    ":00"
+                );
+
+                // invalid if before now+2h OR after cutoff on those dates
+                const pickedMinutes = picked.getHours() * 60 + picked.getMinutes();
+                const violatesCutoff = cutoffDates.has(selectedDateStr) && pickedMinutes > maxMinutes;
+
+                if (combined < minBooking || violatesCutoff) timePicker.clear();
+            }
+        }
+
+        // Set min date on the date input (HTML date picker)
+        function updateMinDate() {
+            const minBooking = getMinBookingDate();
+            const yyyy = minBooking.getFullYear();
+            const mm = String(minBooking.getMonth() + 1).padStart(2, "0");
+            const dd = String(minBooking.getDate()).padStart(2, "0");
+            dateInput.min = `${yyyy}-${mm}-${dd}`;
+        }
+
+        // Run on load
+        updateMinDate();
+        updateMinTimeForSelectedDate();
+
+        // Bind events
+        dateInput.addEventListener("change", () => {
+            updateMinDate();
+            updateMinTimeForSelectedDate();
+        });
+
+        // FINAL GUARD: block submission if date+time is < now+2h OR violates 1PM cutoff
+        document.getElementById("leadForm").addEventListener(
+            "submit",
+            function (e) {
+                const minBooking = getMinBookingDate();
+
+                const dateVal = dateInput.value; // YYYY-MM-DD
+                const timeVal = document.getElementById("timePicker").value; // "10:30 AM"
+
+                if (dateVal && timeVal) {
+                    // Convert "10:30 AM" into 24h minutes
+                    const mins = parse12hToMinutes(timeVal);
+                    if (mins == null) return;
+
+                    const hh = String(Math.floor(mins / 60)).padStart(2, "0");
+                    const mm = String(mins % 60).padStart(2, "0");
+
+                    const combined = new Date(`${dateVal}T${hh}:${mm}:00`);
+
+                    // rule 1: at least 2 hours from now
+                    if (combined < minBooking) {
+                        e.preventDefault();
+                        alert("Please choose a date/time at least 2 hours from now.");
+                        return;
+                    }
+
+                    // rule 2: cutoff dates must be <= 1:00 PM
+                    if (cutoffDates.has(dateVal)) {
+                        const maxMinutes = 13 * 60; // 1PM
+                        if (mins > maxMinutes) {
+                            e.preventDefault();
+                            alert("On March 10, 17, and 18, the latest available time is 1:00 PM.");
+                            return;
+                        }
+                    }
+                }
+            },
+            true
+        );
+    </script>
 
 </body><!-- End of .page_wrapper -->
 
