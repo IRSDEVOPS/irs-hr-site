@@ -18,8 +18,8 @@
 
     <meta name="description"
         content="Are your HR processes fully compliant with UKVI rules? Take this 2-minute quiz to assess your risk level and see how prepared your business is to maintain its Sponsor Licence." />
-    <meta name="keywords"
-        content=Sponsor Licence Risk Assessor quiz, UKVI compliance health check, HR compliance quiz UK, Sponsor Licence risk assessment, UK employer compliance quiz, IRS HR quiz" />
+    <meta name="keywords" content=Sponsor Licence Risk Assessor quiz, UKVI compliance health check, HR compliance quiz
+        UK, Sponsor Licence risk assessment, UK employer compliance quiz, IRS HR quiz" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Sponsor Licence Risk Assessor | Free 2-Minute Quiz | IRS HR" />
@@ -380,13 +380,12 @@
                                                 True cost of Sponsor Licence Revocation</a></li>
                                         <li class=""><a href="fabs-domiciliary-homecare-casestudy.html"
                                                 class="hover:text-white">
-                                                Case Study: Fabs Domiciliary Homecare</a></li>  
+                                                Case Study: Fabs Domiciliary Homecare</a></li>
                                         <li class=""><a href="How-Gain-Care-Protected-their-licence.html"
                                                 class="hover:text-white">
-                                                How Gain Care Protected Their Sponsor Licence from Revocation</a></li>  
-                                        <li class=""><a href="care-sector-crisis.html"
-                                                class="hover:text-white">
-                                                Care Sector Crisis</a></li>        
+                                                How Gain Care Protected Their Sponsor Licence from Revocation</a></li>
+                                        <li class=""><a href="care-sector-crisis.html" class="hover:text-white">
+                                                Care Sector Crisis</a></li>
                                         <li class=""><a href="Home-Office-Punishing-Sponsors-and-Employers.html"
                                                 class="hover:text-white">
                                                 Home Office Punishing Sponsors and Employers</a></li>
@@ -627,9 +626,8 @@
                                 <li class="mb-3"><a href="fabs-domiciliary-homecare-casestudy.html"
                                         class="hover:text-white">
                                         Case Study: Fabs Domiciliary Homecare</a></li>
-                                <li class="mb-3"><a href="care-sector-crisis.html"
-                                        class="hover:text-white">
-                                        Care Sector Crisis</a></li>        
+                                <li class="mb-3"><a href="care-sector-crisis.html" class="hover:text-white">
+                                        Care Sector Crisis</a></li>
                                 <li class="mb-3"><a href="Home-Office-Punishing-Sponsors-and-Employers.html"
                                         class="hover:text-white">
                                         Home Office Punishing Sponsors and Employers</a></li>
@@ -696,171 +694,211 @@
 
 
 
-   <div class="max-w-2xl w-full bg-white rounded-2xl shadow-xl overflow-hidden m-auto mt-20 mb-20">
-      
-       <!-- Header -->
-       <div class="bg-[#927634] p-6 text-white text-center">
-           <h1 class="text-2xl md:text-3xl font-bold mb-2">Quarter 4 (October - December 2026) Sponsor Licence Risk Assessor</h1>
-           <p class="text-slate-300 text-sm md:text-base">Home Office revocations are at an all-time high. Assess your compliance risk in 60 seconds.</p>
-       </div>
+    <div class="max-w-2xl w-full bg-white rounded-2xl shadow-xl overflow-hidden m-auto mt-20 mb-20">
 
-
-       <!-- App Container -->
-       <div id="app-container" class="p-6 md:p-8">
-          
-           <!-- Intro Screen -->
-           <div id="intro-screen" class="text-center fade-in">
-               <div class="mb-6 flex justify-center">
-                   <svg class="w-16 h-16 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
-               </div>
-               <h2 class="text-xl font-semibold mb-4 text-slate-800">Is your business ready for the new Home Office enforcement?</h2>
-               <p class="text-slate-600 mb-8 leading-relaxed">
-                   With the severe restriction on Certificates of Sponsorship (CoS) and heightened compliance checks, sponsors are under unprecedented scrutiny. Answer 10 critical questions to identify your vulnerability.
-               </p>
-               <button onclick="startAssessment()" class="bg-[#927634] hover:bg-[#ba902d] text-white font-bold py-3 px-8 rounded-lg transition duration-200 shadow-md w-full md:w-auto">
-                   Start Risk Assessment
-               </button>
-           </div>
-
-
-           <!-- Question Screen -->
-           <div id="question-screen" class="hidden">
-               <!-- Progress Bar -->
-               <div class="mb-6">
-                   <div class="flex justify-between text-xs font-semibold text-slate-500 mb-2">
-                       <span>Progress</span>
-                       <span id="progress-text">0%</span>
-                   </div>
-                   <div class="w-full bg-slate-200 rounded-full h-2.5">
-                       <div id="progress-bar" class="bg-[#ba902d] h-2.5 rounded-full progress-transition" style="width: 0%"></div>
-                   </div>
-               </div>
-
-
-               <div class="min-h-[150px] flex items-center mb-6">
-                   <h3 id="question-text" class="text-lg md:text-xl font-medium text-slate-800 leading-snug fade-in">
-                       <!-- Question injected here -->
-                   </h3>
-               </div>
-
-
-               <div class="space-y-3 fade-in" id="options-container">
-                   <button onclick="handleAnswer('yes')" class="w-full text-left p-4 border border-slate-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition duration-200 font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 flex justify-between items-center group">
-                       Yes, completely
-                       <svg class="w-5 h-5 text-slate-400 group-hover:text-blue-500 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                   </button>
-                   <button onclick="handleAnswer('partial')" class="w-full text-left p-4 border border-slate-200 rounded-lg hover:border-amber-500 hover:bg-amber-50 transition duration-200 font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-amber-500 flex justify-between items-center group">
-                       Partially / Sometimes
-                       <svg class="w-5 h-5 text-slate-400 group-hover:text-amber-500 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                   </button>
-                   <button onclick="handleAnswer('no')" class="w-full text-left p-4 border border-slate-200 rounded-lg hover:border-red-500 hover:bg-red-50 transition duration-200 font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-red-500 flex justify-between items-center group">
-                       No / Unsure
-                       <svg class="w-5 h-5 text-slate-400 group-hover:text-red-500 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                   </button>
-               </div>
-           </div>
-
-             <!-- Lead Capture Screen -->
-        <div id="lead-capture-screen" class="hidden text-center bg-whites p-8 md:p-12 rounded-2xl shadow-lgs fade-in">
-            <h2 class="text-3xl font-bold text-slate-900 mb-3">You're All Done!</h2>
-            <p class="text-slate-600 mb-6">Enter your details below to get your personalized compliance score.</p>
-            <form id="lead-form" class="space-y-4 gform pure-form pure-form-stacked" method="POST"
-                data-email="pc@irslimited.co.uk"
-                action="https://script.google.com/macros/s/AKfycbzglqWCokVxcmkDJ7DPiyYan0cVC8QEFgUOnpNYZ_i5uMY3pDH-Ce8GQFhNv3-FsjQqiA/exec">
-                <div class="form-elements">
-                    <fieldset class="pure-group">
-                        <input type="text" id="name" placeholder="Your Name" name="name"
-                            class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-gold mb-4"
-                            required>
-                    </fieldset>
-                    <fieldset class="pure-group">
-                        <input type="email" id="email" placeholder="Work Email" name="email"
-                            class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-gold mb-4"
-                            required>
-                    </fieldset>
-                    <fieldset class="pure-group">
-                        <input type="text" id="company" placeholder="Company Name" name="company"
-                            class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-gold mb-4"
-                            required>
-                    </fieldset>
-
-                    <!-- Hidden inputs for quiz answers -->
-                    <fieldset class="pure-group">
-                        <input type="hidden" name="question_1" id="answer_1" value="">
-                    </fieldset>
-                    <fieldset class="pure-group">
-                        <input type="hidden" name="question_2" id="answer_2" value="">
-                    </fieldset>
-                    <fieldset class="pure-group">
-                        <input type="hidden" name="question_3" id="answer_3" value="">
-                    </fieldset>
-                    <fieldset class="pure-group">
-                        <input type="hidden" name="question_4" id="answer_4" value="">
-                    </fieldset>
-                    <fieldset class="pure-group">
-                        <input type="hidden" name="question_5" id="answer_5" value="">
-                    </fieldset>
-                    <fieldset class="pure-group">
-                        <input type="hidden" name="question_6" id="answer_6" value="">
-                    </fieldset>
-                    <fieldset class="pure-group">
-                        <input type="hidden" name="question_7" id="answer_7" value="">
-                    </fieldset>
-                    <fieldset class="pure-group">
-                        <input type="hidden" name="question_8" id="answer_8" value="">
-                    </fieldset>
-                    <fieldset class="pure-group">
-                        <input type="hidden" name="question_9" id="answer_9" value="">
-                    </fieldset>
-                    <fieldset class="pure-group">
-                        <input type="hidden" name="question_10" id="answer_10" value="">
-                    </fieldset>
-                    <fieldset class="pure-group">
-                        <input type="hidden" name="final_score" id="final_score" value="">
-                    </fieldset>
-                    <input type="hidden" name="risk_level" id="risk_level" value="">
-
-                    <button type="submit" id="submit-lead-btn"
-                        class="w-full bg-gold text-white font-bold py-4 px-6  transition-all duration-300 text-lg">Get
-                        My Results</button>
-                </div>
-            </form>
+        <!-- Header -->
+        <div class="bg-[#927634] p-6 text-white text-center">
+            <h1 class="text-2xl md:text-3xl font-bold mb-2">Quarter 3 (October - December 2026) Sponsor Licence Risk
+                Assessor</h1>
+            <p class="text-slate-300 text-sm md:text-base">Home Office revocations are at an all-time high. Assess your
+                compliance risk in 60 seconds.</p>
         </div>
 
-           <!-- Results Screen -->
-           <div id="results-screen" class="hidden fade-in">
-               <div class="text-center mb-6">
-                   <div id="risk-icon-container" class="inline-flex items-center justify-center w-20 h-20 rounded-full mb-4">
-                       <!-- Icon injected based on score -->
-                   </div>
-                   <h2 class="text-2xl font-bold text-slate-800 mb-2">Assessment Complete</h2>
-                   <p class="text-lg font-semibold" id="risk-level-text">Your Risk Level: <span class="uppercase">Calculating...</span></p>
-               </div>
+
+        <!-- App Container -->
+        <div id="app-container" class="p-6 md:p-8">
+
+            <!-- Intro Screen -->
+            <div id="intro-screen" class="text-center fade-in">
+                <div class="mb-6 flex justify-center">
+                    <svg class="w-16 h-16 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                        </path>
+                    </svg>
+                </div>
+                <h2 class="text-xl font-semibold mb-4 text-slate-800">Is your business ready for the new Home Office
+                    enforcement?</h2>
+                <p class="text-slate-600 mb-8 leading-relaxed">
+                    With the severe restriction on Certificates of Sponsorship (CoS) and heightened compliance checks,
+                    sponsors are under unprecedented scrutiny. Answer 10 critical questions to identify your
+                    vulnerability.
+                </p>
+                <button onclick="startAssessment()"
+                    class="bg-[#927634] hover:bg-[#ba902d] text-white font-bold py-3 px-8 rounded-lg transition duration-200 shadow-md w-full md:w-auto">
+                    Start Risk Assessment
+                </button>
+            </div>
 
 
-               <div class="bg-slate-50 border border-slate-200 rounded-lg p-5 mb-6">
-                   <h4 class="font-semibold text-slate-800 mb-3 flex items-center">
-                       <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                       Immediate Mitigation Steps:
-                   </h4>
-                   <ul id="mitigation-list" class="space-y-2 text-sm text-slate-600 list-disc list-inside">
-                       <!-- List injected based on score -->
-                   </ul>
-               </div>
+            <!-- Question Screen -->
+            <div id="question-screen" class="hidden">
+                <!-- Progress Bar -->
+                <div class="mb-6">
+                    <div class="flex justify-between text-xs font-semibold text-slate-500 mb-2">
+                        <span>Progress</span>
+                        <span id="progress-text">0%</span>
+                    </div>
+                    <div class="w-full bg-slate-200 rounded-full h-2.5">
+                        <div id="progress-bar" class="bg-[#ba902d] h-2.5 rounded-full progress-transition"
+                            style="width: 0%"></div>
+                    </div>
+                </div>
 
 
-               <div class="text-center">
-                   <p class="text-sm text-slate-500 mb-4">Protect your business before the Half-Term break.</p>
-                   <a href=" https://irshr.co.uk/calculate-your-savings.html#assessment" ><button class="bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 px-6 rounded-lg transition duration-200 shadow-md w-full md:w-auto mb-3" onclick="alert('In a live environment, this would open a calendar to book a meeting or trigger an email.')">
-                       Book Emergency Audit Consultation
-                   </button></a>
-                   <button onclick="resetAssessment()" class="text-blue-600 hover:text-blue-800 text-sm font-medium underline block mx-auto">
-                       Retake Assessment
-                   </button>
-               </div>
-           </div>
-       </div>
-   </div>
+                <div class="min-h-[150px] flex items-center mb-6">
+                    <h3 id="question-text" class="text-lg md:text-xl font-medium text-slate-800 leading-snug fade-in">
+                        <!-- Question injected here -->
+                    </h3>
+                </div>
+
+
+                <div class="space-y-3 fade-in" id="options-container">
+                    <button onclick="handleAnswer('yes')"
+                        class="w-full text-left p-4 border border-slate-200 rounded-lg hover:border-blue-500 hover:bg-blue-50 transition duration-200 font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500 flex justify-between items-center group">
+                        Yes, completely
+                        <svg class="w-5 h-5 text-slate-400 group-hover:text-blue-500 hidden md:block" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </button>
+                    <button onclick="handleAnswer('partial')"
+                        class="w-full text-left p-4 border border-slate-200 rounded-lg hover:border-amber-500 hover:bg-amber-50 transition duration-200 font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-amber-500 flex justify-between items-center group">
+                        Partially / Sometimes
+                        <svg class="w-5 h-5 text-slate-400 group-hover:text-amber-500 hidden md:block" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </button>
+                    <button onclick="handleAnswer('no')"
+                        class="w-full text-left p-4 border border-slate-200 rounded-lg hover:border-red-500 hover:bg-red-50 transition duration-200 font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-red-500 flex justify-between items-center group">
+                        No / Unsure
+                        <svg class="w-5 h-5 text-slate-400 group-hover:text-red-500 hidden md:block" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Lead Capture Screen -->
+            <div id="lead-capture-screen"
+                class="hidden text-center bg-whites p-8 md:p-12 rounded-2xl shadow-lgs fade-in">
+                <h2 class="text-3xl font-bold text-slate-900 mb-3">You're All Done!</h2>
+                <p class="text-slate-600 mb-6">Enter your details below to get your personalized compliance score.</p>
+                <form id="lead-form" class="space-y-4 gform pure-form pure-form-stacked" method="POST"
+                    data-email="pc@irslimited.co.uk"
+                    action="https://script.google.com/macros/s/AKfycbzglqWCokVxcmkDJ7DPiyYan0cVC8QEFgUOnpNYZ_i5uMY3pDH-Ce8GQFhNv3-FsjQqiA/exec">
+                    <div class="form-elements">
+                        <fieldset class="pure-group">
+                            <input type="text" id="name" placeholder="Your Name" name="name"
+                                class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-gold mb-4"
+                                required>
+                        </fieldset>
+                        <fieldset class="pure-group">
+                            <input type="text" id="name" placeholder="Phone Number" name="phone"
+                                class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-gold mb-4"
+                                required>
+                        </fieldset>
+                        <fieldset class="pure-group">
+                            <input type="email" id="email" placeholder="Work Email" name="email"
+                                class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-gold mb-4"
+                                required>
+                        </fieldset>
+                        <fieldset class="pure-group">
+                            <input type="text" id="company" placeholder="Company Name" name="company"
+                                class="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-gold mb-4"
+                                required>
+                        </fieldset>
+
+                        <!-- Hidden inputs for quiz answers -->
+                        <fieldset class="pure-group">
+                            <input type="hidden" name="question_1" id="answer_1" value="">
+                        </fieldset>
+                        <fieldset class="pure-group">
+                            <input type="hidden" name="question_2" id="answer_2" value="">
+                        </fieldset>
+                        <fieldset class="pure-group">
+                            <input type="hidden" name="question_3" id="answer_3" value="">
+                        </fieldset>
+                        <fieldset class="pure-group">
+                            <input type="hidden" name="question_4" id="answer_4" value="">
+                        </fieldset>
+                        <fieldset class="pure-group">
+                            <input type="hidden" name="question_5" id="answer_5" value="">
+                        </fieldset>
+                        <fieldset class="pure-group">
+                            <input type="hidden" name="question_6" id="answer_6" value="">
+                        </fieldset>
+                        <fieldset class="pure-group">
+                            <input type="hidden" name="question_7" id="answer_7" value="">
+                        </fieldset>
+                        <fieldset class="pure-group">
+                            <input type="hidden" name="question_8" id="answer_8" value="">
+                        </fieldset>
+                        <fieldset class="pure-group">
+                            <input type="hidden" name="question_9" id="answer_9" value="">
+                        </fieldset>
+                        <fieldset class="pure-group">
+                            <input type="hidden" name="question_10" id="answer_10" value="">
+                        </fieldset>
+                        <fieldset class="pure-group">
+                            <input type="hidden" name="final_score" id="final_score" value="">
+                        </fieldset>
+                        <input type="hidden" name="risk_level" id="risk_level" value="">
+
+                        <button type="submit" id="submit-lead-btn"
+                            class="w-full bg-gold text-white font-bold py-4 px-6  transition-all duration-300 text-lg">Get
+                            My Results</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Results Screen -->
+            <div id="results-screen" class="hidden fade-in">
+                <div class="text-center mb-6">
+                    <div id="risk-icon-container"
+                        class="inline-flex items-center justify-center w-20 h-20 rounded-full mb-4">
+                        <!-- Icon injected based on score -->
+                    </div>
+                    <h2 class="text-2xl font-bold text-slate-800 mb-2">Assessment Complete</h2>
+                    <p class="text-lg font-semibold" id="risk-level-text">Your Risk Level: <span
+                            class="uppercase">Calculating...</span></p>
+                </div>
+
+
+                <div class="bg-slate-50 border border-slate-200 rounded-lg p-5 mb-6">
+                    <h4 class="font-semibold text-slate-800 mb-3 flex items-center">
+                        <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        Immediate Mitigation Steps:
+                    </h4>
+                    <ul id="mitigation-list" class="space-y-2 text-sm text-slate-600 list-disc list-inside">
+                        <!-- List injected based on score -->
+                    </ul>
+                </div>
+
+
+                <div class="text-center">
+                    <p class="text-sm text-slate-500 mb-4">Protect your business before the Half-Term break.</p>
+                    <a href=" https://irshr.co.uk/calculate-your-savings.html#assessment"><button
+                            class="bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 px-6 rounded-lg transition duration-200 shadow-md w-full md:w-auto mb-3">
+                            Book Emergency Audit Consultation
+                        </button></a>
+                    <button onclick="resetAssessment()"
+                        class="text-blue-600 hover:text-blue-800 text-sm font-medium underline block mx-auto">
+                        Retake Assessment
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <footer class="bg-[#1b182f] "
@@ -935,332 +973,332 @@
 
 
     <!-- <script data-cfasync="false" src="form-submission-handler.js"></script> -->
-   
-
-   <script>
-       // Quarter 4 (October - December 2026) Specific Compliance Questions
-       const questions = [
-           {
-               text: "Are statutory Right-to-Work (RTW) checks completed and correctly documented for ALL employees (not just sponsored workers)?",
-               weight: 3, // High risk of civil penalties
-               mitigation: "Conduct a full internal audit of all RTW files. The Home Office targets companies missing basic compliance for their local workforce."
-           },
-           {
-               text: "Are changes to sponsored workers' circumstances (e.g., change in job duties, salary, work location) reported on the SMS within 10 working days?",
-               weight: 3, // Immediate revocation trigger
-               mitigation: "Implement a strict 5-day internal reporting policy for line managers to notify HR of any changes to a sponsored worker's role or location."
-           },
-           {
-               text: "Do you have a rigorous, documented system for monitoring and reporting unauthorized absences of sponsored workers?",
-               weight: 2,
-               mitigation: "Standardize your absence tracking software to flag HR immediately if a sponsored worker misses 10 consecutive expected work days."
-           },
-           {
-               text: "Given the Quarter 4 (October - December 2026) CoS restrictions, are all your recent CoS requests backed by strict, documented business cases proving resident labor unavailability?",
-               weight: 3,
-               mitigation: "Draft formal justification memos for every CoS request outlining exact recruitment efforts and why UK-based talent pipelines failed."
-           },
-           {
-               text: "Are your company's core details (Key Personnel, address, corporate structure) 100% up to date on the Sponsorship Management System (SMS)?",
-               weight: 2,
-               mitigation: "Log into the SMS immediately to verify the Authorising Officer, Key Contact, and Level 1 Users are current and active employees."
-           },
-           {
-               text: "Have you conducted an independent or comprehensive internal mock audit of your sponsor files within the last 6 months?",
-               weight: 1,
-               mitigation: "Schedule a mock audit immediately. Unannounced Home Office visits are at an all-time high; identifying gaps now is critical."
-           },
-           {
-               text: "Do you actively track and record the expiry dates of all employee visas, with alerts set for 90, 60, and 30 days prior to expiry?",
-               weight: 3,
-               mitigation: "Implement an automated tracking system to flag upcoming visa expiries well in advance to prevent illegal working penalties."
-           },
-           {
-               text: "Are you retaining all historic Right-to-Work documentation securely for the mandatory minimum of 2 years AFTER an employee's termination?",
-               weight: 2,
-               mitigation: "Review archiving procedures and ensure HR is not prematurely destroying records of former employees."
-           },
-           {
-               text: "Does your business strictly enforce and document the exact working hours, including remote/hybrid working patterns, of all sponsored staff?",
-               weight: 2,
-               mitigation: "Require sponsored workers and their managers to sign off on specific remote working agreements and maintain accurate attendance logs."
-           },
-           {
-               text: "Have you kept comprehensive 'genuine vacancy' evidence (interview notes, CVs, job adverts) for recent hires, to prove the role wasn't created solely to facilitate a visa?",
-               weight: 2,
-               mitigation: "Compile all historical interview notes and screening matrices into a central folder to prove the authenticity of the sponsored roles."
-           }
-       ];
 
 
-    // DOM Elements
-    const introScreen = document.getElementById('intro-screen');
-    const questionScreen = document.getElementById('question-screen');
-    const leadCaptureScreen = document.getElementById('lead-capture-screen');
-    const resultsScreen = document.getElementById('results-screen');
-
-    const questionText = document.getElementById('question-text');
-    const progressBar = document.getElementById('progress-bar');
-    const progressText = document.getElementById('progress-text');
-
-    const leadForm = document.getElementById('lead-form');
-
-    let currentQuestionIndex = 0;
-    let totalRiskScore = 0;
-
-    const maxScore = questions.reduce(
-        (acc, curr) => acc + curr.weight,
-        0
-    );
-
-
-    // ==========================================
-    // START ASSESSMENT
-    // ==========================================
-
-    function startAssessment() {
-
-        introScreen.classList.add('hidden');
-        questionScreen.classList.remove('hidden');
-
-        // Make sure other screens are hidden
-        leadCaptureScreen.classList.add('hidden');
-        resultsScreen.classList.add('hidden');
-
-        currentQuestionIndex = 0;
-        totalRiskScore = 0;
-
-        renderQuestion();
-    }
-
-
-    // ==========================================
-    // RENDER QUESTION
-    // ==========================================
-
-    function renderQuestion() {
-
-        questionText.classList.remove('fade-in');
-
-        void questionText.offsetWidth;
-
-        questionText.classList.add('fade-in');
-
-        questionText.innerText =
-            questions[currentQuestionIndex].text;
-
-
-        // Progress
-        const progressPercentage =
-            Math.round(
-                (currentQuestionIndex / questions.length) * 100
-            );
-
-        progressBar.style.width =
-            `${progressPercentage}%`;
-
-        progressText.innerText =
-            `${progressPercentage}%`;
-    }
+    <script>
+        // Quarter 4 (October - December 2026) Specific Compliance Questions
+        const questions = [
+            {
+                text: "Are statutory Right-to-Work (RTW) checks completed and correctly documented for ALL employees (not just sponsored workers)?",
+                weight: 3, // High risk of civil penalties
+                mitigation: "Conduct a full internal audit of all RTW files. The Home Office targets companies missing basic compliance for their local workforce."
+            },
+            {
+                text: "Are changes to sponsored workers' circumstances (e.g., change in job duties, salary, work location) reported on the SMS within 10 working days?",
+                weight: 3, // Immediate revocation trigger
+                mitigation: "Implement a strict 5-day internal reporting policy for line managers to notify HR of any changes to a sponsored worker's role or location."
+            },
+            {
+                text: "Do you have a rigorous, documented system for monitoring and reporting unauthorized absences of sponsored workers?",
+                weight: 2,
+                mitigation: "Standardize your absence tracking software to flag HR immediately if a sponsored worker misses 10 consecutive expected work days."
+            },
+            {
+                text: "Given the Quarter 3 (October - December 2026) CoS restrictions, are all your recent CoS requests backed by strict, documented business cases proving resident labor unavailability?",
+                weight: 3,
+                mitigation: "Draft formal justification memos for every CoS request outlining exact recruitment efforts and why UK-based talent pipelines failed."
+            },
+            {
+                text: "Are your company's core details (Key Personnel, address, corporate structure) 100% up to date on the Sponsorship Management System (SMS)?",
+                weight: 2,
+                mitigation: "Log into the SMS immediately to verify the Authorising Officer, Key Contact, and Level 1 Users are current and active employees."
+            },
+            {
+                text: "Have you conducted an independent or comprehensive internal mock audit of your sponsor files within the last 6 months?",
+                weight: 1,
+                mitigation: "Schedule a mock audit immediately. Unannounced Home Office visits are at an all-time high; identifying gaps now is critical."
+            },
+            {
+                text: "Do you actively track and record the expiry dates of all employee visas, with alerts set for 90, 60, and 30 days prior to expiry?",
+                weight: 3,
+                mitigation: "Implement an automated tracking system to flag upcoming visa expiries well in advance to prevent illegal working penalties."
+            },
+            {
+                text: "Are you retaining all historic Right-to-Work documentation securely for the mandatory minimum of 2 years AFTER an employee's termination?",
+                weight: 2,
+                mitigation: "Review archiving procedures and ensure HR is not prematurely destroying records of former employees."
+            },
+            {
+                text: "Does your business strictly enforce and document the exact working hours, including remote/hybrid working patterns, of all sponsored staff?",
+                weight: 2,
+                mitigation: "Require sponsored workers and their managers to sign off on specific remote working agreements and maintain accurate attendance logs."
+            },
+            {
+                text: "Have you kept comprehensive 'genuine vacancy' evidence (interview notes, CVs, job adverts) for recent hires, to prove the role wasn't created solely to facilitate a visa?",
+                weight: 2,
+                mitigation: "Compile all historical interview notes and screening matrices into a central folder to prove the authenticity of the sponsored roles."
+            }
+        ];
 
 
-    // ==========================================
-    // HANDLE ANSWER
-    // ==========================================
+        // DOM Elements
+        const introScreen = document.getElementById('intro-screen');
+        const questionScreen = document.getElementById('question-screen');
+        const leadCaptureScreen = document.getElementById('lead-capture-screen');
+        const resultsScreen = document.getElementById('results-screen');
 
-    function handleAnswer(answer) {
+        const questionText = document.getElementById('question-text');
+        const progressBar = document.getElementById('progress-bar');
+        const progressText = document.getElementById('progress-text');
 
-        const currentWeight =
-            questions[currentQuestionIndex].weight;
+        const leadForm = document.getElementById('lead-form');
 
+        let currentQuestionIndex = 0;
+        let totalRiskScore = 0;
 
-        // ------------------------------------------
-        // Save actual visible answer text
-        // ------------------------------------------
-
-        const answerTextMap = {
-            yes: "Yes, completely",
-            partial: "Partially / Sometimes",
-            no: "No / Unsure"
-        };
-
-        const hiddenInput =
-            document.getElementById(
-                `answer_${currentQuestionIndex + 1}`
-            );
-
-        if (hiddenInput) {
-            hiddenInput.value =
-                answerTextMap[answer] || answer;
-        }
+        const maxScore = questions.reduce(
+            (acc, curr) => acc + curr.weight,
+            0
+        );
 
 
-        // ------------------------------------------
-        // Calculate risk
-        // ------------------------------------------
+        // ==========================================
+        // START ASSESSMENT
+        // ==========================================
 
-        if (answer === 'partial') {
+        function startAssessment() {
 
-            totalRiskScore += currentWeight / 2;
+            introScreen.classList.add('hidden');
+            questionScreen.classList.remove('hidden');
 
-        } else if (answer === 'no') {
+            // Make sure other screens are hidden
+            leadCaptureScreen.classList.add('hidden');
+            resultsScreen.classList.add('hidden');
 
-            totalRiskScore += currentWeight;
-        }
-
-
-        // ------------------------------------------
-        // Next question
-        // ------------------------------------------
-
-        currentQuestionIndex++;
-
-
-        if (currentQuestionIndex < questions.length) {
+            currentQuestionIndex = 0;
+            totalRiskScore = 0;
 
             renderQuestion();
-
-        } else {
-
-            // Quiz finished
-            questionScreen.classList.add('hidden');
-
-            // Show lead capture BEFORE results
-            leadCaptureScreen.classList.remove('hidden');
-
-            // Make absolutely sure results are hidden
-            resultsScreen.classList.add('hidden');
         }
-    }
 
 
-    // ==========================================
-    // SUBMIT LEAD FORM
-    // ==========================================
+        // ==========================================
+        // RENDER QUESTION
+        // ==========================================
 
-    leadForm.addEventListener('submit', async function (e) {
+        function renderQuestion() {
 
-    e.preventDefault();
+            questionText.classList.remove('fade-in');
 
-    const submitButton =
-        document.getElementById('submit-lead-btn');
+            void questionText.offsetWidth;
 
-    submitButton.disabled = true;
-    submitButton.innerText = 'Submitting...';
+            questionText.classList.add('fade-in');
 
-
-    // Calculate score
-    const riskPercentage =
-        Math.round((totalRiskScore / maxScore) * 100);
+            questionText.innerText =
+                questions[currentQuestionIndex].text;
 
 
-    // Determine risk level
-    let riskLevel = '';
+            // Progress
+            const progressPercentage =
+                Math.round(
+                    (currentQuestionIndex / questions.length) * 100
+                );
 
-    if (riskPercentage < 20) {
-        riskLevel = 'Low (Stable)';
-    } else if (riskPercentage < 60) {
-        riskLevel = 'Medium (Vulnerable)';
-    } else {
-        riskLevel = 'High (Critical)';
-    }
+            progressBar.style.width =
+                `${progressPercentage}%`;
 
-
-    // Save final score
-    document.getElementById('final_score').value =
-        `${riskPercentage}%`;
+            progressText.innerText =
+                `${progressPercentage}%`;
+        }
 
 
-    // Save risk level
-    document.getElementById('risk_level').value =
-        riskLevel;
+        // ==========================================
+        // HANDLE ANSWER
+        // ==========================================
+
+        function handleAnswer(answer) {
+
+            const currentWeight =
+                questions[currentQuestionIndex].weight;
 
 
-    // Submit everything
-    const formData = new FormData(leadForm);
+            // ------------------------------------------
+            // Save actual visible answer text
+            // ------------------------------------------
 
-    try {
+            const answerTextMap = {
+                yes: "Yes, completely",
+                partial: "Partially / Sometimes",
+                no: "No / Unsure"
+            };
 
-        await fetch(
-            leadForm.action,
-            {
-                method: 'POST',
-                body: formData,
-                mode: 'no-cors'
+            const hiddenInput =
+                document.getElementById(
+                    `answer_${currentQuestionIndex + 1}`
+                );
+
+            if (hiddenInput) {
+                hiddenInput.value =
+                    answerTextMap[answer] || answer;
             }
-        );
-
-    } catch (error) {
-
-        console.error(
-            'Form submission error:',
-            error
-        );
-    }
 
 
-    // Hide form
-    leadCaptureScreen.classList.add('hidden');
+            // ------------------------------------------
+            // Calculate risk
+            // ------------------------------------------
 
-    // Show results
-    resultsScreen.classList.remove('hidden');
+            if (answer === 'partial') {
 
-    submitButton.disabled = false;
-    submitButton.innerText = 'Get My Results';
+                totalRiskScore += currentWeight / 2;
 
-    showResults();
-});
+            } else if (answer === 'no') {
 
-    // ==========================================
-    // SHOW RESULTS
-    // ==========================================
-
-    function showResults() {
-
-        // IMPORTANT:
-        // Hide both previous screens
-        questionScreen.classList.add('hidden');
-        leadCaptureScreen.classList.add('hidden');
-
-        // Show ONLY results
-        resultsScreen.classList.remove('hidden');
+                totalRiskScore += currentWeight;
+            }
 
 
-        const riskPercentage =
-            (totalRiskScore / maxScore) * 100;
+            // ------------------------------------------
+            // Next question
+            // ------------------------------------------
+
+            currentQuestionIndex++;
 
 
-        const riskLevelText =
-            document.getElementById('risk-level-text');
+            if (currentQuestionIndex < questions.length) {
 
-        const iconContainer =
-            document.getElementById('risk-icon-container');
+                renderQuestion();
 
-        const mitigationList =
-            document.getElementById('mitigation-list');
+            } else {
 
+                // Quiz finished
+                questionScreen.classList.add('hidden');
 
-        mitigationList.innerHTML = '';
+                // Show lead capture BEFORE results
+                leadCaptureScreen.classList.remove('hidden');
+
+                // Make absolutely sure results are hidden
+                resultsScreen.classList.add('hidden');
+            }
+        }
 
 
         // ==========================================
-        // LOW RISK
+        // SUBMIT LEAD FORM
         // ==========================================
 
-        if (riskPercentage < 20) {
+        leadForm.addEventListener('submit', async function (e) {
 
-            riskLevelText.innerHTML =
-                `Your Risk Level:
+            e.preventDefault();
+
+            const submitButton =
+                document.getElementById('submit-lead-btn');
+
+            submitButton.disabled = true;
+            submitButton.innerText = 'Submitting...';
+
+
+            // Calculate score
+            const riskPercentage =
+                Math.round((totalRiskScore / maxScore) * 100);
+
+
+            // Determine risk level
+            let riskLevel = '';
+
+            if (riskPercentage < 20) {
+                riskLevel = 'Low (Stable)';
+            } else if (riskPercentage < 60) {
+                riskLevel = 'Medium (Vulnerable)';
+            } else {
+                riskLevel = 'High (Critical)';
+            }
+
+
+            // Save final score
+            document.getElementById('final_score').value =
+                `${riskPercentage}%`;
+
+
+            // Save risk level
+            document.getElementById('risk_level').value =
+                riskLevel;
+
+
+            // Submit everything
+            const formData = new FormData(leadForm);
+
+            try {
+
+                await fetch(
+                    leadForm.action,
+                    {
+                        method: 'POST',
+                        body: formData,
+                        mode: 'no-cors'
+                    }
+                );
+
+            } catch (error) {
+
+                console.error(
+                    'Form submission error:',
+                    error
+                );
+            }
+
+
+            // Hide form
+            leadCaptureScreen.classList.add('hidden');
+
+            // Show results
+            resultsScreen.classList.remove('hidden');
+
+            submitButton.disabled = false;
+            submitButton.innerText = 'Get My Results';
+
+            showResults();
+        });
+
+        // ==========================================
+        // SHOW RESULTS
+        // ==========================================
+
+        function showResults() {
+
+            // IMPORTANT:
+            // Hide both previous screens
+            questionScreen.classList.add('hidden');
+            leadCaptureScreen.classList.add('hidden');
+
+            // Show ONLY results
+            resultsScreen.classList.remove('hidden');
+
+
+            const riskPercentage =
+                (totalRiskScore / maxScore) * 100;
+
+
+            const riskLevelText =
+                document.getElementById('risk-level-text');
+
+            const iconContainer =
+                document.getElementById('risk-icon-container');
+
+            const mitigationList =
+                document.getElementById('mitigation-list');
+
+
+            mitigationList.innerHTML = '';
+
+
+            // ==========================================
+            // LOW RISK
+            // ==========================================
+
+            if (riskPercentage < 20) {
+
+                riskLevelText.innerHTML =
+                    `Your Risk Level:
                 <span class="text-green-600 font-bold uppercase">
                     Low (Stable)
                 </span>`;
 
 
-            iconContainer.className =
-                "inline-flex items-center justify-center w-20 h-20 rounded-full mb-4 bg-green-100 text-green-600";
+                iconContainer.className =
+                    "inline-flex items-center justify-center w-20 h-20 rounded-full mb-4 bg-green-100 text-green-600";
 
 
-            iconContainer.innerHTML = `
+                iconContainer.innerHTML = `
                 <svg class="w-10 h-10"
                     fill="none"
                     stroke="currentColor"
@@ -1278,7 +1316,7 @@
             `;
 
 
-            mitigationList.innerHTML = `
+                mitigationList.innerHTML = `
                 <li class="mb-2">
                     Your compliance appears strong.
                     Continue regular internal monitoring.
@@ -1291,31 +1329,31 @@
 
                 <li>
                     Ensure Key Personnel remain trained on the latest
-                    Quarter 4 (October - December 2026)
+                    Quarter 3 (October - December 2026)
                     Home Office guidance changes.
                 </li>
             `;
-        }
+            }
 
 
-        // ==========================================
-        // MEDIUM RISK
-        // ==========================================
+            // ==========================================
+            // MEDIUM RISK
+            // ==========================================
 
-        else if (riskPercentage < 60) {
+            else if (riskPercentage < 60) {
 
-            riskLevelText.innerHTML =
-                `Your Risk Level:
+                riskLevelText.innerHTML =
+                    `Your Risk Level:
                 <span class="text-amber-500 font-bold uppercase">
                     Medium (Vulnerable)
                 </span>`;
 
 
-            iconContainer.className =
-                "inline-flex items-center justify-center w-20 h-20 rounded-full mb-4 bg-amber-100 text-amber-500";
+                iconContainer.className =
+                    "inline-flex items-center justify-center w-20 h-20 rounded-full mb-4 bg-amber-100 text-amber-500";
 
 
-            iconContainer.innerHTML = `
+                iconContainer.innerHTML = `
                 <svg class="w-10 h-10"
                     fill="none"
                     stroke="currentColor"
@@ -1335,7 +1373,7 @@
             `;
 
 
-            mitigationList.innerHTML = `
+                mitigationList.innerHTML = `
                 <li class="mb-2">
                     <strong>Warning:</strong>
                     You have compliance gaps that could trigger
@@ -1352,27 +1390,27 @@
                     Right-to-Work documentation.
                 </li>
             `;
-        }
+            }
 
 
-        // ==========================================
-        // HIGH RISK
-        // ==========================================
+            // ==========================================
+            // HIGH RISK
+            // ==========================================
 
-        else {
+            else {
 
-            riskLevelText.innerHTML =
-                `Your Risk Level:
+                riskLevelText.innerHTML =
+                    `Your Risk Level:
                 <span class="text-red-600 font-bold uppercase">
                     High (Critical)
                 </span>`;
 
 
-            iconContainer.className =
-                "inline-flex items-center justify-center w-20 h-20 rounded-full mb-4 bg-red-100 text-red-600";
+                iconContainer.className =
+                    "inline-flex items-center justify-center w-20 h-20 rounded-full mb-4 bg-red-100 text-red-600";
 
 
-            iconContainer.innerHTML = `
+                iconContainer.innerHTML = `
                 <svg class="w-10 h-10"
                     fill="none"
                     stroke="currentColor"
@@ -1390,7 +1428,7 @@
             `;
 
 
-            mitigationList.innerHTML = `
+                mitigationList.innerHTML = `
                 <li class="mb-2">
                     <strong>CRITICAL:</strong>
                     Your licence is at high risk of revocation
@@ -1407,56 +1445,56 @@
                     Emergency Mock Audit before the end of the month.
                 </li>
             `;
+            }
+            // Save risk level
+            document.getElementById('risk_level').value =
+                riskLevel;
         }
-         // Save risk level
-document.getElementById('risk_level').value =
-    riskLevel;
-    }
 
 
-    // ==========================================
-    // RETAKE ASSESSMENT
-    // ==========================================
+        // ==========================================
+        // RETAKE ASSESSMENT
+        // ==========================================
 
-    function resetAssessment() {
+        function resetAssessment() {
 
-        // Reset variables
-        currentQuestionIndex = 0;
-        totalRiskScore = 0;
-
-
-        // Hide EVERYTHING first
-        questionScreen.classList.add('hidden');
-        leadCaptureScreen.classList.add('hidden');
-        resultsScreen.classList.add('hidden');
+            // Reset variables
+            currentQuestionIndex = 0;
+            totalRiskScore = 0;
 
 
-        // Show intro
-        introScreen.classList.remove('hidden');
+            // Hide EVERYTHING first
+            questionScreen.classList.add('hidden');
+            leadCaptureScreen.classList.add('hidden');
+            resultsScreen.classList.add('hidden');
 
 
-        // Reset progress
-        progressBar.style.width = '0%';
-        progressText.innerText = '0%';
+            // Show intro
+            introScreen.classList.remove('hidden');
 
 
-        // Reset form
-        leadForm.reset();
+            // Reset progress
+            progressBar.style.width = '0%';
+            progressText.innerText = '0%';
 
 
-        // Clear hidden answer fields
-        document
-            .querySelectorAll(
-                '#lead-form input[type="hidden"]'
-            )
-            .forEach(input => {
+            // Reset form
+            leadForm.reset();
 
-                input.value = '';
 
-            });
-    }
+            // Clear hidden answer fields
+            document
+                .querySelectorAll(
+                    '#lead-form input[type="hidden"]'
+                )
+                .forEach(input => {
 
-</script>
+                    input.value = '';
+
+                });
+        }
+
+    </script>
 
     <script src="https://cdn.brevo.com/js/sdk-loader.js" async></script>
     <script>
