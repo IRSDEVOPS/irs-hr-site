@@ -1,0 +1,2096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UK Sponsor Licence Compliance: The 1/12th Salary Rule, Treal Care [2026] & SW 14.3B Guide</title>
+    <meta name="description"
+        content="Complete employer guide to the Treal Care [2026] EWCA Civ 1420 Court of Appeal judgment and April 2026 Skilled Worker SW 14.3B rules. Understand why the 1/12th monthly salary rule was rejected and how the 3-month rolling payroll rule works.">
+    <meta name="keywords"
+        content="Treal Care UK Limited v Secretary of State, 1/12th salary rule CoS, SW 14.3B three month rolling pay, SW 14.3A 17 week average, UK sponsor licence revocation Annex C1 aa, Skilled Worker fluctuating hours compliance">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://irshr.co.uk/UK-Compliance-Guide-treal-care-sw14-3b-salary-rules.html">
+
+    <!-- Open Graph / Social / AI Crawler Metadata -->
+    <meta property="og:type" content="article">
+    <meta property="og:title"
+        content="Do UK Sponsors Have to Pay 1/12th of a CoS Salary Every Month? (Treal Care & SW 14.3B Guide)">
+    <meta property="og:description"
+        content="The Court of Appeal rejected the Home Office's rigid 1/12th monthly rule in Treal Care, but April 2026 rule SW 14.3B enforces a strict 3-month rolling floor. Use our interactive compliance tools.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="header/header.css?update=0079" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/images/favicon.webp">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+
+    <!-- Structured Data (JSON-LD) for Google Search & AI Chatbots (AEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "headline": "UK Sponsor Licence Compliance: The 1/12th Monthly Salary Myth (Treal Care) vs. The 3-Month Rolling Rule (SW 14.3B)",
+          "datePublished": "2026-11-06",
+          "dateModified": "2026-11-12",
+          "author": {
+            "@type": "Organization",
+            "name": "SponsorGuard UK Compliance Advisory"
+          },
+          "description": "An authoritative business guide examining the Court of Appeal decision in Treal Care [2026] EWCA Civ 1420 alongside the April 2026 Skilled Worker Immigration Rules (SW 14.3A & SW 14.3B)."
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Does a UK sponsor have an absolute obligation to pay at least one-twelfth (1/12th) of an annual CoS salary in every single month?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. While the Secretary of State advanced the argument that, for monthly-paid workers whose Certificate of Sponsorship (CoS) states an annual salary figure, the sponsor assumes an absolute obligation to pay at least one-twelfth of that annual amount in every single month, the Court of Appeal decisively rejected this in R (Treal Care (UK) Ltd) v SSHD [2026] EWCA Civ 1420. The Court ruled that compliance for workers with uneven or fluctuating hours requires a rounded, evidence-based assessment over a fair period rather than a rigid month-by-month 1/12th test."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can sponsors rely purely on annualised salary figures if a worker's pay drops over a consecutive three-month period?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Sponsors can no longer rely purely on annualised figures if their payroll practices cause severe shortfalls over a consecutive three-month period. Under paragraph SW 14.3B of Appendix Skilled Worker (introduced in April 2026), where a worker works fluctuating hours resulting in uneven pay, a monthly-paid worker must be paid at least one-quarter (25%) of their required annual salary across every rolling three-month period."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does rule SW 14.3A affect sponsored workers who work irregular weekly shift patterns?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Under SW 14.3A (effective 8 April 2026), if a sponsored worker works different hours each week resulting in uneven pay, hours worked in excess of 48 hours in some weeks can count towards salary thresholds only if the average over a regular cycle of no more than 17 weeks does not exceed 48 hours per week. Unpaid rest weeks count towards the average and are not treated as unauthorised absences."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- !-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T8ZKXHXF1K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-T8ZKXHXF1K');
+    </script>
+    <!-- UPDATED: Using specific UMD version of Chart.js for better browser compatibility -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            gold: '#C9A227',       /* Primary Executive Gold */
+                            gold_bright: '#D4AF37',/* Accent Metallic Gold */
+                            gold_light: '#FBF6E8', /* Soft Champagne Gold Tint */
+                            gold_border: '#EAD79B',/* Subtle Gold Hairline */
+                            gold_dark: '#9E7B16',  /* Deep Accessible Gold */
+                            dark: '#141413',       /* Rich Obsidian Charcoal */
+                            slate: '#262624',      /* Elevated Dark Card */
+                            ivory: '#FAF9F5'       /* Uncluttered Warm Background */
+                        }
+                    },
+                    boxShadow: {
+                        'gold': '0 10px 25px -5px rgba(201, 162, 39, 0.35)',
+                        'soft': '0 12px 32px -8px rgba(20, 20, 19, 0.06)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #FAF9F5;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #C9A227;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9E7B16;
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #D4AF37 0%, #F3E5AB 50%, #C9A227 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero-bg {
+            background-color: #111827;
+            background-image: radial-gradient(#374151 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .alert-pattern {
+            background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0.2) 10px, transparent 10px, transparent 20px);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #b91c1c 0%, #1e3a8a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-pattern {
+            background-color: #ffffff;
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .py-50 {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+    </style>
+
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Bottom Popup Banner -->
+    <div id="bottomPopup" class="popup-banner shadow">
+        <div class="container d-flex align-items-center justify-content-between flex-wrap gap-3">
+
+            <!-- Text Content -->
+            <div class="popup-text">
+                <h5 class="mb-1">Get Home Office Clarity When You Need It </h5>
+                <a href="https://meet.brevo.com/irsdemo/intro" target="_blank">
+                    <p class="mb-0 sp-txt">
+                        👉 Join our daily demo any day to discover a simpler, safer way to manage HR Home Office, and
+                        sponsor duties.
+                    </p>
+                </a>
+
+                <p>Ps: For immediate help, Call our Sponsor Helpline now <a href="tel:0333 577 4771">0333 577
+                        4771</a></p>
+
+            </div>
+
+            <!-- Close Button -->
+            <button type="button" class="popup-close" onclick="closePopup()">×</button>
+
+        </div>
+    </div>
+
+    <!-- Top Compliance Alert Banner -->
+    <div class="bg-brand-dark text-gray-300 text-xs sm:text-sm py-3 px-4 border-b border-gray-800">
+        <div
+            class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+            <div class="flex items-center gap-2.5">
+                <span
+                    class="bg-brand-gold text-brand-dark font-bold px-2.5 py-0.5 rounded text-xs uppercase tracking-wider">Legal
+                    Update</span>
+                <span>Updated for <strong class="text-white">Treal Care [2026] EWCA Civ 1420</strong> &amp; <strong
+                        class="text-white">Appendix Skilled Worker (SW 14.3A / SW 14.3B)</strong></span>
+            </div>
+            <a href="#tools-suite"
+                class="text-brand-gold_bright hover:underline font-medium inline-flex items-center gap-1">
+                Run 3-Month Payroll Check <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="top__bar">
+        <p class="m-auto mb-0 text-center">We are part of International
+            Recruitment Solutions. <a href="https://irslimited.co.uk/" target="_blank">Click</a>
+            to learn how IRS helps your business thrive</p>
+    </div>
+    <!-- main header -->
+    <header class="main-header z-50">
+        <div class="auto-container">
+            <!-- header-top -->
+            <div class="hidden md:flex header-top z-50">
+
+                <div class="top-inner clearfix">
+                    <div class="left-column pull-left">
+                        <ul class="info-list clearfix">
+                            <li><i class="fas fa-phone-square"></i><a href="tel:0333 577 4771">0333 577 4771</a></li>
+                            <li><i class="fas fa-envelope"></i><a
+                                    href="mailto:care@irslimited.co.uk">care@irslimited.co.uk</a></li>
+                        </ul>
+                    </div>
+                    <div class="right-column pull-right">
+                        <ul class="social-links clearfix">
+                            <li><a href="https://www.linkedin.com/company/irs-limited"
+                                    aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href="https://www.youtube.com/@SponsorComplianceMadeEasy"
+                                    aria-label="Follow us on Youtube"><i class="fab fa-youtube"></i></a>
+                            </li>
+                        </ul>
+                        <div class="btn-box"><a href="https://app.irshr.co.uk/register" target="_blank">Sign up for IRS
+                                HR</a></div>
+                        <div class="btn-box gold"><a href="https://app.irshr.co.uk/login">Login</a></div>
+                    </div>
+                </div>
+            </div>
+            <!-- header-lower -->
+
+
+        </div>
+
+        <!--sticky Header-->
+        <div class="sticky-header z-50">
+            <div class="auto-container">
+                <div class="outer-box clearfix">
+                    <div class="logo-box pull-left">
+                        <figure class="logo"><a href="index.html"><img src="assets/images/logo.webp" alt=""></a>
+                        </figure>
+                    </div>
+                    <div class="menu-area clearfix pull-right">
+                        <nav class="main-menu clearfix">
+                            <!--Keep This Empty / Menu will come through Javascript-->
+                        </nav>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- main-header end -->
+
+    <!-- Mobile Menu  -->
+    <div class="mobile-menu">
+        <div class="menu-backdrop"></div>
+        <div class="close-btn"><i class="fas fa-times"></i></div>
+
+        <nav class="menu-box">
+            <div class="nav-logo"><a href="index.html"><img src="assets/images/logo.webp" alt="" title=""></a></div>
+            <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+            </div>
+            <div class="contact-info">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li> Second Floor, 189 Brompton Road, Next to Harrods, Knightsbridge London, SW3 1NE</li>
+                    <li><a href="tel:0333 577 4771">0333 577 4771</a></li>
+                    <li><a href="mailto:care@irslimited.co.uk">care@irslimited.co.uk</a></li>
+                </ul>
+                <a href="https://www.linkedin.com/company/irs-limited" target="_blank"
+                    class="inline-flex items-center mt-2 text-white hover:text-gray-300">
+                    <i class="fab fa-linkedin text-xl mr-2"></i>
+                </a>
+                <a href="https://www.youtube.com/@SponsorComplianceMadeEasy" target="_blank"
+                    class="inline-flex items-center mt-2 text-white hover:text-gray-300">
+                    <i class="fab fa-youtube text-xl mr-2"></i>
+                </a>
+            </div>
+
+        </nav>
+    </div><!-- End Mobile Menu -->
+
+    <div id="navbar" class="sticky top-0  duration-300 z-50">
+        <nav class="auto-container mx-auto px-4 sm:px-6 lg:px-4">
+            <div class="flex items-center h-24  justify-between md:justify-start">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html">
+                        <img src="assets/images/logo.webp" alt="Logo" class="h-20 w-auto">
+                    </a>
+                </div>
+
+                <!-- Desktop Nav -->
+                <div class="hidden lg:flex items-center ml-105">
+                    <a href="index.html" class="text-gray-500 hover:text-[#49b280] font-medium text-sm">Home</a>
+                    <div class="relative group">
+                        <a href="benefits.html"
+                            class="text-gray-500 hover:text-[#49b280] font-medium text-sm">Benefits</a>
+                        <div
+                            class="absolute right-[-15em] top-full mt-8 w-[940px] bg-[#ffffff] text-white  shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-999 mega-menu knowledge-hub">
+                            <div class="grid grid-cols-3 gap-8">
+                                <div>
+                                    <ul class="space-y-2 text-sm text-gray-300">
+                                        <li><a class="hover:text-[#49b280]"
+                                                href="24-7-hr-compliance-home-office.html">24x7 HR Home Office
+                                                compliance</a></li>
+                                        <li><a class="hover:text-[#49b280]" href="monitor-your-migrants.html">Monitor
+                                                Your Migrants</a></li>
+                                        <li><a class="hover:text-[#49b280]" href="visa-expiry-alerts.html">Visa Expiry
+                                                Alerts</a></li>
+                                        <li><a class="hover:text-[#49b280]"
+                                                href="right-to-work-digital-records.html">RTW Digital records</a></li>
+                                        <li><a class="hover:text-[#49b280]"
+                                                href="migrants-leave-and-absence-management.html">Leave and absence
+                                                management</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="space-y-2 text-sm text-gray-300">
+                                        <li><a class="hover:text-white"
+                                                href="tailored-policies-home-office-compliance.html">Tailored Policies
+                                                for Home Office compliance</a></li>
+                                        <li><a class="hover:text-white" href="home-office-guidance.html">Home Office
+                                                Guidance</a></li>
+                                        <li><a class="hover:text-white" href="50-sponsored-employee-checklist.html">50+
+                                                Sponsored Employee Checklist</a></li>
+                                        <li><a class="hover:text-white"
+                                                href="100-sponsored-employee-staff-records.html">100+ Sponsored Employee
+                                                Staff Records</a></li>
+                                        <li><a class="hover:text-white"
+                                                href="fast-track-home-office-compliance-onboarding.html">Fast Track Home
+                                                Office Compliance Onboarding</a></li>
+                                    </ul>
+                                </div>
+
+
+                                <!-- Column 3 -->
+                                <div>
+                                    <ul class="space-y-2 text-sm text-gray-300">
+                                        <li><a class="hover:text-white" href="cos-success-strategy.html">CoS Success
+                                                Strategy</a></li>
+                                        <li><a class="hover:text-white"
+                                                href="monthly-home-office-mock-audits.html">Monthly Home Office Mock
+                                                Audits</a></li>
+                                        <li><a class="hover:text-white"
+                                                href="level-7-hr-compliance-success-manager.html">Level 7 HR Compliance
+                                                Success manager</a></li>
+                                        <li><a class="hover:text-white" href="panel-of-solicitors.html">Panel of
+                                                Solicitors</a></li>
+                                        <li><a class="hover:text-white" href="after-sales-support.html"
+                                                target="_blank">After Sales Support</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="calculate-your-savings.html"
+                        class="text-gray-500 hover:text-[#49b280] font-medium text-sm">Pricing</a>
+                    <div class="relative group">
+                        <a href="" class="text-gray-500 hover:text-[#49b280] font-medium text-sm">Businesses</a>
+                        <div
+                            class="absolute top-full mt-4 w-64 bg-[#ffffff] text-black  shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-999">
+                            <ul class="divide-y divide-gray-700">
+                                <li><a href="care.html"
+                                        class="block px-6 py-4 text-sm text-black hover:text-white hover:bg-[#49b280]">Health
+                                        And Social Care Providers</a></li>
+                                <li><a href="construction.html"
+                                        class="block px-6 py-4 text-sm text-black hover:text-white hover:bg-[#49b280]">Construction</a>
+                                </li>
+                                <li><a href="it.html"
+                                        class="block px-6 py-4 text-sm text-black hover:text-white hover:bg-[#49b280]">IT</a>
+                                </li>
+                                <li><a href="fintech.html"
+                                        class="block px-6 py-4 text-sm text-black hover:text-white hover:bg-[#49b280]">Fintech</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <a href="about.html" class="text-gray-500 hover:text-[#49b280] font-medium text-sm">About Us</a>
+                    <div class="relative group current">
+                        <a href="knowledge-hub.html"
+                            class="text-gray-500 hover:text-[#49b280] font-medium text-sm">Knowledge hub</a>
+                        <div
+                            class="absolute right-[-15em] top-full mt-8 w-[940px] bg-[#ffffff] text-white  shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-999 mega-menu">
+                            <div class="grid grid-cols-3 gap-8">
+                                <div>
+                                    <a href="blogs.html">
+                                        <h5 class="font-bold text-black mb-3">Blogs</h5>
+                                    </a>
+                                    <ul class="space-y-2 text-sm text-gray-300">
+                                        <li><a href="is-your-car-home-hr-ready-for-the-home-office-audit.html"
+                                                class="hover:text-[#49b280]">Is Your Care Home's HR Ready for a Home
+                                                Office Audit?</a></li>
+                                        <li><a href="drowning-in-paperwork-how-to-streamline-your-care-agencys-hr-and-stay-compliant.html"
+                                                class="hover:text-[#49b280]">Drowning in Paperwork?</a></li>
+                                        <li><a href="navigating-the-maze-of-sponsor-licence-compliance-are-you-monitoring-your-migrant-workers-correctly.html"
+                                                class="hover:text-[#49b280]">Navigating the Maze of Sponsor Licence
+                                                Compliance</a></li>
+                                        <li><a href="how-hr-software-secures-a-rating-and-boosts-cos-allocation.html"
+                                                class="hover:text-[#49b280]"> How Your HR Software Can Secure Your
+                                                A-Rating and Boost Your CoS Allocation?</a></li>
+                                        <li><a href="over-50-sponsor-licence-checks-and-counting-are-you-missing-a-critical-step.html"
+                                                class="hover:text-[#49b280]">Over 50 Sponsor Licence Checks and
+                                                Counting</a></li>
+                                        <li><a href="navigating-pain-points-for-sponsor-licence-holders.html"
+                                                class="hover:text-[#49b280]">The Key
+                                                Pain Points for UK Sponsor Licence Holders</a></li>
+                                        <li><a href="home-office-updates-immigration-rules.html"
+                                                class="hover:text-[#49b280]">Home Office updates Immigration Rules</a>
+                                        </li>
+                                        <li><a href="immigration-skills-charge-price-increase.html"
+                                                class="hover:text-[#49b280]">6 Weeks to Act Before 32% Immigration
+                                                Skills Charge Increase</a></li>
+                                        <li><a href="home-office-panic-to-readiness.html"
+                                                class="hover:text-[#49b280]">From Home Office Panic to Home-Office
+                                                Readiness in 3 Hours</a></li>
+                                        <li><a href="home-office-licence-enforcement.html"
+                                                class="hover:text-[#49b280]">Home Office Licence Enforcement</a></li>
+                                        <li><a href="golden-record-sponsor-licence.html"
+                                                class="hover:text-[#49b280]">Golden Record for Sponsor Licence</a></li>
+                                        <li><a href="home-office-sms-phishing-scams.html" class="hover:text-[#49b280]">
+                                                Home Office SMS Phishing Scams</a></li>
+                                        <li class=""><a href="2026-dangerous-year-sponsor-licence-holders.html"
+                                                class="hover:text-[#49b280]">
+                                                2026 - The most dangerous year for Sponsor Licence holders</a></li>
+                                        <li class=""><a href="2026-sponsor-license-compliance-update.html"
+                                                class="hover:text-[#49b280]">
+                                                The 2026 Sponsor Licence Compliance Update</a></li>
+
+                                    </ul>
+                                </div>
+                                <div>
+                                    <a href="resources-for-businesses.html">
+                                        <h5 class="font-bold text-black mb-3">Resources for Businesses</h5>
+                                    </a>
+                                    <ul class="space-y-2 text-sm text-gray-300">
+                                        <!-- <li><a href="event.html" class="hover:text-white">Attend Cardiff Event to Safeguard your Sponsor Licence</a></li> -->
+                                        <li><a href="sponsor-compliance-knowledge-series.html"
+                                                class="hover:text-white">Sponsor Compliance Knowledge series</a></li>
+                                        <li><a href="product-showcase.html" class="hover:text-white">IRS HR Product
+                                                Showcase</a></li>
+                                        <li><a href="all-in-one-sponsor-compliance-software.html"
+                                                class="hover:text-white">All in One Sponsor Compliance Software</a></li>
+                                        <li class=""><a href="HomeOffice-HMRC-Data-matching-from-april-2026.html"
+                                                class="hover:text-white">Home Office HMRC Data Matching from April
+                                                2026</a></li>
+                                        <li class=""><a href="sponsor-licence-revocation-risk.html"
+                                                class="hover:text-white">Sponsor Licence Revocation Risk</a></li>
+                                        <li><a href="guide-right-to-work-checks.html" class="hover:text-white">Your
+                                                Guide
+                                                to Conducting Right to Work Checks</a></li>
+                                        <li><a href="sponsor-license-compliance-pitfalls.html"
+                                                class="hover:text-white">Your ultimate guide
+                                                to Sponsor Licence Compliance pitfalls</a></li>
+                                        <li><a href="guide-to-home-office-sponsor-compliance.html"
+                                                class="hover:text-white">Your Ultimate Guide
+                                                to Home Office Sponsor Compliance</a></li>
+                                        <li><a href="guide-to-home-office-digital-audits.html"
+                                                class="hover:text-white">Your Guide To Home Office Digital Audits</a>
+                                        </li>
+                                        <li><a href="guide-to-secure-certificate-of-sponsorship.html"
+                                                class="hover:text-white">
+                                                Your interactive guide to secure Certificate of sponsorship</a></li>
+                                        <li class=""><a href="true-cost-of-sponsor-license-revocation.html"
+                                                class="hover:text-white">
+                                                True cost of Sponsor Licence Revocation</a></li>
+                                        <li class=""><a href="fabs-domiciliary-homecare-casestudy.html"
+                                                class="hover:text-white">
+                                                Case Study: Fabs Domiciliary Homecare</a></li>
+                                        <li class=""><a href="How-Gain-Care-Protected-their-licence.html"
+                                                class="hover:text-white">
+                                                How Gain Care Protected Their Sponsor Licence from Revocation</a></li>
+                                        <li class=""><a href="care-sector-crisis.html" class="hover:text-white">
+                                                Care Sector Crisis</a></li>
+                                        <li class=""><a href="Home-Office-Punishing-Sponsors-and-Employers.html"
+                                                class="hover:text-white">
+                                                Home Office Punishing Sponsors and Employers</a></li>
+                                        <li><a href="applying-for-sponsor-licence.html"
+                                                class="hover:text-white">Applying for a Sponsor Licence - FAQs</a></li>
+                                        <li><a href="sponsor-duties-compliance.html" class="hover:text-white">Sponsor
+                                                Duties and Compliance - FAQs</a></li>
+                                        <li class=""><a href="2026-most-dangerous-year-for-sponsor-licence-holders.html"
+                                                class="hover:text-white">
+                                                2026 - The most dangerous year for Sponsor Licence holders</a></li>
+                                        <li class=""><a href="sponsor-guidance-appendix-d-guide.html"
+                                                class="hover:text-white">
+                                                Sponsor Guidance Appendix D Guide</a></li>
+                                        <li><a href="care-Industry-hours-and-pay-calculator.html"
+                                                class="hover:text-white">
+                                                Care Sector Sponsorship & Fiscal Year Calculator</a></li>
+
+                                    </ul>
+                                </div>
+
+
+                                <!-- Column 3 -->
+                                <div class="font-bold text-white mb-3">
+                                    <a href="quizzes.html">
+                                        <h5 class="font-bold text-black mb-3">Quizzes</h5>
+                                    </a>
+                                    <ul class="space-y-2 text-sm text-gray-300 font-medium">
+                                        <li><a href="quiz-sponsor-licence-compliance-health-check.html"
+                                                class="hover:text-white" target="_blank">Sponsor License Compliance
+                                                Health Check</a></li>
+                                        <li><a href="Sponsor-Compliance-Challenge-Quiz.html" class="hover:text-white"
+                                                target="_blank">Sponsor Compliance Challenge</a></li>
+                                        <li><a href="Home-Office-Digital-Audit-Quiz.html" class="hover:text-white"
+                                                target="_blank">Home Office Digital Audit Quiz</a></li>
+                                        <li><a href="Test-Your-CoS-Request-Knowledge-Quiz.html" class="hover:text-white"
+                                                target="_blank">Test Your CoS Knowledge Quiz</a></li>
+                                        <li class=""><a href="test-your-knowledge-of-the-golden-record.html"
+                                                class="hover:text-white" target="_blank">Test your Knowledge of the
+                                                golden record</a></li>
+                                        <li class=""><a href="revocation-risk-assessment.html" class="hover:text-white"
+                                                target="_blank">Revocation Risk Assessment</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="text-gray-500 hover:text-[#49b280] font-medium text-sm">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="lg:hidden text-gray-700 focus:outline-none">
+                    <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Fullscreen Menu -->
+        <div id="mobile-menu" class="fixed inset-0 bg-[#16142B] text-white hidden flex-col justify-between ">
+            <div>
+                <!-- Top Section -->
+                <div class="flex items-center justify-center p-0 mb-8">
+                    <img src="assets/images/logo.webp" alt="Logo" class="h-48">
+                    <button id="close-btn" class="text-white text-2xl">&times;</button>
+                </div>
+                <nav class=" ">
+                    <a href="index.html" class="px-6 block py-3 border-b border-gray-700 uppercase">Home</a>
+                    <div class="border-b border-gray-700">
+                        <button class="px-6 w-full flex justify-between items-center py-3 accordion-btn uppercase ">
+                            <a href="benefits.html">Benefits</a>
+                            <i class="fas fa-angle-down accordion-icon transition-transform duration-300 "></i>
+                        </button>
+                        <div class="accordion-content hidden pl-6 pr-4 space-y-2 uppercase">
+                            <ul>
+                                <li class="mb-3"><a class="hover:text-[#49b280]"
+                                        href="24-7-hr-compliance-home-office.html">24x7 HR Home Office compliance</a>
+                                </li>
+                                <li class="mb-3"><a class="hover:text-[#49b280]"
+                                        href="monitor-your-migrants.html">Monitor Your Migrants</a></li>
+                                <li class="mb-3"><a class="hover:text-[#49b280]" href="visa-expiry-alerts.html">Visa
+                                        Expiry Alerts</a></li>
+                                <li class="mb-3"><a class="hover:text-[#49b280]"
+                                        href="right-to-work-digital-records.html">RTW Digital records</a></li>
+                                <li class="mb-3"><a class="hover:text-[#49b280]"
+                                        href="migrants-leave-and-absence-management.html">Leave and absence
+                                        management</a></li>
+                                <li class="mb-3"><a class="hover:text-white"
+                                        href="tailored-policies-home-office-compliance.html">Tailored Policies for Home
+                                        Office compliance</a></li>
+                                <li class="mb-3"><a class="hover:text-white" href="home-office-guidance.html">Home
+                                        Office Guidance</a></li>
+                                <li class="mb-3"><a class="hover:text-white"
+                                        href="50-sponsored-employee-checklist.html">50+ Sponsored Employee Checklist</a>
+                                </li>
+                                <li class="mb-3"><a class="hover:text-white"
+                                        href="100-sponsored-employee-staff-records.html">100+ Sponsored Employee Staff
+                                        Records</a></li>
+                                <li class="mb-3"><a class="hover:text-white"
+                                        href="fast-track-home-office-compliance-onboarding.html">Fast Track Home Office
+                                        Compliance Onboarding</a></li>
+                                <li class="mb-3"><a class="hover:text-white" href="cos-success-strategy.html">CoS
+                                        Success Strategy</a></li>
+                                <li class="mb-3"><a class="hover:text-white"
+                                        href="monthly-home-office-mock-audits.html">Monthly Home Office Mock Audits</a>
+                                </li>
+                                <li class="mb-3"><a class="hover:text-white"
+                                        href="level-7-hr-compliance-success-manager.html">Level 7 HR Compliance Success
+                                        manager</a></li>
+                                <li class="mb-3"><a class="hover:text-white" href="panel-of-solicitors.html">Panel of
+                                        Solicitors</a></li>
+                                <li class="mb-3"><a class="hover:text-white" href="after-sales-support.html"
+                                        target="_blank">After Sales Support</a></li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+                    <a href="calculate-your-savings.html"
+                        class="px-6 block py-3 border-b border-gray-700 uppercase">Pricing</a>
+
+                    <!-- Businesses accordion -->
+                    <div class="border-b border-gray-700">
+                        <button class="w-full flex justify-between items-center py-3 px-6 accordion-btn uppercase">
+                            Businesses
+                            <i class="fas fa-angle-down accordion-icon transition-transform duration-300"></i>
+                        </button>
+                        <div class="accordion-content hidden pl-6 pr-4 space-y-2 uppercase">
+                            <a href="care.html" class="block py-3">Health And Social Care Providers</a>
+                            <a href="construction.html" class="block py-3">Construction</a>
+                            <a href="it.html" class="block py-3">IT</a>
+                            <a href="fintech.html" class="block py-3">Fintech</a>
+                        </div>
+                    </div>
+
+                    <a href="about.html" class="px-6 block py-3 border-b border-gray-700 uppercase">About Us</a>
+
+                    <!-- Resources accordion -->
+                    <div class="border-b border-gray-700">
+                        <button
+                            class="px-6 w-full flex justify-between items-center py-3 accordion-btn uppercase current">
+                            <a href="knowledge-hub.html">Knowledge hub</a>
+                            <i class="fas fa-angle-down accordion-icon transition-transform duration-300 "></i>
+                        </button>
+                        <div class="accordion-content hidden pl-6 pr-4 space-y-2 uppercase">
+                            <ul>
+                                <h5 class="font-bold text-white mb-3 mt-4">Blogs</h5>
+                                <li class="mb-3"><a href="is-your-car-home-hr-ready-for-the-home-office-audit.html"
+                                        class="hover:text-[#49b280]">Is Your Care Home's HR Ready for a Home
+                                        Office Audit?</a></li>
+                                <li class="mb-3"><a
+                                        href="drowning-in-paperwork-how-to-streamline-your-care-agencys-hr-and-stay-compliant.html"
+                                        class="hover:text-[#49b280]">Drowning in Paperwork?</a></li>
+                                <li class="mb-3"><a
+                                        href="navigating-the-maze-of-sponsor-licence-compliance-are-you-monitoring-your-migrant-workers-correctly.html"
+                                        class="hover:text-[#49b280]">Navigating the Maze of Sponsor Licence
+                                        Compliance</a></li>
+                                <li class="mb-3"><a
+                                        href="how-hr-software-secures-a-rating-and-boosts-cos-allocation.html"
+                                        class="hover:text-[#49b280]">How Your HR Software Can Secure Your A-Rating and
+                                        Boost Your CoS Allocation?</a></li>
+                                <li class="mb-3"><a
+                                        href="over-50-sponsor-licence-checks-and-counting-are-you-missing-a-critical-step.html"
+                                        class="hover:text-[#49b280]">Over 50 Sponsor Licence Checks and
+                                        Counting</a></li>
+                                <li class="mb-3"><a href="navigating-pain-points-for-sponsor-licence-holders.html"
+                                        class="hover:text-[#49b280]">The
+                                        Key Pain
+                                        Points for UK Sponsor Licence Holders</a></li>
+                                <li class="mb-3"><a href="home-office-updates-immigration-rules.html"
+                                        class="hover:text-[#49b280]">Home Office updates Immigration Rules</a></li>
+                                <li class="mb-3"><a href="immigration-skills-charge-price-increase.html"
+                                        class="hover:text-[#49b280]">6 Weeks to Act Before 32% Immigration Skills Charge
+                                        Increase</a></li>
+                                <li class="mb-3"><a href="home-office-panic-to-readiness.html"
+                                        class="hover:text-[#49b280]">From Home Office Panic to Home-Office Readiness in
+                                        3 Hours</a></li>
+                                <li class="mb-3"><a href="home-office-licence-enforcement.html"
+                                        class="hover:text-[#49b280]">Home Office Licence Enforcement</a></li>
+                                <li class="mb-3"><a href="golden-record-sponsor-licence.html"
+                                        class="hover:text-[#49b280]">Golden Record for Sponsor Licence</a></li>
+                                <li class="mb-3"><a href="home-office-sms-phishing-scams.html"
+                                        class="hover:text-[#49b280]">
+                                        Home Office SMS Phishing Scams</a></li>
+                                <li class="mb-3"><a href="2026-dangerous-year-sponsor-licence-holders.html"
+                                        class="hover:text-[#49b280]">
+                                        2026 - The most dangerous year for Sponsor Licence holders</a></li>
+                                <li class="mb-3"><a href="2026-sponsor-license-compliance-update.html"
+                                        class="hover:text-[#49b280]">
+                                        The 2026 Sponsor Licence Compliance Update</a></li>
+
+
+                                <h5 class="font-bold text-white mb-3 mt-4">Resources for Businesses</h5>
+                                <!-- <li class="mb-3"><a href="event.html" class="hover:text-white">Attend Cardiff Event to Safeguard your Sponsor Licence</a></li> -->
+                                <li class="mb-3"><a href="sponsor-compliance-knowledge-series.html"
+                                        class="hover:text-white">Sponsor Compliance Knowledge series</a></li>
+                                <li class="mb-3"><a href="product-showcase.html" class="hover:text-white">IRS HR Product
+                                        Showcase</a></li>
+                                <li class="mb-3"><a href="all-in-one-sponsor-compliance-software.html"
+                                        class="hover:text-white">All in One Sponsor Compliance Software</a></li>
+                                <li class="mb-3"><a href="HomeOffice-HMRC-Data-matching-from-april-2026.html"
+                                        class="hover:text-white">Home Office HMRC Data Matching from April 2026</a></li>
+                                <li class="mb-3"><a href="HomeOffice-HMRC-Data-matching-from-april-2026.html"
+                                        class="hover:text-white">Home Office HMRC Data Matching from April 2026</a></li>
+                                <li class="mb-3"><a href="sponsor-licence-revocation-risk.html"
+                                        class="hover:text-white">Sponsor Licence Revocation Risk</a></li>
+                                <li class="mb-3"><a href="guide-right-to-work-checks.html" class="hover:text-white">A
+                                        Guide
+                                        to Conducting Right to Work Checks</a></li>
+                                <li class="mb-3"><a href="sponsor-license-compliance-pitfalls.html"
+                                        class="hover:text-white">Your ultimate guide
+                                        to Sponsor Licence Compliance pitfalls</a></li>
+                                <li class="mb-3"><a href="guide-to-home-office-sponsor-compliance.html"
+                                        class="hover:text-white">Your Ultimate Guide
+                                        to Home Office Sponsor Compliance</a></li>
+                                <li class="mb-3"><a href="guide-to-home-office-digital-audits.html"
+                                        class="hover:text-white">Your Guide To Home Office Digital Audits</a></li>
+                                <li class="mb-3"><a href="guide-to-secure-certificate-of-sponsorship.html"
+                                        class="hover:text-white">
+                                        Your interactive guide to secure Certificate of sponsorship</a></li>
+                                <li class="mb-3"><a href="true-cost-of-sponsor-license-revocation.html"
+                                        class="hover:text-white">
+                                        True cost of Sponsor Licence Revocation</a></li>
+                                <li class="mb-3"><a href="fabs-domiciliary-homecare-casestudy.html"
+                                        class="hover:text-white">
+                                        Case Study: Fabs Domiciliary Homecare</a></li>
+                                <li class="mb-3"><a href="care-sector-crisis.html" class="hover:text-white">
+                                        Care Sector Crisis</a></li>
+                                <li class="mb-3"><a href="Home-Office-Punishing-Sponsors-and-Employers.html"
+                                        class="hover:text-white">
+                                        Home Office Punishing Sponsors and Employers</a></li>
+                                <li class="mb-3"><a href="applying-for-sponsor-licence.html"
+                                        class="hover:text-white">Applying for a Sponsor Licence - FAQs</a></li>
+                                <li class="mb-3"><a href="sponsor-duties-compliance.html"
+                                        class="hover:text-white">Sponsor Duties and Compliance - FAQs</a></li>
+                                <li class="mb-3"><a href="2026-most-dangerous-year-for-sponsor-licence-holders.html"
+                                        class="hover:text-white">
+                                        2026 - The most dangerous year for Sponsor Licence holders</a></li>
+                                <li class="mb-3"><a href="sponsor-guidance-appendix-d-guide.html"
+                                        class="hover:text-white">
+                                        Sponsor Guidance Appendix D Guide</a></li>
+                                <li class="mb-3"><a href="care-Industry-hours-and-pay-calculator.html"
+                                        class="hover:text-white">
+                                        Care Sector Sponsorship & Fiscal Year Calculator</a></li>
+
+
+                                <h5 class="font-bold text-white mb-3 mt-4">Quizzes</h5>
+                                <li class="mb-3"><a href="quiz-sponsor-licence-compliance-health-check.html"
+                                        class="hover:text-white" target="_blank">Sponsor License Compliance Health
+                                        Check</a></li>
+                                <li class="mb-3"><a href="Sponsor-Compliance-Challenge-Quiz.html"
+                                        class="hover:text-white" target="_blank">Sponsor Compliance Challenge</a></li>
+                                <li class="mb-3"><a href="Home-Office-Digital-Audit-Quiz.html" class="hover:text-white"
+                                        target="_blank">Home Office Digital Audit Quiz</a></li>
+                                <li class="mb-3"><a href="Test-Your-CoS-Request-Knowledge-Quiz.html"
+                                        class="hover:text-white" target="_blank">Test Your CoS Knowledge Quiz</a></li>
+                                <li class="mb-3"><a href="test-your-knowledge-of-the-golden-record.html"
+                                        class="hover:text-white" target="_blank">Test your Knowledge of the golden
+                                        record</a></li>
+                                <li class="mb-3"><a href="revocation-risk-assessment.html" class="hover:text-white"
+                                        target="_blank">Revocation Risk Assessment</a></li>
+
+                            </ul>
+
+
+                        </div>
+                    </div>
+
+                    <a href="contact.html" class="px-6 block py-3 border-b border-gray-700 uppercase">Contact</a>
+                </nav>
+            </div>
+
+            <!-- Footer -->
+            <div class="border-t border-gray-700 text-sm contact-info">
+                <h4 class="font-bold mb-2">Contact Info</h4>
+                <p>Second Floor, 189 Brompton Road, Next to Harrods, Knightsbridge London, SW3 1NE</p>
+                <p>0333 577 4771</p>
+                <p>care@irslimited.co.uk</p>
+                <a href="https://www.linkedin.com/company/irs-limited"
+                    class="inline-block mt-2 text-white hover:text-gray-300"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/@SponsorComplianceMadeEasy" target="_blank"
+                    class="inline-block mt-2 text-white hover:text-gray-300">
+                    <i class="fab fa-youtube text-xl mr-2"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Hero Section -->
+    <header class="bg-brand-dark text-white relative overflow-hidden py-24 lg:py-32">
+        <!-- Subtle Ambient Gold Glows -->
+        <div
+            class="absolute top-0 right-0 -mr-32 -mt-32 w-[32rem] h-[32rem] rounded-full bg-brand-gold opacity-10 blur-3xl pointer-events-none">
+        </div>
+        <div
+            class="absolute bottom-0 left-1/4 w-96 h-96 rounded-full bg-brand-gold opacity-5 blur-3xl pointer-events-none">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-10 relative z-10">
+            <div class="max-w-4xl">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-brand-gold/30 text-brand-gold_bright text-xs font-semibold uppercase tracking-widest mb-8">
+                    <i class="fa-solid fa-gavel"></i> Employer Briefing for UK Sponsor Licence Holders
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.15] tracking-tight mb-8">
+                    What is the Home Office's 1/12th Salary Rule,<span class="gold-gradient-text"> And, how you might be
+                        breaching your sponsor duties?</span>
+                </h1>
+
+                <p class="text-lg sm:text-xl text-gray-300 mb-10 leading-relaxed max-w-3xl font-normal">
+                    In <strong class="text-white">Treal Care [2026] EWCA Civ 1420</strong>, the Court of Appeal rejected
+                    the Home Office’s rigid claim that sponsors must pay at least 1/12th of an annual CoS salary every
+                    single month. Yet under the <strong class="text-white">April 2026 SW 14.3B rules</strong>, severe
+                    shortfalls over a <strong class="text-brand-gold_bright">consecutive three-month period</strong>
+                    will still trigger licence revocation.
+                </p>
+
+                <div class="flex flex-wrap gap-4">
+                    <a href="#tools-suite"
+                        class="bg-brand-gold hover:bg-brand-gold_dark text-white px-8 py-4 rounded-lg font-semibold transition-all shadow-gold inline-flex items-center gap-3 text-base">
+                        <i class="fa-solid fa-calculator"></i>
+                        <span>Launch Employer Compliance Tools</span>
+                    </a>
+                    <a href="#direct-answers"
+                        class="bg-white/10 hover:bg-white/15 border border-white/15 text-white px-8 py-4 rounded-lg font-semibold transition-all inline-flex items-center gap-3 text-base">
+                        <span>Read Executive Summary</span>
+                        <i class="fa-solid fa-chevron-down text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Trust Metrics Bar -->
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-8 mt-16 pt-10 border-t border-white/10 max-w-3xl">
+                    <div>
+                        <div class="text-2xl sm:text-3xl font-bold text-brand-gold_bright">1/12th Myth</div>
+                        <div class="text-xs sm:text-sm text-gray-400 mt-1">Rejected by Court of Appeal in <em>Treal
+                                Care</em></div>
+                    </div>
+                    <div>
+                        <div class="text-2xl sm:text-3xl font-bold text-white">3-Month Floor</div>
+                        <div class="text-xs sm:text-sm text-gray-400 mt-1">Mandatory 1/4 CoS pay rule under SW 14.3B
+                        </div>
+                    </div>
+                    <div class="col-span-2 sm:col-span-1">
+                        <div class="text-2xl sm:text-3xl font-bold text-brand-gold_bright">17-Week Cap</div>
+                        <div class="text-xs sm:text-sm text-gray-400 mt-1">Max averaging cycle for uneven hours (SW
+                            14.3A)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- AI & Google Direct Answer Section (AEO / Featured Snippet Optimised) -->
+    <section id="direct-answers" class="py-24 lg:py-28 max-w-7xl mx-auto px-6 lg:px-10">
+        <div class="max-w-3xl mx-auto text-center mb-16">
+            <span
+                class="text-xs font-bold uppercase tracking-widest text-brand-gold_dark bg-brand-gold_light px-3.5 py-1.5 rounded-full border border-brand-gold_border">
+                Key Legal Questions Answered
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-bold text-brand-dark mt-4 mb-4">
+                What Sponsor Licence Holders Need to Know Right Now
+            </h2>
+            <p class="text-gray-600 text-lg leading-relaxed">
+                Clear, authoritative answers to the two critical compliance questions shaping UKVI enforcement after
+                November 2026.
+            </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-10">
+            <!-- Core Question 1: The 1/12th Argument -->
+            <article
+                class="bg-white rounded-2xl p-8 sm:p-10 shadow-soft border border-gray-200/80 flex flex-col justify-between relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1.5 bg-brand-gold"></div>
+                <div>
+                    <div class="flex items-center justify-between gap-4 mb-6">
+                        <span
+                            class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-gold_dark bg-brand-gold_light px-3 py-1 rounded-md">
+                            <i class="fa-solid fa-scale-unbalanced"></i> Home Office Argument vs. Court Ruling
+                        </span>
+                        <span class="text-xs font-semibold text-gray-400">[2026] EWCA Civ 1420</span>
+                    </div>
+
+                    <h3 class="text-xl sm:text-2xl font-bold text-brand-dark leading-snug mb-5">
+                        “The Secretary of State advanced the argument that, for monthly-paid workers whose CoS states an
+                        annual salary figure, the sponsor assumes an absolute obligation to pay at least one-twelfth of
+                        that annual amount in every single month.”
+                    </h3>
+
+                    <div class="bg-brand-ivory border-l-4 border-brand-gold p-5 rounded-r-xl mb-6">
+                        <div class="text-xs font-bold uppercase tracking-wider text-brand-gold_dark mb-1">Direct Answer:
+                            Rejected by the Court of Appeal</div>
+                        <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                            In <strong><em>R (Treal Care (UK) Limited) v SSHD</em> [2026] EWCA Civ 1420</strong>, Lord
+                            Justice Peter Jackson (with Green and Fancourt LJJ agreeing) ruled that this rigid 1/12th
+                            monthly requirement is <strong>wrong in principle and inconsistent with the Sponsor
+                                Guidance</strong>.
+                        </p>
+                    </div>
+
+                    <p class="text-gray-600 leading-relaxed mb-6 text-sm sm:text-base">
+                        Where a sponsored worker works uneven or fluctuating shift patterns, a single month dipping
+                        below 1/12th of the annual Certificate of Sponsorship (CoS) figure does <strong>not</strong>
+                        automatically breach Annex C1(aa). Instead, UKVI must conduct a <strong>rounded, evidence-based
+                            assessment</strong> over a fair sample period (such as 4 months) and consider valid
+                        explanations—including authorised unpaid leave, shift swaps across pay periods, or payroll
+                        reconciliation lump sums.
+                    </p>
+                </div>
+
+                <div class="pt-5 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+                    <span><strong class="text-brand-dark">Key Takeaway:</strong> One low month ≠ automatic
+                        revocation.</span>
+                    <a href="#tools-suite" class="text-brand-gold_dark font-semibold hover:underline">Test Monthly
+                        Variance &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Core Question 2: The 3-Month Consecutive Shortfall Rule -->
+            <article
+                class="bg-white rounded-2xl p-8 sm:p-10 shadow-soft border border-gray-200/80 flex flex-col justify-between relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1.5 bg-brand-dark"></div>
+                <div>
+                    <div class="flex items-center justify-between gap-4 mb-6">
+                        <span
+                            class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-dark bg-gray-100 px-3 py-1 rounded-md">
+                            <i class="fa-solid fa-shield-exclamation text-brand-gold_dark"></i> Mandatory Rule Change
+                        </span>
+                        <span class="text-xs font-semibold text-gray-400">Appendix Skilled Worker SW 14.3B</span>
+                    </div>
+
+                    <h3 class="text-xl sm:text-2xl font-bold text-brand-dark leading-snug mb-5">
+                        “Sponsors can no longer rely purely on annualised figures if their payroll practices cause
+                        severe shortfalls over a consecutive three-month period.”
+                    </h3>
+
+                    <div class="bg-brand-ivory border-l-4 border-brand-dark p-5 rounded-r-xl mb-6">
+                        <div class="text-xs font-bold uppercase tracking-wider text-brand-dark mb-1">Direct Answer:
+                            Enforced via the 1/4 Quarterly Floor</div>
+                        <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                            While <em>Treal Care</em> defeats a mechanical 1-month trigger, the April 2026 Immigration
+                            Rules introduced <strong>SW 14.3B</strong>, creating a strict statutory floor over any
+                            <strong>rolling 3-month window</strong> (or 12-week window for weekly-paid staff).
+                        </p>
+                    </div>
+
+                    <p class="text-gray-600 leading-relaxed mb-6 text-sm sm:text-base">
+                        Employers cannot underpay a worker for an entire quarter and promise to "make it up at the end
+                        of the year." For monthly-paid workers with uneven hours, gross pay across <strong>every rolling
+                            three-month period must equal at least one-quarter (25%) of the stated annual CoS
+                            salary</strong>—unless the shortfall is caused by a permitted statutory absence (such as
+                        statutory maternity, paternity, or certified sick leave).
+                    </p>
+                </div>
+
+                <div class="pt-5 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+                    <span><strong class="text-brand-dark">Key Takeaway:</strong> Rolling 3-month pay must be &ge; 25% of
+                        annual CoS.</span>
+                    <a href="#tools-suite" class="text-brand-gold_dark font-semibold hover:underline">Run 3-Month Audit
+                        &rarr;</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Case Study & Legal Comparison Section -->
+    <section id="legal-breakdown" class="py-24 bg-white border-y border-gray-200/80">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-start">
+                <!-- Left Column: Treal Care Case Facts -->
+                <div class="lg:col-span-5">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brand-gold_dark">Inside the
+                        Judgment</span>
+                    <h2 class="text-3xl font-bold text-brand-dark mt-2 mb-6">
+                        Why the Home Office Lost in <em>Treal Care</em>
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        Treal Care (UK) Ltd sponsored 75 care workers on CoS salaries of £22,400 per year (based on a
+                        40-hour week). Following a March 2024 compliance visit, the Home Office revoked their licence
+                        under <strong>Annex C1(aa)</strong> (underpayment) and <strong>Annex C1(z)</strong> (genuine
+                        vacancy) after reviewing four months of payslips (May–August 2024) for three workers:
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="p-5 rounded-xl bg-brand-ivory border border-gray-200">
+                            <div class="flex items-center justify-between mb-1">
+                                <span class="font-bold text-brand-dark">Worker 1: Ms A</span>
+                                <span
+                                    class="text-xs px-2.5 py-0.5 rounded-full bg-green-100 text-green-800 font-semibold">Revocation
+                                    Irrational</span>
+                            </div>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Annualised pay over the 4 months was £22,190 (marginally below £22,400) only because she
+                                took <strong>authorised unpaid leave</strong> in May and July. Her June and August pay
+                                met or exceeded the CoS rate. UKVI ignored the unpaid leave explanation.
+                            </p>
+                        </div>
+
+                        <div class="p-5 rounded-xl bg-brand-ivory border border-gray-200">
+                            <div class="flex items-center justify-between mb-1">
+                                <span class="font-bold text-brand-dark">Worker 2: Ms O</span>
+                                <span
+                                    class="text-xs px-2.5 py-0.5 rounded-full bg-green-100 text-green-800 font-semibold">Revocation
+                                    Irrational</span>
+                            </div>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Annualised pay over the 4-month period was <strong>£22,693.56</strong>—exceeding her
+                                £22,400 CoS! An earlier administrative lag in notifying training hours to payroll had
+                                already been rectified by a lump-sum payment before the revocation decision.
+                            </p>
+                        </div>
+
+                        <div class="p-5 rounded-xl bg-brand-ivory border border-gray-200">
+                            <div class="flex items-center justify-between mb-1">
+                                <span class="font-bold text-brand-dark">Worker 3: Ms L</span>
+                                <span
+                                    class="text-xs px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800 font-semibold">Residual
+                                    Discretion Applies</span>
+                            </div>
+                            <p class="text-sm text-gray-600 leading-relaxed">
+                                Worked reduced hours while caring for her seriously ill son (compassionate leave) and
+                                was later topped up. The Court confirmed that the Secretary of State holds a
+                                <strong>residual discretion</strong> even under "mandatory" Annex C1 grounds to consider
+                                mitigation and proportionality.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Structured Comparison Table -->
+                <div class="lg:col-span-7">
+                    <div class="bg-brand-dark text-white rounded-2xl p-8 sm:p-10 shadow-xl border border-gray-800">
+                        <div class="flex items-center justify-between mb-6">
+                            <div>
+                                <span
+                                    class="text-xs uppercase tracking-widest text-brand-gold_bright font-semibold">Compliance
+                                    Matrix</span>
+                                <h3 class="text-2xl font-bold mt-1">The New 2026 Dual-Layer Salary Framework</h3>
+                            </div>
+                            <i class="fa-solid fa-layer-group text-brand-gold text-2xl"></i>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-8 leading-relaxed">
+                            How HR and Payroll teams must reconcile the <em>Treal Care</em> Court of Appeal ruling with
+                            the April 2026 Skilled Worker Rules (`SW 14.3A` and `SW 14.3B`).
+                        </p>
+
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr
+                                        class="border-b border-gray-700 text-xs uppercase tracking-wider text-brand-gold_bright">
+                                        <th class="py-3.5 pr-4">Compliance Dimension</th>
+                                        <th class="py-3.5 px-4">Old Home Office Stance (Rejected)</th>
+                                        <th class="py-3.5 pl-4">Current Law (Treal Care + April 2026 Rules)</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-800 text-sm">
+                                    <tr>
+                                        <td class="py-4 pr-4 font-semibold text-white">Single-Month Shortfall</td>
+                                        <td class="py-4 px-4 text-gray-400">Paying &lt; 1/12th of annual CoS in any
+                                            single month = automatic breach.</td>
+                                        <td class="py-4 pl-4 text-gray-200"><strong
+                                                class="text-brand-gold_bright">Permitted if justified:</strong> Requires
+                                            a rounded assessment across the working pattern &amp; evidence.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-4 pr-4 font-semibold text-white">Rolling 3-Month Floor (SW 14.3B)
+                                        </td>
+                                        <td class="py-4 px-4 text-gray-400">No explicit quarterly rule; arbitrary
+                                            monthly spreadsheet checks.</td>
+                                        <td class="py-4 pl-4 text-gray-200"><strong
+                                                class="text-brand-gold_bright">Strict 25% Minimum:</strong> Must pay
+                                            &ge; 1/4 of annual CoS salary in every consecutive 3-month period.</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-4 pr-4 font-semibold text-white">Uneven Weekly Hours (SW 14.3A)
+                                        </td>
+                                        <td class="py-4 px-4 text-gray-400">Unclear treatment of weeks exceeding 48
+                                            hours and unpaid rest weeks.</td>
+                                        <td class="py-4 pl-4 text-gray-200"><strong
+                                                class="text-brand-gold_bright">17-Week Cycle Cap:</strong> Can average
+                                            hours over a regular cycle &le; 17 weeks (must average &le; 48 hrs/wk).</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-4 pr-4 font-semibold text-white">Unpaid Rest Weeks (Rota Pattern)
+                                        </td>
+                                        <td class="py-4 px-4 text-gray-400">Frequently flagged as unreported unpaid
+                                            absence breaches.</td>
+                                        <td class="py-4 pl-4 text-gray-200"><strong
+                                                class="text-brand-gold_bright">Protected (SW 14.3A(c)):</strong> Unpaid
+                                            rest weeks in a regular rota count toward average &amp; are not absences.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-4 pr-4 font-semibold text-white">UKVI Revocation Discretion</td>
+                                        <td class="py-4 px-4 text-gray-400">Claimed zero discretion if Annex C1(aa)
+                                            triggered mathematically.</td>
+                                        <td class="py-4 pl-4 text-gray-200"><strong
+                                                class="text-brand-gold_bright">Residual Discretion Exists:</strong> UKVI
+                                            must consider sponsor explanations, remediation &amp; workforce impact.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Employer Compliance Suite (3 Tools in Uncluttered Tabs) -->
+    <section id="tools-suite" class="py-24 lg:py-28 max-w-6xl mx-auto px-6 lg:px-10">
+        <div class="text-center max-w-3xl mx-auto mb-14">
+            <span
+                class="text-xs font-bold uppercase tracking-widest text-brand-gold_dark bg-brand-gold_light px-3.5 py-1.5 rounded-full border border-brand-gold_border">
+                Interactive Employer Diagnostic Suite
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-bold text-brand-dark mt-4 mb-4">
+                Test Your Sponsored Workforce Payroll in Real Time
+            </h2>
+            <p class="text-gray-600 text-lg">
+                Select a tool below to check a worker’s 3-month rolling salary compliance (SW 14.3B), 17-week shift
+                pattern average (SW 14.3A), or SMS reporting duties.
+            </p>
+        </div>
+
+        <!-- Tab Navigation Buttons -->
+        <div class="flex flex-wrap justify-center gap-3 mb-10" role="tablist">
+            <button type="button" onclick="switchToolTab('tab-rolling')" id="btn-tab-rolling"
+                class="px-6 py-3.5 rounded-xl font-semibold text-sm transition-all flex items-center gap-2.5 bg-brand-dark text-brand-gold_bright shadow-md border border-brand-gold">
+                <i class="fa-solid fa-calendar-week"></i>
+                <span>1. Rolling 3-Month &amp; 1/12th Checker (SW 14.3B)</span>
+            </button>
+            <button type="button" onclick="switchToolTab('tab-17week')" id="btn-tab-17week"
+                class="px-6 py-3.5 rounded-xl font-semibold text-sm transition-all flex items-center gap-2.5 bg-white text-gray-600 hover:text-brand-dark border border-gray-200">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <span>2. 17-Week Uneven Hours Calculator (SW 14.3A)</span>
+            </button>
+            <button type="button" onclick="switchToolTab('tab-triage')" id="btn-tab-triage"
+                class="px-6 py-3.5 rounded-xl font-semibold text-sm transition-all flex items-center gap-2.5 bg-white text-gray-600 hover:text-brand-dark border border-gray-200">
+                <i class="fa-solid fa-sitemap"></i>
+                <span>3. Shortfall &amp; SMS Reporting Triage</span>
+            </button>
+        </div>
+
+        <!-- TOOL 1: SW 14.3B Rolling 3-Month & 1/12th Variance Calculator -->
+        <div id="tab-rolling" class="bg-white rounded-2xl shadow-soft border border-gray-200/90 p-8 sm:p-12">
+            <div class="grid lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-brand-gold_dark">Tool 01 &bull; SW
+                            14.3B &amp; Annex C1(aa)</span>
+                        <h3 class="text-2xl font-bold text-brand-dark mt-1">3-Month Rolling Pay &amp; 1/12th Variance
+                            Auditor</h3>
+                        <p class="text-sm text-gray-500 mt-1">
+                            Evaluates both whether single months dip below 1/12th (requiring a <em>Treal Care</em>
+                            evidence note) and whether the 3-month total breaches the mandatory 1/4 quarterly floor.
+                        </p>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Stated Annual CoS Gross Salary
+                            (£)</label>
+                        <div class="relative">
+                            <span class="absolute left-4 top-3 text-gray-400 font-semibold">£</span>
+                            <input type="number" id="annualSalary" value="25000"
+                                class="w-full pl-9 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-gold focus:border-brand-gold outline-none transition-all font-medium"
+                                oninput="calculateCompliance()">
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <div class="flex justify-between items-center mb-3">
+                            <h4 class="text-sm font-semibold text-gray-700">Actual Gross Pay Across 3 Consecutive Months
+                            </h4>
+                            <button type="button" onclick="loadSampleScenario('treal')"
+                                class="text-xs text-brand-gold_dark hover:underline font-medium">Load Fluctuating Shift
+                                Example</button>
+                        </div>
+                        <div class="grid sm:grid-cols-3 gap-4">
+                            <div>
+                                <label class="block text-xs text-gray-500 mb-1">Month 1 Gross (£)</label>
+                                <input type="number" id="month1" value="1850"
+                                    class="w-full px-3.5 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-gold outline-none text-sm font-medium"
+                                    oninput="calculateCompliance()">
+                            </div>
+                            <div>
+                                <label class="block text-xs text-gray-500 mb-1">Month 2 Gross (£)</label>
+                                <input type="number" id="month2" value="2350"
+                                    class="w-full px-3.5 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-gold outline-none text-sm font-medium"
+                                    oninput="calculateCompliance()">
+                            </div>
+                            <div>
+                                <label class="block text-xs text-gray-500 mb-1">Month 3 Gross (£)</label>
+                                <input type="number" id="month3" value="2100"
+                                    class="w-full px-3.5 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-gold outline-none text-sm font-medium"
+                                    oninput="calculateCompliance()">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Output Panel -->
+                <div class="lg:col-span-6 bg-brand-ivory rounded-2xl p-8 border border-brand-gold_border">
+                    <h4 class="text-xs uppercase tracking-widest font-bold text-gray-400 mb-5">Live UKVI Audit
+                        Diagnostic</h4>
+
+                    <div class="space-y-3 mb-6">
+                        <div class="flex justify-between items-center py-2.5 border-b border-gray-200/80 text-sm">
+                            <span class="text-gray-600">Nominal 1/12th Monthly Benchmark:</span>
+                            <span class="font-bold text-brand-dark" id="monthlyBenchmarkOutput">£2,083.33</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2.5 border-b border-gray-200/80 text-sm">
+                            <span class="text-gray-600">Required 3-Month Floor (1/4 CoS):</span>
+                            <span class="font-bold text-brand-dark" id="requiredOutput">£6,250.00</span>
+                        </div>
+                        <div class="flex justify-between items-center py-2.5 border-b border-gray-200/80 text-sm">
+                            <span class="text-gray-600">Actual 3-Month Gross Paid:</span>
+                            <span class="font-extrabold text-lg text-brand-dark" id="actualOutput">£6,300.00</span>
+                        </div>
+                    </div>
+
+                    <div id="statusBadge"
+                        class="w-full py-3.5 px-4 rounded-xl text-center font-bold text-sm text-white transition-colors mb-4">
+                        <!-- Injected by JS -->
+                    </div>
+
+                    <div id="statusMessage"
+                        class="text-xs sm:text-sm leading-relaxed text-gray-700 bg-white p-4 rounded-xl border border-gray-200">
+                        <!-- Injected by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOOL 2: SW 14.3A 17-Week Irregular Hours & Shift Averaging Calculator -->
+        <div id="tab-17week" class="hidden bg-white rounded-2xl shadow-soft border border-gray-200/90 p-8 sm:p-12">
+            <div class="grid lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-6 space-y-5">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-brand-gold_dark">Tool 02 &bull;
+                            Paragraph SW 14.3A</span>
+                        <h3 class="text-2xl font-bold text-brand-dark mt-1">17-Week Rota &amp; Unpaid Rest Cycle
+                            Calculator</h3>
+                        <p class="text-sm text-gray-500 mt-1">
+                            Under SW 14.3A (effective 8 April 2026), weeks worked over 48 hours count toward salary
+                            thresholds only if the regular cycle is <strong>&le; 17 weeks</strong> and averages
+                            <strong>&le; 48 hours/week</strong> including unpaid rest weeks.
+                        </p>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Hourly Pay Rate (£)</label>
+                            <input type="number" step="0.01" id="rotaHourlyRate" value="12.50"
+                                class="w-full px-3.5 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-gold outline-none text-sm font-medium"
+                                oninput="calculate17WeekCycle()">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Total Rota Cycle Length
+                                (Weeks)</label>
+                            <input type="number" id="rotaCycleWeeks" value="3" min="1" max="26"
+                                class="w-full px-3.5 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-gold outline-none text-sm font-medium"
+                                oninput="calculate17WeekCycle()">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Active Working Weeks in
+                                Cycle</label>
+                            <input type="number" id="rotaWorkingWeeks" value="2" min="1" max="26"
+                                class="w-full px-3.5 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-gold outline-none text-sm font-medium"
+                                oninput="calculate17WeekCycle()">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-gray-700 mb-1">Hours Worked per Active
+                                Week</label>
+                            <input type="number" id="rotaHoursPerActiveWeek" value="60" min="1" max="80"
+                                class="w-full px-3.5 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-gold outline-none text-sm font-medium"
+                                oninput="calculate17WeekCycle()">
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-400 italic">
+                        Default values match the Home Office’s statutory example in SW 14.3A (60 hrs/week for 2 weeks
+                        followed by 1 unpaid rest week = 3-week cycle).
+                    </p>
+                </div>
+
+                <div class="lg:col-span-6 bg-brand-ivory rounded-2xl p-8 border border-brand-gold_border">
+                    <h4 class="text-xs uppercase tracking-widest font-bold text-gray-400 mb-5">SW 14.3A Rota Assessment
+                    </h4>
+                    <div class="space-y-3 mb-6 text-sm">
+                        <div class="flex justify-between py-2 border-b border-gray-200">
+                            <span class="text-gray-600">Unpaid Rest Weeks in Cycle:</span>
+                            <span class="font-bold text-brand-dark" id="rotaRestWeeksOut">1 week</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-gray-200">
+                            <span class="text-gray-600">Average Weekly Hours Across Cycle:</span>
+                            <span class="font-bold text-brand-dark" id="rotaAvgHoursOut">40.0 hrs / week</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-gray-200">
+                            <span class="text-gray-600">Recognised Annualised CoS Salary:</span>
+                            <span class="font-extrabold text-lg text-brand-dark"
+                                id="rotaAnnualSalaryOut">£26,000.00</span>
+                        </div>
+                    </div>
+                    <div id="rotaStatusBadge"
+                        class="w-full py-3 px-4 rounded-xl text-center font-bold text-sm text-white bg-green-600 mb-3">
+                        COMPLIANT ROTA PATTERN (SW 14.3A)
+                    </div>
+                    <p id="rotaStatusNote"
+                        class="text-xs sm:text-sm text-gray-700 bg-white p-4 rounded-xl border border-gray-200 leading-relaxed">
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOOL 3: Shortfall & SMS Reporting Triage Diagnostic -->
+        <div id="tab-triage" class="hidden bg-white rounded-2xl shadow-soft border border-gray-200/90 p-8 sm:p-12">
+            <div class="max-w-3xl mx-auto">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-gold_dark">Tool 03 &bull; Sponsor
+                    Guidance Part 2 (S4.19–S4.31) &amp; Part 3</span>
+                <h3 class="text-2xl font-bold text-brand-dark mt-1 mb-2">Interactive Shortfall &amp; SMS Reporting
+                    Decision Tree</h3>
+                <p class="text-sm text-gray-600 mb-6">
+                    Select why a sponsored worker’s monthly gross pay dropped below 1/12th of their stated CoS salary to
+                    view your immediate UKVI compliance procedure.
+                </p>
+
+                <div class="mb-6">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Select Cause of Monthly Pay
+                        Dip:</label>
+                    <select id="triageReason" onchange="updateTriageAdvice()"
+                        class="w-full px-4 py-3.5 border border-gray-300 rounded-xl focus:ring-2 focus:ring-brand-gold outline-none font-medium text-brand-dark bg-brand-ivory">
+                        <option value="uneven_shifts">1. Uneven shift pattern / rota variation (made up in adjacent
+                            months)</option>
+                        <option value="rest_week">2. Scheduled unpaid rest week within a regular &le;17-week rota cycle
+                        </option>
+                        <option value="unpaid_short">3. Employee-requested authorised unpaid leave (&le; 4 weeks in
+                            calendar year)</option>
+                        <option value="unpaid_long">4. Unpaid leave exceeding 4 weeks in a calendar year (non-exempt)
+                        </option>
+                        <option value="statutory_leave">5. Statutory Maternity, Paternity, Shared Parental, or Sick
+                            Leave</option>
+                        <option value="payroll_error">6. Administrative / payroll cut-off lag (e.g. unlogged training or
+                            overtime hours)</option>
+                        <option value="compassionate">7. Compassionate / emergency family care reduction in hours
+                        </option>
+                    </select>
+                </div>
+
+                <div id="triageOutputBox" class="bg-brand-ivory rounded-2xl p-6 sm:p-8 border-l-4 border-brand-gold">
+                    <!-- Populated via JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4-Step Strategic Action Plan for Sponsors -->
+    <section id="action-plan" class="py-24 bg-brand-dark text-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="max-w-3xl mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-gold_bright">Employer
+                    Blueprint</span>
+                <h2 class="text-3xl sm:text-4xl font-bold mt-3 mb-4">
+                    4-Step Compliance Strategy for Sponsor Licence Holders
+                </h2>
+                <p class="text-gray-300 text-lg leading-relaxed">
+                    How to operationalise the <em>Treal Care</em> safeguards while insulating your organisation from SW
+                    14.3B rolling-quarter breaches.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div
+                    class="bg-brand-slate p-8 rounded-2xl border border-gray-800 hover:border-brand-gold/50 transition-all flex flex-col justify-between">
+                    <div>
+                        <div
+                            class="w-12 h-12 rounded-xl bg-brand-gold/15 border border-brand-gold/40 flex items-center justify-center text-brand-gold_bright font-bold text-lg mb-6">
+                            01
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Replace Annual Checks with Rolling 3-Month Audits</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Configure your payroll software to run an automated check after every monthly pay run. Flag
+                            any sponsored worker whose cumulative gross pay over the last 3 consecutive months is below
+                            <strong>25.5% of their annual CoS salary</strong>.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-800 text-xs text-brand-gold_bright font-semibold">
+                        Satisfies Rule SW 14.3B
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div
+                    class="bg-brand-slate p-8 rounded-2xl border border-gray-800 hover:border-brand-gold/50 transition-all flex flex-col justify-between">
+                    <div>
+                        <div
+                            class="w-12 h-12 rounded-xl bg-brand-gold/15 border border-brand-gold/40 flex items-center justify-center text-brand-gold_bright font-bold text-lg mb-6">
+                            02
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Build a "Treal Care" Contemporaneous Evidence Log</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Whenever a single month dips below 1/12th of the CoS rate, attach a Contemporaneous Variance
+                            Note to that payslip in your HR file (e.g., signed unpaid leave request, rota swap sheet, or
+                            training reconciliation record).
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-800 text-xs text-brand-gold_bright font-semibold">
+                        Defeats Annex C1(aa) Assumptions
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div
+                    class="bg-brand-slate p-8 rounded-2xl border border-gray-800 hover:border-brand-gold/50 transition-all flex flex-col justify-between">
+                    <div>
+                        <div
+                            class="w-12 h-12 rounded-xl bg-brand-gold/15 border border-brand-gold/40 flex items-center justify-center text-brand-gold_bright font-bold text-lg mb-6">
+                            03
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Align Variable Shift Contracts to the 17-Week Cap</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            If staff work compressed or uneven weekly shifts (such as 60-hour weeks followed by rest
+                            weeks), formalise the repeating rota cycle in writing so it never exceeds <strong>17
+                                weeks</strong> and averages &le; 48 hours per week.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-800 text-xs text-brand-gold_bright font-semibold">
+                        Satisfies Rule SW 14.3A
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div
+                    class="bg-brand-slate p-8 rounded-2xl border border-gray-800 hover:border-brand-gold/50 transition-all flex flex-col justify-between">
+                    <div>
+                        <div
+                            class="w-12 h-12 rounded-xl bg-brand-gold/15 border border-brand-gold/40 flex items-center justify-center text-brand-gold_bright font-bold text-lg mb-6">
+                            04
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Enforce Pre-Emptive Remediation &amp; SMS Reporting</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            As demonstrated by Worker Ms O in <em>Treal Care</em>, rectifying payroll errors via a
+                            lump-sum payment <em>before</em> UKVI enforcement—and reporting prolonged reduced pay on the
+                            SMS within 10 working days—protects your A-rating.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-800 text-xs text-brand-gold_bright font-semibold">
+                        Protects Sponsor Licence Rating
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rich SEO & AI-Targeted FAQ Accordion Section -->
+    <section id="faq" class="py-24 max-w-5xl mx-auto px-6 lg:px-10">
+        <div class="text-center mb-16">
+            <span
+                class="text-xs font-bold uppercase tracking-widest text-brand-gold_dark bg-brand-gold_light px-3.5 py-1.5 rounded-full border border-brand-gold_border">
+                Frequently Asked Questions
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-bold text-brand-dark mt-4 mb-4">
+                Sponsor Licence Salary &amp; Compliance FAQs
+            </h2>
+            <p class="text-gray-600">
+                Structured answers for Authorising Officers, Level 1 Users, HR Directors, and Employment Counsel.
+            </p>
+        </div>
+
+        <div class="space-y-4">
+            <!-- FAQ Item 1 -->
+            <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+                <button type="button" onclick="toggleFaq(1)"
+                    class="w-full px-7 py-6 text-left flex justify-between items-center gap-4 hover:bg-gray-50/60 transition-colors">
+                    <span class="font-bold text-brand-dark text-base sm:text-lg">
+                        1. Must a UK sponsor pay at least 1/12th of the annual CoS salary every single month?
+                    </span>
+                    <i id="faq-icon-1" class="fa-solid fa-minus text-brand-gold transition-transform"></i>
+                </button>
+                <div id="faq-body-1"
+                    class="px-7 pb-6 text-gray-600 leading-relaxed text-sm sm:text-base border-t border-gray-100 pt-4">
+                    <strong>No.</strong> Although the Secretary of State argued in <em>Treal Care (UK) Limited v
+                        SSHD</em> [2026] EWCA Civ 1420 that stating an annual salary on a Certificate of Sponsorship
+                    (CoS) for a monthly-paid worker creates an absolute obligation to pay at least one-twelfth (1/12th)
+                    every single month, the Court of Appeal rejected that interpretation. Where a worker works uneven
+                    hours or takes authorised short-term unpaid leave, compliance with Annex C1(aa) requires a rounded
+                    assessment over a representative period, not a mechanical single-month division by twelve.
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+                <button type="button" onclick="toggleFaq(2)"
+                    class="w-full px-7 py-6 text-left flex justify-between items-center gap-4 hover:bg-gray-50/60 transition-colors">
+                    <span class="font-bold text-brand-dark text-base sm:text-lg">
+                        2. Why can’t sponsors rely purely on annualised salary figures anymore?
+                    </span>
+                    <i id="faq-icon-2" class="fa-solid fa-plus text-brand-gold transition-transform"></i>
+                </button>
+                <div id="faq-body-2"
+                    class="hidden px-7 pb-6 text-gray-600 leading-relaxed text-sm sm:text-base border-t border-gray-100 pt-4">
+                    Because paragraph <strong>SW 14.3B</strong> of Appendix Skilled Worker (introduced in April 2026)
+                    sets strict rolling pay-period minimums. Sponsors can no longer rely purely on annualised figures if
+                    their payroll practices cause severe shortfalls over a consecutive three-month period. Specifically,
+                    monthly-paid workers on uneven hours must receive at least <strong>one-quarter (25%) of their annual
+                        CoS salary in every rolling three-month period</strong> (or every rolling 12-week period if paid
+                    weekly).
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+                <button type="button" onclick="toggleFaq(3)"
+                    class="w-full px-7 py-6 text-left flex justify-between items-center gap-4 hover:bg-gray-50/60 transition-colors">
+                    <span class="font-bold text-brand-dark text-base sm:text-lg">
+                        3. Does the Home Office have discretion not to revoke a licence under Annex C1(aa)?
+                    </span>
+                    <i id="faq-icon-3" class="fa-solid fa-plus text-brand-gold transition-transform"></i>
+                </button>
+                <div id="faq-body-3"
+                    class="hidden px-7 pb-6 text-gray-600 leading-relaxed text-sm sm:text-base border-t border-gray-100 pt-4">
+                    <strong>Yes.</strong> At paragraphs [52]–[56] of <em>Treal Care</em>, Lord Justice Peter Jackson
+                    rejected the Home Office’s claim that it had zero residual discretion when a mandatory ground in
+                    Annex C1 is engaged. Under public law principles (<em>R (Lumba) v SSHD</em> and <em>Prestwick
+                        Care</em>), the Home Office retains a residual discretion to consider explanations, early
+                    remediation (such as topping up an accidental underpayment), compassionate circumstances, and the
+                    wider impact on employees and service users before revoking a licence.
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+                <button type="button" onclick="toggleFaq(4)"
+                    class="w-full px-7 py-6 text-left flex justify-between items-center gap-4 hover:bg-gray-50/60 transition-colors">
+                    <span class="font-bold text-brand-dark text-base sm:text-lg">
+                        4. What happens if a sponsored worker takes compassionate leave or unpaid leave?
+                    </span>
+                    <i id="faq-icon-4" class="fa-solid fa-plus text-brand-gold transition-transform"></i>
+                </button>
+                <div id="faq-body-4"
+                    class="hidden px-7 pb-6 text-gray-600 leading-relaxed text-sm sm:text-base border-t border-gray-100 pt-4">
+                    In <em>Treal Care</em>, the Court noted that compassionate leave is not automatically listed as a
+                    permitted salary reduction exception in the Sponsor Guidance (unlike statutory maternity, paternity,
+                    or sick leave), which meant Worker Ms L’s reduced pay required careful handling and remediation.
+                    Additionally, if a sponsored worker takes more than <strong>4 weeks of unpaid leave</strong> in a
+                    calendar year (outside statutory exceptions), the sponsor must normally stop sponsoring the worker
+                    or report the exception via the SMS under paragraphs S4.19–S4.31.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Uncluttered Demo Booking & Consultation Section -->
+    <section id="booking" class="py-24 lg:py-28 bg-white border-t border-gray-200/80">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="grid lg:grid-cols-12 gap-14 items-center">
+                <!-- Left Column: Value Proposition -->
+                <div class="lg:col-span-5">
+                    <span
+                        class="text-xs font-bold uppercase tracking-widest text-brand-gold_dark bg-brand-gold_light px-3.5 py-1.5 rounded-full border border-brand-gold_border">
+                        Book Your Live Demo
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-brand-dark mt-4 mb-6 leading-tight">
+                        Automate Your Rolling 3-Month &amp; CoS Payroll Compliance
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed mb-8">
+                        Don’t wait for an unannounced UKVI compliance visit to discover a rolling-quarter shortfall.
+                        Book a tailored 30-minute walkthrough of the <strong>SponsorGuard Compliance Platform</strong>
+                        and receive a complimentary diagnostic of your current sponsored payroll.
+                    </p>
+
+                    <div class="space-y-5 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-9 h-9 rounded-lg bg-brand-gold_light border border-brand-gold_border flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-bolt text-brand-gold_dark text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-dark text-sm">Automated SW 14.3B Rolling Alerts</h4>
+                                <p class="text-xs text-gray-500 mt-0.5">Syncs with Sage, Xero, BrightPay &amp; NHS ESR
+                                    to flag 3-month 1/4 threshold risks before payroll closes.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-9 h-9 rounded-lg bg-brand-gold_light border border-brand-gold_border flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-file-shield text-brand-gold_dark text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-dark text-sm">One-Click "Treal Care" Evidence Bundles
+                                </h4>
+                                <p class="text-xs text-gray-500 mt-0.5">Automatically links rota logs, unpaid leave
+                                    approvals, and training top-ups to monthly payslips.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-9 h-9 rounded-lg bg-brand-gold_light border border-brand-gold_border flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-bell text-brand-gold_dark text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-dark text-sm">10-Day SMS Reporting Tracker</h4>
+                                <p class="text-xs text-gray-500 mt-0.5">Never miss a mandatory Sponsorship Management
+                                    System deadline for salary or hour changes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Demo Booking Form Card -->
+                <div class="lg:col-span-7">
+                    <div
+                        class="bg-brand-ivory rounded-2xl shadow-soft p-8 sm:p-12 border border-gray-200 relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-2 bg-brand-gold"></div>
+
+                        <!-- Success Confirmation State -->
+                        <div id="formSuccess" class="hidden py-10 text-center">
+                            <div
+                                class="w-16 h-16 bg-brand-gold_light border border-brand-gold rounded-full flex items-center justify-center mx-auto mb-5">
+                                <i class="fa-solid fa-check text-2xl text-brand-gold_dark"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-brand-dark mb-2">Demo &amp; Compliance Review Confirmed
+                            </h3>
+                            <p class="text-gray-600 text-sm max-w-md mx-auto mb-6" id="bookingSummaryText">
+                                Thank you. Our Senior UKVI Compliance Specialist has received your request and will send
+                                your calendar invitation shortly.
+                            </p>
+                            <button type="button" onclick="resetFormUI()"
+                                class="px-6 py-2.5 rounded-lg bg-brand-dark text-brand-gold_bright text-xs font-semibold uppercase tracking-wider hover:bg-gray-800 transition-colors">
+                                Book Another Session
+                            </button>
+                        </div>
+
+                        <!-- Active Booking Form -->
+                        <form class="space-y-4" id="leadForm" method="POST" data-email="pc@irslimited.co.uk"
+                            action="https://script.google.com/macros/s/AKfycbz2GnlqojLNYcIAoqxwJ3paL4eXeeOn4a43rcy8BFrI0LHXn3jt7DfskUXiDSzj0Vg/exec">
+                            <div class="flex items-center justify-between border-b border-gray-200 pb-4 mb-2">
+                                <div>
+                                    <h3 class="text-xl font-bold text-brand-dark">Schedule Your Platform Demo</h3>
+                                    <p class="text-xs text-gray-500 mt-0.5">Includes a free SW 14.3B &amp; Treal Care
+                                        payroll vulnerability check</p>
+                                </div>
+                                <span
+                                    class="text-xs font-semibold px-3 py-1 rounded-full bg-brand-gold_light text-brand-gold_dark border border-brand-gold_border">30
+                                    Mins</span>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 mb-1">Company Name</label>
+                                <input type="text"
+                                    class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition"
+                                    placeholder="e.g. Acme Care Ltd" name="company">
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-1">Your Name</label>
+                                    <input type="text"
+                                        class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-blue-500 outline-none transition"
+                                        placeholder="John Doe" name="name" required>
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-1">Mobile</label>
+                                    <input type="tel"
+                                        class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-blue-500 outline-none transition"
+                                        placeholder="07700..." name="phone" required>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-1">Work Email</label>
+                                    <input type="email"
+                                        class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-blue-500 outline-none transition"
+                                        placeholder="john@company.com" name="email" required>
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-1">Number of
+                                        Employees</label>
+                                    <input type="text"
+                                        class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-blue-500 outline-none transition"
+                                        placeholder="300" name="employees" required>
+                                </div>
+
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-1">Preferred Date</label>
+                                    <input type="date"
+                                        class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-blue-500 outline-none transition"
+                                        name="date" required>
+                                </div>
+
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-700 mb-1">Preferred Time</label>
+                                    <input id="timePicker"
+                                        class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-blue-500 outline-none transition"
+                                        placeholder="09:00 AM" name="time" required />
+                                    <p class="block text-sm text-gray-700 mb-1 mt-2">Choose a time 2 hours from now</p>
+                                </div>
+                            </div>
+
+                            <button type="submit" id="submitLeadBtn"
+                                class="w-full bg-brand-gold hover:bg-brand-gold_dark text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5 mt-2">
+                                Secure My Priority Demo Slot
+                            </button>
+
+                            <div class="text-center mt-4">
+                                <span class="text-xs text-gray-400 flex items-center justify-center">
+                                    <i data-lucide="lock" class="w-3 h-3 mr-1"></i> 100% Confidential & Secure
+                                </span>
+                            </div>
+                        </form>
+
+                        <div id="successModal"
+                            class="fixed inset-0 z-50 flex items-center justify-center hidden bg-black bg-opacity-50 px-4">
+                            <div
+                                class="bg-white rounded-2xl p-8 max-w-sm w-full text-center shadow-2xl transform transition-all">
+                                <div
+                                    class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-2">Priority IRS HR Demo Request Received!
+                                </h3>
+                                <p class="text-gray-600 mb-6">Thank you for reaching out to IRS HR Priority Team. We've
+                                    secured your slot and will
+                                    be in touch shortly.</p>
+                                <button onclick="closeModal()"
+                                    class="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 rounded-xl transition">
+                                    Great, thanks!
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#1b182f] "
+        style="background-image: url(assets/images/shape/shape-8.webp);background-repeat: no-repeat;background-position: bottom right;    background-position-y: 370px;">
+        <!-- Top Section -->
+        <div class="w-full border-b border-gray-700">
+            <div class="auto-container mx-auto flex flex-col md:flex-row items-center justify-between py-6 px-6">
+
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <img src="assets/images/logo.webp" alt="Logo" class="h-40">
+                </div>
+
+                <!-- Contact Info -->
+                <div class="flex flex-col md:flex-row items-center gap-10 mt-4 md:mt-0">
+                    <!-- Email -->
+                    <div class="flex items-center gap-2 pr-0 sm:pr-40">
+                        <i class="flaticon-message text-[#49b280] text-3xl mr-2"></i>
+                        <div>
+                            <p class="text-sm uppercase text-[#9390a7]">Email Address</p>
+                            <a href="mailto:care@irslimited.co.uk"
+                                class="font-bold hover:text-[#49b280] text-white text-lg">care@irslimited.co.uk</a>
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="flex items-center gap-2">
+                        <i class="flaticon-phone-call text-[#49b280] text-3xl mr-2"></i>
+                        <div>
+                            <p class="text-sm uppercase text-[#9390a7]">Call Now</p>
+                            <a href="tel:0333 577 4771" class="font-bold hover:text-[#49b280] text-white text-lg">0333
+                                577 4771</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="auto-container mx-auto d-block sm:grid grid-cols-3 gap-10 px-6 py-50">
+
+            <!-- About -->
+            <div class="col-span-2">
+                <h3 class="font-bold mb-3 text-white fs_20">About</h3>
+                <p class="text-[#9390a7] leading-[32px] footer-about sm:pr-100 p-0 font-medium">
+                    IRS HR is an advanced AI-Assisted HR compliance platform designed to help UK Sponsor Licence holders
+                    manage workforce compliance effortlessly. From migrant monitoring to maintaining robust
+                    International
+                    Recruitment to solicitor support, we simplify HR so businesses can focus on growth.
+                </p>
+            </div>
+
+            <!-- Address -->
+            <div class="col-span-1">
+                <h3 class="font-bold mb-3 text-white fs_20 mt-10 sm:mt-0">Address</h3>
+                <p class="text-[#9390a7] leading-[32px] font-medium ">
+                    Second Floor, 189 Brompton Road,<br>
+                    Next to Harrods, Knightsbridge London,<br>
+                    SW3 1NE
+                </p>
+                <ul class="social-links clearfix" style="display: flex;">
+                    <li><a href="https://www.linkedin.com/company/irs-limited"
+                            class="flex items-center justify-center w-12 h-12 rounded-full bg-[#1e1b3a] hover:bg-[#4ade80] transition duration-300 mt-8"><i
+                                class="fab fa-linkedin text-white"></i></a></li>
+                    <li><a href="https://www.youtube.com/@SponsorComplianceMadeEasy"
+                            class="flex items-center justify-center w-12 h-12 rounded-full bg-[#1e1b3a] hover:bg-[#4ade80] transition duration-300 mt-8"><i
+                                class="fab fa-youtube text-white"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <div class="bg-[#25223c]">
+        <p class="text-center text-gray-400 py-8">© Copyright 2024 by INTERNATIONAL RECRUITMENT SOLUTIONS LIMITED</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="assets/js/bookingForm.js"></script>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const navbar = document.getElementById("navbar");
+            const navLinks = document.getElementsByClassName(".links-navbar a");
+
+            if (window.innerWidth >= 768) {
+                if (window.scrollY > 10) {
+                    navbar.classList.add("bg-[#16132A]");
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove("bg-[#16132A]");
+                    navbar.classList.remove('scrolled');
+                }
+            }
+        });
+    </script>
+
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const closeBtn = document.getElementById("close-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const accordions = document.querySelectorAll(".accordion-btn");
+
+        menuBtn.addEventListener("click", () => mobileMenu.classList.remove("hidden"));
+        closeBtn.addEventListener("click", () => mobileMenu.classList.add("hidden"));
+
+        accordions.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const content = btn.nextElementSibling;
+                content.classList.toggle("hidden");
+            });
+        });
+    </script>
+
+    <script>
+        function closePopup() {
+            document.getElementById("bottomPopup").style.display = "none";
+        }
+    </script>
+
+
+    <!-- Interactive Logic -->
+    <script>
+        // Format GBP Currency
+        const formatGBP = (amount) => {
+            return new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' }).format(amount);
+        };
+
+        // Switch Interactive Tool Tabs
+        function switchToolTab(tabId) {
+            const tabs = ['tab-rolling', 'tab-17week', 'tab-triage'];
+            const btns = ['btn-tab-rolling', 'btn-tab-17week', 'btn-tab-triage'];
+
+            tabs.forEach((id, index) => {
+                const tabEl = document.getElementById(id);
+                const btnEl = document.getElementById(btns[index]);
+                if (id === tabId) {
+                    tabEl.classList.remove('hidden');
+                    btnEl.className = "px-6 py-3.5 rounded-xl font-semibold text-sm transition-all flex items-center gap-2.5 bg-brand-dark text-brand-gold_bright shadow-md border border-brand-gold";
+                } else {
+                    tabEl.classList.add('hidden');
+                    btnEl.className = "px-6 py-3.5 rounded-xl font-semibold text-sm transition-all flex items-center gap-2.5 bg-white text-gray-600 hover:text-brand-dark border border-gray-200";
+                }
+            });
+        }
+
+        // Load Preset Example into Tool 1
+        function loadSampleScenario(type) {
+            if (type === 'treal') {
+                document.getElementById('annualSalary').value = 22400;
+                document.getElementById('month1').value = 1650; // Dip due to uneven shifts
+                document.getElementById('month2').value = 2050; // Recovery month
+                document.getElementById('month3').value = 1950; // Above 1/12th
+                calculateCompliance();
+            }
+        }
+
+        // Tool 1: SW 14.3B Rolling 3-Month & 1/12th Variance Calculator
+        function calculateCompliance() {
+            const annual = parseFloat(document.getElementById('annualSalary').value) || 0;
+            const m1 = parseFloat(document.getElementById('month1').value) || 0;
+            const m2 = parseFloat(document.getElementById('month2').value) || 0;
+            const m3 = parseFloat(document.getElementById('month3').value) || 0;
+
+            const monthlyBenchmark = annual / 12;
+            const required3Month = annual / 4;
+            const actual3Month = m1 + m2 + m3;
+
+            document.getElementById('monthlyBenchmarkOutput').innerText = formatGBP(monthlyBenchmark);
+            document.getElementById('requiredOutput').innerText = formatGBP(required3Month);
+            document.getElementById('actualOutput').innerText = formatGBP(actual3Month);
+
+            const badge = document.getElementById('statusBadge');
+            const msg = document.getElementById('statusMessage');
+
+            // Identify which individual months dipped below 1/12th
+            const dippedMonths = [];
+            if (m1 < monthlyBenchmark) dippedMonths.push('Month 1');
+            if (m2 < monthlyBenchmark) dippedMonths.push('Month 2');
+            if (m3 < monthlyBenchmark) dippedMonths.push('Month 3');
+
+            if (actual3Month >= required3Month) {
+                if (dippedMonths.length === 0) {
+                    badge.className = "w-full py-3.5 px-4 rounded-xl text-center font-bold text-sm text-white bg-green-600 shadow-sm mb-4";
+                    badge.innerHTML = `<i class="fa-solid fa-circle-check mr-1.5"></i> FULLY COMPLIANT (SW 14.3B & MONTHLY BENCHMARK MET)`;
+                    msg.innerHTML = `
+    <strong class="text-green-700">Zero Compliance Risk:</strong>
+    Every individual month meets or exceeds the nominal
+    1/12th rate (${formatGBP(monthlyBenchmark)}), and the
+    3-month cumulative total (${formatGBP(actual3Month)})
+    exceeds the mandatory 1/4 floor
+    (${formatGBP(required3Month)}).
+`;
+                } else {
+                    badge.className = "w-full py-3.5 px-4 rounded-xl text-center font-bold text-sm text-brand-dark bg-brand-gold_bright shadow-sm mb-4";
+                    badge.innerHTML = `<i class="fa-solid fa-shield-halved mr-1.5"></i> COMPLIANT UNDER TREAL CARE & SW 14.3B (DOCUMENTATION REQUIRED)`;
+                    msg.innerHTML = `
+                    <strong class="text-brand-dark">Protected Fluctuation:</strong>
+                    Although <strong>${dippedMonths.join(' & ')}</strong>
+                    dipped below the 1/12th monthly figure
+                    (${formatGBP(monthlyBenchmark)}), your 3-month rolling
+                    total (${formatGBP(actual3Month)}) meets the mandatory
+                    <strong>SW 14.3B 1/4 floor
+                    (${formatGBP(required3Month)})</strong>.
+                    Under <em>Treal Care [2026] EWCA Civ 1420</em>,
+                    keep a contemporaneous rota/shift note on file to
+                    explain the single-month variance.
+                `;
+                }
+            } else {
+                const shortfall = required3Month - actual3Month;
+                badge.className = "w-full py-3.5 px-4 rounded-xl text-center font-bold text-sm text-white bg-red-600 shadow-sm mb-4";
+                badge.innerHTML = `<i class="fa-solid fa-triangle-exclamation mr-1.5"></i> SW 14.3B 3-MONTH ROLLING BREACH RISK`;
+                msg.innerHTML = `
+    <strong class="text-red-700">
+        Action Required — Shortfall of ${formatGBP(shortfall)}:
+    </strong>
+    Sponsors cannot rely purely on annualised figures when
+    a consecutive 3-month period falls below 1/4 of the
+    annual CoS salary (${formatGBP(required3Month)}).
+    Unless caused by a statutory exception (e.g. statutory
+    maternity or sick leave), you must remediate any
+    administrative payroll error immediately or assess
+    SMS reporting duties.
+`;
+            }
+        }
+
+        // Tool 2: SW 14.3A 17-Week Irregular Hours Calculator
+        function calculate17WeekCycle() {
+            const hourlyRate = parseFloat(document.getElementById('rotaHourlyRate').value) || 0;
+            const cycleWeeks = parseFloat(document.getElementById('rotaCycleWeeks').value) || 1;
+            const workingWeeks = parseFloat(document.getElementById('rotaWorkingWeeks').value) || 0;
+            const hoursPerActive = parseFloat(document.getElementById('rotaHoursPerActiveWeek').value) || 0;
+
+            const restWeeks = Math.max(0, cycleWeeks - workingWeeks);
+            const totalCycleHours = workingWeeks * hoursPerActive;
+            const avgWeeklyHours = totalCycleHours / cycleWeeks;
+            const impliedAnnualSalary = hourlyRate * avgWeeklyHours * 52;
+
+            document.getElementById('rotaRestWeeksOut').innerText = `${restWeeks} week(s)`;
+            document.getElementById('rotaAvgHoursOut').innerText = `${avgWeeklyHours.toFixed(1)} hrs / week`;
+            document.getElementById('rotaAnnualSalaryOut').innerText = formatGBP(impliedAnnualSalary);
+
+            const badge = document.getElementById('rotaStatusBadge');
+            const note = document.getElementById('rotaStatusNote');
+
+            if (cycleWeeks > 17) {
+                badge.className = "w-full py-3 px-4 rounded-xl text-center font-bold text-sm text-white bg-red-600 mb-3";
+                badge.innerText = "NON-COMPLIANT CYCLE: EXCEEDS 17-WEEK MAXIMUM (SW 14.3A)";
+                note.innerHTML = `Under <strong>SW 14.3A(a)</strong>, a regular averaging cycle for uneven weekly hours can be <strong>no more than 17 weeks</strong>. Reduce your formal rota cycle length to 17 weeks or fewer.`;
+            } else if (avgWeeklyHours > 48) {
+                badge.className = "w-full py-3 px-4 rounded-xl text-center font-bold text-sm text-white bg-red-600 mb-3";
+                badge.innerText = "NON-COMPLIANT AVERAGE: EXCEEDS 48 HOURS/WEEK CAP";
+                note.innerHTML = `Under <strong>SW 14.3A(a)</strong>, work in excess of 48 hours in peak weeks only counts toward Skilled Worker salary thresholds if the average across the cycle (&le;17 weeks) is <strong>not more than 48 hours a week</strong>. Current average is ${avgWeeklyHours.toFixed(1)} hrs/wk.`;
+            } else {
+                badge.className = "w-full py-3 px-4 rounded-xl text-center font-bold text-sm text-white bg-green-600 mb-3";
+                badge.innerText = "COMPLIANT ROTA PATTERN (SW 14.3A PROTECTED)";
+                note.innerHTML = `<strong>Compliant under SW 14.3A:</strong> Your ${cycleWeeks}-week cycle is within the 17-week limit and averages <strong>${avgWeeklyHours.toFixed(1)} hours/week</strong> (&le; 48 hrs). Under SW 14.3A(b)–(c), the <strong>${restWeeks} unpaid rest week(s)</strong> count toward the average and do <em>not</em> count as unauthorised absences from employment.`;
+            }
+        }
+
+        // Tool 3: Shortfall Triage Decision Helper
+        function updateTriageAdvice() {
+            const reason = document.getElementById('triageReason').value;
+            const box = document.getElementById('triageOutputBox');
+
+            const guidanceMap = {
+                uneven_shifts: {
+                    title: "Protected Under Treal Care — Monitor 3-Month Rolling Floor",
+                    sms: "No SMS Report Required (if 3-month rolling pay >= 25% of annual CoS)",
+                    advice: "Under <em>Treal Care [2026] EWCA Civ 1420</em>, a single monthly dip caused by fluctuating shift patterns does not breach Annex C1(aa) provided the annual rate is maintained in the round. However, under <strong>SW 14.3B</strong>, ensure the worker's cumulative pay across any consecutive 3-month window reaches at least 1/4 of their annual CoS salary."
+                },
+                rest_week: {
+                    title: "Expressly Permitted Under Paragraph SW 14.3A",
+                    sms: "No SMS Report Required",
+                    advice: "Under <strong>SW 14.3A(b) and (c)</strong> (effective 8 April 2026), scheduled unpaid rest weeks within a regular cycle of up to 17 weeks count toward the average salary calculation and do <strong>not</strong> constitute absences from employment."
+                },
+                unpaid_short: {
+                    title: "Permissible Short-Term Unpaid Absence (Ms A Precedent in Treal Care)",
+                    sms: "No SMS Termination Required (Retain Signed Leave Request)",
+                    advice: "Sponsored workers may take up to <strong>4 weeks of authorised unpaid leave</strong> in a calendar year without triggering mandatory sponsorship termination. In <em>Treal Care</em> (at [25]), the Court held it was irrational for UKVI to ignore Ms A's authorised unpaid leave when assessing her 4-month pay. Keep the signed leave request attached to payroll records."
+                },
+                unpaid_long: {
+                    title: "High Risk — Exceeds 4-Week Unpaid Leave Limit (S4.19–S4.31)",
+                    sms: "Mandatory SMS Report Within 10 Working Days",
+                    advice: "If a sponsored worker is absent without pay for more than 4 weeks in total during a calendar year (and it does not fall under a statutory exception like maternity or sick leave), you must normally <strong>stop sponsoring the worker</strong> and report this via your SMS account within 10 working days."
+                },
+                statutory_leave: {
+                    title: "Protected Statutory Exception (Maternity, Paternity, Adoption, Sick Leave)",
+                    sms: "Permitted Reduction — Log Fit Notes / Statutory Certificates",
+                    advice: "Salary reductions due to statutory maternity, paternity, shared parental, adoption, or certified sick leave are expressly permitted under the Sponsor Guidance and SW 14.3B. Retain all MATB1 forms or GP fit notes in the worker's compliance folder."
+                },
+                payroll_error: {
+                    title: "Rectify Immediately via Lump-Sum Top-Up (Ms O Precedent in Treal Care)",
+                    sms: "Issue Immediate Top-Up Payment & Payroll Audit Note",
+                    advice: "In <em>Treal Care</em> (at [26]), Worker Ms O experienced an early underpayment because training hours were not notified to payroll, which the sponsor corrected via a lump-sum payment before the decision. Issue an immediate corrective BACS payment and document the reconciliation in writing."
+                },
+                compassionate: {
+                    title: "Caution — Compassionate Leave Is Not an Automatic Salary Exception",
+                    sms: "Consider Paid Leave Top-Up or Formal SMS Notification",
+                    advice: "As highlighted in <em>Treal Care</em> (at [27] & [59], Worker Ms L), unpaid compassionate leave is not automatically an exempt reduction in the Guidance, though UKVI must consider strong personal mitigation under its residual discretion. To eliminate revocation risk, either maintain the worker's CoS salary rate during compassionate leave or take immediate legal advice on SMS reporting."
+                }
+            };
+
+            const item = guidanceMap[reason];
+            box.innerHTML = `
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                    <h4 class="font-bold text-lg text-brand-dark">${item.title}</h4>
+                    <span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-brand-dark text-brand-gold_bright">${item.sms}</span>
+                </div>
+                <p class="text-gray-700 text-sm sm:text-base leading-relaxed">${item.advice}</p>
+            `;
+        }
+
+        // FAQ Accordion Toggle
+        function toggleFaq(index) {
+            const body = document.getElementById(`faq-body-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+            const isHidden = body.classList.contains('hidden');
+
+            if (isHidden) {
+                body.classList.remove('hidden');
+                icon.classList.remove('fa-plus');
+                icon.classList.add('fa-minus');
+            } else {
+                body.classList.add('hidden');
+                icon.classList.remove('fa-minus');
+                icon.classList.add('fa-plus');
+            }
+        }
+
+        // Initialise All Calculators on Load
+        window.addEventListener('DOMContentLoaded', () => {
+            calculateCompliance();
+            calculate17WeekCycle();
+            updateTriageAdvice();
+        });
+    </script>
+
+</body>
+
+</html>
